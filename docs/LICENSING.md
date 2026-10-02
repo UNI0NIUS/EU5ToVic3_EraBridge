@@ -16,6 +16,8 @@
 
 公开源码不新增分发 Python、NumPy、Pillow、Tk、MSVC、Windows SDK 或下载的 Rakaly 二进制。上游历史中已有的第三方文件保持其原来源。后续若发布可执行包，需按实际打包清单收集许可证和通知文件，并核查各 DLL 的分发条件；不能仅凭构建成功判断可公开分发。
 
+候选包整理另保存了 [librakaly 0.12.7 许可原文](../licenses/README.md)，并按 DLL 摘要核对版本。运行库通知依据实际打包文件收集；静态依赖和分发条件的核查状态见[发布准备](RELEASING.md)。
+
 ## 游戏、模组与图标
 
 Europa Universalis V、Victoria 3 及其商标、游戏脚本、美术和其他资源属于相应权利人。转换器代码的 MIT 许可不授权再分发这些内容。本次排除 `.local/`、`build/`、`outputs/`、存档、完整候选模组及提取素材。

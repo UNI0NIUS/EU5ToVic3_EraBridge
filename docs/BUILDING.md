@@ -1,5 +1,7 @@
 # 构建 EraBridge
 
+[文档索引](README.md) · [发布准备](RELEASING.md)
+
 当前维护的构建环境为 Windows x64。原仓库保留 Linux 构建文件，但本分支桌面版尚未完成 Linux 验证。
 
 ## 获取源码

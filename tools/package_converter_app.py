@@ -1,7 +1,8 @@
-"""Build a relocatable offline distribution using the installed Python runtime and MSVC.
+"""Build a local desktop distribution using the installed Python runtime and MSVC.
 
 No installer, registry changes or global package installation. Dependency DLL closure
-is copied from the same Python distribution; game files/history are never bundled.
+is copied from the same Python distribution. Local generated rules can contain
+game-derived assets and absolute paths; this output is not a public release.
 """
 import argparse
 import importlib.util

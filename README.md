@@ -17,7 +17,9 @@ EraBridge 将 Europa Universalis V 存档转换为 Victoria 3 候选模组，并
 
 ## 使用与构建
 
-本次公开的是源码、配置、测试、应用图标和文档。仓库不包含游戏本体、玩家存档、基准存档、游戏提取的贴图或本机生成的完整规则包，也不提供可直接运行的 Windows 发行包。
+目前公开的是源码、配置、测试、应用图标和文档。Windows 便携版正在准备，尚无经过发布验收的下载包；后续安装包会放在 [Releases](https://github.com/UNI0NIUS/EU5ToVic3_EraBridge/releases)。GitHub 自动生成的 Source code 压缩包仅包含源码。
+
+仓库不包含游戏本体、玩家存档、基准存档、游戏提取的贴图或本机生成的完整规则包。发布条件及剩余问题见[发布准备](docs/RELEASING.md)。
 
 开发环境及构建步骤见 [构建说明](docs/BUILDING.md)。完整桌面打包还需要本地规则包及合法安装的游戏数据；仅克隆仓库不足以完成端到端转换。
 
@@ -25,11 +27,13 @@ EraBridge 将 Europa Universalis V 存档转换为 Victoria 3 候选模组，并
 
 ## 文档
 
+- [开发文档：使用说明、架构与转换规则](docs/README.md)
 - [桌面工作台：操作流程、编辑和导出](docs/CONVERTER_WORKBENCH.md)
 - [文化、宗教与身份规则](docs/CONVERTER_IDENTITY_SETTINGS.md)
 - [源核心、宣称与释放边界](docs/CONVERTER_SOURCE_CORES.md)
 - [旗帜转换规则](docs/FLAG_GENERATION_RULES.md)
 - [公开材料与验证记录](docs/PUBLICATION.md)
+- [Release 准备与验收流程](docs/RELEASING.md)
 - [来源、许可与再发布范围](docs/LICENSING.md)
 
 `config/personal/` 保留早期开发沿用的目录名称，包含转换规则、研究依据和部分旧战役配置。各文件的适用范围不同，不能把所有配置直接当作任意新存档的默认值。

@@ -42,15 +42,22 @@ __pycache__/
 !.env.example
 /PERSONAL_DEVELOPMENT_PLAN.md
 
-# Keep local research logs; publish the maintained user/developer documents.
+# Publish maintained technical documents; keep conversation and campaign logs local.
 /docs/*
+!/docs/README.md
+!/docs/BUILDING.md
+!/docs/ARCHITECTURE.md
+!/docs/CONVERSION_RULES.md
 !/docs/CONVERTER_WORKBENCH.md
 !/docs/CONVERTER_IDENTITY_SETTINGS.md
 !/docs/CONVERTER_SOURCE_CORES.md
 !/docs/FLAG_GENERATION_RULES.md
-!/docs/BUILDING.md
 !/docs/LICENSING.md
 !/docs/PUBLICATION.md
+!/docs/RELEASING.md
+!/docs/releases/
+/docs/releases/*
+!/docs/releases/v0.12.2-beta.1.md
 
 # One-machine installation helpers are not part of the source distribution.
 /tools/install_economy_test.ps1
