@@ -1,0 +1,3374 @@
+{
+  "schema": 1,
+  "entries": [
+    {
+      "culture": "eu5_resident_totonac_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_VERACRUZ"
+      ],
+      "anchors": {
+        "papantla": [
+          "STATE_VERACRUZ"
+        ],
+        "cempoala": [
+          "STATE_VERACRUZ"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_popoloca_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_MEXICO"
+      ],
+      "anchors": {
+        "tehuacan": [
+          "STATE_MEXICO"
+        ],
+        "tepexi": [
+          "STATE_MEXICO"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_zoque_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_CHIAPAS",
+        "STATE_OAXACA"
+      ],
+      "anchors": {
+        "quechula": [
+          "STATE_CHIAPAS"
+        ],
+        "chimalapan": [
+          "STATE_OAXACA"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_pame_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_BAJIO"
+      ],
+      "anchors": {
+        "jalpan": [
+          "STATE_BAJIO"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_matlatzinca_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_MEXICO"
+      ],
+      "anchors": {
+        "tollohcan": [
+          "STATE_MEXICO"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_mixe_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_OAXACA"
+      ],
+      "anchors": {
+        "atitlan": [
+          "STATE_OAXACA"
+        ],
+        "tehuantepec": [
+          "STATE_OAXACA"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_chiapanec_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_CHIAPAS"
+      ],
+      "anchors": {
+        "napinaica": [
+          "STATE_CHIAPAS",
+          "STATE_OAXACA"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_chorotega_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_NICARAGUA",
+        "STATE_COSTA_RICA"
+      ],
+      "anchors": {
+        "nequecheri": [
+          "STATE_NICARAGUA"
+        ],
+        "nekokiaw": [
+          "STATE_COSTA_RICA"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_huichol_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_JALISCO"
+      ],
+      "anchors": {
+        "nayarit": [
+          "STATE_JALISCO"
+        ],
+        "metzquititlan": [
+          "STATE_JALISCO"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_naayeri_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_JALISCO"
+      ],
+      "anchors": {
+        "nayarit": [
+          "STATE_JALISCO"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_mayo_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_SONORA",
+        "STATE_SINALOA"
+      ],
+      "anchors": {
+        "huatabampo": [
+          "STATE_SONORA"
+        ],
+        "ahome": [
+          "STATE_SINALOA",
+          "STATE_SONORA"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_amuzgo_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_GUERRERO"
+      ],
+      "anchors": {
+        "ometepec": [
+          "STATE_GUERRERO"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_ikoot_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_OAXACA"
+      ],
+      "anchors": {
+        "tehuantepec": [
+          "STATE_OAXACA"
+        ],
+        "guiigu_yudxi": [
+          "STATE_OAXACA"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_lenca_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_HONDURAS"
+      ],
+      "anchors": {
+        "tencoa": [
+          "STATE_HONDURAS"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_huetar_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_COSTA_RICA"
+      ],
+      "anchors": {
+        "pacaca": [
+          "STATE_COSTA_RICA"
+        ],
+        "uxarraci": [
+          "STATE_COSTA_RICA"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_chimu_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_CAJAMARCA"
+      ],
+      "anchors": {
+        "chan_chan": [
+          "STATE_CAJAMARCA"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_malvi",
+      "status": "candidate_core",
+      "states": [
+        "STATE_MALWA"
+      ],
+      "anchors": {
+        "indore": [
+          "STATE_MALWA"
+        ],
+        "ujjain": [
+          "STATE_MALWA"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_bhil",
+      "status": "candidate_core",
+      "states": [
+        "STATE_RAJPUTANA",
+        "STATE_MALWA"
+      ],
+      "anchors": {
+        "banswara": [
+          "STATE_RAJPUTANA"
+        ],
+        "dungarpur": [
+          "STATE_RAJPUTANA"
+        ],
+        "alirajpur": [
+          "STATE_MALWA"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_serer",
+      "status": "candidate_core",
+      "states": [
+        "STATE_SENEGAL"
+      ],
+      "anchors": {
+        "diakhao": [
+          "STATE_SENEGAL"
+        ],
+        "kahone": [
+          "STATE_SENEGAL"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_sherbro",
+      "status": "candidate_core",
+      "states": [
+        "STATE_SIERRA_LEONE"
+      ],
+      "anchors": {
+        "sherbro_island": [
+          "STATE_SIERRA_LEONE"
+        ],
+        "shenge": [
+          "STATE_SIERRA_LEONE"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_temne",
+      "status": "candidate_core",
+      "states": [
+        "STATE_SIERRA_LEONE"
+      ],
+      "anchors": {
+        "port_loko": [
+          "STATE_SIERRA_LEONE"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_newar_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_HIMALAYAS"
+      ],
+      "anchors": {
+        "kathmandu": [
+          "STATE_HIMALAYAS"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_bai_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_YUNNAN"
+      ],
+      "anchors": {
+        "jianchuan": [
+          "STATE_YUNNAN"
+        ],
+        "langqiong": [
+          "STATE_YUNNAN"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_gyalrong_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_SICHUAN"
+      ],
+      "anchors": {
+        "maerkang": [
+          "STATE_SICHUAN"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_bodo_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_ASSAM",
+        "STATE_EASTERN_HIMALAYAS"
+      ],
+      "anchors": {
+        "kokrajhar": [
+          "STATE_ASSAM"
+        ],
+        "goalpara": [
+          "STATE_ASSAM"
+        ],
+        "morangi": [
+          "STATE_ASSAM"
+        ],
+        "maibong": [
+          "STATE_ASSAM"
+        ],
+        "sadiya": [
+          "STATE_EASTERN_HIMALAYAS"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_tani_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_EASTERN_HIMALAYAS"
+      ],
+      "anchors": {
+        "siang": [
+          "STATE_EASTERN_HIMALAYAS"
+        ],
+        "subansiri": [
+          "STATE_EASTERN_HIMALAYAS"
+        ],
+        "ziro": [
+          "STATE_EASTERN_HIMALAYAS"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_nagpuri_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_BIHAR"
+      ],
+      "anchors": {
+        "ranchi": [
+          "STATE_BIHAR"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_koch_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_ASSAM",
+        "STATE_WEST_BENGAL"
+      ],
+      "anchors": {
+        "koch_bihar": [
+          "STATE_WEST_BENGAL"
+        ],
+        "dhubri": [
+          "STATE_ASSAM"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_tripuri_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_ASSAM",
+        "STATE_EAST_BENGAL"
+      ],
+      "anchors": {
+        "agartala": [
+          "STATE_EAST_BENGAL"
+        ],
+        "pilak": [
+          "STATE_ASSAM"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_munda_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_BIHAR"
+      ],
+      "anchors": {
+        "ranchi": [
+          "STATE_BIHAR"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_karbi_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_ASSAM"
+      ],
+      "anchors": {
+        "diphu": [
+          "STATE_ASSAM"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_mishmi_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_EASTERN_HIMALAYAS"
+      ],
+      "anchors": {
+        "dibang": [
+          "STATE_EASTERN_HIMALAYAS"
+        ],
+        "walong": [
+          "STATE_ASSAM",
+          "STATE_EASTERN_HIMALAYAS"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_nicobarese_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_PEGU"
+      ],
+      "anchors": {
+        "car_nicobar": [
+          "STATE_PEGU"
+        ],
+        "nicobar": [
+          "STATE_PEGU"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_shina_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_KASHMIR"
+      ],
+      "anchors": {
+        "gilgit": [
+          "STATE_KASHMIR"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_banjara",
+      "status": "withheld_mobile_identity",
+      "states": [],
+      "anchors": {}
+    },
+    {
+      "culture": "eu5_resident_santal_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_BIHAR",
+        "STATE_WEST_BENGAL"
+      ],
+      "anchors": {
+        "barabhum": [
+          "STATE_BIHAR"
+        ],
+        "bankura": [
+          "STATE_WEST_BENGAL"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_malto_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_BIHAR"
+      ],
+      "anchors": {
+        "rajmahal": [
+          "STATE_BIHAR"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_kurukh_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_BIHAR"
+      ],
+      "anchors": {
+        "ranchi": [
+          "STATE_BIHAR"
+        ],
+        "khukhragarh": [
+          "STATE_BIHAR"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_garo_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_ASSAM"
+      ],
+      "anchors": {
+        "ruga": [
+          "STATE_ASSAM"
+        ],
+        "chisobibra": [
+          "STATE_ASSAM"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_nimadi",
+      "status": "candidate_core",
+      "states": [
+        "STATE_CENTRAL_PROVINCES",
+        "STATE_MALWA"
+      ],
+      "anchors": {
+        "maheshwar": [
+          "STATE_MALWA"
+        ],
+        "khandwa": [
+          "STATE_CENTRAL_PROVINCES"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_korku_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_CENTRAL_PROVINCES"
+      ],
+      "anchors": {
+        "kherla": [
+          "STATE_CENTRAL_PROVINCES"
+        ],
+        "gawilgarh": [
+          "STATE_CENTRAL_PROVINCES"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_chakma_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_ASSAM"
+      ],
+      "anchors": {
+        "chakma": [
+          "STATE_ASSAM"
+        ],
+        "rangamati": [
+          "STATE_ASSAM"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_sora_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_CIRCARS"
+      ],
+      "anchors": {
+        "ganjam": [
+          "STATE_CIRCARS"
+        ],
+        "kalingapattanam": [
+          "STATE_CIRCARS"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_tuluva",
+      "status": "candidate_core",
+      "states": [
+        "STATE_MYSORE"
+      ],
+      "anchors": {
+        "mangalore": [
+          "STATE_MYSORE"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_ho_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_BIHAR"
+      ],
+      "anchors": {
+        "chaibasa": [
+          "STATE_BIHAR"
+        ],
+        "porahat": [
+          "STATE_BIHAR"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_brahui_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_BALUCHISTAN"
+      ],
+      "anchors": {
+        "kalat": [
+          "STATE_BALUCHISTAN"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_khond_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_ORISSA"
+      ],
+      "anchors": {
+        "phulbani": [
+          "STATE_ORISSA"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_pamiri_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_BALKH",
+        "STATE_TAJIKISTAN"
+      ],
+      "anchors": {
+        "shighnan": [
+          "STATE_TAJIKISTAN"
+        ],
+        "qila_panjeh": [
+          "STATE_BALKH",
+          "STATE_TAJIKISTAN"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_kharia_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_BIHAR"
+      ],
+      "anchors": {
+        "khukhragarh": [
+          "STATE_BIHAR"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_magar_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_HIMALAYAS"
+      ],
+      "anchors": {
+        "tansen": [
+          "STATE_HIMALAYAS"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_gurung_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_HIMALAYAS"
+      ],
+      "anchors": {
+        "lamjung": [
+          "STATE_HIMALAYAS"
+        ],
+        "pokhara": [
+          "STATE_HIMALAYAS"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_pashayi_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_KABUL"
+      ],
+      "anchors": {
+        "alishang": [
+          "STATE_KABUL"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_tamang_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_HIMALAYAS"
+      ],
+      "anchors": {
+        "dhading": [
+          "STATE_HIMALAYAS"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_nuristani_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_KABUL"
+      ],
+      "anchors": {
+        "parun": [
+          "STATE_KABUL"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_bantoid",
+      "status": "withheld_label_scope",
+      "states": [],
+      "anchors": {}
+    },
+    {
+      "culture": "eu5_resident_benue",
+      "status": "withheld_label_scope",
+      "states": [],
+      "anchors": {}
+    },
+    {
+      "culture": "eu5_resident_gonga_culture",
+      "status": "withheld_label_scope",
+      "states": [],
+      "anchors": {}
+    },
+    {
+      "culture": "eu5_resident_omo_culture",
+      "status": "withheld_label_scope",
+      "states": [],
+      "anchors": {}
+    },
+    {
+      "culture": "eu5_resident_south_cushitic_culture",
+      "status": "withheld_label_scope",
+      "states": [],
+      "anchors": {}
+    },
+    {
+      "culture": "eu5_resident_daju_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_DARFUR"
+      ],
+      "anchors": {
+        "nyala": [
+          "STATE_DARFUR"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_dahalo_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_KENYA"
+      ],
+      "anchors": {
+        "central_dahalo": [
+          "STATE_KENYA",
+          "STATE_SOMALILAND"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_madi_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_EQUATORIA"
+      ],
+      "anchors": {
+        "madi": [
+          "STATE_EQUATORIA"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_gbaya_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_UBANGI_SHARI"
+      ],
+      "anchors": {
+        "bouar": [
+          "STATE_UBANGI_SHARI"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_agaw_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_GONDER"
+      ],
+      "anchors": {
+        "lalibela": [
+          "STATE_GONDER"
+        ],
+        "sokota": [
+          "STATE_GONDER"
+        ],
+        "dangila": [
+          "STATE_GONDER"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_berta_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_AMHARA",
+        "STATE_BLUE_NILE"
+      ],
+      "anchors": {
+        "assosa": [
+          "STATE_AMHARA",
+          "STATE_BLUE_NILE"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_gumuz_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_GONDER"
+      ],
+      "anchors": {
+        "gilgel_beles": [
+          "STATE_GONDER"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_gbari",
+      "status": "candidate_core",
+      "states": [
+        "STATE_EAST_HAUSALAND"
+      ],
+      "anchors": {
+        "kuje": [
+          "STATE_EAST_HAUSALAND"
+        ],
+        "zuba": [
+          "STATE_EAST_HAUSALAND"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_moru_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_EQUATORIA"
+      ],
+      "anchors": {
+        "lado": [
+          "STATE_EQUATORIA"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_balanta",
+      "status": "candidate_core",
+      "states": [
+        "STATE_GUINEA"
+      ],
+      "anchors": {
+        "bissau": [
+          "STATE_GUINEA"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_ngbandi_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_EQUATEUR"
+      ],
+      "anchors": {
+        "bangui": [
+          "STATE_EQUATEUR"
+        ],
+        "bosobolo": [
+          "STATE_EQUATEUR"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_banda_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_UBANGI_SHARI"
+      ],
+      "anchors": {
+        "ouaka": [
+          "STATE_UBANGI_SHARI"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_rendille_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_KENYA"
+      ],
+      "anchors": {
+        "rendille": [
+          "STATE_KENYA"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_lugbara_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_UGANDA"
+      ],
+      "anchors": {
+        "pubungu": [
+          "STATE_UGANDA"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_idoma",
+      "status": "candidate_core",
+      "states": [
+        "STATE_BENIN"
+      ],
+      "anchors": {
+        "katsina_ala": [
+          "STATE_BENIN",
+          "STATE_NIGERIA"
+        ],
+        "idah": [
+          "STATE_BENIN"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_mandja_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_UBANGI_SHARI"
+      ],
+      "anchors": {
+        "krebedje": [
+          "STATE_UBANGI_SHARI"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_ometo_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_AMHARA"
+      ],
+      "anchors": {
+        "soddo": [
+          "STATE_AMHARA"
+        ],
+        "gamo": [
+          "STATE_AMHARA"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_hadza_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_TANGANYIKA"
+      ],
+      "anchors": {
+        "iraqw": [
+          "STATE_TANGANYIKA"
+        ],
+        "datooga": [
+          "STATE_LINDI",
+          "STATE_TANGANYIKA"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_ijaw",
+      "status": "candidate_core",
+      "states": [
+        "STATE_NIGER_DELTA"
+      ],
+      "anchors": {
+        "brass": [
+          "STATE_NIGER_DELTA"
+        ],
+        "nembe": [
+          "STATE_NIGER_DELTA"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_sandawe_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_TANGANYIKA"
+      ],
+      "anchors": {
+        "sandawe": [
+          "STATE_LINDI",
+          "STATE_TANGANYIKA"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_baga_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_GUINEA"
+      ],
+      "anchors": {
+        "rio_pongo": [
+          "STATE_GUINEA"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_gola",
+      "status": "candidate_core",
+      "states": [
+        "STATE_LIBERIA"
+      ],
+      "anchors": {
+        "bopolu": [
+          "STATE_LIBERIA"
+        ],
+        "cape_mount": [
+          "STATE_LIBERIA"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_burji_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_AMHARA"
+      ],
+      "anchors": {
+        "konso": [
+          "STATE_AMHARA"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_dhaasanac_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_AMHARA",
+        "STATE_KENYA"
+      ],
+      "anchors": {
+        "daasanach": [
+          "STATE_AMHARA",
+          "STATE_KENYA"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_jola",
+      "status": "candidate_core",
+      "states": [
+        "STATE_SENEGAL"
+      ],
+      "anchors": {
+        "casamance": [
+          "STATE_SENEGAL"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_tenda_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_GUINEA",
+        "STATE_SENEGAL"
+      ],
+      "anchors": {
+        "salemata": [
+          "STATE_GUINEA",
+          "STATE_SENEGAL"
+        ],
+        "iwol": [
+          "STATE_GUINEA"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_manjak",
+      "status": "candidate_core",
+      "states": [
+        "STATE_GUINEA"
+      ],
+      "anchors": {
+        "cacheu": [
+          "STATE_GUINEA"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_igala",
+      "status": "candidate_core",
+      "states": [
+        "STATE_BENIN"
+      ],
+      "anchors": {
+        "idah": [
+          "STATE_BENIN"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_orang_asli_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_MALAYA"
+      ],
+      "anchors": {
+        "gerik": [
+          "STATE_MALAYA"
+        ],
+        "kuala_lipis": [
+          "STATE_MALAYA"
+        ],
+        "pahang": [
+          "STATE_MALAYA"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_torajan_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_CELEBES"
+      ],
+      "anchors": {
+        "toraja": [
+          "STATE_CELEBES"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_tolaki_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_CELEBES"
+      ],
+      "anchors": {
+        "unaaha": [
+          "STATE_CELEBES"
+        ],
+        "kendari": [
+          "STATE_CELEBES"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_bahnar_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_MEKONG"
+      ],
+      "anchors": {
+        "kon_tum": [
+          "STATE_MEKONG"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_atoni_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_SUNDA_ISLANDS"
+      ],
+      "anchors": {
+        "sombai": [
+          "STATE_SUNDA_ISLANDS"
+        ],
+        "nunkolo": [
+          "STATE_SUNDA_ISLANDS"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_palaung_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_SHAN_STATES",
+        "STATE_YUNNAN"
+      ],
+      "anchors": {
+        "namhsan": [
+          "STATE_SHAN_STATES"
+        ],
+        "mangshi": [
+          "STATE_YUNNAN"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_wa_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_YUNNAN"
+      ],
+      "anchors": {
+        "gengma": [
+          "STATE_YUNNAN"
+        ],
+        "mengdong": [
+          "STATE_YUNNAN"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_gorontalo_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_CELEBES"
+      ],
+      "anchors": {
+        "gorontalo": [
+          "STATE_CELEBES"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_minahasan_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_CELEBES"
+      ],
+      "anchors": {
+        "manado": [
+          "STATE_CELEBES"
+        ],
+        "amurang": [
+          "STATE_CELEBES"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_sumba_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_SUNDA_ISLANDS"
+      ],
+      "anchors": {
+        "sumba": [
+          "STATE_SUNDA_ISLANDS"
+        ],
+        "waingapo": [
+          "STATE_SUNDA_ISLANDS"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_kaili_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_CELEBES"
+      ],
+      "anchors": {
+        "sigi": [
+          "STATE_CELEBES"
+        ],
+        "donggala": [
+          "STATE_CELEBES"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_dompu_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_SUNDA_ISLANDS"
+      ],
+      "anchors": {
+        "bima": [
+          "STATE_SUNDA_ISLANDS"
+        ],
+        "dompu": [
+          "STATE_SUNDA_ISLANDS"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_rma_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_SICHUAN"
+      ],
+      "anchors": {
+        "wenchuan": [
+          "STATE_SICHUAN"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_tagbanwa_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_LUZON"
+      ],
+      "anchors": {
+        "aborlan": [
+          "STATE_LUZON"
+        ],
+        "busuanga": [
+          "STATE_LUZON"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_nashi_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_YUNNAN"
+      ],
+      "anchors": {
+        "tongan_lijiang": [
+          "STATE_YUNNAN"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_sedang_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_MEKONG"
+      ],
+      "anchors": {
+        "kon_tum": [
+          "STATE_MEKONG"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_bontoc_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_LUZON"
+      ],
+      "anchors": {
+        "balbalan": [
+          "STATE_LUZON"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_talaud_culture",
+      "status": "withheld_map_resolution",
+      "states": [],
+      "anchors": {}
+    },
+    {
+      "culture": "eu5_resident_sui_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_GUIZHOU"
+      ],
+      "anchors": {
+        "dushan": [
+          "STATE_GUIZHOU"
+        ],
+        "duyun": [
+          "STATE_GUIZHOU"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_mandarese_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_CELEBES"
+      ],
+      "anchors": {
+        "balanipa": [
+          "STATE_CELEBES"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_pumi_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_YUNNAN"
+      ],
+      "anchors": {
+        "yongning_baisheng": [
+          "STATE_YUNNAN"
+        ],
+        "jianchuan": [
+          "STATE_YUNNAN"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_kalinga_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_LUZON"
+      ],
+      "anchors": {
+        "balbalan": [
+          "STATE_LUZON"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_mangyan_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_LUZON"
+      ],
+      "anchors": {
+        "mamburao": [
+          "STATE_LUZON"
+        ],
+        "mangarin": [
+          "STATE_LUZON"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_monguor_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_GANSU"
+      ],
+      "anchors": {
+        "datong_xining": [
+          "STATE_GANSU"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_kankanaey_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_LUZON"
+      ],
+      "anchors": {
+        "tagudin": [
+          "STATE_LUZON"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_gelao_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_GUIZHOU"
+      ],
+      "anchors": {
+        "wuchuan_sinan": [
+          "STATE_GUIZHOU"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_mori_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_CELEBES"
+      ],
+      "anchors": {
+        "mori_celebes": [
+          "STATE_CELEBES"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_mongondow_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_CELEBES"
+      ],
+      "anchors": {
+        "solimandungan": [
+          "STATE_CELEBES"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_derung_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_YUNNAN"
+      ],
+      "anchors": {
+        "gongshan": [
+          "STATE_YUNNAN"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_aeta_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_LUZON"
+      ],
+      "anchors": {
+        "botolan": [
+          "STATE_LUZON"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_nu_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_YUNNAN"
+      ],
+      "anchors": {
+        "gongshan": [
+          "STATE_YUNNAN"
+        ],
+        "zhiziluo": [
+          "STATE_YUNNAN"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_moronene_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_CELEBES"
+      ],
+      "anchors": {
+        "taubonto": [
+          "STATE_CELEBES"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_bonan_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_GANSU"
+      ],
+      "anchors": {
+        "zeku": [
+          "STATE_GANSU"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_sangirese_culture",
+      "status": "withheld_map_resolution",
+      "states": [],
+      "anchors": {}
+    },
+    {
+      "culture": "eu5_resident_blang_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_YUNNAN"
+      ],
+      "anchors": {
+        "menghai": [
+          "STATE_YUNNAN"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_pamona_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_CELEBES"
+      ],
+      "anchors": {
+        "poso": [
+          "STATE_CELEBES"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_isnag_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_LUZON"
+      ],
+      "anchors": {
+        "pudtol": [
+          "STATE_LUZON"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_mambai_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_SUNDA_ISLANDS"
+      ],
+      "anchors": {
+        "likusaen": [
+          "STATE_SUNDA_ISLANDS"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_bungku_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_CELEBES"
+      ],
+      "anchors": {
+        "bungku": [
+          "STATE_CELEBES"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_tomini_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_CELEBES"
+      ],
+      "anchors": {
+        "tomini": [
+          "STATE_CELEBES"
+        ],
+        "pendau": [
+          "STATE_CELEBES"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_calusa_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_FLORIDA"
+      ],
+      "anchors": {
+        "caloosahatchee": [
+          "STATE_FLORIDA"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_timucua_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_FLORIDA"
+      ],
+      "anchors": {
+        "timucua": [
+          "STATE_FLORIDA"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_atakapa_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_LOUISIANA",
+        "STATE_TEXAS"
+      ],
+      "anchors": {
+        "calcasieu": [
+          "STATE_LOUISIANA",
+          "STATE_TEXAS"
+        ],
+        "ishak": [
+          "STATE_TEXAS"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_natchez_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_MISSISSIPPI"
+      ],
+      "anchors": {
+        "natchez": [
+          "STATE_LOUISIANA",
+          "STATE_MISSISSIPPI"
+        ],
+        "tiou": [
+          "STATE_MISSISSIPPI"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_bayagoula_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_LOUISIANA"
+      ],
+      "anchors": {
+        "itihumma": [
+          "STATE_LOUISIANA"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_ohlone_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_CALIFORNIA"
+      ],
+      "anchors": {
+        "chochenyo": [
+          "STATE_CALIFORNIA"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_kalapuyan_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_OREGON"
+      ],
+      "anchors": {
+        "kalapuya": [
+          "STATE_OREGON"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_wintuan_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_CALIFORNIA"
+      ],
+      "anchors": {
+        "wintu": [
+          "STATE_CALIFORNIA"
+        ],
+        "hill_nomlaki": [
+          "STATE_CALIFORNIA"
+        ],
+        "suisin": [
+          "STATE_CALIFORNIA"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_sahaptin_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_WASHINGTON"
+      ],
+      "anchors": {
+        "pa_lus_sa": [
+          "STATE_WASHINGTON"
+        ],
+        "klikitat": [
+          "STATE_WASHINGTON"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_chinook_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_OREGON",
+        "STATE_WASHINGTON"
+      ],
+      "anchors": {
+        "chinook": [
+          "STATE_OREGON",
+          "STATE_WASHINGTON"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_miwok_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_CALIFORNIA"
+      ],
+      "anchors": {
+        "kasumne": [
+          "STATE_CALIFORNIA"
+        ],
+        "koloma": [
+          "STATE_CALIFORNIA"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_maiduan_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_CALIFORNIA"
+      ],
+      "anchors": {
+        "konkow": [
+          "STATE_CALIFORNIA"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_north_valley_yokut_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_CALIFORNIA"
+      ],
+      "anchors": {
+        "chawchila": [
+          "STATE_CALIFORNIA"
+        ],
+        "tulumni": [
+          "STATE_CALIFORNIA"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_molalla_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_OREGON"
+      ],
+      "anchors": {
+        "south_molala": [
+          "STATE_OREGON"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_chitimacha_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_LOUISIANA"
+      ],
+      "anchors": {
+        "atchafalaya": [
+          "STATE_LOUISIANA"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_nisenan_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_CALIFORNIA"
+      ],
+      "anchors": {
+        "nisenan": [
+          "STATE_CALIFORNIA"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_takelma_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_OREGON"
+      ],
+      "anchors": {
+        "tak_elam": [
+          "STATE_OREGON"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_avoyel_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_LOUISIANA"
+      ],
+      "anchors": {
+        "catahoula": [
+          "STATE_LOUISIANA"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_taensa_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_LOUISIANA"
+      ],
+      "anchors": {
+        "tensas": [
+          "STATE_LOUISIANA"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_ewksikni_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_OREGON"
+      ],
+      "anchors": {
+        "ewksikni": [
+          "STATE_OREGON"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_willetpoos_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_OREGON"
+      ],
+      "anchors": {
+        "liksiyu": [
+          "STATE_OREGON"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_modokni_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_CALIFORNIA",
+        "STATE_OREGON"
+      ],
+      "anchors": {
+        "giiwas": [
+          "STATE_OREGON"
+        ],
+        "modokni": [
+          "STATE_CALIFORNIA"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_tongva_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_CALIFORNIA"
+      ],
+      "anchors": {
+        "yaanga": [
+          "STATE_CALIFORNIA"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_taaqtam_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_CALIFORNIA"
+      ],
+      "anchors": {
+        "taaqtam": [
+          "STATE_CALIFORNIA"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_wiyot_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_CALIFORNIA"
+      ],
+      "anchors": {
+        "jaroujiji": [
+          "STATE_CALIFORNIA"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_tocobaga_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_FLORIDA"
+      ],
+      "anchors": {
+        "mocozo": [
+          "STATE_FLORIDA"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_yurok_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_CALIFORNIA"
+      ],
+      "anchors": {
+        "oohl": [
+          "STATE_CALIFORNIA"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_coos_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_OREGON"
+      ],
+      "anchors": {
+        "ko_kwel": [
+          "STATE_OREGON"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_tlingit_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_ALASKA"
+      ],
+      "anchors": {
+        "aa_kw": [
+          "STATE_ALASKA",
+          "STATE_BRITISH_COLUMBIA"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_eyak_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_ALASKA"
+      ],
+      "anchors": {
+        "daxunhyuu": [
+          "STATE_ALASKA"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_quasmigdo_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_TEXAS"
+      ],
+      "anchors": {
+        "bidai": [
+          "STATE_TEXAS"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_xumani_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_TEXAS"
+      ],
+      "anchors": {
+        "xumani": [
+          "STATE_TEXAS"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_yoli_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_CHIHUAHUA"
+      ],
+      "anchors": {
+        "yoli": [
+          "STATE_CHIHUAHUA"
+        ],
+        "julime": [
+          "STATE_CHIHUAHUA"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_coahuilteco_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_TEXAS"
+      ],
+      "anchors": {
+        "yanaguana": [
+          "STATE_TEXAS"
+        ],
+        "cacaxtles": [
+          "STATE_TEXAS"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_guamar_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_BAJIO"
+      ],
+      "anchors": {
+        "guanchenis": [
+          "STATE_BAJIO",
+          "STATE_ZACATECAS"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_iztachichimecah_culture",
+      "status": "withheld_label_scope",
+      "states": [],
+      "anchors": {}
+    },
+    {
+      "culture": "eu5_resident_guachichil_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_BAJIO",
+        "STATE_ZACATECAS"
+      ],
+      "anchors": {
+        "tangamanga": [
+          "STATE_BAJIO"
+        ],
+        "guachichil": [
+          "STATE_RIO_GRANDE",
+          "STATE_ZACATECAS"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_opata_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_SONORA"
+      ],
+      "anchors": {
+        "aconchi": [
+          "STATE_SONORA"
+        ],
+        "oposura": [
+          "STATE_SONORA"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_zacatecah_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_DURANGO",
+        "STATE_ZACATECAS"
+      ],
+      "anchors": {
+        "tlacuitlapan": [
+          "STATE_ZACATECAS"
+        ],
+        "cuencame": [
+          "STATE_DURANGO"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_tepecan_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_JALISCO"
+      ],
+      "anchors": {
+        "tepecan": [
+          "STATE_JALISCO",
+          "STATE_ZACATECAS"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_acaxee_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_DURANGO"
+      ],
+      "anchors": {
+        "topia": [
+          "STATE_DURANGO"
+        ],
+        "tamazula": [
+          "STATE_DURANGO"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_tahue_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_SINALOA"
+      ],
+      "anchors": {
+        "culiacan": [
+          "STATE_SINALOA"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_caxcan_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_JALISCO",
+        "STATE_ZACATECAS"
+      ],
+      "anchors": {
+        "teulinchan": [
+          "STATE_JALISCO",
+          "STATE_ZACATECAS"
+        ],
+        "xochipillan": [
+          "STATE_ZACATECAS"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_raramuri_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_CHIHUAHUA"
+      ],
+      "anchors": {
+        "gonogochi": [
+          "STATE_CHIHUAHUA"
+        ],
+        "papigochic": [
+          "STATE_CHIHUAHUA"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_sauzas_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_ZACATECAS"
+      ],
+      "anchors": {
+        "sauzas": [
+          "STATE_ZACATECAS"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_totorame_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_SINALOA"
+      ],
+      "anchors": {
+        "mazatlan": [
+          "STATE_SINALOA"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_tamauliteco_culture",
+      "status": "withheld_label_scope",
+      "states": [],
+      "anchors": {}
+    },
+    {
+      "culture": "eu5_resident_tepehuan_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_DURANGO"
+      ],
+      "anchors": {
+        "odam": [
+          "STATE_DURANGO"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_tapachultec_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_CHIAPAS"
+      ],
+      "anchors": {
+        "tenamitl": [
+          "STATE_CHIAPAS"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_guasave_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_SINALOA"
+      ],
+      "anchors": {
+        "sinaloa": [
+          "STATE_SINALOA"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_xixime_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_DURANGO"
+      ],
+      "anchors": {
+        "tamazula": [
+          "STATE_DURANGO"
+        ],
+        "tayoltita": [
+          "STATE_DURANGO"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_toboso_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_DURANGO"
+      ],
+      "anchors": {
+        "mapimi": [
+          "STATE_DURANGO"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_otomanguean_culture",
+      "status": "withheld_label_scope",
+      "states": [],
+      "anchors": {}
+    },
+    {
+      "culture": "eu5_resident_barbakoan_culture",
+      "status": "withheld_label_scope",
+      "states": [],
+      "anchors": {}
+    },
+    {
+      "culture": "eu5_resident_pazioca_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_JUJUY",
+        "STATE_TUCUMAN"
+      ],
+      "anchors": {
+        "kilmes": [
+          "STATE_TUCUMAN"
+        ],
+        "tolombon": [
+          "STATE_JUJUY",
+          "STATE_TUCUMAN"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_guancavilca_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_ECUADOR"
+      ],
+      "anchors": {
+        "guancavilca": [
+          "STATE_ECUADOR"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_tallan_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_CAJAMARCA"
+      ],
+      "anchors": {
+        "chira": [
+          "STATE_CAJAMARCA"
+        ],
+        "nariguala": [
+          "STATE_CAJAMARCA"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_jama_coaque_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_ECUADOR"
+      ],
+      "anchors": {
+        "jama": [
+          "STATE_ECUADOR"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_chicha_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_POTOSI"
+      ],
+      "anchors": {
+        "tupiza": [
+          "STATE_POTOSI"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_kanari_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_ECUADOR"
+      ],
+      "anchors": {
+        "hatun_kanar": [
+          "STATE_ECUADOR"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_licanantay_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_ANTOFAGASTA"
+      ],
+      "anchors": {
+        "tulor": [
+          "STATE_ANTOFAGASTA"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_cabecar_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_COSTA_RICA"
+      ],
+      "anchors": {
+        "kabeka": [
+          "STATE_COSTA_RICA"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_cara_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_ECUADOR"
+      ],
+      "anchors": {
+        "caran": [
+          "STATE_ECUADOR"
+        ],
+        "otavalo": [
+          "STATE_ECUADOR"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_casma_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_LIMA"
+      ],
+      "anchors": {
+        "manchan": [
+          "STATE_LIMA"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_charka_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_SANTA_CRUZ"
+      ],
+      "anchors": {
+        "charka": [
+          "STATE_SANTA_CRUZ"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_andaqui_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_GUAVIARE"
+      ],
+      "anchors": {
+        "andaki": [
+          "STATE_GUAVIARE",
+          "STATE_PASTAZA"
+        ],
+        "caguan": [
+          "STATE_GUAVIARE"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_tahami_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_CUNDINAMARCA"
+      ],
+      "anchors": {
+        "tahamies": [
+          "STATE_CUNDINAMARCA"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_boruca_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_COSTA_RICA"
+      ],
+      "anchors": {
+        "boruca": [
+          "STATE_COSTA_RICA"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_pashash_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_LIMA"
+      ],
+      "anchors": {
+        "pashas": [
+          "STATE_LIMA"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_sutagao_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_CUNDINAMARCA"
+      ],
+      "anchors": {
+        "pasca": [
+          "STATE_CUNDINAMARCA"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_timanae_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_CAUCA"
+      ],
+      "anchors": {
+        "timana": [
+          "STATE_CAUCA"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_guayacundo_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_CAJAMARCA"
+      ],
+      "anchors": {
+        "guayacundo": [
+          "STATE_CAJAMARCA"
+        ],
+        "ayahuacas": [
+          "STATE_CAJAMARCA"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_yampara_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_SANTA_CRUZ"
+      ],
+      "anchors": {
+        "yamparaez": [
+          "STATE_SANTA_CRUZ"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_puruha_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_ECUADOR"
+      ],
+      "anchors": {
+        "liribamba": [
+          "STATE_ECUADOR"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_guna_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_ANTIOQUIA",
+        "STATE_PANAMA"
+      ],
+      "anchors": {
+        "careta": [
+          "STATE_PANAMA"
+        ],
+        "kuna": [
+          "STATE_ANTIOQUIA"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_uru_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_POTOSI"
+      ],
+      "anchors": {
+        "uru": [
+          "STATE_POTOSI"
+        ],
+        "aullagas": [
+          "STATE_POTOSI"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_chiribaya_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_AREQUIPA"
+      ],
+      "anchors": {
+        "tacna": [
+          "STATE_AREQUIPA"
+        ],
+        "puquina": [
+          "STATE_AREQUIPA"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_tsachila_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_ECUADOR"
+      ],
+      "anchors": {
+        "tsachila": [
+          "STATE_ECUADOR"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_cholon_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_LIMA"
+      ],
+      "anchors": {
+        "rupharupha": [
+          "STATE_LIMA"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_mayangna_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_NICARAGUA"
+      ],
+      "anchors": {
+        "ukutal": [
+          "STATE_NICARAGUA"
+        ],
+        "ulwas": [
+          "STATE_NICARAGUA"
+        ],
+        "karawala": [
+          "STATE_NICARAGUA"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_puben_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_CAUCA"
+      ],
+      "anchors": {
+        "purace": [
+          "STATE_CAUCA"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_bagua_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_CAJAMARCA"
+      ],
+      "anchors": {
+        "bagua": [
+          "STATE_CAJAMARCA"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_rama_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_NICARAGUA"
+      ],
+      "anchors": {
+        "rama": [
+          "STATE_NICARAGUA"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_chillque_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_ICA"
+      ],
+      "anchors": {
+        "maukallaqta": [
+          "STATE_ICA"
+        ],
+        "qusqu": [
+          "STATE_ICA"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_ngabe_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_PANAMA"
+      ],
+      "anchors": {
+        "chiriqui": [
+          "STATE_PANAMA"
+        ],
+        "veragua": [
+          "STATE_PANAMA"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_chitarero_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_ANTIOQUIA"
+      ],
+      "anchors": {
+        "chitagaes": [
+          "STATE_ANTIOQUIA"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_uwa_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_CUNDINAMARCA"
+      ],
+      "anchors": {
+        "cubara": [
+          "STATE_CUNDINAMARCA"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_tastil_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_JUJUY"
+      ],
+      "anchors": {
+        "tastil": [
+          "STATE_JUJUY"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_collique_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_LIMA"
+      ],
+      "anchors": {
+        "collique": [
+          "STATE_LIMA"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_canta_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_LIMA"
+      ],
+      "anchors": {
+        "cantamarca": [
+          "STATE_LIMA"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_nutabe_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_ANTIOQUIA"
+      ],
+      "anchors": {
+        "xundabe": [
+          "STATE_ANTIOQUIA"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_awa_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_CAUCA"
+      ],
+      "anchors": {
+        "tapaje": [
+          "STATE_CAUCA",
+          "STATE_ECUADOR"
+        ],
+        "iscuande": [
+          "STATE_CAUCA"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_waunana_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_ANTIOQUIA"
+      ],
+      "anchors": {
+        "noanama": [
+          "STATE_ANTIOQUIA"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_embera_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_ANTIOQUIA",
+        "STATE_PANAMA"
+      ],
+      "anchors": {
+        "choco": [
+          "STATE_ANTIOQUIA"
+        ],
+        "baudo": [
+          "STATE_ANTIOQUIA"
+        ],
+        "chepo": [
+          "STATE_PANAMA"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_omaguaca_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_JUJUY"
+      ],
+      "anchors": {
+        "omaguacas": [
+          "STATE_JUJUY"
+        ],
+        "tilcara": [
+          "STATE_JUJUY"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_oirat_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_DZUNGARIA"
+      ],
+      "anchors": {
+        "bortala": [
+          "STATE_DZUNGARIA"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_frisian",
+      "status": "candidate_core",
+      "states": [
+        "STATE_FRIESLAND"
+      ],
+      "anchors": {
+        "leeuwarden": [
+          "STATE_FRIESLAND"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_romansh",
+      "status": "candidate_core",
+      "states": [
+        "STATE_EAST_SWITZERLAND"
+      ],
+      "anchors": {
+        "disentis": [
+          "STATE_EAST_SWITZERLAND"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_sasak_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_SUNDA_ISLANDS"
+      ],
+      "anchors": {
+        "lombok": [
+          "STATE_SUNDA_ISLANDS"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_madurese_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_EAST_JAVA"
+      ],
+      "anchors": {
+        "bangkalan": [
+          "STATE_EAST_JAVA"
+        ],
+        "sugeneb": [
+          "STATE_EAST_JAVA"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_lisu_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_YUNNAN"
+      ],
+      "anchors": {
+        "luzhang": [
+          "STATE_YUNNAN"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_hani_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_YUNNAN"
+      ],
+      "anchors": {
+        "jianshui": [
+          "STATE_YUNNAN"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_lahu_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_YUNNAN"
+      ],
+      "anchors": {
+        "mengtong": [
+          "STATE_YUNNAN"
+        ],
+        "kainan": [
+          "STATE_YUNNAN"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_jino_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_YUNNAN"
+      ],
+      "anchors": {
+        "mengban_jihong": [
+          "STATE_YUNNAN"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_mulam_maonan",
+      "status": "candidate_core",
+      "states": [
+        "STATE_GUANGXI"
+      ],
+      "anchors": {
+        "luocheng": [
+          "STATE_GUANGXI"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_limbu_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_HIMALAYAS"
+      ],
+      "anchors": {
+        "taplejung": [
+          "STATE_HIMALAYAS"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_gurage",
+      "status": "deferred",
+      "states": [],
+      "anchors": {}
+    },
+    {
+      "culture": "eu5_resident_tigre",
+      "status": "candidate_core",
+      "states": [
+        "STATE_ERITREA"
+      ],
+      "anchors": {
+        "agordat": [
+          "STATE_ERITREA"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_norn_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_HIGHLANDS"
+      ],
+      "anchors": {
+        "orkney": [
+          "STATE_HIGHLANDS"
+        ],
+        "shetland": [
+          "STATE_HIGHLANDS"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_tsoyaha_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_TENNESSEE"
+      ],
+      "anchors": {
+        "tsoyaha": [
+          "STATE_TENNESSEE"
+        ],
+        "hogohega": [
+          "STATE_TENNESSEE"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_resident_lucayo",
+      "status": "candidate_core",
+      "states": [
+        "STATE_BAHAMAS"
+      ],
+      "anchors": {
+        "guanahani": [
+          "STATE_BAHAMAS"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_framework_tangut",
+      "status": "candidate_core",
+      "states": [
+        "STATE_NINGXIA"
+      ],
+      "anchors": {
+        "ningxia": [
+          "STATE_NINGXIA"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_framework_achang",
+      "status": "candidate_core",
+      "states": [
+        "STATE_YUNNAN"
+      ],
+      "anchors": {
+        "tengchong": [
+          "STATE_YUNNAN"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_framework_kadu",
+      "status": "candidate_core",
+      "states": [
+        "STATE_KACHIN"
+      ],
+      "anchors": {
+        "katha": [
+          "STATE_KACHIN"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_framework_bru_kuy",
+      "status": "candidate_core",
+      "states": [
+        "STATE_LAOS",
+        "STATE_NAKHON_RATCHASIMA"
+      ],
+      "anchors": {
+        "savannakhet": [
+          "STATE_LAOS",
+          "STATE_NAKHON_RATCHASIMA"
+        ],
+        "khukhan": [
+          "STATE_LAOS",
+          "STATE_NAKHON_RATCHASIMA"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_framework_monpa",
+      "status": "candidate_core",
+      "states": [
+        "STATE_EASTERN_HIMALAYAS"
+      ],
+      "anchors": {
+        "tawang": [
+          "STATE_EASTERN_HIMALAYAS"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_framework_kohistani",
+      "status": "candidate_core",
+      "states": [
+        "STATE_KASHMIR"
+      ],
+      "anchors": {
+        "kandia": [
+          "STATE_KASHMIR"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_framework_zaza",
+      "status": "candidate_core",
+      "states": [
+        "STATE_DIYARBAKIR"
+      ],
+      "anchors": {
+        "harput": [
+          "STATE_DIYARBAKIR"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_framework_unangan",
+      "status": "candidate_core",
+      "states": [
+        "STATE_ALASKA"
+      ],
+      "anchors": {
+        "qawalangin": [
+          "STATE_ALASKA"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_framework_lozi",
+      "status": "candidate_core",
+      "states": [
+        "STATE_ZAMBIA"
+      ],
+      "anchors": {
+        "zambesia_katongo": [
+          "STATE_ZAMBIA"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_framework_abkhaz_abaza",
+      "status": "candidate_core",
+      "states": [
+        "STATE_GREATER_CAUCASUS",
+        "STATE_KUBAN"
+      ],
+      "anchors": {
+        "pitsunda": [
+          "STATE_GREATER_CAUCASUS",
+          "STATE_KUBAN"
+        ],
+        "costa": [
+          "STATE_GREATER_CAUCASUS",
+          "STATE_KUBAN"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_framework_sardinian",
+      "status": "candidate_core",
+      "states": [
+        "STATE_SARDINIA"
+      ],
+      "anchors": {
+        "terralba": [
+          "STATE_SARDINIA"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_framework_anglo_irish",
+      "status": "candidate_core",
+      "states": [
+        "STATE_LEINSTER"
+      ],
+      "anchors": {
+        "dublin": [
+          "STATE_LEINSTER"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_framework_ciboney",
+      "status": "candidate_core",
+      "states": [
+        "STATE_WESTERN_CUBA"
+      ],
+      "anchors": {
+        "guaniguanico": [
+          "STATE_WESTERN_CUBA"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_framework_hohokam",
+      "status": "candidate_core",
+      "states": [
+        "STATE_ARIZONA"
+      ],
+      "anchors": {
+        "tse_binestie": [
+          "STATE_ARIZONA"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_framework_cahokia",
+      "status": "candidate_core",
+      "states": [
+        "STATE_ILLINOIS"
+      ],
+      "anchors": {
+        "cahokia": [
+          "STATE_ILLINOIS"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_framework_quimbaya",
+      "status": "candidate_core",
+      "states": [
+        "STATE_CUNDINAMARCA"
+      ],
+      "anchors": {
+        "otun": [
+          "STATE_CUNDINAMARCA"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_framework_tumaco",
+      "status": "candidate_core",
+      "states": [
+        "STATE_ECUADOR"
+      ],
+      "anchors": {
+        "tumaco": [
+          "STATE_ECUADOR"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_framework_pankararu",
+      "status": "candidate_core",
+      "states": [
+        "STATE_PERNAMBUCO"
+      ],
+      "anchors": {
+        "pankararu": [
+          "STATE_PERNAMBUCO"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_framework_gula_iro",
+      "status": "candidate_core",
+      "states": [
+        "STATE_WADDAI"
+      ],
+      "anchors": {
+        "bahr_salamat": [
+          "STATE_WADDAI"
+        ]
+      }
+    },
+    {
+      "culture": "eu5_review_lozi_culture",
+      "status": "candidate_core",
+      "states": [
+        "STATE_ZAMBIA"
+      ],
+      "anchors": {
+        "zambesia_katongo": [
+          "STATE_ZAMBIA"
+        ]
+      }
+    }
+  ]
+}

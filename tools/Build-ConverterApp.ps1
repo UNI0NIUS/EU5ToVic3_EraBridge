@@ -1,14 +1,16 @@
-param([string]$Output = 'build/ConverterWorkbench', [switch]$SkipRuntime)
+param([string]$Output = 'build/ConverterWorkbench', [switch]$SkipRuntime, [switch]$IncludeLocalRules)
 $ErrorActionPreference = 'Stop'
 $projectRoot = Split-Path $PSScriptRoot -Parent
 $runtimePython = (Get-Command python -CommandType Application | Select-Object -First 1).Source
 $appOutput = [IO.Path]::GetFullPath((Join-Path $projectRoot $Output))
 if (-not $appOutput.StartsWith($projectRoot + [IO.Path]::DirectorySeparatorChar, [StringComparison]::OrdinalIgnoreCase)) { throw 'Build output must stay inside project.' }
+$taskRuleArgs = @()
+if ($IncludeLocalRules) { $taskRuleArgs += '--include-local-rules' }
 if (-not $SkipRuntime) {
-    & $runtimePython -X utf8 "$PSScriptRoot/package_converter_app.py" --root $projectRoot --out $appOutput
+    & $runtimePython -X utf8 "$PSScriptRoot/package_converter_app.py" --root $projectRoot --out $appOutput @taskRuleArgs
     if ($LASTEXITCODE -ne 0) { throw 'Runtime packaging failed.' }
 } else {
-    & $runtimePython -X utf8 "$PSScriptRoot/package_converter_app.py" --root $projectRoot --out $appOutput --refresh-code
+    & $runtimePython -X utf8 "$PSScriptRoot/package_converter_app.py" --root $projectRoot --out $appOutput --refresh-code @taskRuleArgs
     if ($LASTEXITCODE -ne 0) { throw 'Application refresh failed.' }
 }
 . "$PSScriptRoot/Enter-DevEnvironment.ps1"

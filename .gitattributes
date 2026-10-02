@@ -1,0 +1,3 @@
+# Preserve byte hashes in resource recipes and original license notices.
+/config/release_rules/** -text whitespace=cr-at-eol
+/licenses/rakaly-0.12.7/** -text -whitespace

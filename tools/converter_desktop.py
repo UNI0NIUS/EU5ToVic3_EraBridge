@@ -93,7 +93,7 @@ class Workbench:
         self.brand_icon=tk.PhotoImage(master=self.root,file=str(self.icon_dir/'erabridge-beta-32.png'))
         ttk.Label(top,image=self.brand_icon).pack(side='left',padx=(0,8))
         ttk.Label(top,text='EU5 → VICTORIA 3',style='Title.TLabel').pack(side='left')
-        for label,cmd in [('退出',self.close),('打开输出目录',self.open_output),('导出模组',self.export),('打开项目 / 结果',self.open_dialog),('导入 EU5 存档',self.convert_dialog)]:
+        for label,cmd in [('退出',self.close),('打开输出目录',self.open_output),('导出模组',self.export),('打开项目 / 结果',self.open_dialog),('准备转换规则',self.initialize_dialog),('导入 EU5 存档',self.convert_dialog)]:
             self.button(top,label,cmd,mutates=label not in ('退出','打开输出目录')).pack(side='right',padx=3)
         self.title=tk.StringVar(value='选择存档开始转换，或打开已经生成的转换结果。')
         ttk.Label(self.root,textvariable=self.title,padding=(16,0,16,8)).pack(fill='x')
@@ -720,7 +720,7 @@ class Workbench:
             current=Path(var.get()).expanduser()
             if current.exists():options['initialdir']=str(current if current.is_dir() else current.parent)
             if kind=='directory':path=filedialog.askdirectory(**options,mustexist=True)
-            else:path=filedialog.askopenfilename(**options,filetypes=[('EU5 存档','*.eu5'),('所有文件','*.*')] if kind=='save' else [('JSON 文件','*.json'),('所有文件','*.*')])
+            else:path=filedialog.askopenfilename(**options,filetypes=[('EU5 存档','*.eu5'),('所有文件','*.*')] if kind=='save' else [('V3 开局存档','*.v3'),('已解码文本','*.txt'),('所有文件','*.*')] if kind=='baseline' else [('JSON 文件','*.json'),('所有文件','*.*')])
             if path:var.set(path)
         ttk.Button(frame,text='浏览…',command=browse).grid(row=row,column=2,padx=(8,0))
         return var
@@ -744,6 +744,34 @@ class Workbench:
                 body=dict(package=package.get(),game=game.get(),name='转换世界 · '+datetime.now().strftime('%m-%d %H:%M'))
             d.destroy();self.load(body)
         ttk.Button(f,text='打开并计算风险',command=submit,style='Accent.TButton').grid(row=5,column=1,sticky='e');ttk.Button(f,text='取消',command=d.destroy).grid(row=5,column=2,padx=8)
+
+    def initialize_dialog(self):
+        if self.busy:return
+        d,f=self.dialog('准备转换规则')
+        defaults=self.app.defaults()
+        remembered=self.app.workspace/'conversion_inputs.json'
+        prior=read(remembered) if remembered.exists() else {}
+        eu5=self.path_field(f,0,'EU5 安装目录',prior.get('eu5',defaults['eu5']))
+        game=self.path_field(f,1,'Victoria 3 / game',prior.get('game',defaults['game']))
+        baseline=self.path_field(f,2,'V3 原版开局存档',prior.get('baseline',''),kind='baseline')
+        ttk.Label(f,text='首次使用时先准备规则。请在 Victoria 3 1.13.11 中禁用模组，新开 1836 年战役，暂停并立即保存。\n选择该 .v3 存档后，程序从本机游戏生成所需资源；原存档、游戏文件和已有规则保持不变。',wraplength=700).grid(row=3,column=0,columnspan=3,sticky='w',pady=12)
+        def submit():
+            inputs=dict(eu5=eu5.get().strip(),game=game.get().strip(),baseline=baseline.get().strip())
+            for key in ('eu5','game','baseline'):
+                path=Path(inputs[key])
+                if not inputs[key] or not (path.is_file() if key=='baseline' else path.is_dir()):
+                    messagebox.showerror('路径无效','请选择有效的游戏目录和基准存档。',parent=d);return
+            d.destroy()
+            def work():
+                from initialize_converter import initialize
+                return initialize(ROOT,self.app.workspace,**inputs,progress=lambda msg:self.events.put(('progress',msg)))
+            def done(result):
+                write(remembered,{**prior,**inputs,'eu5':result['eu5'],'game':result['game'],'rules':result['rules']})
+                self.status.set('规则已准备好，可导入 EU5 存档。')
+                messagebox.showinfo('规则准备完成','已生成并校验转换规则。现在可以导入 EU5 存档。',parent=self.root)
+            self.submit('准备转换规则',work,done)
+        ttk.Button(f,text='生成规则',command=submit,style='Accent.TButton').grid(row=4,column=1,sticky='e')
+        ttk.Button(f,text='取消',command=d.destroy).grid(row=4,column=2,padx=8)
 
     def convert_dialog(self):
         if self.busy:return

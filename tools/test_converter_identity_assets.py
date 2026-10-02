@@ -27,6 +27,20 @@ class IdentityAssetTests(unittest.TestCase):
             (mod/'events/test.txt').write_text('eu5_test.1 = { title = eu5_test.1.t desc = eu5_test.1.d }')
             with self.assertRaisesRegex(ValueError,'eu5_test.1.d'):verify_event_labels(mod)
 
+    def test_population_overlay_duplicate_is_removed_before_claim_reader(self):
+        from economy_model import definitions
+        with tempfile.TemporaryDirectory() as td:
+            base=Path(td);assets=base/'assets';mod=base/'mod'
+            for folder in (assets/'common/religions',mod/'common/religions'):folder.mkdir(parents=True)
+            (assets/'common/religions/zz_converter_identity.txt').write_text('faith={ heritage=new }')
+            (mod/'common/religions/zz_converter_identity.txt').write_text('faith={ heritage=new }')
+            (mod/'common/religions/zz_population_religions.txt').write_text('faith={ heritage=old } other={ heritage=keep }')
+            with self.assertRaisesRegex(ValueError,'Duplicate definition'):definitions(mod/'common/religions')
+            sync(mod,assets)
+            result=definitions(mod/'common/religions')
+            self.assertEqual(result['faith']['heritage'],'new')
+            self.assertEqual(result['other']['heritage'],'keep')
+
     def test_religion_palette_keeps_script_and_uses_native_float_rgb(self):
         original='icon = "bon.dds"\nheritage = heritage_dharmic\ncolor = { 0 0 0 }\ntaboos = { wine }'
         updated=apply('bon',original)

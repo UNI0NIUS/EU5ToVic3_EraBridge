@@ -16,7 +16,9 @@
 
 公开源码不新增分发 Python、NumPy、Pillow、Tk、MSVC、Windows SDK 或下载的 Rakaly 二进制。上游历史中已有的第三方文件保持其原来源。后续若发布可执行包，需按实际打包清单收集许可证和通知文件，并核查各 DLL 的分发条件；不能仅凭构建成功判断可公开分发。
 
-候选包整理另保存了 [librakaly 0.12.7 许可原文](../licenses/README.md)，并按 DLL 摘要核对版本。运行库通知依据实际打包文件收集；静态依赖和分发条件的核查状态见[发布准备](RELEASING.md)。
+候选包整理另保存了 [librakaly 0.12.7 许可原文](../licenses/README.md)，并按 DLL 摘要核对版本。运行库通知依据实际打包文件收集。该版本的 [Cargo.lock](https://github.com/rakaly/librakaly/blob/v0.12.7/Cargo.lock) 将 `eu5save`、`vic3save` 等固定到 pdx-tools 提交 `153678d140cc04602a0c316f601a8ab9e0882a7e`，该提交的[根许可证为 AGPL v3](https://github.com/pdx-tools/pdx-tools/blob/153678d140cc04602a0c316f601a8ab9e0882a7e/LICENSE)。相关 crate 未声明单独许可证；目前未找到预编译 DLL 的单独授权说明，因此不能把外层 MIT 当作整个 DLL 的分发依据。依赖通知清单不是授权结论，也不是完整对应源码。公开二进制前须确认授权范围或落实适用的源码与分发义务。
+
+微软运行库按实际来源及产品条款核查。[微软分发说明](https://learn.microsoft.com/en-us/cpp/windows/redistributing-visual-cpp-files?view=msvc-170) 将分发权与许可条件关联；从包缓存取得 DLL 和许可文本本身不足以证明分发资格。剩余条件见[发布准备](RELEASING.md)。
 
 ## 游戏、模组与图标
 

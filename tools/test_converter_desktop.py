@@ -65,6 +65,15 @@ class DesktopTests(unittest.TestCase):
         button=next(w for w in frame.winfo_children() if isinstance(w,ttk.Button))
         with patch('converter_desktop.filedialog.askopenfilename',return_value='D:/世界.eu5') as picker:
             button.invoke();self.assertEqual(value.get(),'D:/世界.eu5');self.assertIs(picker.call_args.kwargs['parent'],self.root)
+    def test_baseline_picker_accepts_v3_and_preserves_dialog_parent(self):
+        frame=ttk.Frame(self.root);value=self.ui.path_field(frame,0,'基准','',kind='baseline')
+        button=next(w for w in frame.winfo_children() if isinstance(w,ttk.Button))
+        with patch('converter_desktop.filedialog.askopenfilename',return_value='D:/基准.v3') as picker:
+            button.invoke()
+            self.assertEqual(value.get(),'D:/基准.v3')
+            self.assertIs(picker.call_args.kwargs['parent'],self.root)
+            self.assertIn(('V3 开局存档','*.v3'),picker.call_args.kwargs['filetypes'])
+
     def test_cancelled_picker_preserves_value(self):
         frame=ttk.Frame(self.root);value=self.ui.path_field(frame,0,'目录','existing')
         button=next(w for w in frame.winfo_children() if isinstance(w,ttk.Button))

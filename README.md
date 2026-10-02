@@ -21,9 +21,9 @@ EraBridge 将 Europa Universalis V 存档转换为 Victoria 3 候选模组，并
 
 仓库不包含游戏本体、玩家存档、基准存档、游戏提取的贴图或本机生成的完整规则包。发布条件及剩余问题见[发布准备](docs/RELEASING.md)。
 
-开发环境及构建步骤见 [构建说明](docs/BUILDING.md)。完整桌面打包还需要本地规则包及合法安装的游戏数据；仅克隆仓库不足以完成端到端转换。
+开发环境及构建步骤见 [构建说明](docs/BUILDING.md)。桌面包包含规则配方；首次转换时从使用者合法安装的游戏和自备基准存档生成所需资源。
 
-已有本地构建时，双击 `Open-ConverterWorkbench.cmd`，或运行 `build/ConverterWorkbench/EU5Converter.exe`。导入存档时指定游戏目录和规则包，完成转换后在地图上检查，再导出模组。新模组应在 Victoria 3 中新开战役验证。
+已有本地构建时，双击 `Open-ConverterWorkbench.cmd`，或运行 `build/ConverterWorkbench/EU5Converter.exe`。先点击“准备转换规则”，选择两款游戏和自备的 V3 原版开局存档，再导入 EU5 存档。转换完成后在地图上检查并导出模组。新模组应在 Victoria 3 中新开战役验证。
 
 ## 文档
 

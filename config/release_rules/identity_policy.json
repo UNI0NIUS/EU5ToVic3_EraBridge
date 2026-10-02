@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "revision": "m5-framework-test33",
+  "mapping_precedence": [
+    "existing cross-save reviews",
+    "explicit M5 identity corrections",
+    "explicit M5 framework decisions"
+  ],
+  "ordinary_homelands": "historical_core_with_current_local_presence",
+  "migrant_homelands": "strict_statewide_majority",
+  "unknown_identity": "stop_for_review",
+  "limitations": "Name pools and appearance are inherited. Archaeological continuity is alternate-history survival from the source save; uncertain language traits are mechanical distinctions, not attested language families.",
+  "date_sensitive": {
+    "eu5_framework_lozi": "Pre-Makololo Luyi design; source-language setting retained, not a simulated historical language shift."
+  },
+  "dated_mappings": {
+    "lozi_culture": {
+      "from_year": 1830,
+      "target": "eu5_review_lozi_culture",
+      "basis": "Conservative cutoff for the explicitly pre-1830 Luyi design; retain existing cross-save source identity thereafter, without simulating the date of language change."
+    }
+  }
+}

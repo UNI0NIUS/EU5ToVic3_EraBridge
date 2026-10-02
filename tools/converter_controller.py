@@ -39,8 +39,8 @@ class App:
         for p in sorted((self.workspace/'runs').glob('*/complete/package_report.json'),reverse=True):
             r=read(p);generated.append(dict(path=str(p.parent),name=r.get('mod_name','通用流水线转换结果'),date=r.get('source_date','')))
         candidates=generated+candidates
-        return dict(game=d.get('game','D:/Steam/steamapps/common/Victoria 3/game'),
-                    eu5=d.get('eu5','D:/Steam/steamapps/common/Europa Universalis V'),
+        return dict(game=d.get('game',''),
+                    eu5=d.get('eu5',''),
                     candidates=candidates,settings=DEFAULTS,projects=self.projects(),workspace=str(self.workspace))
 
     def save(self):

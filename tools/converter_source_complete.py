@@ -24,6 +24,10 @@ def build():
  prior=ASSETS
  identity_assets(mod,prior)
  shutil.copytree(RUN/'demographic/migrant_assets',mod,dirs_exist_ok=True)
+ # Population overlays can retain older definitions with the same identity keys.
+ # Normalize before Target/source-claim readers reject duplicate definitions.
+ from converter_identity_assets import sync
+ sync(mod,ASSETS)
  from v3_startup_validation import culture_modifiers,flag_assets
  culture_modifiers(GAME,mod,write=True)
  flag_assets(GAME,mod,EU5)

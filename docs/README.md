@@ -14,6 +14,7 @@ EraBridge 0.12.2 的使用、实现与发布说明。首次使用先读[桌面�
 | [C++ 命名约定](../EU5ToVic3/NamingConvention.txt) | Scraper、Parser、Mapper、Loader、Manager 的职责 |
 | [验证记录](PUBLICATION.md) | 已运行的检查及尚未覆盖的范围 |
 | [许可说明](LICENSING.md) | 上游许可、第三方依赖与素材分发条件 |
+| [独立验收](ACCEPTANCE.md) | 完整性、启动、转换与导出验收工具，及游戏内检查 |
 | [Release 准备](RELEASING.md) | 候选包生成、验收和上传流程 |
 | [发布说明草稿](releases/v0.12.2-beta.1.md) | 首个便携版拟用的公开说明 |
 

@@ -55,6 +55,7 @@ __pycache__/
 !/docs/LICENSING.md
 !/docs/PUBLICATION.md
 !/docs/RELEASING.md
+!/docs/ACCEPTANCE.md
 !/docs/releases/
 /docs/releases/*
 !/docs/releases/v0.12.2-beta.1.md

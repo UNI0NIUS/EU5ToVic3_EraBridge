@@ -48,10 +48,10 @@ def seal(out,archive=None):
             for p in sorted(payload)+[out/'build_manifest.json']:z.write(p,out.name+'/'+p.relative_to(out).as_posix())
         print(str(Path(archive).resolve()),flush=True)
 
-def refresh(root,out):
+def refresh(root,out,include_local_rules=False):
     root,out=Path(root).resolve(),Path(out).resolve()
     if not (out/'runtime/python.exe').exists():raise ValueError('No existing packaged runtime')
-    refresh_rules(root,out)
+    if include_local_rules:refresh_rules(root,out)
     for path in (root/'tools').glob('*.py'):
         if not path.name.startswith('test_'):shutil.copy2(path,out/'tools'/path.name)
     shutil.copytree(root/'tools/converter_ui',out/'tools/converter_ui',dirs_exist_ok=True)
@@ -60,12 +60,10 @@ def refresh(root,out):
     (out/'docs').mkdir(exist_ok=True)
     shutil.copy2(root/'docs/CONVERTER_WORKBENCH.md',out/'docs/CONVERTER_WORKBENCH.md')
     shutil.copy2(root/'docs/CONVERTER_SOURCE_CORES.md',out/'docs/CONVERTER_SOURCE_CORES.md')
-    paths=[str(p.parent.resolve()) for p in sorted((root/'.local/converter/runs').glob('*/complete/package_report.json'),reverse=True)]
-    paths+=[str((root/'.local/conversion/1337-20261002/complete').resolve())]
-    write(out/'data/defaults.json',dict(candidate_paths=paths,game='D:/Steam/steamapps/common/Victoria 3/game',eu5='D:/Steam/steamapps/common/Europa Universalis V'))
-    (out/'README.txt').write_text('EU5 → Victoria 3 桌面转换器 0.12.2\n\n双击 EU5Converter.exe 打开独立桌面窗口。无需浏览器，无需另装 Python。\n完整保留软件目录，不要单独复制 EXE。\n支持原始存档转换、地图选择、参数调试、合并、撤销和导出。\n耕地 ≤ 3、严重失业和食物不足分别提醒。\n操作失败弹出具体原因并保存日志。详细说明见 docs/CONVERTER_WORKBENCH.md。\n',encoding='utf-8')
+    write(out/'data/defaults.json',dict(candidate_paths=[],game='',eu5=''))
+    (out/'README.txt').write_text('EU5 → Victoria 3 桌面转换器 0.12.2\n\n双击 EU5Converter.exe 打开独立桌面窗口。无需浏览器，无需另装 Python。\n完整保留软件目录，不要单独复制 EXE。\n首次使用点击“准备转换规则”，选择自己的游戏安装和 V3 原版 1836.1.1 开局存档。\n支持原始存档转换、地图选择、参数调试、合并、撤销和导出。\n耕地 ≤ 3、严重失业和食物不足分别提醒。\n操作失败弹出具体原因并保存日志。详细说明见 docs/CONVERTER_WORKBENCH.md。\n',encoding='utf-8')
 
-def package(root,out):
+def package(root,out,include_local_rules=False):
     root,out=Path(root).resolve(),Path(out).resolve();base=Path(sys.base_prefix)
     if out.exists():raise ValueError('Distribution already exists')
     runtime=out/'runtime';runtime.mkdir(parents=True)
@@ -114,22 +112,17 @@ def package(root,out):
     native=out/'native';native.mkdir()
     for name in ('EU5ToVic3Converter.exe','rakaly.dll'):
         shutil.copy2(root/'build/Release-Windows/EU5ToVic3'/name,native/name)
-    shutil.copytree(root/'.local/converter/rules',out/'data/rules')
-    rules=read(out/'data/rules/manifest.json')
-    # Keep reference saves external: do not redistribute game data as converter binaries.
-    write(out/'data/rules/manifest.json',rules)
-    paths=[str(p.parent.resolve()) for p in sorted((root/'.local/converter/runs').glob('*/complete/package_report.json'),reverse=True)]
-    paths+=[str((root/'.local/conversion/1337-20261002/complete').resolve())]
-    write(out/'data/defaults.json',dict(candidate_paths=paths,game='D:/Steam/steamapps/common/Victoria 3/game',eu5='D:/Steam/steamapps/common/Europa Universalis V'))
+    if include_local_rules:refresh_rules(root,out)
+    write(out/'data/defaults.json',dict(candidate_paths=[],game='',eu5=''))
     shutil.copy2(root/'LICENSE',out/'LICENSE')
-    (out/'README.txt').write_text('EU5 → Victoria 3 桌面转换器 0.12.2\n\n双击 EU5Converter.exe 打开独立桌面窗口。无需浏览器，无需另装 Python。\n请完整保留软件目录。软件关闭与详细说明见 docs/CONVERTER_WORKBENCH.md。\n',encoding='utf-8')
+    (out/'README.txt').write_text('EU5 → Victoria 3 桌面转换器 0.12.2\n\n双击 EU5Converter.exe 打开独立桌面窗口。无需浏览器，无需另装 Python。\n首次使用点击“准备转换规则”，从自己的游戏安装和 V3 原版开局存档生成资源。\n请完整保留软件目录。软件关闭与详细说明见 docs/CONVERTER_WORKBENCH.md。\n',encoding='utf-8')
     (out/'docs').mkdir()
     if (root/'docs/CONVERTER_WORKBENCH.md').exists():shutil.copy2(root/'docs/CONVERTER_WORKBENCH.md',out/'docs/CONVERTER_WORKBENCH.md')
     write(out/'build_manifest.json',dict(python=sys.version,files={p.relative_to(out).as_posix():digest(p) for p in out.rglob('*') if p.is_file()}))
     print(str(out),flush=True)
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser();p.add_argument('--root',type=Path,required=True);p.add_argument('--out',type=Path,required=True);p.add_argument('--refresh-code',action='store_true');p.add_argument('--seal',action='store_true');p.add_argument('--archive',type=Path)
+    p=argparse.ArgumentParser();p.add_argument('--root',type=Path,required=True);p.add_argument('--out',type=Path,required=True);p.add_argument('--refresh-code',action='store_true');p.add_argument('--seal',action='store_true');p.add_argument('--archive',type=Path);p.add_argument('--include-local-rules',action='store_true')
     a=p.parse_args()
     if a.seal:seal(a.out,a.archive)
-    else:(refresh if a.refresh_code else package)(a.root,a.out)
+    else:(refresh if a.refresh_code else package)(a.root,a.out,a.include_local_rules)

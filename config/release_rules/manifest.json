@@ -1,0 +1,22 @@
+{
+  "source_map_sha256": "bfbb8840343560367240f2b29e1e0621292aaa81616c06827c7fe566e2ec2b83",
+  "target_map_sha256": "e3911fd80a40c6b297a68f66e898d9b187863b64483a9608123606143ee2ea78",
+  "terrain_override_provinces": [
+    "x46467A",
+    "x800111",
+    "xB02837"
+  ],
+  "schema": 1,
+  "game_versions": {
+    "eu5": "1.3.11",
+    "v3": "1.13.11"
+  },
+  "files": {
+    "assets.json": "a56ae9897325ebf5afdd8566db2048fe3cca03da1c5e1825656cd0442301eae1",
+    "config_profile.json": "70145bac654f8e6a55122b60e37425c87794f7f23419c9db702cc8a0e34246ce",
+    "culture_mapping.json": "16ae1323a904d9f7087ffce0e14f77f1c8b56fe4c06e8982f70e77198c33a535",
+    "identity_homelands.json": "d48e2a9762813e63cb68ee917049952d153a77fd9fc650ce1dbb9f3e0df9ea86",
+    "identity_policy.json": "bae022c4824cbfd6d24573243075b545114c4707e34e8de7d5c06762752e29fd",
+    "terrain_reviews.json": "40f7e864006f91998135ff457b9a15d960f3f6669fe0d046c6af173b0d507cbe"
+  }
+}

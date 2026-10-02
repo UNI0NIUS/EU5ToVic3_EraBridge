@@ -1,0 +1,3 @@
+-r requirements.txt
+# Geometry workbench tests; not included in the portable runtime.
+scipy==1.16.3

@@ -1,0 +1,1410 @@
+{
+  "schema": "terrain-references-v1",
+  "source_map_sha256": "bfbb8840343560367240f2b29e1e0621292aaa81616c06827c7fe566e2ec2b83",
+  "target_map_sha256": "e3911fd80a40c6b297a68f66e898d9b187863b64483a9608123606143ee2ea78",
+  "revision": 56,
+  "entries": {
+    "x014759": {
+      "status": "mapped",
+      "source_location": "yuzhny",
+      "reference_location": "pustozersk",
+      "note": ""
+    },
+    "x0A75FF": {
+      "status": "mapped",
+      "source_location": "yuzhny",
+      "reference_location": "pustozersk",
+      "note": ""
+    },
+    "x143579": {
+      "status": "mapped",
+      "source_location": "yuzhny",
+      "reference_location": "pustozersk",
+      "note": ""
+    },
+    "x14DCCC": {
+      "status": "mapped",
+      "source_location": "yuzhny",
+      "reference_location": "pustozersk",
+      "note": ""
+    },
+    "x1D0B2C": {
+      "status": "mapped",
+      "source_location": "yuzhny",
+      "reference_location": "pustozersk",
+      "note": ""
+    },
+    "x2B00F6": {
+      "status": "mapped",
+      "source_location": "yuzhny",
+      "reference_location": "pustozersk",
+      "note": ""
+    },
+    "x2B0D72": {
+      "status": "mapped",
+      "source_location": "yuzhny",
+      "reference_location": "pustozersk",
+      "note": ""
+    },
+    "x33301E": {
+      "status": "mapped",
+      "source_location": "yuzhny",
+      "reference_location": "pustozersk",
+      "note": ""
+    },
+    "x36C073": {
+      "status": "mapped",
+      "source_location": "yuzhny",
+      "reference_location": "pustozersk",
+      "note": ""
+    },
+    "x36D215": {
+      "status": "mapped",
+      "source_location": "yuzhny",
+      "reference_location": "pustozersk",
+      "note": ""
+    },
+    "x3CAECB": {
+      "status": "mapped",
+      "source_location": "yuzhny",
+      "reference_location": "pustozersk",
+      "note": ""
+    },
+    "x3F32BC": {
+      "status": "mapped",
+      "source_location": "yuzhny",
+      "reference_location": "pustozersk",
+      "note": ""
+    },
+    "x46B48C": {
+      "status": "mapped",
+      "source_location": "yuzhny",
+      "reference_location": "pustozersk",
+      "note": ""
+    },
+    "x4C8F3C": {
+      "status": "mapped",
+      "source_location": "yuzhny",
+      "reference_location": "pustozersk",
+      "note": ""
+    },
+    "x4F0008": {
+      "status": "mapped",
+      "source_location": "yuzhny",
+      "reference_location": "pustozersk",
+      "note": ""
+    },
+    "x51E8BE": {
+      "status": "mapped",
+      "source_location": "yuzhny",
+      "reference_location": "pustozersk",
+      "note": ""
+    },
+    "x5BAD22": {
+      "status": "mapped",
+      "source_location": "yuzhny",
+      "reference_location": "pustozersk",
+      "note": ""
+    },
+    "x65E25D": {
+      "status": "mapped",
+      "source_location": "yuzhny",
+      "reference_location": "pustozersk",
+      "note": ""
+    },
+    "x71A859": {
+      "status": "mapped",
+      "source_location": "yuzhny",
+      "reference_location": "pustozersk",
+      "note": ""
+    },
+    "x773101": {
+      "status": "mapped",
+      "source_location": "yuzhny",
+      "reference_location": "pustozersk",
+      "note": ""
+    },
+    "x799E1B": {
+      "status": "mapped",
+      "source_location": "yuzhny",
+      "reference_location": "pustozersk",
+      "note": ""
+    },
+    "x85A43D": {
+      "status": "mapped",
+      "source_location": "yuzhny",
+      "reference_location": "pustozersk",
+      "note": ""
+    },
+    "x871046": {
+      "status": "mapped",
+      "source_location": "yuzhny",
+      "reference_location": "pustozersk",
+      "note": ""
+    },
+    "x8BC648": {
+      "status": "mapped",
+      "source_location": "yuzhny",
+      "reference_location": "pustozersk",
+      "note": ""
+    },
+    "x918387": {
+      "status": "mapped",
+      "source_location": "yuzhny",
+      "reference_location": "pustozersk",
+      "note": ""
+    },
+    "x92E397": {
+      "status": "mapped",
+      "source_location": "yuzhny",
+      "reference_location": "pustozersk",
+      "note": ""
+    },
+    "x949B67": {
+      "status": "mapped",
+      "source_location": "yuzhny",
+      "reference_location": "pustozersk",
+      "note": ""
+    },
+    "x9E8DF5": {
+      "status": "mapped",
+      "source_location": "yuzhny",
+      "reference_location": "pustozersk",
+      "note": ""
+    },
+    "xA01669": {
+      "status": "mapped",
+      "source_location": "yuzhny",
+      "reference_location": "pustozersk",
+      "note": ""
+    },
+    "xA26F82": {
+      "status": "mapped",
+      "source_location": "yuzhny",
+      "reference_location": "pustozersk",
+      "note": ""
+    },
+    "xA2A80D": {
+      "status": "mapped",
+      "source_location": "yuzhny",
+      "reference_location": "pustozersk",
+      "note": ""
+    },
+    "xA409C0": {
+      "status": "mapped",
+      "source_location": "yuzhny",
+      "reference_location": "pustozersk",
+      "note": ""
+    },
+    "xA8DA11": {
+      "status": "mapped",
+      "source_location": "yuzhny",
+      "reference_location": "pustozersk",
+      "note": ""
+    },
+    "xAC3CC6": {
+      "status": "mapped",
+      "source_location": "yuzhny",
+      "reference_location": "pustozersk",
+      "note": ""
+    },
+    "xB79F41": {
+      "status": "mapped",
+      "source_location": "yuzhny",
+      "reference_location": "pustozersk",
+      "note": ""
+    },
+    "xBB28DE": {
+      "status": "mapped",
+      "source_location": "yuzhny",
+      "reference_location": "pustozersk",
+      "note": ""
+    },
+    "xC34748": {
+      "status": "mapped",
+      "source_location": "yuzhny",
+      "reference_location": "pustozersk",
+      "note": ""
+    },
+    "xC7EB17": {
+      "status": "mapped",
+      "source_location": "yuzhny",
+      "reference_location": "pustozersk",
+      "note": ""
+    },
+    "xCAA6E2": {
+      "status": "mapped",
+      "source_location": "yuzhny",
+      "reference_location": "pustozersk",
+      "note": ""
+    },
+    "xCC4416": {
+      "status": "mapped",
+      "source_location": "yuzhny",
+      "reference_location": "pustozersk",
+      "note": ""
+    },
+    "xCD2826": {
+      "status": "mapped",
+      "source_location": "yuzhny",
+      "reference_location": "pustozersk",
+      "note": ""
+    },
+    "xCE989F": {
+      "status": "mapped",
+      "source_location": "yuzhny",
+      "reference_location": "pustozersk",
+      "note": ""
+    },
+    "xD19787": {
+      "status": "mapped",
+      "source_location": "yuzhny",
+      "reference_location": "pustozersk",
+      "note": ""
+    },
+    "xD662A8": {
+      "status": "mapped",
+      "source_location": "yuzhny",
+      "reference_location": "pustozersk",
+      "note": ""
+    },
+    "xD6FA07": {
+      "status": "mapped",
+      "source_location": "yuzhny",
+      "reference_location": "pustozersk",
+      "note": ""
+    },
+    "xFAA187": {
+      "status": "mapped",
+      "source_location": "yuzhny",
+      "reference_location": "pustozersk",
+      "note": ""
+    },
+    "xFB0270": {
+      "status": "mapped",
+      "source_location": "yuzhny",
+      "reference_location": "pustozersk",
+      "note": ""
+    },
+    "xFF3B52": {
+      "status": "mapped",
+      "source_location": "yuzhny",
+      "reference_location": "pustozersk",
+      "note": ""
+    },
+    "x01B54E": {
+      "status": "mapped",
+      "source_location": "arctic_archipelago",
+      "reference_location": "qurliqtuq",
+      "note": ""
+    },
+    "x051790": {
+      "status": "mapped",
+      "source_location": "arctic_archipelago",
+      "reference_location": "qurliqtuq",
+      "note": ""
+    },
+    "x147220": {
+      "status": "mapped",
+      "source_location": "arctic_archipelago",
+      "reference_location": "qurliqtuq",
+      "note": ""
+    },
+    "x15BB4F": {
+      "status": "mapped",
+      "source_location": "arctic_archipelago",
+      "reference_location": "qurliqtuq",
+      "note": ""
+    },
+    "x1E703F": {
+      "status": "mapped",
+      "source_location": "arctic_archipelago",
+      "reference_location": "qurliqtuq",
+      "note": ""
+    },
+    "x20438A": {
+      "status": "mapped",
+      "source_location": "arctic_archipelago",
+      "reference_location": "qurliqtuq",
+      "note": ""
+    },
+    "x2AFDCF": {
+      "status": "mapped",
+      "source_location": "arctic_archipelago",
+      "reference_location": "qurliqtuq",
+      "note": ""
+    },
+    "x2D0E85": {
+      "status": "mapped",
+      "source_location": "arctic_archipelago",
+      "reference_location": "qurliqtuq",
+      "note": ""
+    },
+    "x3A066D": {
+      "status": "mapped",
+      "source_location": "arctic_archipelago",
+      "reference_location": "qurliqtuq",
+      "note": ""
+    },
+    "x3E101E": {
+      "status": "mapped",
+      "source_location": "arctic_archipelago",
+      "reference_location": "qurliqtuq",
+      "note": ""
+    },
+    "x43EF0F": {
+      "status": "mapped",
+      "source_location": "arctic_archipelago",
+      "reference_location": "qurliqtuq",
+      "note": ""
+    },
+    "x44BDE0": {
+      "status": "mapped",
+      "source_location": "arctic_archipelago",
+      "reference_location": "qurliqtuq",
+      "note": ""
+    },
+    "x44EB96": {
+      "status": "mapped",
+      "source_location": "arctic_archipelago",
+      "reference_location": "qurliqtuq",
+      "note": ""
+    },
+    "x4AB399": {
+      "status": "mapped",
+      "source_location": "arctic_archipelago",
+      "reference_location": "qurliqtuq",
+      "note": ""
+    },
+    "x538E1E": {
+      "status": "mapped",
+      "source_location": "arctic_archipelago",
+      "reference_location": "qurliqtuq",
+      "note": ""
+    },
+    "x57E690": {
+      "status": "mapped",
+      "source_location": "arctic_archipelago",
+      "reference_location": "qurliqtuq",
+      "note": ""
+    },
+    "x5D3D51": {
+      "status": "mapped",
+      "source_location": "arctic_archipelago",
+      "reference_location": "qurliqtuq",
+      "note": ""
+    },
+    "x5E029F": {
+      "status": "mapped",
+      "source_location": "arctic_archipelago",
+      "reference_location": "qurliqtuq",
+      "note": ""
+    },
+    "x63E1C9": {
+      "status": "mapped",
+      "source_location": "arctic_archipelago",
+      "reference_location": "qurliqtuq",
+      "note": ""
+    },
+    "x6797A2": {
+      "status": "mapped",
+      "source_location": "arctic_archipelago",
+      "reference_location": "qurliqtuq",
+      "note": ""
+    },
+    "x6AFCEE": {
+      "status": "mapped",
+      "source_location": "arctic_archipelago",
+      "reference_location": "qurliqtuq",
+      "note": ""
+    },
+    "x71A0CD": {
+      "status": "mapped",
+      "source_location": "arctic_archipelago",
+      "reference_location": "qurliqtuq",
+      "note": ""
+    },
+    "x7885BB": {
+      "status": "mapped",
+      "source_location": "arctic_archipelago",
+      "reference_location": "qurliqtuq",
+      "note": ""
+    },
+    "x7B2628": {
+      "status": "mapped",
+      "source_location": "arctic_archipelago",
+      "reference_location": "qurliqtuq",
+      "note": ""
+    },
+    "x8DFDBD": {
+      "status": "mapped",
+      "source_location": "arctic_archipelago",
+      "reference_location": "qurliqtuq",
+      "note": ""
+    },
+    "x943750": {
+      "status": "mapped",
+      "source_location": "arctic_archipelago",
+      "reference_location": "qurliqtuq",
+      "note": ""
+    },
+    "x976D8B": {
+      "status": "mapped",
+      "source_location": "arctic_archipelago",
+      "reference_location": "qurliqtuq",
+      "note": ""
+    },
+    "xA0816F": {
+      "status": "mapped",
+      "source_location": "arctic_archipelago",
+      "reference_location": "qurliqtuq",
+      "note": ""
+    },
+    "xA4BD38": {
+      "status": "mapped",
+      "source_location": "arctic_archipelago",
+      "reference_location": "qurliqtuq",
+      "note": ""
+    },
+    "xA53899": {
+      "status": "mapped",
+      "source_location": "arctic_archipelago",
+      "reference_location": "qurliqtuq",
+      "note": ""
+    },
+    "xA8D5EA": {
+      "status": "mapped",
+      "source_location": "arctic_archipelago",
+      "reference_location": "qurliqtuq",
+      "note": ""
+    },
+    "xB11019": {
+      "status": "mapped",
+      "source_location": "arctic_archipelago",
+      "reference_location": "qurliqtuq",
+      "note": ""
+    },
+    "xB326D4": {
+      "status": "mapped",
+      "source_location": "arctic_archipelago",
+      "reference_location": "qurliqtuq",
+      "note": ""
+    },
+    "xB6D96A": {
+      "status": "mapped",
+      "source_location": "arctic_archipelago",
+      "reference_location": "qurliqtuq",
+      "note": ""
+    },
+    "xBA596D": {
+      "status": "mapped",
+      "source_location": "arctic_archipelago",
+      "reference_location": "qurliqtuq",
+      "note": ""
+    },
+    "xBA7ECF": {
+      "status": "mapped",
+      "source_location": "arctic_archipelago",
+      "reference_location": "qurliqtuq",
+      "note": ""
+    },
+    "xC1B54F": {
+      "status": "mapped",
+      "source_location": "arctic_archipelago",
+      "reference_location": "qurliqtuq",
+      "note": ""
+    },
+    "xC32B73": {
+      "status": "mapped",
+      "source_location": "arctic_archipelago",
+      "reference_location": "qurliqtuq",
+      "note": ""
+    },
+    "xCBB064": {
+      "status": "mapped",
+      "source_location": "arctic_archipelago",
+      "reference_location": "qurliqtuq",
+      "note": ""
+    },
+    "xDDCE1D": {
+      "status": "mapped",
+      "source_location": "arctic_archipelago",
+      "reference_location": "qurliqtuq",
+      "note": ""
+    },
+    "xE4547A": {
+      "status": "mapped",
+      "source_location": "arctic_archipelago",
+      "reference_location": "qurliqtuq",
+      "note": ""
+    },
+    "xE7ABE7": {
+      "status": "mapped",
+      "source_location": "arctic_archipelago",
+      "reference_location": "qurliqtuq",
+      "note": ""
+    },
+    "xEB4799": {
+      "status": "mapped",
+      "source_location": "arctic_archipelago",
+      "reference_location": "qurliqtuq",
+      "note": ""
+    },
+    "xEF0BBF": {
+      "status": "mapped",
+      "source_location": "arctic_archipelago",
+      "reference_location": "qurliqtuq",
+      "note": ""
+    },
+    "xF508EB": {
+      "status": "mapped",
+      "source_location": "arctic_archipelago",
+      "reference_location": "qurliqtuq",
+      "note": ""
+    },
+    "xF9F7D6": {
+      "status": "mapped",
+      "source_location": "arctic_archipelago",
+      "reference_location": "qurliqtuq",
+      "note": ""
+    },
+    "x045D36": {
+      "status": "mapped",
+      "source_location": "southampton_island",
+      "reference_location": "kinngait",
+      "note": ""
+    },
+    "x144D66": {
+      "status": "mapped",
+      "source_location": "southampton_island",
+      "reference_location": "kinngait",
+      "note": ""
+    },
+    "x16E611": {
+      "status": "mapped",
+      "source_location": "southampton_island",
+      "reference_location": "kinngait",
+      "note": ""
+    },
+    "x1A3F4A": {
+      "status": "mapped",
+      "source_location": "southampton_island",
+      "reference_location": "kinngait",
+      "note": ""
+    },
+    "x1F2C8D": {
+      "status": "mapped",
+      "source_location": "southampton_island",
+      "reference_location": "kinngait",
+      "note": ""
+    },
+    "x24DF76": {
+      "status": "mapped",
+      "source_location": "southampton_island",
+      "reference_location": "kinngait",
+      "note": ""
+    },
+    "x2B377B": {
+      "status": "mapped",
+      "source_location": "southampton_island",
+      "reference_location": "kinngait",
+      "note": ""
+    },
+    "x2E1DD5": {
+      "status": "mapped",
+      "source_location": "southampton_island",
+      "reference_location": "kinngait",
+      "note": ""
+    },
+    "x326C03": {
+      "status": "mapped",
+      "source_location": "southampton_island",
+      "reference_location": "kinngait",
+      "note": ""
+    },
+    "x356824": {
+      "status": "mapped",
+      "source_location": "southampton_island",
+      "reference_location": "kinngait",
+      "note": ""
+    },
+    "x361ECD": {
+      "status": "mapped",
+      "source_location": "southampton_island",
+      "reference_location": "kinngait",
+      "note": ""
+    },
+    "x693BF1": {
+      "status": "mapped",
+      "source_location": "southampton_island",
+      "reference_location": "kinngait",
+      "note": ""
+    },
+    "x7058A8": {
+      "status": "mapped",
+      "source_location": "southampton_island",
+      "reference_location": "kinngait",
+      "note": ""
+    },
+    "x803416": {
+      "status": "mapped",
+      "source_location": "southampton_island",
+      "reference_location": "kinngait",
+      "note": ""
+    },
+    "x8B9A07": {
+      "status": "mapped",
+      "source_location": "southampton_island",
+      "reference_location": "kinngait",
+      "note": ""
+    },
+    "x8DBCCF": {
+      "status": "mapped",
+      "source_location": "southampton_island",
+      "reference_location": "kinngait",
+      "note": ""
+    },
+    "x8EF665": {
+      "status": "mapped",
+      "source_location": "southampton_island",
+      "reference_location": "kinngait",
+      "note": ""
+    },
+    "x9065F6": {
+      "status": "mapped",
+      "source_location": "southampton_island",
+      "reference_location": "kinngait",
+      "note": ""
+    },
+    "xA0C61A": {
+      "status": "mapped",
+      "source_location": "southampton_island",
+      "reference_location": "kinngait",
+      "note": ""
+    },
+    "xA17BEC": {
+      "status": "mapped",
+      "source_location": "southampton_island",
+      "reference_location": "kinngait",
+      "note": ""
+    },
+    "xA45531": {
+      "status": "mapped",
+      "source_location": "southampton_island",
+      "reference_location": "kinngait",
+      "note": ""
+    },
+    "xA6AAC4": {
+      "status": "mapped",
+      "source_location": "southampton_island",
+      "reference_location": "kinngait",
+      "note": ""
+    },
+    "xB76543": {
+      "status": "mapped",
+      "source_location": "southampton_island",
+      "reference_location": "kinngait",
+      "note": ""
+    },
+    "xB7E39B": {
+      "status": "mapped",
+      "source_location": "southampton_island",
+      "reference_location": "kinngait",
+      "note": ""
+    },
+    "xC859B3": {
+      "status": "mapped",
+      "source_location": "southampton_island",
+      "reference_location": "kinngait",
+      "note": ""
+    },
+    "xC98D90": {
+      "status": "mapped",
+      "source_location": "southampton_island",
+      "reference_location": "kinngait",
+      "note": ""
+    },
+    "xDBB0CD": {
+      "status": "mapped",
+      "source_location": "southampton_island",
+      "reference_location": "kinngait",
+      "note": ""
+    },
+    "xF045C3": {
+      "status": "mapped",
+      "source_location": "southampton_island",
+      "reference_location": "kinngait",
+      "note": ""
+    },
+    "xF0E62B": {
+      "status": "mapped",
+      "source_location": "southampton_island",
+      "reference_location": "kinngait",
+      "note": ""
+    },
+    "xF53F21": {
+      "status": "mapped",
+      "source_location": "southampton_island",
+      "reference_location": "kinngait",
+      "note": ""
+    },
+    "x051F32": {
+      "status": "mapped",
+      "source_location": "baffin_island",
+      "reference_location": "pangnirtung",
+      "note": ""
+    },
+    "x10D98F": {
+      "status": "mapped",
+      "source_location": "baffin_island",
+      "reference_location": "pangnirtung",
+      "note": ""
+    },
+    "x18D607": {
+      "status": "mapped",
+      "source_location": "baffin_island",
+      "reference_location": "pangnirtung",
+      "note": ""
+    },
+    "x330AFA": {
+      "status": "mapped",
+      "source_location": "baffin_island",
+      "reference_location": "pangnirtung",
+      "note": ""
+    },
+    "x409145": {
+      "status": "mapped",
+      "source_location": "baffin_island",
+      "reference_location": "pangnirtung",
+      "note": ""
+    },
+    "x4389E1": {
+      "status": "mapped",
+      "source_location": "baffin_island",
+      "reference_location": "pangnirtung",
+      "note": ""
+    },
+    "x46174B": {
+      "status": "mapped",
+      "source_location": "baffin_island",
+      "reference_location": "pangnirtung",
+      "note": ""
+    },
+    "x48E7BF": {
+      "status": "mapped",
+      "source_location": "baffin_island",
+      "reference_location": "pangnirtung",
+      "note": ""
+    },
+    "x4FF0CD": {
+      "status": "mapped",
+      "source_location": "baffin_island",
+      "reference_location": "pangnirtung",
+      "note": ""
+    },
+    "x534C6C": {
+      "status": "mapped",
+      "source_location": "baffin_island",
+      "reference_location": "pangnirtung",
+      "note": ""
+    },
+    "x547339": {
+      "status": "mapped",
+      "source_location": "baffin_island",
+      "reference_location": "pangnirtung",
+      "note": ""
+    },
+    "x70C845": {
+      "status": "mapped",
+      "source_location": "baffin_island",
+      "reference_location": "pangnirtung",
+      "note": ""
+    },
+    "x8375B9": {
+      "status": "mapped",
+      "source_location": "baffin_island",
+      "reference_location": "pangnirtung",
+      "note": ""
+    },
+    "x9E9A42": {
+      "status": "mapped",
+      "source_location": "baffin_island",
+      "reference_location": "pangnirtung",
+      "note": ""
+    },
+    "xA9F85A": {
+      "status": "mapped",
+      "source_location": "baffin_island",
+      "reference_location": "pangnirtung",
+      "note": ""
+    },
+    "xB9072A": {
+      "status": "mapped",
+      "source_location": "baffin_island",
+      "reference_location": "pangnirtung",
+      "note": ""
+    },
+    "x194628": {
+      "status": "mapped",
+      "source_location": "baffin_island",
+      "reference_location": "kinngait",
+      "note": ""
+    },
+    "x5D6554": {
+      "status": "mapped",
+      "source_location": "baffin_island",
+      "reference_location": "kinngait",
+      "note": ""
+    },
+    "x776735": {
+      "status": "mapped",
+      "source_location": "baffin_island",
+      "reference_location": "kinngait",
+      "note": ""
+    },
+    "x803359": {
+      "status": "mapped",
+      "source_location": "baffin_island",
+      "reference_location": "kinngait",
+      "note": ""
+    },
+    "xB050B6": {
+      "status": "mapped",
+      "source_location": "baffin_island",
+      "reference_location": "kinngait",
+      "note": ""
+    },
+    "xB5EFD2": {
+      "status": "mapped",
+      "source_location": "baffin_island",
+      "reference_location": "kinngait",
+      "note": ""
+    },
+    "xBD856D": {
+      "status": "mapped",
+      "source_location": "baffin_island",
+      "reference_location": "kinngait",
+      "note": ""
+    },
+    "xE7DD40": {
+      "status": "mapped",
+      "source_location": "baffin_island",
+      "reference_location": "kinngait",
+      "note": ""
+    },
+    "x0BAB3C": {
+      "status": "mapped",
+      "source_location": "eiriksfjord",
+      "reference_location": "kangeq",
+      "note": ""
+    },
+    "x1BAB17": {
+      "status": "mapped",
+      "source_location": "eiriksfjord",
+      "reference_location": "kangeq",
+      "note": ""
+    },
+    "x59D1D2": {
+      "status": "mapped",
+      "source_location": "eiriksfjord",
+      "reference_location": "kangeq",
+      "note": ""
+    },
+    "x5B326C": {
+      "status": "mapped",
+      "source_location": "eiriksfjord",
+      "reference_location": "kangeq",
+      "note": ""
+    },
+    "x813BEC": {
+      "status": "mapped",
+      "source_location": "eiriksfjord",
+      "reference_location": "kangeq",
+      "note": ""
+    },
+    "x82F13A": {
+      "status": "mapped",
+      "source_location": "eiriksfjord",
+      "reference_location": "kangeq",
+      "note": ""
+    },
+    "x8D1714": {
+      "status": "mapped",
+      "source_location": "eiriksfjord",
+      "reference_location": "kangeq",
+      "note": ""
+    },
+    "xDDC889": {
+      "status": "mapped",
+      "source_location": "eiriksfjord",
+      "reference_location": "kangeq",
+      "note": ""
+    },
+    "xF2FD47": {
+      "status": "mapped",
+      "source_location": "eiriksfjord",
+      "reference_location": "kangeq",
+      "note": ""
+    },
+    "x55CE19": {
+      "status": "mapped",
+      "source_location": "siberian_tundra_5",
+      "reference_location": "ot_kyuyel",
+      "note": ""
+    },
+    "x9F6CD6": {
+      "status": "mapped",
+      "source_location": "siberian_tundra_5",
+      "reference_location": "ot_kyuyel",
+      "note": ""
+    },
+    "xA3A805": {
+      "status": "mapped",
+      "source_location": "siberian_tundra_5",
+      "reference_location": "ot_kyuyel",
+      "note": ""
+    },
+    "xA49864": {
+      "status": "mapped",
+      "source_location": "siberian_tundra_5",
+      "reference_location": "ot_kyuyel",
+      "note": ""
+    },
+    "xBA10C7": {
+      "status": "mapped",
+      "source_location": "siberian_tundra_5",
+      "reference_location": "ot_kyuyel",
+      "note": ""
+    },
+    "xD50988": {
+      "status": "mapped",
+      "source_location": "siberian_tundra_5",
+      "reference_location": "ot_kyuyel",
+      "note": ""
+    },
+    "xD9FCA0": {
+      "status": "mapped",
+      "source_location": "siberian_tundra_5",
+      "reference_location": "ot_kyuyel",
+      "note": ""
+    },
+    "x2F97B2": {
+      "status": "mapped",
+      "source_location": "kolguyev",
+      "reference_location": "oma",
+      "note": ""
+    },
+    "x427269": {
+      "status": "mapped",
+      "source_location": "kolguyev",
+      "reference_location": "oma",
+      "note": ""
+    },
+    "x69F422": {
+      "status": "mapped",
+      "source_location": "kolguyev",
+      "reference_location": "oma",
+      "note": ""
+    },
+    "xC7CF5F": {
+      "status": "mapped",
+      "source_location": "kolguyev",
+      "reference_location": "oma",
+      "note": ""
+    },
+    "xD5B87E": {
+      "status": "mapped",
+      "source_location": "kolguyev",
+      "reference_location": "oma",
+      "note": ""
+    },
+    "x2CEF5A": {
+      "status": "mapped",
+      "source_location": "eiriksfjord",
+      "reference_location": "eggers_o",
+      "note": ""
+    },
+    "x7C04E8": {
+      "status": "mapped",
+      "source_location": "eiriksfjord",
+      "reference_location": "eggers_o",
+      "note": ""
+    },
+    "x8AC169": {
+      "status": "mapped",
+      "source_location": "eiriksfjord",
+      "reference_location": "eggers_o",
+      "note": ""
+    },
+    "xE7CC7E": {
+      "status": "mapped",
+      "source_location": "eiriksfjord",
+      "reference_location": "eggers_o",
+      "note": ""
+    },
+    "x3E0F09": {
+      "status": "mapped",
+      "source_location": "eiriksfjord",
+      "reference_location": "eggers_o",
+      "note": ""
+    },
+    "x75E8EC": {
+      "status": "mapped",
+      "source_location": "eiriksfjord",
+      "reference_location": "eggers_o",
+      "note": ""
+    },
+    "x9541C5": {
+      "status": "mapped",
+      "source_location": "eiriksfjord",
+      "reference_location": "eggers_o",
+      "note": ""
+    },
+    "xE174E4": {
+      "status": "mapped",
+      "source_location": "eiriksfjord",
+      "reference_location": "eggers_o",
+      "note": ""
+    },
+    "x0CB925": {
+      "status": "mapped",
+      "source_location": "southampton_island",
+      "reference_location": "kinngait",
+      "note": ""
+    },
+    "x4E1F08": {
+      "status": "mapped",
+      "source_location": "southampton_island",
+      "reference_location": "kinngait",
+      "note": ""
+    },
+    "xC724BB": {
+      "status": "mapped",
+      "source_location": "southampton_island",
+      "reference_location": "kinngait",
+      "note": ""
+    },
+    "x290133": {
+      "status": "mapped",
+      "source_location": "nenets",
+      "reference_location": "pustozersk",
+      "note": ""
+    },
+    "x735843": {
+      "status": "mapped",
+      "source_location": "nenets",
+      "reference_location": "pustozersk",
+      "note": ""
+    },
+    "x91D285": {
+      "status": "mapped",
+      "source_location": "nenets",
+      "reference_location": "pustozersk",
+      "note": ""
+    },
+    "x1A5496": {
+      "status": "mapped",
+      "source_location": "eiriksfjord",
+      "reference_location": "eggers_o",
+      "note": ""
+    },
+    "x1D11A0": {
+      "status": "mapped",
+      "source_location": "eiriksfjord",
+      "reference_location": "eggers_o",
+      "note": ""
+    },
+    "x705ADB": {
+      "status": "mapped",
+      "source_location": "eiriksfjord",
+      "reference_location": "eggers_o",
+      "note": ""
+    },
+    "x86E45D": {
+      "status": "mapped",
+      "source_location": "yamal",
+      "reference_location": "ob",
+      "note": ""
+    },
+    "x930F69": {
+      "status": "mapped",
+      "source_location": "yamal",
+      "reference_location": "ob",
+      "note": ""
+    },
+    "xD64E92": {
+      "status": "mapped",
+      "source_location": "yamal",
+      "reference_location": "ob",
+      "note": ""
+    },
+    "x20083F": {
+      "status": "mapped",
+      "source_location": "eiriksfjord",
+      "reference_location": "eggers_o",
+      "note": ""
+    },
+    "xFC7F77": {
+      "status": "mapped",
+      "source_location": "eiriksfjord",
+      "reference_location": "eggers_o",
+      "note": ""
+    },
+    "x3EB32E": {
+      "status": "mapped",
+      "source_location": "northern_arctic_uplands",
+      "reference_location": "qurliqtuq",
+      "note": ""
+    },
+    "x59B5A5": {
+      "status": "mapped",
+      "source_location": "northern_arctic_uplands",
+      "reference_location": "qurliqtuq",
+      "note": ""
+    },
+    "x418382": {
+      "status": "mapped",
+      "source_location": "tabiteuea_atoll",
+      "reference_location": "tabiteuea_atoll",
+      "note": ""
+    },
+    "xC041F0": {
+      "status": "mapped",
+      "source_location": "tabiteuea_atoll",
+      "reference_location": "tabiteuea_atoll",
+      "note": ""
+    },
+    "x43052F": {
+      "status": "mapped",
+      "source_location": "baffin_island",
+      "reference_location": "kinngait",
+      "note": ""
+    },
+    "x6F28EA": {
+      "status": "mapped",
+      "source_location": "baffin_island",
+      "reference_location": "kinngait",
+      "note": ""
+    },
+    "x601E0C": {
+      "status": "mapped",
+      "source_location": "erri_uplands2",
+      "reference_location": "valkaran",
+      "note": ""
+    },
+    "x6DD6EC": {
+      "status": "mapped",
+      "source_location": "erri_uplands2",
+      "reference_location": "valkaran",
+      "note": ""
+    },
+    "xB0BDDF": {
+      "status": "mapped",
+      "source_location": "georgia_isle",
+      "reference_location": "east_falkland",
+      "note": ""
+    },
+    "xB5100C": {
+      "status": "mapped",
+      "source_location": "georgia_isle",
+      "reference_location": "east_falkland",
+      "note": ""
+    },
+    "xC98F3A": {
+      "status": "mapped",
+      "source_location": "baffin_island",
+      "reference_location": "kinngait",
+      "note": ""
+    },
+    "xE5F662": {
+      "status": "mapped",
+      "source_location": "baffin_island",
+      "reference_location": "kinngait",
+      "note": ""
+    },
+    "x0000C0": {
+      "status": "mapped",
+      "source_location": "ungava_peninsula",
+      "reference_location": "kuujjuaq",
+      "note": ""
+    },
+    "x0274BA": {
+      "status": "mapped",
+      "source_location": "baffin_island",
+      "reference_location": "kinngait",
+      "note": ""
+    },
+    "x0CB556": {
+      "status": "mapped",
+      "source_location": "ascensao",
+      "reference_location": "st_helena",
+      "note": ""
+    },
+    "x1C9894": {
+      "status": "mapped",
+      "source_location": "siberian_wasteland_12",
+      "reference_location": "dudinka",
+      "note": ""
+    },
+    "x1E761E": {
+      "status": "mapped",
+      "source_location": "kaiman",
+      "reference_location": "oristan",
+      "note": ""
+    },
+    "x28EF12": {
+      "status": "mapped",
+      "source_location": "eiriksfjord",
+      "reference_location": "kangeq",
+      "note": ""
+    },
+    "x31968A": {
+      "status": "mapped",
+      "source_location": "jan_mayen",
+      "reference_location": "torshavn",
+      "note": ""
+    },
+    "x325620": {
+      "status": "mapped",
+      "source_location": "eiriksfjord",
+      "reference_location": "kangeq",
+      "note": ""
+    },
+    "x335389": {
+      "status": "mapped",
+      "source_location": "ariogana",
+      "reference_location": "wadadli",
+      "note": ""
+    },
+    "x3E3DBE": {
+      "status": "mapped",
+      "source_location": "eiriksfjord",
+      "reference_location": "kangeq",
+      "note": ""
+    },
+    "x3EEE4F": {
+      "status": "mapped",
+      "source_location": "baffin_island",
+      "reference_location": "kinngait",
+      "note": ""
+    },
+    "x46467A": {
+      "status": "mapped",
+      "source_location": "baffin_island",
+      "reference_location": "kinngait",
+      "note": "",
+      "review_round": "1337-empty-state-parts-20261002"
+    },
+    "x4D5156": {
+      "status": "mapped",
+      "source_location": "porto_santo",
+      "reference_location": "funchal",
+      "note": ""
+    },
+    "x5B081A": {
+      "status": "mapped",
+      "source_location": "arctic_archipelago",
+      "reference_location": "colville",
+      "note": ""
+    },
+    "x5B5C22": {
+      "status": "mapped",
+      "source_location": "chagos_archipelago",
+      "reference_location": "addu_atoll",
+      "note": ""
+    },
+    "x5C2239": {
+      "status": "mapped",
+      "source_location": "christmas_island",
+      "reference_location": "kandangwesi",
+      "note": ""
+    },
+    "x5C2250": {
+      "status": "mapped",
+      "source_location": "christmas_island",
+      "reference_location": "pangguyangan",
+      "note": ""
+    },
+    "x5C657B": {
+      "status": "mapped",
+      "source_location": "northern_arctic_uplands",
+      "reference_location": "nueltin",
+      "note": ""
+    },
+    "x60E0B0": {
+      "status": "mapped",
+      "source_location": "seychelles",
+      "reference_location": "al_khadra",
+      "note": ""
+    },
+    "x609A10": {
+      "status": "mapped",
+      "source_location": "baffin_island",
+      "reference_location": "pangnirtung",
+      "note": ""
+    },
+    "x6329E1": {
+      "status": "mapped",
+      "source_location": "baffin_island",
+      "reference_location": "kinngait",
+      "note": ""
+    },
+    "x800111": {
+      "status": "mapped",
+      "source_location": "hahajima",
+      "reference_location": "saipan",
+      "note": "",
+      "review_round": "1337-empty-state-parts-20261002"
+    },
+    "x82EE4E": {
+      "status": "mapped",
+      "source_location": "baffin_island",
+      "reference_location": "kinngait",
+      "note": ""
+    },
+    "x82B862": {
+      "status": "mapped",
+      "source_location": "baffin_island",
+      "reference_location": "kinngait",
+      "note": ""
+    },
+    "xEA49D9": {
+      "status": "mapped",
+      "source_location": "southampton_island",
+      "reference_location": "qingaaluk",
+      "note": ""
+    },
+    "xEF50C0": {
+      "status": "mapped",
+      "source_location": "alamagan",
+      "reference_location": "saipan",
+      "note": ""
+    },
+    "xFA33DC": {
+      "status": "mapped",
+      "source_location": "arctic_archipelago",
+      "reference_location": "qurliqtuq",
+      "note": ""
+    },
+    "x485920": {
+      "status": "mapped",
+      "source_location": "eiriksfjord",
+      "reference_location": "kangeq",
+      "note": ""
+    },
+    "x527F6C": {
+      "status": "mapped",
+      "source_location": "kanemilohai_atoll",
+      "reference_location": "taka_atoll",
+      "note": ""
+    },
+    "xB02837": {
+      "status": "mapped",
+      "source_location": "zagya",
+      "reference_location": "zagya",
+      "note": "",
+      "review_round": "1337-empty-state-parts-20261002"
+    }
+  },
+  "updated_at": "2026-10-02T03:16:33.605573+00:00"
+}

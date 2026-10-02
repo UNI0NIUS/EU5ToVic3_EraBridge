@@ -1,6 +1,6 @@
 """Prepare an internal Windows candidate and evidence; never publish a release.
 
-Generated rules and user data are deliberately omitted. A successful run means
+Private generated resources and user data are omitted; reconstruction recipes are included. A successful run means
 that preparation finished, not that the candidate is approved for distribution.
 """
 import argparse
@@ -20,7 +20,7 @@ PUBLIC_DOCUMENTS = (
     'README.md', 'BUILDING.md', 'ARCHITECTURE.md', 'CONVERSION_RULES.md',
     'CONVERTER_WORKBENCH.md', 'CONVERTER_IDENTITY_SETTINGS.md',
     'CONVERTER_SOURCE_CORES.md', 'FLAG_GENERATION_RULES.md',
-    'LICENSING.md', 'PUBLICATION.md', 'RELEASING.md',
+    'LICENSING.md', 'PUBLICATION.md', 'RELEASING.md', 'ACCEPTANCE.md',
     'releases/v0.12.2-beta.1.md',
 )
 EXCLUDED_PARTS = {'__pycache__', '.git', '.local', 'tests', 'test', 'logs'}
@@ -157,6 +157,7 @@ def prepare(root, app, out, python_base, make_archive=True):
     for name in ('runtime', 'native'):
         copy_tree(app / name, stage / name)
     shutil.copy2(app / 'EU5Converter.exe', stage / 'EU5Converter.exe')
+    shutil.copy2(root / 'tools/Test-PortableRelease.ps1', stage / 'Test-PortableRelease.ps1')
     (stage / 'tools').mkdir()
     for path in sorted((root / 'tools').glob('*.py')):
         if not path.name.startswith('test_') and path.name not in {'prepare_release.py', 'package_converter_app.py'}:
@@ -184,6 +185,8 @@ def prepare(root, app, out, python_base, make_archive=True):
         target = stage / 'licenses' / ('rakaly-' + rakaly_version)
         target.mkdir(parents=True, exist_ok=True)
         shutil.copy2(rakaly_license, target / 'LICENSE.txt')
+        if (rakaly_license.parent / 'dependencies').is_dir():
+            copy_tree(rakaly_license.parent / 'dependencies', target / 'dependencies')
     write_json(stage / 'data/defaults.json', {'candidate_paths': [], 'game': '', 'eu5': ''})
     excluded = []
     rules = app / 'data/rules'
@@ -195,9 +198,9 @@ def prepare(root, app, out, python_base, make_archive=True):
     revision = subprocess.run(['git', 'rev-parse', 'HEAD'], cwd=root, capture_output=True, text=True, check=True).stdout.strip()
     dirty = bool(subprocess.run(['git', 'status', '--porcelain'], cwd=root, capture_output=True, text=True, check=True).stdout.strip())
     blockers = [
-        '完整规则包及基准存档未打包；尚无从干净克隆和玩家自有游戏数据重建规则的完整流程。',
-        '游戏衍生规则资源整体排除，包括宗教 DDS 图标；定义与本地化的来源仍需逐项核对。',
-        '依赖许可证已按可核实来源收集，Rakaly 静态依赖、未匹配二进制和微软运行库的分发条件仍需完成审查。',
+        '完整规则及基准存档由使用者本机生成；独立 Windows 环境的初始化与端到端验收仍待执行。',
+        '游戏资源采用本机引用重建，原始素材不随包分发；当前规则限定已验证地图和资源版本。',
+        'Rakaly 锁定部分 AGPL 仓库依赖，二进制独立授权或相应分发方案仍待确认；微软运行库的分发依据也需确认。',
         '尚未完成无开发环境机器上的安装、端到端转换、导出和游戏内验收。',
     ]
     report = {'version': VERSION, 'ready_for_publication': False, 'source_commit': revision,
@@ -210,7 +213,8 @@ def prepare(root, app, out, python_base, make_archive=True):
         'EraBridge ' + VERSION + ' — 内部发布候选\n\n'
         '本目录用于检查发布结构与运行环境，尚未通过公开发行验收。\n'
         '双击 EU5Converter.exe 可检查桌面界面。保留整个目录，不要单独复制 EXE。\n'
-        '未包含完整转换规则、基准存档或游戏数据，不能直接完成新存档转换。\n'
+        '首次使用点击“准备转换规则”，选择两款游戏安装及自己的 V3 原版 1836.1.1 开局存档。\n'
+        '游戏素材与基准存档仅在本机读取或生成，不随软件分发。独立验收用 Test-PortableRelease.ps1。\n'
         '发布流程见 docs/RELEASING.md；依赖清单见 licenses/runtime-inventory.json。\n', encoding='utf-8')
     if make_archive:
         archive = out / (stage.name + '.zip')

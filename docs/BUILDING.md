@@ -29,10 +29,10 @@ git submodule update --init --recursive
 
 ## Python 工具与测试
 
-Python 代码使用 NumPy、Pillow 和 Tk。当前本机验证使用 Python 3.13.9；代码使用 `hashlib.file_digest`，最低需要 Python 3.11。在自己的虚拟环境中安装依赖，确认 Python 自带 Tk 可用：
+桌面运行使用 NumPy、Pillow 和 Tk；开发测试另需 SciPy。当前本机验证使用 Python 3.13.9；代码使用 `hashlib.file_digest`，最低需要 Python 3.11。在自己的虚拟环境中安装依赖，确认 Python 自带 Tk 可用：
 
 ```powershell
-python -m pip install -r requirements.txt
+python -m pip install -r requirements-dev.txt
 python -X utf8 -m unittest discover -s tools -p 'test_*.py'
 ```
 
@@ -44,10 +44,11 @@ python -X utf8 -m unittest discover -s tools -p 'test_*.py'
 
 - 已构建的 C++ 导入器和 Rakaly DLL。
 - 包含 NumPy、Pillow、Tk 和依赖 DLL 的 Python 环境。
-- `.local/converter/rules/` 内带哈希清单的规则包。
-- 由使用者自己提供的 Victoria 3 基准开局文本，以及匹配的本地游戏数据。
+- 仓库中的 `config/release_rules/` 配方及其引用的配置文件。
 
-规则构建入口是 `tools/build_converter_rules.py`，参数可通过 `--help` 查看。它还依赖已验证的资产包、文化映射上下文和本地地理审核数据；这些输入不包含在公开源码中。因此，目前还没有从干净克隆一键生成完整桌面发行包的流程。
+默认打包不读取开发机的 `.local/converter/rules/`。玩家首次运行时，通过“准备转换规则”从自己的游戏和 V3 原版 1836.1.1 基准存档生成私有资源。`initialize_converter.py` 校验配方、地图及引用字段摘要；游戏资源变化时需维护者更新配方。`freeze_release_rules.py` 用于维护配方，不是玩家首次使用的步骤。
+
+`-IncludeLocalRules` 仅供本地调试，会带入已有完整规则，不应用于公开候选。
 
 输入齐全时运行：
 
@@ -57,4 +58,4 @@ python -X utf8 -m unittest discover -s tools -p 'test_*.py'
 
 输出目录必须位于仓库内且尚不存在。打包器目前按本机 Python 发行版的目录布局收集依赖，其他 Python 安装可能需要调整。`-SkipRuntime` 用于刷新已有本地构建，不用于制作干净发行包。
 
-现有 ZIP 可能包含本地默认路径和从游戏生成的资源，不应直接作为公开下载。公开二进制前需另行核查依赖许可证、资产来源、路径清理和干净机器运行结果。
+旧构建或使用 `-IncludeLocalRules` 的 ZIP 可能包含本地默认路径和游戏资源，不应直接作为公开下载。公开二进制前需另行核查依赖许可证、资产来源、路径清理和干净机器运行结果。
