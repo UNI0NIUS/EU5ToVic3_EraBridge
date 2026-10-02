@@ -1,0 +1,93 @@
+{
+  "name": "M2 Italy-Provence regional format prototype",
+  "target_version": "1.13.11",
+  "source_sha256": "d4e6bcb5f0c9d91f3d5abe73a5644b6bd99364060f3c76120c60529ad3ac6f74",
+  "country_tags": {
+    "ITA": "ITA",
+    "PAP": "PAP"
+  },
+  "capital_overrides": {
+    "ITA": "STATE_PIEDMONT",
+    "SAR": "STATE_SAVOY"
+  },
+  "states": {
+    "STATE_PIEDMONT": {
+      "x1140E0": [
+        "novara"
+      ],
+      "x11C061": [
+        "asti"
+      ],
+      "x54728A": [
+        "ventimiglia",
+        "albenga"
+      ],
+      "x5F6BAA": [
+        "savona",
+        "finalborgo",
+        "mondovi"
+      ],
+      "x904061": [
+        "genoa"
+      ],
+      "x90C060": [
+        "aosta"
+      ],
+      "xA9397D": [
+        "turin"
+      ],
+      "xAA6958": [
+        "susa"
+      ],
+      "xACB500": [
+        "alessandria"
+      ],
+      "xD080E0": [
+        "saluzzo",
+        "cuneo"
+      ],
+      "xDA86EA": [
+        "ivrea"
+      ],
+      "xF00544": [
+        "domodossola"
+      ]
+    },
+    "STATE_PROVENCE": {
+      "x3040E0": [
+        "toulon"
+      ],
+      "x31C0DF": [
+        "marseille"
+      ],
+      "x5080E0": [
+        "nice"
+      ],
+      "x6D5E3F": [
+        "digne"
+      ],
+      "xB040E0": [
+        "aix_en_provence"
+      ],
+      "xB0C060": [
+        "draguignan"
+      ],
+      "xB0C0E0": [
+        "avignon"
+      ],
+      "xC03918": [
+        "sisteron"
+      ],
+      "xCB9C34": [
+        "castellane"
+      ]
+    }
+  },
+  "target_fingerprints": {
+    "map_data/state_regions/00_west_europe.txt": "272b757789390d16eb34a083c15eddfc8c471b3121198e4c634b57f9615e40e8",
+    "map_data/state_regions/01_south_europe.txt": "cae1cd7df5334a1df6d49a7bb4f992c564cada7efd13e2c9330bcaa30b1fcee7",
+    "common/history/states/00_states.txt": "d8408feff70da84e50d5cbf3fcc552841cb2bf8c0338bf997ce127f10423c50e",
+    "common/country_definitions/00_countries.txt": "d13a2a5ddfe9391287be287041c28611599fed537d1d41c3fb5691de08872a74"
+  },
+  "mapping_note": "Explicit coarse territorial anchors. Avignon represented by xB0C0E0 (northwest of Marseille); some surrounding EU5 land shares a target province. No claim of exact border equivalence. Other regions retain V3 ownership."
+}

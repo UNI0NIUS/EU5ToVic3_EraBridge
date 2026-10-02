@@ -19,9 +19,14 @@ void EU5::LocationManager::registerKeys()
 		const auto theLocation = getSeenLocationByID(std::stoi(numberString));
 		if (!theLocation)
 		{
+			if (strictValidation)
+				throw std::runtime_error("Unregistered save location: " + numberString);
 			Log(LogLevel::Error) << "Attempting to load location data for (" << numberString << ") which is NOT registered. THIS IS CORRUPTION-LEVEL BAD.";
+			commonItems::ignoreItem(numberString, theStream);
 			return;
 		}
+		if (!loadedIDs.insert(theLocation->getID()).second && strictValidation)
+			throw std::runtime_error("Duplicate save location: " + numberString);
 		theLocation->parseData(theStream);
 		locations.emplace(theLocation->getName(), theLocation);
 		// There is no Step 2.
@@ -33,21 +38,22 @@ void EU5::LocationManager::registerLocation(int theLocationID, const std::string
 {
 	if (seenLocations.contains(locationName))
 	{
+		if (strictValidation)
+			throw std::runtime_error("Duplicate metadata location: " + locationName);
 		Log(LogLevel::Error) << "Attempting to register location " << locationName << " (" << theLocationID << ")  which is already registered. This is bad.";
 		return;
 	}
 
 	auto newLocation = std::make_shared<Location>(theLocationID, locationName);
+	if (!locationsByID.emplace(theLocationID, newLocation).second)
+		throw std::runtime_error("Duplicate metadata location ID: " + std::to_string(theLocationID));
 	seenLocations.emplace(locationName, newLocation);
 }
 
 std::shared_ptr<EU5::Location> EU5::LocationManager::getSeenLocationByID(int theID) const
 {
-	for (const auto& Location: seenLocations | std::views::values)
-	{
-		if (Location->getID() == theID)
-			return Location;
-	}
+	if (const auto it = locationsByID.find(theID); it != locationsByID.end())
+		return it->second;
 
 	Log(LogLevel::Error) << "Trying to access seenLocations by ID " << std::to_string(theID) << " which does not exists! Fire! Bad!";
 	return nullptr;

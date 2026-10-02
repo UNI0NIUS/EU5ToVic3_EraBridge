@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "ordinary_homelands": {
+    "historical_source": "Fixed local EU5 main_menu/setup/start/06_pops.txt, 1337 setup",
+    "minimum_source_location_share_percent": 20,
+    "current_state_supplement": "strictly_greater_than_50_percent",
+    "merged_culture_policy": "Aggregate only the already frozen source-to-target identities, then union evidenced settlement locations.",
+    "mapping_policy": "Use existing verified source-location to target-state allocations; record unmapped historical anchors without guessing.",
+    "existing_homelands": "preserve_all"
+  },
+  "migrant_homelands": {
+    "rule": "strictly_greater_than_50_percent",
+    "denominator": "all integer output residents across every owner and religion in the whole target state region, including template residents",
+    "authorization": "User explicitly selected strict majority on 2026-10-02.",
+    "no_qualifying_state": "leave_without_homeland; do not force a largest-state fallback"
+  },
+  "dispersed_policy": "no_forced_homeland",
+  "dispersed_policy_status": "conservative_default; user preference question pending; no territorial homeland invented",
+  "dispersed_exceptions": ["eu5_resident_mizrahi", "eu5_resident_mustaarabi", "eu5_resident_domari_culture"],
+  "colors": {
+    "minimum_delta_e_76": 8,
+    "preferred": "EU5 source culture color, adjusted for separation from vanilla and all other custom cultures",
+    "allocation_order": "descending actual output population, then culture key",
+    "shared_state_weight": 0.65,
+    "historical_meaning": "display only, no ethnic or political meaning inferred"
+  }
+}

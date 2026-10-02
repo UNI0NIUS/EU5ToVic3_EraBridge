@@ -1,0 +1,44 @@
+{
+  "schema": 1,
+  "policy": "source_development_uplift_v1",
+  "industry": {
+    "maximum_extra_fraction": 0.50,
+    "development_floor": 20,
+    "development_full": 80,
+    "development_weight": 0.15,
+    "urban_weight": 0.10,
+    "modern_factory_weight": 0.15,
+    "production_technology_weight": 0.10,
+    "urban_full_share": 0.50,
+    "source_industrial_population_reference": 0.04,
+    "technology_markers": ["manufacturies", "mechanical_tools", "atmospheric_engine", "railways"],
+    "source_employment_weight": 0.75,
+    "source_installed_capacity_weight": 0.25,
+    "passes": 4,
+    "owner_workforce_reserve_per_level": 200,
+    "maximum_extra_input_import_fraction": 0.10,
+    "maximum_extra_import_to_output_value": 0.25,
+    "note": "Bounded gameplay correction to the immutable initial factory stock using local source evidence; not a claim of 1:1 EU5/V3 jobs. Britain is no longer a hard output frontier. No tag-specific bonus, automatic late technology, or unemployment-driven industry target."
+  },
+  "arable": {
+    "maximum_increase_fraction": 1.0,
+    "cultivated_land_recovery": {
+      "development_floor": 30,
+      "development_full": 85,
+      "maximum_fraction": 1.0,
+      "topography_factor": {"flatland": 1.0, "hills": 0.60, "plateau": 0.50, "mountains": 0.15, "wetlands": 0.25, "atoll": 0.05},
+      "climate_factor": {"continental": 0.90, "oceanic": 1.0, "mediterranean": 0.65, "subtropical": 1.0, "tropical": 1.0, "cold_arid": 0.0, "arid": 0.0, "arctic": 0.0},
+      "irrigation_only_evidence": 0.50,
+      "cultivation_building_suffixes": ["_farm", "_orchard", "_plantation"],
+      "cultivation_building_types": ["farming_village"],
+      "note": "Observed crops/working irrigation plus high local development can represent land already cultivated despite a forest/jungle map label. No modern reclamation assumed. Desert and arctic remain excluded; wetlands and mountains heavily limited. Population cannot raise this ceiling."
+    }
+  },
+  "notes": [
+    "Apply the same rule to every mapped source country and province in any save; no special Sumatra or Italy tag list.",
+    "Industry additions require local source manufacturing, legal technology/PMs, local workforce/infrastructure, and household balance checks. Extra domestic input gaps are limited to 10% of baseline use per good and 25% of new output base value; these are unfilled import needs, never fabricated trade.",
+    "Existing military, public buildings, diplomacy, geographic mineral capacities and commercial farms remain protected.",
+    "Extra arable land initially supports subsistence only. Land is measured against original V3 geography, not repeatedly multiplied.",
+    "Rebuild both population choices from the original population after changing jobs or land; never compound population cuts."
+  ]
+}

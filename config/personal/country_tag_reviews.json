@@ -1,0 +1,22 @@
+{
+  "matches": {
+    "GEO": {"target": "GEO", "reason": "格鲁吉亚对应高加索 GEO；排除同英文名的美国佐治亚 GRG。"},
+    "CHI": {"target": "CHI", "reason": "存档当前 TAG 为 CHI、名称明；V3 CHI 是中国通用国家定义。保留源名称、政体和人物，不采用清朝历史。"},
+    "KOR": {"target": "KOR", "reason": "高丽映射朝鲜半岛 KOR，沿用源高丽名称和统治者。"},
+    "KHM": {"target": "CAM", "reason": "源高棉国家对应柬埔寨 CAM；V3 KHM 是 Khmu，不能按同码匹配。"},
+    "DAI": {"target": "DAI", "reason": "源大越对应越南国家 DAI；保留大越名称，不继承原版大南王朝。"},
+    "TOG": {"target": "TNG", "reason": "源 Tu'i Tonga 对应 V3 Tonga；两游戏使用不同代码。"},
+    "ARK": {"target": "ARK", "reason": "源 Launggyet 是若开政权，对应 V3 Arakan；保留源政权名称。"}
+  },
+  "reject": {
+    "BRA": "勃兰登堡不能对应 V3 BRA（不伦瑞克），也不直接当作普鲁士。",
+    "HOL": "源 Holland 与 V3 Holstein 不同；存档另有 Netherlands，不能合并。",
+    "BOL": "源 Dapitan 与 V3 Bolivia 不同；玻利维亚还是本轮保留的原版国家。",
+    "HAI": "源 Hainaut 与 V3 Haiti 不同。",
+    "MOS": "源 Muscovy 与 V3 Mossi 不同；源俄罗斯另有独立实体。",
+    "MEI": "源 Meissen 与 V3 Saxe-Meiningen 不同。",
+    "PAL": "源莱茵普法尔茨与 V3 Palestine 不同。",
+    "TRI": "源 Trier 与 V3 Tripolitania 不同。",
+    "BHT": "源 Bohtan 与 V3 India 不同。"
+  }
+}

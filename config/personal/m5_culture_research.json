@@ -1,0 +1,98 @@
+{
+  "schema": 1,
+  "status": "research_candidate_not_installed",
+  "date": "2026-10-02",
+  "policy": {
+    "ordinary_homelands": "Explicit historical core areas, translated through checked location-to-state links. Neither 20% settlement nor a present majority automatically establishes a homeland. Record historical period, evidence and coarse-state limitations separately.",
+    "campaign_continuity": "Historical evidence informs identity and geography; it never deletes surviving campaign cultures, changes population religion, or moves people back to real-world homelands.",
+    "migrant_homelands": "Keep the user-selected strictly greater than 50% of the whole output state; preserve indigenous homelands.",
+    "heritage": "A V3 acceptance design, not a taxonomic fact. Document the historical evidence and the gameplay inference separately; language family alone cannot justify identity merging.",
+    "review": "Review identity, language, heritage design, historical geography, state translation, names and appearance independently. No asset is fully historically reviewed merely because its identity split is supported.",
+    "budget": "This bounded candidate adds five used cultures (400 to 405); resident assets remain below 100 and effective definitions below 480. No return to one asset per source identity."
+  },
+  "sources": {
+    "azeri_iranica": {"title":"AZERBAIJAN vii. The Iranian Language of Azerbaijan — Ehsan Yarshater", "url":"https://www.iranicaonline.org/articles/azerbaijan-vii/", "scope":"Historical Iranian Adhari, its retreat with Turkic expansion, and surviving related dialects; not a claim that all Azerbaijan was Adhari in 1780."},
+    "astara_iranica": {"title":"ĀSTĀRĀ i. Town and sub-province — Marcel Bazin", "url":"https://www.iranicaonline.org/articles/astara-tales-region-on-the-caspian-coast/", "scope":"Talyshi khans of Astara in the sixteenth to eighteenth centuries; later descriptions must not be projected unchanged into 1780."},
+    "talysh_glottolog": {"title":"Glottolog 5.3: North-Central Talysh", "url":"https://glottolog.org/resource/languoid/id/taly1247", "scope":"Distinct modern linguistic record; does not delimit all historical Talysh settlement."},
+    "pamir_iranica": {"title":"CENTRAL ASIA xiii. Iranian Languages — I. M. Steblin-Kamenskij", "url":"https://www.iranicaonline.org/articles/central-asia-xiii/", "scope":"Pamir languages are several Eastern Iranian languages, distinct from Perso-Tajik; not a single language or synonymous with Pashto."},
+    "sarikol_iranica": {"title":"CHINESE TURKESTAN vi. Iranian Groups in Sinkiang since the 1750s — Kim Ho-Dong", "url":"https://www.iranicaonline.org/articles/chinese-turkestan-vi/", "scope":"Late seventeenth to nineteenth century eastern Pamir settlement; distinguish Sarikol/Lake Zorkul geographical names and do not equate the whole Tian Shan with Pamir homelands."},
+    "bone_chronicle": {"title":"The Bugis Chronicle of Bone — Macknight, Paeni and Hadrawi (eds.), ANU Press, 2020", "url":"https://press.anu.edu.au/publications/bugis-chronicle-bone", "scope":"Edition of a late-seventeenth-century chronicle: Bone and Makasar Gowa have distinct political traditions and sustained interaction in South Sulawesi."},
+    "bugis_glottolog": {"title":"Glottolog 5.3: Buginese", "url":"https://glottolog.org/resource/languoid/id/bugi1244", "scope":"Bugis linguistic identity, separate from Makasar."},
+    "makasar_glottolog": {"title":"Glottolog 5.3: Makasar", "url":"https://glottolog.org/resource/languoid/id/maka1311", "scope":"Makasar linguistic identity, separate from Bugis."},
+    "hadza_glottolog": {"title":"Glottolog 5.3: Hadza", "url":"https://glottolog.org/resource/languoid/id/hadz1240", "scope":"Hadza has independent classification; click consonants do not establish a shared Khoisan family."},
+    "sandawe_glottolog": {"title":"Glottolog 5.3: Sandawe", "url":"https://glottolog.org/resource/languoid/id/sand1273", "scope":"Sandawe has independent classification in this catalogue. Hypothesized more distant relations are not treated as established here."},
+    "hadza_ethnography": {"title":"Frank Marlowe, The Hadza: Hunter-Gatherers of Tanzania, UC Press, 2010", "url":"https://www.ucpress.edu/books/the-hadza/paper", "scope":"Ethnographic orientation near Serengeti/Olduvai. Publisher description alone is insufficient for an exact eighteenth-century territorial boundary."},
+    "sandawe_phonetics": {"title":"Sandawe — Journal of the International Phonetic Association", "url":"https://www.cambridge.org/core/journals/journal-of-the-international-phonetic-association/article/sandawe/A3827FC654CC94E923C176EDD68661C3", "scope":"Modern Kondoa-area linguistic description; supports geographic orientation, not an unqualified 1780 homeland boundary."}
+  },
+  "splits": [
+    {"old_seed":"adhari_culture", "separate":["adhari_culture","talysh_culture","pamiri_culture"], "residual_seed":null},
+    {"old_seed":"hadza_culture", "separate":["hadza_culture","sandawe_culture"], "residual_seed":null},
+    {"old_seed":"buginese_culture", "separate":["buginese_culture","makassarese_culture"], "residual_seed":"bungku_culture", "residual_labels":{"english":"Other Sulawesi peoples","simp_chinese":"苏拉威西其他诸族"}}
+  ],
+  "identities": {
+    "adhari_culture": {
+      "labels":{"english":"Adhari","simp_chinese":"阿扎里"},
+      "identity_basis":"保留战役中仍存续的伊朗语阿扎里身份，不与突厥语阿塞拜疆人等同，也不因现实历史中的衰退删除人口。",
+      "sources":["azeri_iranica"],
+      "language":{"key":"adhari","labels":{"english":"Adhari","simp_chinese":"阿扎里语"},"group":"language_group_iranic","basis":"保留伊朗语阿扎里；与塔雷什语区分，使用原版伊朗语言组。"},
+      "heritage":{"trait":"heritage_iranian","group":"heritage_group_middle_eastern","basis":"候选玩法设计：在伊朗历史文化背景及原版 Persian/Tajik 传承粒度下共享伊朗传承；文化与语言仍独立，接纳平衡待游戏内评估。"},
+      "homeland":{"status":"candidate_core","period":"Medieval core with survival in the alternate 1780 campaign","region":"伊朗阿塞拜疆的大不里士历史核心","anchors":{"tabriz":["STATE_TABRIZ"]},"states":["STATE_TABRIZ"],"limitation":"只先纳入有证据的核心州；不把伊朗全境或整个高加索列入。此处延续战役身份，不声称1780现实大不里士仍以阿扎里语为主。"}
+    },
+    "talysh_culture": {
+      "labels":{"english":"Talysh","simp_chinese":"塔雷什"},
+      "identity_basis":"塔雷什作为里海西南沿岸身份单列；阿斯塔拉的16—18世纪塔雷什汗历史提供时段相关证据。",
+      "sources":["astara_iranica","azeri_iranica","talysh_glottolog"],
+      "language":{"key":"talysh","labels":{"english":"Talysh","simp_chinese":"塔雷什语"},"group":"language_group_iranic","basis":"源游戏写作 adharic_language，目标显式区分塔雷什语；更细方言不另造文化。"},
+      "heritage":{"trait":"heritage_iranian","group":"heritage_group_middle_eastern","basis":"候选玩法设计：塔雷什—吉兰—阿尔达比勒的历史联系及原版伊朗传承粒度支持共享大类；不合并为波斯或阿扎里文化。"},
+      "homeland":{"status":"candidate_core","period":"Sixteenth to eighteenth centuries","region":"阿斯塔拉—兰卡兰与塔雷什山地沿岸核心","anchors":{"astara":["STATE_MAZANDARAN"],"lankaran":["STATE_AZERBAIJAN"]},"states":["STATE_AZERBAIJAN","STATE_MAZANDARAN"],"limitation":"V3 州包括大量非塔雷什区域；州级本土表示核心聚居区与该州相交，不表示全州族群同质或领土主权。"}
+    },
+    "pamiri_culture": {
+      "labels":{"english":"Pamiri","simp_chinese":"帕米尔诸族"},
+      "identity_basis":"从伊朗其他诸族中分离帕米尔诸族，内部保留V3可用的山地集合粒度，不进一步细分每条山谷。",
+      "sources":["pamir_iranica","sarikol_iranica"],
+      "language":{"key":"pamiri","labels":{"english":"Pamir languages","simp_chinese":"帕米尔诸语言"},"group":"language_group_iranic","basis":"纠正源 afghani_language 的过宽归类；帕米尔诸语言是东伊朗语的若干语言，集合标签不声称其为单一语言。"},
+      "heritage":{"trait":"heritage_iranian","group":"heritage_group_middle_eastern","basis":"候选玩法设计：借用原版伊朗传承容纳帕米尔历史身份及与波斯—塔吉克文化空间的联系；与塔吉克文化、波斯语均保持区分。"},
+      "homeland":{"status":"deferred_state_translation","period":"Late seventeenth to nineteenth centuries","region":"巴达赫尚、瓦罕及帕米尔山谷","anchors":{},"states":[],"observed_campaign_link":{"sarikol":["STATE_TIANSHAN"]},"limitation":"战役人口只在 sarikol，现有转换落到 TIANSHAN。须复核历史 Sarikol/Zorkul 与源地点坐标，以及塔吉克、阿富汗和新疆州边界；不因现居天山就自动授予整个天山本土。"}
+    },
+    "buginese_culture": {
+      "labels":{"english":"Bugis","simp_chinese":"布吉"},
+      "identity_basis":"Bone 编年史及独立布吉语证据支持布吉与望加锡分别保留；其他苏拉威西群体不冒用布吉名称。",
+      "sources":["bone_chronicle","bugis_glottolog"],
+      "language":{"key":"bugis","labels":{"english":"Bugis","simp_chinese":"布吉语"},"group":"language_group_austronesian","basis":"独立布吉语特质，使用原版南岛语言组。"},
+      "heritage":{"trait":"heritage_insulindian","group":"heritage_group_southeast_asian","basis":"候选玩法设计：南苏拉威西的历史互动置于原版 Malay/Moluccan 所用群岛传承；不把群岛传承当成共同民族。"},
+      "homeland":{"status":"candidate_core","period":"Fourteenth to seventeenth centuries, continuing into eighteenth century","region":"南苏拉威西 Bone 等布吉核心区","anchors":{"bone":["STATE_CELEBES"]},"states":["STATE_CELEBES"],"limitation":"V3 把苏拉威西放在一个州；CELEBES 是州级近似，海外少量布吉人口不自动生成本土。"}
+    },
+    "makassarese_culture": {
+      "labels":{"english":"Makassarese","simp_chinese":"望加锡"},
+      "identity_basis":"Gowa 与 Bone 具有独立政治传统；望加锡语与布吉语分别记录。",
+      "sources":["bone_chronicle","makasar_glottolog"],
+      "language":{"key":"makasar","labels":{"english":"Makasar","simp_chinese":"望加锡语"},"group":"language_group_austronesian","basis":"覆盖源 buginese_language 的粗糙字段，独立目标语言保持来源字段不变。"},
+      "heritage":{"trait":"heritage_insulindian","group":"heritage_group_southeast_asian","basis":"候选玩法设计：与布吉共享原版群岛传承，体现南苏拉威西历史互动；各自保留文化和语言。"},
+      "homeland":{"status":"candidate_core","period":"Sixteenth to seventeenth centuries, continuing into eighteenth century","region":"南苏拉威西 Gowa—Tallo 核心","anchors":{"gowa":["STATE_CELEBES"]},"states":["STATE_CELEBES"],"limitation":"与布吉共享州级本土不等于二者历史疆域或民族相同。"}
+    },
+    "hadza_culture": {
+      "labels":{"english":"Hadza","simp_chinese":"哈扎"},
+      "identity_basis":"不能因点击音或源 khoisan_group 就将哈扎与桑达韦视为同族；先保留两种文化。",
+      "sources":["hadza_glottolog","hadza_ethnography"],
+      "language":{"key":"hadza","labels":{"english":"Hadza","simp_chinese":"哈扎语"},"group":null,"basis":"依现有分类独立建组；不沿用源 khoe_language，也不据此推断其他点击音语言的亲缘。"},
+      "heritage":{"trait":null,"group":"heritage_group_african","basis":"候选保守设计：独立哈扎传承放在原版非洲大组，暂不强制共享科伊桑或班图传承；这不是血统分类。"},
+      "homeland":{"status":"deferred_period_evidence","period":"Modern ethnographic orientation; eighteenth-century extent unresolved","region":"埃亚西湖周边、坦桑尼亚北部","anchors":{},"states":[],"limitation":"现代民族志概览不足以划定1780范围；须补充时段证据并核对 TANGANYIKA/邻州位置，不能取全部当前人口州。"}
+    },
+    "sandawe_culture": {
+      "labels":{"english":"Sandawe","simp_chinese":"桑达韦"},
+      "identity_basis":"独立桑达韦身份及语言；不把尚有争议的远亲语言假说变成已证实的共同传承。",
+      "sources":["sandawe_glottolog","sandawe_phonetics"],
+      "language":{"key":"sandawe","labels":{"english":"Sandawe","simp_chinese":"桑达韦语"},"group":null,"basis":"独立桑达韦语言组，保持远亲关系未定；与哈扎语分开。"},
+      "heritage":{"trait":null,"group":"heritage_group_african","basis":"候选保守设计：独立桑达韦传承置于原版非洲大组；不以音系特点推断与哈扎的共同民族身份。"},
+      "homeland":{"status":"deferred_period_and_state_evidence","period":"Modern Kondoa distribution; eighteenth-century extent unresolved","region":"坦桑尼亚中部 Kondoa 一带","anchors":{},"states":[],"observed_campaign_link":{"sandawe":["STATE_LINDI","STATE_TANGANYIKA"]},"limitation":"源地点跨两个目标州；现代语言地点不能直接证明两州全应为1780本土，补历史地图后再确认。"}
+    }
+  },
+  "next_priority": [
+    {"seed":"gonga_culture","issue":"库希特其他诸族包含 Gonga、Ometo 等奥摩相关群体；需独立考察，不能沿用旧名称声称同一语支。"},
+    {"seed":"bantoid","issue":"核查 Ijaw 与所谓 Volta-Niger 集合的关系；文化圈、语言分支与现居范围须分开。"},
+    {"seed":"totonac_culture","issue":"Totonac、Mixe-Zoque 与 Ikoot/Huave 的集合关系需重审。"},
+    {"seed":"malvi","issue":"Nuristani、Pashayi、Shina 等不能仅凭印度地区标签当成同一民族。"},
+    {"seed":"lenca_culture","issue":"Lenca 与 Misumalpan 的关系须核实；先保留明确来源，不提前认定亲缘。"},
+    {"seed":"orang_asli_culture","issue":"集合跨印度、东南亚大陆与岛屿；南亚语系不能代替共同历史文化圈。"}
+  ]
+}

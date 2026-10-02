@@ -20,7 +20,8 @@ void EU5::BuildingManager::registerKeys()
 		}
 		const auto newBuildingID = std::stoi(theID);
 		const auto& newBuilding = std::make_shared<Building>(newBuildingID, theStream);
-		buildings.emplace(newBuildingID, newBuilding);
+		if (!buildings.emplace(newBuildingID, newBuilding).second)
+			throw std::runtime_error("Duplicate building ID: " + theID);
 		buildingIDsByLocation[newBuilding->getLocationID()].push_back(newBuildingID);
 	});
 	buildingDatabaseParser.registerRegex(commonItems::catchallRegex, commonItems::ignoreItem);

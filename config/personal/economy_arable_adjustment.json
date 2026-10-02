@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "policy": "bounded_historical_arable_correction",
+  "maximum_increase_fraction": 0.5,
+  "minimum_development_factor": 0.25,
+  "topography_ceiling": {"flatland": 0.4, "hills": 0.25, "plateau": 0.2, "mountains": 0.1, "wetlands": 0.1, "atoll": 0.05},
+  "climate_factor": {"continental": 1, "oceanic": 1, "mediterranean": 0.75, "subtropical": 0.9, "tropical": 0.65, "cold_arid": 0.25, "arid": 0.15, "arctic": 0},
+  "vegetation_factor": {"farmland": 1, "grasslands": 0.9, "woods": 0.6, "forest": 0.45, "sparse": 0.3, "jungle": 0.3, "desert": 0.1},
+  "crop_goods": ["wheat", "legumes", "potato", "rice", "maize", "millet", "fruit", "olives", "wine", "fiber_crops", "cotton", "silk", "dyes", "sugar", "tobacco", "tea", "coffee", "cocoa", "saffron", "cloves", "chili"],
+  "historical_overrides": {
+    "STATE_UMBRIA": {"maximum_fraction": 0.3, "basis": "Documented preindustrial terraced olive agriculture around Assisi and Spoleto; bounded state-level proxy, not measured hectares.", "source": "https://www.fao.org/giahs/giahs-around-the-world/italy-assisi-spoleto-olive-groves/mediterranean-diet---agricultural-heritage--the-flavors-of-the-land/en"},
+    "STATE_ROMAGNA": {"maximum_fraction": 0.45, "basis": "Ferrara/Po delta land reclamation documented in the fourteenth to sixteenth centuries; no twentieth-century drainage assumed.", "source": "https://whc.unesco.org/en/list/733/"},
+    "STATE_VALENCIA": {"maximum_fraction": 0.3, "basis": "Long-established Horta irrigation; limited local correction within the state.", "source": "https://www.fao.org/giahs/giahs-around-the-world/spain-valencia-historical-irrigation-system/mediterranean-diet---agricultural-heritage--the-flavors-of-the-land/en"},
+    "STATE_LOWER_EGYPT": {"maximum_fraction": 0.35, "basis": "Nile basin irrigation before mid-nineteenth-century perennial irrigation; excludes modern dams and desert reclamation.", "source": "https://www.fao.org/4/ac799e/ac799e03.htm"},
+    "STATE_MIDDLE_EGYPT": {"maximum_fraction": 0.25, "basis": "Traditional Nile flood-basin cultivation, without modern perennial irrigation.", "source": "https://www.fao.org/4/ac799e/ac799e03.htm"},
+    "STATE_UPPER_EGYPT": {"maximum_fraction": 0.2, "basis": "Traditional Nile flood-basin cultivation constrained to the river valley.", "source": "https://www.fao.org/4/ac799e/ac799e03.htm"}
+  },
+  "restricted_state_ceiling": {"STATE_HAIL": 0.05, "STATE_NEJD": 0.05, "STATE_HEDJAZ": 0.05, "STATE_OMAN": 0.1, "STATE_ABU_DHABI": 0.05, "STATE_YEMEN": 0.15},
+  "sources": [
+    {"url": "https://www.fao.org/4/s2022e/s2022e06.htm", "use": "Ecological constraint only: desert/arid cultivation requires water. Modern land statistics are not projected backwards."},
+    {"url": "https://whc.unesco.org/en/list/1563/", "use": "Arabian oasis farming depends on localized springs and canals; no blanket desert expansion."}
+  ],
+  "notes": [
+    "All numerical multipliers are explicit conservative gameplay assumptions, not historical measurements of unused farmland.",
+    "Original V3 arable land is always the base: rerunning cannot compound increases. Mineral/resource capacities remain unchanged.",
+    "Each mapped V3 province gets equal weight; unique source locations within it get equal weight. Neither population size nor an urban population concentration raises the geographic ceiling.",
+    "Source development and observed crop/irrigation evidence scale the ceiling. Unemployment demand can select less land but can never raise the ceiling.",
+    "Only states with a local remaining employment-capacity shortfall receive extra land. New land remains initially subsistence because productive building levels are unchanged.",
+    "No population movement, new commercial farms, invented irrigation projects, ongoing employment guarantees or direct profession rewrites."
+  ]
+}

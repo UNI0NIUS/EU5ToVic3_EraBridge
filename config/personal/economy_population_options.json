@@ -1,0 +1,21 @@
+{
+  "schema": 1,
+  "population_mode": "preserve",
+  "available_population_modes": ["preserve", "reserve_15"],
+  "coverage": "all_populated_state_country_parts_worldwide_including_template_fallback",
+  "workforce_share": 0.25,
+  "productive_staffing_fraction": 0.75,
+  "owner_staffing_fraction": 1.0,
+  "workforce_reserve_fraction": 0.15,
+  "maximum_state_country_reduction_fraction": 0.20,
+  "maximum_country_reduction_fraction": 0.15,
+  "minimum_persons_per_existing_group": 1,
+  "require_full_world_coverage": true,
+  "notes": [
+    "preserve retains every original opening population group exactly.",
+    "reserve_15 targets workforce equal to 115% of planned local job capacity, subject to reduction limits and identity/elite protection.",
+    "Always start from the recorded uncalibrated population, including when switching modes or rebuilding.",
+    "The choice applies to the entire world, not only the player country or industrial countries.",
+    "Neither mode changes running saves. Start a new campaign after selecting the output."
+  ]
+}

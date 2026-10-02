@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>EU5 → V3 地点映射工作站</title><link rel="stylesheet" href="/style.css"></head>
+<body>
+<header><div class="brand"><span class="mark">↔</span><div><strong>地点映射工作站</strong><small>EU5 1780 → Victoria 3 · 居民人口</small></div></div><div class="progress"><span id="progress">正在加载本地地图…</span><div class="track"><i id="bar"></i></div></div><div class="file-actions"><button id="export">导出备份</button><button id="import">导入备份</button><input hidden type="file" id="import-file" accept=".json,application/json"><button id="help">使用说明</button></div></header>
+<main>
+<aside class="queue"><div class="queue-top"><h2>待补地点 <span id="count" class="badge"></span></h2><label class="sr-only" for="search">搜索源地点</label><input id="search" placeholder="地名、英文、国家、区域"><div class="filter-row"><select id="filter" aria-label="处理状态"><option value="pending">未处理</option><option value="deferred">暂缓</option><option value="mapped">已完成</option><option value="all">全部地点</option></select><select id="sort" aria-label="排序"><option value="population">人口最多</option><option value="name">按地名</option><option value="region">按区域</option></select></div></div><div id="queue-list" class="queue-list"></div><div class="queue-foot" id="remaining"></div></aside>
+<section class="workspace"><div class="location-head"><div><div id="crumb" class="eyebrow">选择地点开始</div><h1 id="location-title">正在加载</h1><p id="location-meta"></p></div><div class="location-actions"><button id="previous" aria-label="上一个地点">上一个</button><button id="next" aria-label="下一个地点">下一个</button></div></div>
+<div class="maps">
+<section class="map-panel"><div class="map-head"><strong>EU5 源地点</strong><span>金色：当前地点 · 圆点：附近参照</span></div><div class="map-wrap"><canvas id="source-map" tabindex="0" aria-label="EU5 源地图：拖动平移，滚轮缩放"></canvas><div class="map-buttons"><button data-map="source" data-action="in" aria-label="放大 EU5 地图">＋</button><button data-map="source" data-action="out" aria-label="缩小 EU5 地图">－</button><button data-map="source" data-action="focus">定位</button><button data-map="source" data-action="world">全球</button></div><div id="source-tip" class="map-tip">拖动平移 · 滚轮缩放 · 点击查看参照</div></div></section>
+<section class="map-panel"><div class="map-head"><strong>V3 目标省份</strong><span>点击地块添加 · 再次点击移除</span></div><div class="map-wrap"><canvas id="target-map" tabindex="0" aria-label="V3 目标地图：点击省份添加或移除，拖动平移，滚轮缩放"></canvas><div class="map-buttons"><button data-map="target" data-action="in" aria-label="放大 V3 地图">＋</button><button data-map="target" data-action="out" aria-label="缩小 V3 地图">－</button><button data-map="target" data-action="focus">定位</button><button data-map="target" data-action="world">全球</button></div><div id="target-tip" class="map-tip">附近参照推算的视野，需人工确认</div></div></section>
+</div>
+<div class="reference-grid"><section><h2>附近已映射地点 <small>点击可对照两幅地图</small></h2><div id="neighbors" class="chips"></div><div id="reference-info" class="muted">选择参照地点可查看对应州和省份。</div></section><section><h2>附近目标候选 <small>只是定位建议</small></h2><div id="candidates" class="chips"></div></section></div>
+<div class="context-line"><span id="culture-summary"></span><span>地图取自本机游戏；两侧投影不同，分别缩放。</span></div>
+</section>
+<aside class="editor"><div class="editor-head"><h2>确认对应关系</h2><span id="record-status" class="badge">未处理</span></div><p class="muted">把这个源地点的人口分配到以下 V3 省份。可选多个，默认等份。</p>
+<label for="target-search">搜索州名 / 省份 ID / 国家</label><input id="target-search" placeholder="如 托斯卡纳、x123ABC"><div id="target-results"></div>
+<div class="selection-head"><h3>已选省份 <span id="selected-count">0</span></h3><button id="clear" class="text-button">清空</button></div><div id="selected" class="selected"></div>
+<div class="allocation-note">权重 1 : 1 表示各分一半；2 : 1 表示分配 ⅔ 和 ⅓。此处只处理人口落点。</div>
+<label for="note">备注 / 判断依据</label><textarea id="note" rows="3" maxlength="4000" placeholder="例如：位于河口南岸，归入同一州的沿海省份。"></textarea>
+<div id="owner-warning" class="warning" hidden></div><div class="save-state" id="save-state" role="status">选择目标省份后保存</div>
+<div class="editor-actions"><button id="save-next" class="primary">保存并下一个</button><div><button id="save">保存</button><button id="defer">暂缓并下一个</button></div><button id="reset" class="text-button">重新标为未处理</button></div>
+</aside></main>
+<div id="toast" role="status" hidden></div>
+<dialog id="help-dialog"><h2>补齐一个地点，只需三步</h2><ol><li>在左边选择源地点。地图会定位到原始位置，下面列出附近已映射地点。</li><li>对照海岸、边界和参照地点，在右侧 V3 地图点选省份。可选多个，也可搜索州名后定位。</li><li>填写必要备注，点击“保存并下一个”。不能确认时点“暂缓”。</li></ol><p>金色高亮表示当前源地点或已选目标；蓝色圆点是参照。地图可拖动、滚轮缩放。候选位置是根据附近已有映射推算的，尤其岛屿和边界地区需要核实。</p><p>保存会写入本机文件，每次保存都有历史快照。未保存的编辑暂存在当前浏览器，切换地点也可保留。可随时导出 JSON 备份；导入会校验战役、地图和省份。</p><p>“保存”只确认人口落点，不改变现有国界，不立即安装游戏模组。文化和宗教跟随源人口保留。</p><button id="close-help" class="primary">开始处理</button></dialog>
+<script src="/app.js"></script></body></html>

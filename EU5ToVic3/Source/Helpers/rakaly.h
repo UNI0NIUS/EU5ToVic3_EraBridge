@@ -284,7 +284,7 @@ extern "C"
 namespace rakaly
 {
 
-void unwrapError(PdsError* err)
+inline void unwrapError(PdsError* err)
 {
 	if (err != nullptr)
 	{
@@ -366,7 +366,7 @@ class GameFile
 	virtual ~GameFile() { rakaly_free_file(file); }
 };
 
-GameFile parseEu4(const std::string& data)
+inline GameFile parseEu4(const std::string& data)
 {
 	PdsFileResult* file_result = rakaly_eu4_file(data.c_str(), data.length());
 	unwrapError(rakaly_file_error(file_result));
@@ -374,7 +374,7 @@ GameFile parseEu4(const std::string& data)
 	return GameFile(file);
 }
 
-GameFile parseCk3(const std::string& data)
+inline GameFile parseCk3(const std::string& data)
 {
 	PdsFileResult* file_result = rakaly_ck3_file(data.c_str(), data.length());
 	unwrapError(rakaly_file_error(file_result));
@@ -382,7 +382,7 @@ GameFile parseCk3(const std::string& data)
 	return GameFile(file);
 }
 
-GameFile parseImperator(const std::string& data)
+inline GameFile parseImperator(const std::string& data)
 {
 	PdsFileResult* file_result = rakaly_imperator_file(data.c_str(), data.length());
 	unwrapError(rakaly_file_error(file_result));
@@ -390,7 +390,7 @@ GameFile parseImperator(const std::string& data)
 	return GameFile(file);
 }
 
-GameFile parseHoi4(const std::string& data)
+inline GameFile parseHoi4(const std::string& data)
 {
 	PdsFileResult* file_result = rakaly_hoi4_file(data.c_str(), data.length());
 	unwrapError(rakaly_file_error(file_result));
@@ -398,7 +398,7 @@ GameFile parseHoi4(const std::string& data)
 	return GameFile(file);
 }
 
-GameFile parseVic3(const std::string& data)
+inline GameFile parseVic3(const std::string& data)
 {
 	PdsFileResult* file_result = rakaly_vic3_file(data.c_str(), data.length());
 	unwrapError(rakaly_file_error(file_result));
@@ -406,7 +406,7 @@ GameFile parseVic3(const std::string& data)
 	return GameFile(file);
 }
 
-GameFile parseEu5(const std::string& data)
+inline GameFile parseEu5(const std::string& data)
 {
 	PdsFileResult* file_result = rakaly_eu5_file(data.c_str(), data.length());
 	unwrapError(rakaly_file_error(file_result));

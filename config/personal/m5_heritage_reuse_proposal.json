@@ -1,0 +1,1085 @@
+{
+  "schema": 2,
+  "status": "review_proposal_not_applied",
+  "date": "2026-10-02",
+  "scope": "本轮修订设计提案，尚未实装。保留文化键、语言、人口、宗教和本土。大类是游戏抽象；不声称全部成员同族、同语言或已完成全部历史审核。",
+  "sources": {
+    "california": {
+      "url": "https://roadmaptoresearch.dot.ca.gov/about-map-layers.html",
+      "finding": "加州文化区包含不同语言和独立地方共同体；共同文化区不意味着单一民族或语言。"
+    },
+    "northwest": {
+      "url": "https://americanindian.si.edu/nk360/pnw-history-culture-regions/pacific-coast",
+      "finding": "太平洋西北海岸共享鲑鱼相关传统，同时明确区分海岸、普吉特湾与哥伦比亚高原。"
+    },
+    "northwest_north": {
+      "url": "https://ocean.si.edu/human-connections/history-cultures/raven-spirit-native-american-canoes-journey",
+      "finding": "特林吉特、海达和钦西安的西北海岸文化背景。"
+    },
+    "plateau": {
+      "url": "https://www.nps.gov/whmi/learn/education/upload/Cayuse-Teacher-Guide-2022-2.pdf",
+      "finding": "卡尤塞与高原萨哈普廷社群存在共同文化实践，不能因此抹去独立卡尤塞身份和历史语言。"
+    },
+    "toraja": {
+      "url": "https://whc.unesco.org/en/tentativelists/5462/",
+      "finding": "托拉查传统聚落与仪式体系；作为独立文化保留。该文献不直接决定V3传承分组。"
+    },
+    "cornish": {
+      "url": "https://www.gov.uk/government/news/cornish-granted-minority-status-within-the-uk",
+      "finding": "康沃尔身份和语言独立；与威尔士、苏格兰及爱尔兰同属英国承认的少数族群。现代法律只佐证身份区别，不回推1780制度。"
+    },
+    "bahrani": {
+      "url": "https://www.iranicaonline.org/articles/bahrain-all/bahrain-ii-shi%CA%BFite-elements-in-bahrain/",
+      "finding": "区分巴哈里纳阿拉伯居民与波斯移民；什叶派宗教不能推出波斯身份。"
+    },
+    "chokwe": {
+      "url": "https://www.metmuseum.org/de/essays/kingdoms-of-the-savanna-the-luba-and-lunda-empires",
+      "finding": "卢巴—隆达政治文化传统及乔奎工匠与隆达的联系，支持与原版卢巴、隆达共用宽泛传承的设计。"
+    },
+    "tai_scope": {
+      "url": "https://glottolog.org/resource/reference/id/16971",
+      "finding": "海南Hlai与侗台语言背景；与本机泰、老挝、掸、壮同一传承的明确先例结合，设计广义壮侗传承。语言文献只是背景，不是民族等同声明。"
+    },
+    "andes_scope": {
+      "url": "https://americanindian.si.edu/exhibitions/infinityofnations/andes.html",
+      "finding": "安第斯跨社会的象征、工艺与互动传统，包括哥伦比亚、厄瓜多尔、秘鲁、玻利维亚；共同传承可跨民族和语言。"
+    },
+    "upper_guinea": {
+      "url": "https://www.metmuseum.org/ja/essays/nomoli-pomdo-stone-figures",
+      "finding": "上几内亚海岸萨皮传统及泰姆内、布隆、巴加关联；支持共享沿海传承的核心，而非覆盖全西非。"
+    },
+    "upper_guinea_rice": {
+      "url": "https://repository.si.edu/bitstreams/8b0c996c-079c-4690-b24e-49c1bc507988/download",
+      "finding": "乔拉及邻近上几内亚海岸社会的稻作历史；扩展为区域传承是游戏设计，不认定所有成员都是萨皮。"
+    },
+    "isthmian": {
+      "url": "https://www.si.edu/object/siris_sil_724736",
+      "finding": "哥斯达黎加、巴拿马与哥伦比亚之间的金工、权力象征及地峡—哥伦比亚互动区研究；本提案使用文化区而非遗传族群分类。"
+    },
+    "india_central": {
+      "url": "https://tribal.nic.in/downloads/Livelihood/Resource%20and%20Publications/tribalFaces.pdf",
+      "finding": "中东印度乔塔那格浦尔等地区的具名居民背景；与原版Gondi和Chhattisgarhi共用中印度的跨语言先例结合。"
+    },
+    "aridoamerican": {
+      "url": "https://www.noticonquista.unam.mx/amoxtli/2263/2257",
+      "finding": "UNAM将北墨西哥与美国西南的旱地文化区并置比较，同时区分绿洲农业与流动社会。这里只使用文化区与群体背景，不沿用旧文献的等级评价。"
+    }
+  },
+  "groups": [
+    {
+      "id": "island_southeast_asia",
+      "status": "recommended",
+      "target": "heritage_insulindian",
+      "members": [
+        "eu5_sundanese_culture",
+        "eu5_buton_culture",
+        "eu5_lamaholot_culture",
+        "eu5_tetum_culture",
+        "eu5_resident_atoni_culture",
+        "eu5_resident_bontoc_culture",
+        "eu5_resident_bungku_culture",
+        "eu5_resident_dompu_culture",
+        "eu5_resident_gorontalo_culture",
+        "eu5_resident_isnag_culture",
+        "eu5_resident_kaili_culture",
+        "eu5_resident_kalinga_culture",
+        "eu5_resident_kankanaey_culture",
+        "eu5_resident_mambai_culture",
+        "eu5_resident_mandarese_culture",
+        "eu5_resident_mangyan_culture",
+        "eu5_resident_minahasan_culture",
+        "eu5_resident_mongondow_culture",
+        "eu5_resident_mori_culture",
+        "eu5_resident_moronene_culture",
+        "eu5_resident_pamona_culture",
+        "eu5_resident_sangirese_culture",
+        "eu5_resident_sumba_culture",
+        "eu5_resident_tagbanwa_culture",
+        "eu5_resident_talaud_culture",
+        "eu5_resident_tolaki_culture",
+        "eu5_resident_tomini_culture",
+        "eu5_resident_torajan_culture"
+      ],
+      "basis": "延续已审核布吉、望加锡的原版印苏林迪亚抽象。原版本身覆盖爪哇、马来、达雅克、巴塔克、摩鹿加及菲律宾多种文化；这些具名岛屿社会各自保留文化与语言，以共用传承表达宽泛互动圈。不是将其全部改为马来或爪哇，也不以南岛语系自动覆盖全世界。",
+      "sources": [
+        "toraja"
+      ]
+    },
+    {
+      "id": "papuan_political_assets",
+      "status": "recommended",
+      "target": "heritage_melanesian",
+      "members": [
+        "eu5_buruwai_culture",
+        "eu5_namau_culture",
+        "eu5_rawa_papua_culture"
+      ],
+      "basis": "遵循已接受的原版美拉尼西亚大类范围，消除政治文化资产与已有巴布亚居民大类的传承碎片；这不是同一语言或同一族源声明。",
+      "sources": []
+    },
+    {
+      "id": "california_core",
+      "status": "recommended",
+      "target": "heritage_californian_indian",
+      "members": [
+        "eu5_resident_chumash_culture",
+        "eu5_resident_maiduan_culture",
+        "eu5_resident_miwok_culture",
+        "eu5_resident_nisenan_culture",
+        "eu5_resident_north_valley_yokut_culture",
+        "eu5_resident_ohlone_culture",
+        "eu5_resident_taaqtam_culture",
+        "eu5_resident_tongva_culture",
+        "eu5_resident_wintuan_culture"
+      ],
+      "basis": "采用原版加利福尼亚传承的文化区层级，结合已考证的具体社区核心；不把加州行政边界内一切文化归入，也不把原版Hokan示例解释为全部成员均讲Hokan语言。",
+      "sources": [
+        "california"
+      ]
+    },
+    {
+      "id": "northwest_coast_core",
+      "status": "recommended",
+      "target": "heritage_northwest_coast_indian",
+      "members": [
+        "eu5_resident_makah_culture",
+        "eu5_resident_tlingit_culture",
+        "eu5_resident_tsimshian_culture",
+        "eu5_resident_chinook_culture"
+      ],
+      "basis": "以西北海岸社会传统和交往为宽泛共同传承；原版萨利希只是已有示例。沿海奇努克采用此项，高原居民另列。",
+      "sources": [
+        "northwest",
+        "northwest_north"
+      ]
+    },
+    {
+      "id": "plateau_core",
+      "status": "recommended",
+      "target": "heritage_plateau_indian",
+      "members": [
+        "eu5_resident_sahaptin_culture",
+        "eu5_resident_willetpoos_culture"
+      ],
+      "basis": "萨哈普廷与卡尤塞使用哥伦比亚高原文化区传承，与原版内兹珀斯共享传承；卡尤塞文化和历史语言不合并。",
+      "sources": [
+        "plateau"
+      ]
+    },
+    {
+      "id": "mesoamerican_core",
+      "status": "recommended",
+      "target": "heritage_mesoamerican",
+      "members": [
+        "eu5_resident_amuzgo_culture",
+        "eu5_resident_chiapanec_culture",
+        "eu5_resident_chorotega_culture",
+        "eu5_resident_cuitlatec_culture",
+        "eu5_resident_ikoot_culture",
+        "eu5_resident_matlatzinca_culture",
+        "eu5_resident_mixe_culture",
+        "eu5_resident_popoloca_culture",
+        "eu5_resident_tapachultec_culture",
+        "eu5_resident_totonac_culture",
+        "eu5_resident_xinka_culture",
+        "eu5_resident_zoque_culture",
+        "eu5_mephaa_culture"
+      ],
+      "basis": "结合已有具名历史核心，沿用原版纳瓦、玛雅、萨波特克、米斯特克等跨语言文化区的游戏抽象。北部荒漠接触带和粒度不明的Otomanguean暂不随之归并。",
+      "sources": []
+    },
+    {
+      "id": "cornish",
+      "status": "recommended",
+      "target": "heritage_british",
+      "members": [
+        "eu5_resident_cornish"
+      ],
+      "basis": "原版British传承已经包含威尔士、爱尔兰、苏格兰盖尔等；康沃尔可同层级复用。保留其独立文化及语言，不改为英格兰文化。",
+      "sources": [
+        "cornish"
+      ]
+    },
+    {
+      "id": "silesian",
+      "status": "recommended",
+      "target": "heritage_west_slavic",
+      "members": [
+        "eu5_silesian"
+      ],
+      "basis": "针对源数据这一具名西里西亚文化的西斯拉夫设计，与原版波兰、捷克、斯洛伐克共用传承；不据此改写西里西亚州德语居民身份。",
+      "sources": []
+    },
+    {
+      "id": "bahrani",
+      "status": "recommended",
+      "target": "heritage_arab",
+      "members": [
+        "eu5_bahrani_culture"
+      ],
+      "basis": "巴哈里纳居民采用阿拉伯传承，居民文化和什叶派宗教各自保留；不是随统治者或按宗教划入伊朗。",
+      "sources": [
+        "bahrani"
+      ]
+    },
+    {
+      "id": "chokwe",
+      "status": "recommended",
+      "target": "heritage_congolese",
+      "members": [
+        "eu5_chokwe"
+      ],
+      "basis": "基于卢巴—隆达政治文化传统联系，复用原版卢巴、隆达所属的刚果传承；并非按现代国界把安哥拉族群改成刚果民族。",
+      "sources": [
+        "chokwe"
+      ]
+    },
+    {
+      "id": "north_american_settlers",
+      "status": "recommended",
+      "target": "heritage_north_american_settler",
+      "members": [
+        "eu5_migrant_english_north_america",
+        "eu5_migrant_french_north_america",
+        "eu5_migrant_ligurian_north_america"
+      ],
+      "basis": "沿用已授权的地区移民设计，复用原版洋基、迪克西、英裔加拿大、法裔加拿大共有传承；各移民语言、宗教、人口和严格多数本土政策不变。",
+      "sources": []
+    },
+    {
+      "id": "latin_american_settlers",
+      "status": "recommended",
+      "target": "heritage_latin_american_settler",
+      "members": [
+        "eu5_migrant_ligurian_central_america",
+        "eu5_migrant_ligurian_south_america"
+      ],
+      "basis": "原版拉美移民传承作为地区社会形成的抽象，可涵盖本战役已形成的利古里亚裔移民文化；不强制说西班牙语或葡萄牙语，不替换原住民。",
+      "sources": []
+    },
+    {
+      "id": "african_european_settlers",
+      "status": "recommended",
+      "target": "heritage_african_settler",
+      "members": [
+        "eu5_migrant_ligurian_sub_saharan_africa"
+      ],
+      "basis": "复用原版布尔文化的非洲定居者传承，仍属欧洲传承大组。它与非裔离散heritage_african_diaspora不同；不把当地非洲居民变成欧洲裔。",
+      "sources": []
+    },
+    {
+      "id": "andean_extension",
+      "status": "recommended",
+      "target": "heritage_andean",
+      "members": [
+        "eu5_resident_canta_culture",
+        "eu5_resident_charka_culture",
+        "eu5_resident_chicha_culture",
+        "eu5_resident_chillque_culture",
+        "eu5_resident_licanantay_culture",
+        "eu5_resident_omaguaca_culture",
+        "eu5_resident_pashash_culture",
+        "eu5_resident_pazioca_culture",
+        "eu5_resident_tastil_culture",
+        "eu5_resident_uru_culture",
+        "eu5_resident_yampara_culture",
+        "eu5_sacha_p_qulla_culture"
+      ],
+      "basis": "采用原版宽泛传承尺度的明确设计，成员保持独立文化、语言和宗教。原版参照：安第斯包含克丘亚、艾马拉、穆伊斯卡。本项不要求所有成员同族，也不宣称完整历史审核通过。",
+      "sources": []
+    },
+    {
+      "id": "guinean_extension",
+      "status": "recommended",
+      "target": "heritage_guinean",
+      "members": [
+        "eu5_bariba",
+        "eu5_dagbani",
+        "eu5_nupe",
+        "eu5_tem",
+        "eu5_resident_gbari",
+        "eu5_resident_gonja",
+        "eu5_resident_idoma",
+        "eu5_resident_igala",
+        "eu5_resident_ijaw",
+        "eu5_resident_kabiye"
+      ],
+      "basis": "采用原版宽泛传承尺度的明确设计，成员保持独立文化、语言和宗教。原版参照：几内亚包含阿肯、巴萨、埃多、埃维、丰、伊比比奥、伊博、基西、克鲁、莫西、蒂夫、约鲁巴、芳。本项不要求所有成员同族，也不宣称完整历史审核通过。",
+      "sources": []
+    },
+    {
+      "id": "himalayan_extension",
+      "status": "recommended",
+      "target": "heritage_himalayan",
+      "members": [
+        "eu5_resident_gurung_culture",
+        "eu5_resident_magar_culture",
+        "eu5_resident_newar_culture",
+        "eu5_resident_tamang_culture"
+      ],
+      "basis": "采用原版宽泛传承尺度的明确设计，成员保持独立文化、语言和宗教。原版参照：喜马拉雅包含尼泊尔、帕哈里。本项不要求所有成员同族，也不宣称完整历史审核通过。",
+      "sources": []
+    },
+    {
+      "id": "siberian_extension",
+      "status": "recommended",
+      "target": "heritage_siberian",
+      "members": [
+        "eu5_chelkans_culture",
+        "eu5_teleut_culture"
+      ],
+      "basis": "采用原版宽泛传承尺度的明确设计，成员保持独立文化、语言和宗教。原版参照：西伯利亚包含乌戈尔、西伯利亚、雅库特、图瓦。本项不要求所有成员同族，也不宣称完整历史审核通过。",
+      "sources": []
+    },
+    {
+      "id": "steppe_group_change",
+      "status": "recommended",
+      "target": "heritage_kipchak",
+      "members": [
+        "eu5_nogai",
+        "eu5_resident_cuman_culture"
+      ],
+      "basis": "采用原版宽泛传承尺度的明确设计，成员保持独立文化、语言和宗教。原版参照：钦察包含哈萨克、吉尔吉斯。本项不要求所有成员同族，也不宣称完整历史审核通过。",
+      "sources": [],
+      "group_change_rationale": "原逐源资产的大组来自旧模板；改用原版钦察或伏尔加—乌拉尔时随目标统一大组。明确接受欧洲／中亚、北亚／欧洲大组接纳关系变化，不修改语言。"
+    },
+    {
+      "id": "komi_group_change",
+      "status": "recommended",
+      "target": "heritage_volga_uralic",
+      "members": [
+        "eu5_resident_komi"
+      ],
+      "basis": "采用原版宽泛传承尺度的明确设计，成员保持独立文化、语言和宗教。原版参照：伏尔加‑乌拉尔包含莫尔多瓦、马里、乌德穆尔特。本项不要求所有成员同族，也不宣称完整历史审核通过。",
+      "sources": [],
+      "group_change_rationale": "原逐源资产的大组来自旧模板；改用原版钦察或伏尔加—乌拉尔时随目标统一大组。明确接受欧洲／中亚、北亚／欧洲大组接纳关系变化，不修改语言。"
+    },
+    {
+      "id": "tai_broad",
+      "status": "recommended",
+      "target": "heritage_tai",
+      "members": [
+        "eu5_resident_hlai_culture",
+        "eu5_kam_culture",
+        "eu5_resident_sui_culture",
+        "eu5_resident_gelao_culture"
+      ],
+      "basis": "原版泰传承已有泰、老挝、掸、壮，按广义壮侗文化圈复用至黎、侗、水、仡佬。保留各自语言；黎族不是被改成泰族。壮侗语言背景与原版实际跨度共同支持这项游戏设计。",
+      "sources": [
+        "tai_scope"
+      ],
+      "group_change_rationale": "水、仡佬旧模板位于东亚大组；新设计随原版壮与泰传承统一到东南亚大组。"
+    },
+    {
+      "id": "hmong_mien_broad",
+      "status": "recommended",
+      "target": "heritage_miao",
+      "members": [
+        "eu5_resident_yao_china_culture",
+        "eu5_resident_she_culture"
+      ],
+      "basis": "原版苗传承扩展为苗瑶相关文化圈，容纳瑶、畲；这是明确的传承范围设计，不以同一族群或完全相同习俗为前提。民族和语言字段保持。",
+      "sources": [],
+      "group_change_rationale": ""
+    },
+    {
+      "id": "sinitic_hui",
+      "status": "recommended",
+      "target": "heritage_han",
+      "members": [
+        "eu5_resident_hui_muslim_culture"
+      ],
+      "basis": "采用原版汉传承涵盖汉、闽、粤、客家的宽泛社会文化层级；回文化保留其独立身份和宗教，表达长期汉语社会中的共同文化背景，不作宗教同化。",
+      "sources": [],
+      "group_change_rationale": ""
+    },
+    {
+      "id": "mongolic_broad",
+      "status": "recommended",
+      "target": "heritage_mongolian",
+      "members": [
+        "eu5_resident_daur_culture",
+        "eu5_resident_monguor_culture",
+        "eu5_resident_bonan_culture"
+      ],
+      "basis": "原版蒙古包含蒙古、卡尔梅克、布里亚特，按这一跨地域尺度容纳达斡尔、土、保安。宗教与语言差异继续由对应字段表达。",
+      "sources": [],
+      "group_change_rationale": "三个旧模板在东亚，新目标原版蒙古位于北亚；这是显式分类校正。"
+    },
+    {
+      "id": "tibetan_frontier",
+      "status": "recommended",
+      "target": "heritage_tibetan",
+      "members": [
+        "eu5_resident_gyalrong_culture",
+        "eu5_resident_pumi_culture",
+        "eu5_resident_rma_culture"
+      ],
+      "basis": "将原版藏传承解释为藏地—东部高原传统圈，容纳嘉绒、普米、尔玛羌；保留语言差异，不把所有藏缅文化归藏，也不根据现代行政区自动吸收土家、白。",
+      "sources": [],
+      "group_change_rationale": ""
+    },
+    {
+      "id": "burma_upland",
+      "status": "recommended",
+      "target": "heritage_burmese",
+      "members": [
+        "eu5_resident_wa_culture",
+        "eu5_resident_palaung_culture",
+        "eu5_resident_blang_culture",
+        "eu5_lawa_culture",
+        "eu5_resident_derung_culture",
+        "eu5_resident_nu_culture"
+      ],
+      "basis": "原版缅甸已包含孟、缅甸、克钦、克伦，显然不是单一缅族。按缅甸及邻接山地历史互动圈容纳佤、德昂、布朗、拉佤、独龙、怒；不要求其说缅语。",
+      "sources": [],
+      "group_change_rationale": "源模板将部分滇西山地群体放在东亚；采用原版缅甸传承后统一东南亚大组，保持语言宗教。"
+    },
+    {
+      "id": "eastern_highlands_broad",
+      "status": "recommended",
+      "target": "heritage_eastern_highlands",
+      "members": [
+        "eu5_resident_tani_culture",
+        "eu5_resident_mishmi_culture",
+        "eu5_resident_bodo_culture",
+        "eu5_resident_koch_culture",
+        "eu5_resident_tripuri_culture",
+        "eu5_resident_karbi_culture",
+        "eu5_resident_garo_culture",
+        "eu5_resident_chakma_culture",
+        "eu5_khasi_culture"
+      ],
+      "basis": "原版东部高地覆盖曼尼普尔、卢沙伊、那加等多种山地社会；以东北印度—东喜马拉雅接触圈的大类尺度容纳这些具名文化，并不要求同一语系。",
+      "sources": [],
+      "group_change_rationale": "原东亚／南亚模板改用原版东部高地时随目标到东南亚；这是明确的大类设计，不能把旧模板当作不可变历史事实。"
+    },
+    {
+      "id": "mainland_southern_highlands",
+      "status": "recommended",
+      "target": "heritage_cambodian",
+      "members": [
+        "eu5_resident_bahnar_culture",
+        "eu5_resident_sedang_culture",
+        "eu5_resident_degar_culture"
+      ],
+      "basis": "以原版高棉对应的南部大陆东南亚文化圈容纳巴拿、色当、德加高地社会。原版单个示例不等于必须只服务高棉民族；本项为扩展设计，居民不改成高棉。",
+      "sources": [],
+      "group_change_rationale": ""
+    },
+    {
+      "id": "island_minorities",
+      "status": "recommended",
+      "target": "heritage_insulindian",
+      "members": [
+        "eu5_resident_orang_asli_culture",
+        "eu5_resident_aeta_culture"
+      ],
+      "basis": "原版岛屿传承已有达雅克、吕宋、卢马德等不同社会，覆盖森林和岛屿共同体而非仅沿海统治民族；沿用这一尺度到阿斯里、阿埃塔，不以语言差异另造传承。",
+      "sources": [],
+      "group_change_rationale": ""
+    },
+    {
+      "id": "central_indian_broad",
+      "status": "recommended",
+      "target": "heritage_central",
+      "members": [
+        "eu5_resident_bhil",
+        "eu5_resident_malvi",
+        "eu5_resident_nimadi",
+        "eu5_resident_nagpuri_culture",
+        "eu5_resident_munda_culture",
+        "eu5_resident_santal_culture",
+        "eu5_resident_malto_culture",
+        "eu5_resident_kurukh_culture",
+        "eu5_resident_korku_culture",
+        "eu5_resident_sora_culture",
+        "eu5_resident_ho_culture",
+        "eu5_resident_khond_culture",
+        "eu5_resident_kharia_culture"
+      ],
+      "basis": "原版中印度已将Gondi与Bundeli、Bageli、Chhattisgarhi并列，采用中部—东中部印度社会文化带的尺度；容纳具名山地和乔塔那格浦尔居民，不合并其民族或语言。",
+      "sources": [
+        "india_central"
+      ],
+      "group_change_rationale": ""
+    },
+    {
+      "id": "southwest_india",
+      "status": "recommended",
+      "target": "heritage_deccani",
+      "members": [
+        "eu5_resident_tuluva"
+      ],
+      "basis": "原版德干跨卡纳达、泰卢固、马拉地与德干居民；图卢使用相同区域传承尺度，文化保持独立。",
+      "sources": [],
+      "group_change_rationale": ""
+    },
+    {
+      "id": "south_asian_islands",
+      "status": "recommended",
+      "target": "heritage_insular",
+      "members": [
+        "eu5_dhivehi_culture"
+      ],
+      "basis": "迪维希采用原版海岛传承，与僧伽罗构成南亚海岛历史文化尺度；不改语言或伊斯兰宗教。",
+      "sources": [],
+      "group_change_rationale": ""
+    },
+    {
+      "id": "kashmir_dardic",
+      "status": "recommended",
+      "target": "heritage_kashmiri",
+      "members": [
+        "eu5_resident_shina_culture"
+      ],
+      "basis": "原版克什米尔已包含Kashmiri与Kho，以西喜马拉雅—达尔德区域传统容纳希纳，保持各自语言。",
+      "sources": [],
+      "group_change_rationale": ""
+    },
+    {
+      "id": "hindu_kush",
+      "status": "recommended",
+      "target": "heritage_afghan",
+      "members": [
+        "eu5_resident_nuristani_culture",
+        "eu5_resident_pashayi_culture"
+      ],
+      "basis": "复用原版已定义的阿富汗区域传承，容纳兴都库什南麓两种具名山地文化；不把努里斯坦改作普什图，不倒推19世纪末宗教变化。",
+      "sources": [],
+      "group_change_rationale": "原中东模板转到该原版trait定义的中亚大组；不改宗教、语言或本土。"
+    },
+    {
+      "id": "baluch_region",
+      "status": "recommended",
+      "target": "heritage_iranian",
+      "members": [
+        "eu5_resident_brahui_culture"
+      ],
+      "basis": "原版伊朗已包含俾路支、普什图等，采用伊朗—阿富汗—俾路支社会文化圈尺度容纳布拉灰；其达罗毗荼语言照旧，不以语言分类否定共享地区传承。",
+      "sources": [],
+      "group_change_rationale": "布拉灰旧南亚大组随原版伊朗传承归中东；明确是游戏文化圈而非语言分类。"
+    },
+    {
+      "id": "terai",
+      "status": "recommended",
+      "target": "heritage_himalayan",
+      "members": [
+        "eu5_resident_tharu_culture"
+      ],
+      "basis": "塔鲁与尼泊尔南麓社会互动使用宽泛喜马拉雅传承；不据此授予整个喜马拉雅本土。",
+      "sources": [],
+      "group_change_rationale": ""
+    },
+    {
+      "id": "livonian",
+      "status": "recommended",
+      "target": "heritage_baltic",
+      "members": [
+        "eu5_resident_liv"
+      ],
+      "basis": "原版波罗的已经包含爱沙尼亚而不限波罗的语族；利沃尼亚依同样跨语言的历史文化圈归入。",
+      "sources": [],
+      "group_change_rationale": ""
+    },
+    {
+      "id": "chiyalik",
+      "status": "recommended",
+      "target": "heritage_magyar",
+      "members": [
+        "eu5_resident_chiyalik_culture"
+      ],
+      "basis": "固定源定义将Chiyalik与Hungarian、Szekely列为kindred；复用原版马扎尔共同传承，仍保留源存续文化和现有语言。",
+      "sources": [],
+      "group_change_rationale": ""
+    },
+    {
+      "id": "south_arabian",
+      "status": "recommended",
+      "target": "heritage_arab",
+      "members": [
+        "eu5_soqotri_culture"
+      ],
+      "basis": "阿拉伯传承按包含也门、埃及、马格里布的宽泛尺度使用；索科特拉保留南阿拉伯语言及岛屿身份，不因语言不等于现代阿拉伯语就独设传承。",
+      "sources": [],
+      "group_change_rationale": ""
+    },
+    {
+      "id": "andean_pacific_shared",
+      "status": "recommended",
+      "target": "eu5_shared_heritage_andean_pacific",
+      "members": [
+        "eu5_resident_chimu_culture",
+        "eu5_resident_casma_culture",
+        "eu5_resident_chiribaya_culture",
+        "eu5_resident_collique_culture",
+        "eu5_resident_tallan_culture",
+        "eu5_resident_guancavilca_culture",
+        "eu5_resident_jama_coaque_culture",
+        "eu5_manta_culture",
+        "eu5_xllang_culture"
+      ],
+      "basis": "新增一项安第斯太平洋沿岸共享传承：秘鲁—厄瓜多尔沿海谷地城邦、海上交往与工艺传统共同构成大文化圈。其与高地存在联系，拆分是接纳设计取舍，并非绝对文明分界。",
+      "sources": [
+        "andes_scope"
+      ],
+      "group_change_rationale": ""
+    },
+    {
+      "id": "andean_northern_interior",
+      "status": "recommended",
+      "target": "heritage_andean",
+      "members": [
+        "eu5_resident_cara_culture",
+        "eu5_resident_guayacundo_culture",
+        "eu5_resident_kanari_culture",
+        "eu5_resident_puruha_culture",
+        "eu5_resident_puben_culture",
+        "eu5_resident_sutagao_culture",
+        "eu5_resident_chitarero_culture",
+        "eu5_resident_uwa_culture",
+        "eu5_resident_nutabe_culture",
+        "eu5_resident_tahami_culture",
+        "eu5_resident_timanae_culture",
+        "eu5_resident_calima_culture",
+        "eu5_cuicas_culture",
+        "eu5_panche_culture",
+        "eu5_resident_pijao_culture"
+      ],
+      "basis": "复用原版已包含哥伦比亚穆伊斯卡的广义安第斯。涵盖北安第斯山地、河谷与相关传统社会，不限印加或克丘亚；保留各自来源标签。",
+      "sources": [
+        "andes_scope"
+      ],
+      "group_change_rationale": ""
+    },
+    {
+      "id": "isthmo_colombian_shared",
+      "status": "recommended",
+      "target": "eu5_shared_heritage_isthmo_colombian",
+      "members": [
+        "eu5_resident_huetar_culture",
+        "eu5_resident_cabecar_culture",
+        "eu5_resident_boruca_culture",
+        "eu5_resident_guna_culture",
+        "eu5_resident_ngabe_culture",
+        "eu5_resident_tayrona_culture",
+        "eu5_resident_sinu_culture",
+        "eu5_resident_malibu_culture",
+        "eu5_resident_embera_culture",
+        "eu5_resident_waunana_culture",
+        "eu5_atacame_culture",
+        "eu5_resident_awa_culture",
+        "eu5_resident_tsachila_culture",
+        "eu5_resident_barbakoan_culture"
+      ],
+      "basis": "新增地峡—哥伦比亚大传承，容纳地峡南部、哥伦比亚北部及太平洋低地的跨语言社会联系。不是一律归作奇布查民族；Barbakoan仍标记源标签不明，不因共享大类就完成民族审核。",
+      "sources": [
+        "isthmian"
+      ],
+      "group_change_rationale": ""
+    },
+    {
+      "id": "caribbean_mainland",
+      "status": "recommended",
+      "target": "heritage_caribbean",
+      "members": [
+        "eu5_resident_mayangna_culture",
+        "eu5_resident_rama_culture",
+        "eu5_matagalpa_culture",
+        "eu5_resident_jirajaran_culture"
+      ],
+      "basis": "原版加勒比传承已包括大陆的米斯基托和瓜希罗；依此大陆互动圈尺度容纳马扬纳、拉马、马塔加尔帕和希拉哈拉，不以是否居住岛屿判断。",
+      "sources": [],
+      "group_change_rationale": ""
+    },
+    {
+      "id": "amazonian_frontier",
+      "status": "recommended",
+      "target": "heritage_amazonian",
+      "members": [
+        "eu5_resident_andaqui_culture",
+        "eu5_resident_cholon_culture",
+        "eu5_resident_bagua_culture",
+        "eu5_resident_kanisian_culture",
+        "eu5_palta_culture"
+      ],
+      "basis": "使用原版亚马孙的宽泛低地与东坡森林文化圈；独立族群、有限史料和存续标签仍保留，不假称一个语言家族。",
+      "sources": [],
+      "group_change_rationale": ""
+    },
+    {
+      "id": "upper_guinea_shared",
+      "status": "recommended",
+      "target": "eu5_shared_heritage_upper_guinean",
+      "members": [
+        "eu5_resident_baga_culture",
+        "eu5_resident_balanta",
+        "eu5_resident_jola",
+        "eu5_resident_manjak",
+        "eu5_resident_temne",
+        "eu5_resident_sherbro",
+        "eu5_resident_gola",
+        "eu5_resident_serer",
+        "eu5_resident_tenda_culture"
+      ],
+      "basis": "新增上几内亚沿岸共享传承：以塞内冈比亚南部至几内亚—塞拉利昂的区域联系为尺度，核心包括萨皮相关传统，兼容不同语言、宗教及稻作／旱作生活。塞雷尔和滕达是向内陆过渡的显式边缘成员，不宣称都是萨皮。",
+      "sources": [
+        "upper_guinea",
+        "upper_guinea_rice"
+      ],
+      "group_change_rationale": ""
+    },
+    {
+      "id": "guinean_gulf",
+      "status": "recommended",
+      "target": "heritage_guinean",
+      "members": [
+        "eu5_resident_ajan",
+        "eu5_resident_bantoid",
+        "eu5_resident_benue"
+      ],
+      "basis": "原版几内亚已有阿肯、约鲁巴、蒂夫等多类居民。固定源Ajan属Kwa背景，Bantoid/Benue为西非源分类标签，在这一大圈内复用；标签内部民族成员仍未知，本土仍保持不授予决定。",
+      "sources": [],
+      "group_change_rationale": ""
+    },
+    {
+      "id": "sahelian_broad",
+      "status": "recommended",
+      "target": "heritage_sahelian",
+      "members": [
+        "eu5_resident_dogon",
+        "eu5_resident_sao_culture",
+        "eu5_resident_mandara_culture",
+        "eu5_resident_bilala_culture",
+        "eu5_resident_runga_culture",
+        "eu5_resident_zaghawa_culture"
+      ],
+      "basis": "原版萨赫勒横跨沃洛夫、曼德、豪萨、卡努里、萨拉、泰达人，不是单一语族。具名萨赫勒—乍得盆地社会沿用这个广阔交流圈。",
+      "sources": [],
+      "group_change_rationale": ""
+    },
+    {
+      "id": "darfur_broad",
+      "status": "recommended",
+      "target": "heritage_darfurian",
+      "members": [
+        "eu5_resident_daju_culture",
+        "eu5_resident_tunjur_culture",
+        "eu5_resident_masalit_culture",
+        "eu5_resident_maba_africa_culture"
+      ],
+      "basis": "复用达尔富尔区域传承，包含达朱、通朱尔、马萨利特、马巴等达尔富尔—瓦达伊历史相连的社会；不把全部人改成Fur民族。",
+      "sources": [],
+      "group_change_rationale": ""
+    },
+    {
+      "id": "horn_highlands",
+      "status": "recommended",
+      "target": "heritage_abyssinian",
+      "members": [
+        "eu5_resident_agaw_culture",
+        "eu5_resident_burji_culture",
+        "eu5_resident_ometo_culture",
+        "eu5_resident_gonga_culture",
+        "eu5_resident_omo_culture"
+      ],
+      "basis": "原版阿比西尼亚已跨阿姆哈拉、提格雷、阿法尔、贝贾、奥罗莫、锡达莫，按同等宽度扩展南部高地和奥摩相关社会。Gonga/Omo内部未定不影响大圈归属，但保持未完成身份审核状态。",
+      "sources": [],
+      "group_change_rationale": ""
+    },
+    {
+      "id": "nilotic_regional",
+      "status": "recommended",
+      "target": "heritage_nilotic",
+      "members": [
+        "eu5_resident_madi_culture",
+        "eu5_resident_moru_culture",
+        "eu5_resident_lugbara_culture",
+        "eu5_resident_berta_culture",
+        "eu5_resident_gumuz_culture",
+        "eu5_resident_dhaasanac_culture"
+      ],
+      "basis": "将原版尼罗传承按尼罗—东北非内陆社会文化圈解释，覆盖这些南苏丹与邻接河谷具名群体；这是跨语言大区设计，明确不称其所有语言都属于Nilotic。",
+      "sources": [],
+      "group_change_rationale": ""
+    },
+    {
+      "id": "congo_ubangi",
+      "status": "recommended",
+      "target": "heritage_congolese",
+      "members": [
+        "eu5_resident_adamawa_culture",
+        "eu5_resident_gbaya_culture",
+        "eu5_resident_mandja_culture",
+        "eu5_resident_banda_culture",
+        "eu5_resident_ngbandi_culture",
+        "eu5_resident_bomassa_culture",
+        "eu5_resident_kuba",
+        "eu5_resident_seru_culture"
+      ],
+      "basis": "原版刚果已把班图类别与阿赞德并列；按刚果—乌班吉内陆社会交流的大尺度复用。跨语言群体文化仍各自独立。",
+      "sources": [],
+      "group_change_rationale": ""
+    },
+    {
+      "id": "bantu_eastern",
+      "status": "recommended",
+      "target": "heritage_eastern_bantu",
+      "members": [
+        "eu5_resident_bemba",
+        "eu5_resident_tabwa",
+        "eu5_resident_twa_culture"
+      ],
+      "basis": "原版东班图从湖区延至马拉维—莫桑比克且涵盖多种社会。以湖区互动圈容纳本巴、塔布瓦和源Twa；Twa语言及身份仍按源记录保留，不解释为所有Twa民族都同属一种班图语言。",
+      "sources": [],
+      "group_change_rationale": ""
+    },
+    {
+      "id": "bantu_southern",
+      "status": "recommended",
+      "target": "heritage_southern_bantu",
+      "members": [
+        "eu5_resident_tsonga_culture"
+      ],
+      "basis": "原版南班图已包含恩古尼、绍纳、索托、汤加，聪加按相同区域尺度共享。",
+      "sources": [],
+      "group_change_rationale": ""
+    },
+    {
+      "id": "somali_frontier",
+      "status": "recommended",
+      "target": "heritage_somali",
+      "members": [
+        "eu5_resident_rendille_culture"
+      ],
+      "basis": "索马里传承扩展为非洲之角东部干旱区的近缘交往圈，伦迪莱语言与宗教独立。",
+      "sources": [],
+      "group_change_rationale": ""
+    },
+    {
+      "id": "sudanese_regional",
+      "status": "recommended",
+      "target": "heritage_afro_arab",
+      "members": [
+        "eu5_resident_funj_culture"
+      ],
+      "basis": "原版非裔阿拉伯已有Sudanese，丰吉按苏丹历史社会圈使用；不是强制文化阿拉伯化或改宗。",
+      "sources": [],
+      "group_change_rationale": ""
+    },
+    {
+      "id": "southeast_woodlands",
+      "status": "recommended",
+      "target": "heritage_southeast_indian",
+      "members": [
+        "eu5_resident_calusa_culture",
+        "eu5_resident_timucua_culture",
+        "eu5_resident_tocobaga_culture",
+        "eu5_resident_natchez_culture",
+        "eu5_resident_taensa_culture",
+        "eu5_resident_bayagoula_culture",
+        "eu5_resident_chitimacha_culture",
+        "eu5_resident_atakapa_culture",
+        "eu5_resident_avoyel_culture",
+        "eu5_resident_quasmigdo_culture"
+      ],
+      "basis": "启用原版已定义的东南印第安传承，统合佛罗里达—密西西比下游—墨西哥湾东部文化区。地区边缘仍按具名清单取舍，不复制原版Cherokee误入subarctic的异常。",
+      "sources": [],
+      "group_change_rationale": ""
+    },
+    {
+      "id": "northwest_extension",
+      "status": "recommended",
+      "target": "heritage_northwest_coast_indian",
+      "members": [
+        "eu5_resident_alsea_culture",
+        "eu5_resident_coos_culture",
+        "eu5_resident_eyak_culture",
+        "eu5_resident_yurok_culture",
+        "eu5_resident_wiyot_culture",
+        "eu5_resident_kalapuyan_culture"
+      ],
+      "basis": "原版西北海岸按文化区设计，纳入海岸和威拉米特邻接交流区；卡拉普亚及北加州两项是明确的边缘取舍，保留语言和文化，不要求全部为Salish。",
+      "sources": [],
+      "group_change_rationale": ""
+    },
+    {
+      "id": "plateau_extension",
+      "status": "recommended",
+      "target": "heritage_plateau_indian",
+      "members": [
+        "eu5_resident_ktunaxa_culture",
+        "eu5_resident_ewksikni_culture",
+        "eu5_resident_modokni_culture",
+        "eu5_resident_molalla_culture"
+      ],
+      "basis": "以高原文化区及其南缘接触带容纳库特奈、克拉马斯、莫多克、莫拉拉。原版示例内兹珀斯不是唯一允许身份。",
+      "sources": [],
+      "group_change_rationale": ""
+    },
+    {
+      "id": "california_north",
+      "status": "recommended",
+      "target": "heritage_californian_indian",
+      "members": [
+        "eu5_resident_takelma_culture"
+      ],
+      "basis": "采用北加州—罗格河传统接触区的大类尺度，不按现代俄勒冈边界否定与加州文化区联系。",
+      "sources": [],
+      "group_change_rationale": ""
+    },
+    {
+      "id": "plains_core",
+      "status": "recommended",
+      "target": "heritage_plains_indian",
+      "members": [
+        "eu5_resident_kaigwu_culture"
+      ],
+      "basis": "基奥瓦复用原版大平原传承。",
+      "sources": [],
+      "group_change_rationale": ""
+    },
+    {
+      "id": "northeast_beothuk",
+      "status": "recommended",
+      "target": "heritage_eastern_woodlands_indian",
+      "members": [
+        "eu5_resident_beothuk_culture"
+      ],
+      "basis": "贝奥图克作为纽芬兰林地—沿海社会使用广义东部林地传承，与阿尔冈昆背景参照；不声称其语言已确定同族。",
+      "sources": [],
+      "group_change_rationale": ""
+    },
+    {
+      "id": "southwest_north_mexico",
+      "status": "recommended",
+      "target": "heritage_southwest_indian",
+      "members": [
+        "eu5_resident_mayo_culture",
+        "eu5_resident_opata_culture",
+        "eu5_resident_acaxee_culture",
+        "eu5_resident_raramuri_culture",
+        "eu5_resident_tepehuan_culture",
+        "eu5_resident_xixime_culture"
+      ],
+      "basis": "原版西南传承按西南—北墨西哥历史接触区使用，兼容农业、山地与流动社会；本项保留墨西哥边缘成员的身份，不因现代美墨国界另造传承。",
+      "sources": [],
+      "group_change_rationale": ""
+    },
+    {
+      "id": "mesoamerican_northern_southern_frontiers",
+      "status": "recommended",
+      "target": "heritage_mesoamerican",
+      "members": [
+        "eu5_resident_otomanguean_culture",
+        "eu5_resident_lenca_culture",
+        "eu5_resident_huichol_culture",
+        "eu5_resident_naayeri_culture",
+        "eu5_resident_caxcan_culture",
+        "eu5_resident_tepecan_culture",
+        "eu5_resident_totorame_culture",
+        "eu5_resident_tahue_culture",
+        "eu5_resident_guasave_culture",
+        "eu5_resident_tolupan_culture"
+      ],
+      "basis": "原版美索美洲覆盖多语多民族的文明互动圈；纳入西部、南部具名接触带及源Otomanguean大标签。共享传承不等于源标签的成员、本土均已明确。",
+      "sources": [],
+      "group_change_rationale": ""
+    },
+    {
+      "id": "aridoamerican_shared",
+      "status": "recommended",
+      "target": "eu5_shared_heritage_aridoamerican",
+      "members": [
+        "eu5_resident_guamar_culture",
+        "eu5_resident_pame_culture",
+        "eu5_resident_iztachichimecah_culture",
+        "eu5_resident_guachichil_culture",
+        "eu5_resident_zacatecah_culture",
+        "eu5_resident_sauzas_culture",
+        "eu5_resident_tamauliteco_culture",
+        "eu5_resident_coahuilteco_culture",
+        "eu5_resident_toboso_culture",
+        "eu5_resident_xumani_culture",
+        "eu5_resident_yoli_culture"
+      ],
+      "basis": "用一个北墨西哥旱地大传承收束奇奇梅克与邻接旱地社会，避免强行等同美索美洲文明或另造十一项。伊斯塔奇奇梅卡和塔毛利帕斯源标签内部仍未明确，本项只作大圈设计，不补造民族成员或本土。",
+      "sources": [
+        "aridoamerican"
+      ]
+    }
+  ],
+  "retain_reasons": {
+    "eu5_resident_hadza_culture": "已专门审核独立传承；不能为压缩数量而误称科伊桑。",
+    "eu5_resident_sandawe_culture": "已专门审核独立传承；点击音或地理接近不足以归入科伊桑。",
+    "eu5_resident_coptic_culture": "科普特历史共同体不应仅因埃及位置或阿拉伯语接触直接变成阿拉伯传承。",
+    "eu5_resident_nubian": "原版尼罗特或阿拉伯传承不能仅凭尼罗河地理或语言模板替代努比亚。",
+    "eu5_tujia_culture": "土家与汉、藏、彝传承的中心范围存在区别；没有类似泰—壮那样清楚的原版共同覆盖先例。作为武陵地区有限例外保留，而非要求每个民族独立传承。",
+    "eu5_migrant_french_asia": "原版没有对应的欧洲裔亚洲移民传承；保留目前亚洲移民共同传承。",
+    "eu5_migrant_ligurian_asia": "原版没有对应的欧洲裔亚洲移民传承；不会误用亚洲原住民传承。",
+    "eu5_resident_bai_culture": "白族可与邻近社会共享很多特征，但原版汉、藏、彝各自已有较明确中心；保留大理地区这一历史主体传承作为有限例外，避免三选一的任意归属。",
+    "eu5_resident_nashi_culture": "纳西处于藏地与滇西传统交汇；不能仅用纳西语言与彝近缘或东巴与苯教联系决定唯一传承。先保留这一有限地区例外。",
+    "eu5_resident_dahalo_culture": "非洲之角、东非沿海与点击音语言之间均有交叉背景；原版东非trait目前服务马达加斯加，东班图也不是纯地理标签，暂保留。",
+    "eu5_resident_south_cushitic_culture": "源南库施标签未明确具体成员；现有原版东非类别与马达加斯加、班图、索马里的实际范围均有不确定边界，暂保留而不改判为科伊桑。",
+    "eu5_resident_beyte_yisrael": "贝塔以色列的犹太历史共同体不能直接当作塞法迪分支；与阿比西尼亚共有背景也未必足以替代其传承，作为少数例外保留。",
+    "eu5_resident_teimani": "也门犹太传统不等同伊比利亚塞法迪流散；原版犹太传承分为阿什肯纳兹／塞法迪，缺少足够宽泛的直接对应。暂保留，未来可与其他西亚犹太文化共用一项。",
+    "eu5_resident_mizrahi": "原版塞法迪不能自动代表所有米兹拉希。保持现有宽泛西亚犹太身份，不按犹太宗教直接归阿什肯纳兹或塞法迪。",
+    "eu5_resident_mustaarabi": "阿拉伯语犹太社区不等同塞法迪流散或非犹太阿拉伯社会；暂保留，可另研究西亚犹太共享传承，而非逐一新增。",
+    "eu5_resident_nicobarese_culture": "南亚海岛与岛屿东南亚之间的边缘成员，原版海岛仅僧伽罗、印苏林迪亚又以马来群岛为中心；本轮保留少数未定边缘项。",
+    "eu5_resident_andamanese_culture": "安达曼群岛历史共同体与尼科巴、南亚海岛及马来群岛不能简单等同；避免为岛屿位置而硬归，保留有限例外。",
+    "eu5_resident_banjara": "跨地区流动社群，缺少足以代表全部源人口的统一拉贾斯坦或德干归属；人口和不授予固定本土的既有决定不变。",
+    "eu5_resident_domari_culture": "跨地区多姆社群不能用当前位置选阿拉伯或印度传承；独立社会身份构成保留例外。"
+  },
+  "native_exceptions": "本机原版把Cherokee/Muskogean与Cree放在subarctic，把Oodham放在eastern_woodlands；southeast_indian虽定义存在却暂无文化使用。本提案不机械沿用这些疑似错配，也不改原版资产。",
+  "design_principle": "以本机原版实际成员推断传承作为宽泛接纳圈的用意；优先复用原版，少量新增共享大传承。历史文化身份独立不自动要求传承独立。显式成员清单，不按每个POP位置或语言运行自动分类。",
+  "new_shared_heritages": {
+    "eu5_shared_heritage_andean_pacific": {
+      "name": "安第斯太平洋沿岸",
+      "english": "Andean Pacific Coast",
+      "group": "heritage_group_indigenous_american",
+      "type": "heritage",
+      "basis": "秘鲁—厄瓜多尔海岸的历史城邦、沿海谷地及海上交换传统；与原版安第斯保持同一大组。",
+      "sources": [
+        "andes_scope"
+      ]
+    },
+    "eu5_shared_heritage_upper_guinean": {
+      "name": "上几内亚沿岸",
+      "english": "Upper Guinean Coast",
+      "group": "heritage_group_african",
+      "type": "heritage",
+      "basis": "塞内冈比亚南部—几内亚—塞拉利昂沿岸的区域交流、稻作与仪式传统。不是单一Atlantic语言家族或一个民族。",
+      "sources": [
+        "upper_guinea",
+        "upper_guinea_rice"
+      ]
+    },
+    "eu5_shared_heritage_isthmo_colombian": {
+      "name": "地峡—哥伦比亚",
+      "english": "Isthmo-Colombian",
+      "group": "heritage_group_indigenous_american",
+      "type": "heritage",
+      "basis": "哥斯达黎加—巴拿马—哥伦比亚北部共享的大文化互动区；避免把全部群体硬塞进中美洲、安第斯或加勒比。",
+      "sources": [
+        "isthmian"
+      ]
+    },
+    "eu5_shared_heritage_aridoamerican": {
+      "name": "北墨西哥旱地",
+      "english": "Aridoamerican",
+      "group": "heritage_group_indigenous_american",
+      "type": "heritage",
+      "basis": "北墨西哥旱地及奇奇梅克接触带共享大传承；与原版西南农业／山地核心和中美洲大类相邻，不为各个小群体单设。",
+      "sources": [
+        "aridoamerican"
+      ]
+    }
+  },
+  "budget": {
+    "max_new_shared_heritages": 4,
+    "max_remaining_active_custom_heritages": 24,
+    "max_new_heritage_groups": 0,
+    "policy": "限制传承碎片，不以达标为理由自动改民族或删除人口。"
+  },
+  "revision_note": "用户要求按原版宽泛文化圈尽可能整合，并允许安第斯、几内亚等跨度过大的区域拆成少数共享大传承。此修订取代首版69项保守建议。"
+}

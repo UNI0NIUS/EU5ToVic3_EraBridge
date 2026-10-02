@@ -1,5 +1,6 @@
 #ifndef EU5_LOCATION_H
 #define EU5_LOCATION_H
+#include "PopulationManager/PopulationManager.h"
 
 namespace EU5
 {
@@ -49,7 +50,7 @@ class Location: commonItems::parser
 	[[nodiscard]] const auto& getLastOwnerChange() const { return lastOwnerChange; }
 	[[nodiscard]] const auto& getLastControllerChange() const { return lastControllerChange; }
 
-	[[nodiscard]] int getMaxRawMaterialWorkers() const { return maxRawMaterialWorkers; }
+	[[nodiscard]] double getMaxRawMaterialWorkers() const { return maxRawMaterialWorkers; }
 	[[nodiscard]] double getControl() const { return control; }
 	[[nodiscard]] bool getCapControl() const { return capControl; }
 	[[nodiscard]] bool getRoadToCapital() const { return roadToCapital; }
@@ -109,7 +110,7 @@ class Location: commonItems::parser
 	date lastOwnerChange;
 	date lastControllerChange;
 
-	int maxRawMaterialWorkers = 0;
+	double maxRawMaterialWorkers = 0;
 	double control = 0;
 	bool capControl = false;
 	bool roadToCapital = false;
@@ -127,11 +128,11 @@ class Location: commonItems::parser
 	// instritution name -> 0.0001 - 100 representing spread %
 	std::map<std::string, double> institutions;
 
-	std::vector<int> unitIDs;
-	std::vector<int> portIDs; // list in save but I only ever see one value?
+	std::vector<ObjectID> unitIDs;
+	std::vector<ObjectID> portIDs; // unit IDs at the port
 	// TODO figure out what to do with location-specific pop info that isn't tied to specific pop IDs
 	//      e.g. unemployment, rgo employment, culture/religion conversion
-	std::vector<int> popIDs;
+	std::vector<PopID> popIDs;
 
 	double garrison = 0;
 	std::map<std::string, int> counters;

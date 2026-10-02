@@ -12,7 +12,8 @@ void EU5::CultureManager::registerKeys()
 {
 	cultureDatabaseParser.registerRegex(commonItems::integerRegex, [this](const std::string& theID, std::istream& theStream) {
 		const auto newCultureID = std::stoi(theID);
-		cultures.emplace(newCultureID, std::make_shared<Culture>(newCultureID, theStream));
+		if (!cultures.emplace(newCultureID, std::make_shared<Culture>(newCultureID, theStream)).second)
+			throw std::runtime_error("Duplicate culture ID: " + theID);
 	});
 	cultureDatabaseParser.registerRegex(commonItems::catchallRegex, commonItems::ignoreItem);
 

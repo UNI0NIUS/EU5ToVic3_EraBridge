@@ -1,0 +1,384 @@
+{
+  "source_sha256": "d4e6bcb5f0c9d91f3d5abe73a5644b6bd99364060f3c76120c60529ad3ac6f74",
+  "target_version": "1.13.11",
+  "matches": {
+    "3": {
+      "source_tag": "SWE",
+      "target_tag": "SWE",
+      "status": "exact_localized_name",
+      "evidence": "Unique exact English or Chinese identity in installed game localization."
+    },
+    "6": {
+      "source_tag": "NOR",
+      "target_tag": "NOR",
+      "status": "exact_localized_name",
+      "evidence": "Unique exact English or Chinese identity in installed game localization."
+    },
+    "12": {
+      "source_tag": "ICE",
+      "target_tag": "ICL",
+      "status": "exact_localized_name",
+      "evidence": "Unique exact English or Chinese identity in installed game localization."
+    },
+    "13": {
+      "source_tag": "GRL",
+      "target_tag": "GRN",
+      "status": "exact_localized_name",
+      "evidence": "Unique exact English or Chinese identity in installed game localization."
+    },
+    "134": {
+      "source_tag": "YEM",
+      "target_tag": "YEM",
+      "status": "exact_localized_name",
+      "evidence": "Unique exact English or Chinese identity in installed game localization."
+    },
+    "136": {
+      "source_tag": "OMA",
+      "target_tag": "OMA",
+      "status": "exact_localized_name",
+      "evidence": "Unique exact English or Chinese identity in installed game localization."
+    },
+    "182": {
+      "source_tag": "PUE",
+      "target_tag": "PUE",
+      "status": "exact_localized_name",
+      "evidence": "Unique exact English or Chinese identity in installed game localization."
+    },
+    "203": {
+      "source_tag": "BYZ",
+      "target_tag": "BYZ",
+      "status": "exact_localized_name",
+      "evidence": "Unique exact English or Chinese identity in installed game localization."
+    },
+    "245": {
+      "source_tag": "LIT",
+      "target_tag": "LIT",
+      "status": "exact_localized_name",
+      "evidence": "Unique exact English or Chinese identity in installed game localization."
+    },
+    "264": {
+      "source_tag": "GWL",
+      "target_tag": "GAR",
+      "status": "exact_localized_name",
+      "evidence": "Unique exact English or Chinese identity in installed game localization."
+    },
+    "289": {
+      "source_tag": "ENG",
+      "target_tag": "ENG",
+      "status": "exact_localized_name",
+      "evidence": "Unique exact English or Chinese identity in installed game localization."
+    },
+    "291": {
+      "source_tag": "SCO",
+      "target_tag": "SCO",
+      "status": "exact_localized_name",
+      "evidence": "Unique exact English or Chinese identity in installed game localization."
+    },
+    "314": {
+      "source_tag": "ULS",
+      "target_tag": "ULS",
+      "status": "exact_localized_name",
+      "evidence": "Unique exact English or Chinese identity in installed game localization."
+    },
+    "381": {
+      "source_tag": "HUN",
+      "target_tag": "HUN",
+      "status": "exact_localized_name",
+      "evidence": "Unique exact English or Chinese identity in installed game localization."
+    },
+    "382": {
+      "source_tag": "RMN",
+      "target_tag": "ROM",
+      "status": "exact_localized_name",
+      "evidence": "Unique exact English or Chinese identity in installed game localization."
+    },
+    "391": {
+      "source_tag": "GEO",
+      "target_tag": "GEO",
+      "status": "reviewed",
+      "evidence": "格鲁吉亚对应高加索 GEO；排除同英文名的美国佐治亚 GRG。"
+    },
+    "556": {
+      "source_tag": "AGH",
+      "target_tag": "AGC",
+      "status": "exact_localized_name",
+      "evidence": "Unique exact English or Chinese identity in installed game localization."
+    },
+    "607": {
+      "source_tag": "KOR",
+      "target_tag": "KOR",
+      "status": "reviewed",
+      "evidence": "高丽映射朝鲜半岛 KOR，沿用源高丽名称和统治者。"
+    },
+    "609": {
+      "source_tag": "MCH",
+      "target_tag": "MCH",
+      "status": "exact_localized_name",
+      "evidence": "Unique exact English or Chinese identity in installed game localization."
+    },
+    "764": {
+      "source_tag": "CHI",
+      "target_tag": "CHI",
+      "status": "reviewed",
+      "evidence": "存档当前 TAG 为 CHI、名称明；V3 CHI 是中国通用国家定义。保留源名称、政体和人物，不采用清朝历史。"
+    },
+    "1142": {
+      "source_tag": "FRA",
+      "target_tag": "FRA",
+      "status": "exact_localized_name",
+      "evidence": "Unique exact English or Chinese identity in installed game localization."
+    },
+    "1253": {
+      "source_tag": "SPA",
+      "target_tag": "SPA",
+      "status": "exact_localized_name",
+      "evidence": "Unique exact English or Chinese identity in installed game localization."
+    },
+    "1260": {
+      "source_tag": "POR",
+      "target_tag": "POR",
+      "status": "exact_localized_name",
+      "evidence": "Unique exact English or Chinese identity in installed game localization."
+    },
+    "1286": {
+      "source_tag": "ORI",
+      "target_tag": "ORI",
+      "status": "exact_localized_name",
+      "evidence": "Unique exact English or Chinese identity in installed game localization."
+    },
+    "1326": {
+      "source_tag": "DHU",
+      "target_tag": "JAI",
+      "status": "exact_localized_name",
+      "evidence": "Unique exact English or Chinese identity in installed game localization."
+    },
+    "1338": {
+      "source_tag": "PTN",
+      "target_tag": "PTN",
+      "status": "exact_localized_name",
+      "evidence": "Unique exact English or Chinese identity in installed game localization."
+    },
+    "1353": {
+      "source_tag": "KSH",
+      "target_tag": "KAS",
+      "status": "exact_localized_name",
+      "evidence": "Unique exact English or Chinese identity in installed game localization."
+    },
+    "1481": {
+      "source_tag": "ITA",
+      "target_tag": "ITA",
+      "status": "exact_localized_name",
+      "evidence": "Unique exact English or Chinese identity in installed game localization."
+    },
+    "1498": {
+      "source_tag": "PAP",
+      "target_tag": "PAP",
+      "status": "exact_localized_name",
+      "evidence": "Unique exact English or Chinese identity in installed game localization."
+    },
+    "1547": {
+      "source_tag": "NED",
+      "target_tag": "NET",
+      "status": "exact_localized_name",
+      "evidence": "Unique exact English or Chinese identity in installed game localization."
+    },
+    "1549": {
+      "source_tag": "LUX",
+      "target_tag": "LUX",
+      "status": "exact_localized_name",
+      "evidence": "Unique exact English or Chinese identity in installed game localization."
+    },
+    "1750": {
+      "source_tag": "MAY",
+      "target_tag": "MAY",
+      "status": "exact_localized_name",
+      "evidence": "Unique exact English or Chinese identity in installed game localization."
+    },
+    "1780": {
+      "source_tag": "BRE",
+      "target_tag": "BRE",
+      "status": "exact_localized_name",
+      "evidence": "Unique exact English or Chinese identity in installed game localization."
+    },
+    "1781": {
+      "source_tag": "BRM",
+      "target_tag": "BRE",
+      "status": "exact_localized_name",
+      "evidence": "Unique exact English or Chinese identity in installed game localization."
+    },
+    "1816": {
+      "source_tag": "HAM",
+      "target_tag": "HAM",
+      "status": "exact_localized_name",
+      "evidence": "Unique exact English or Chinese identity in installed game localization."
+    },
+    "1819": {
+      "source_tag": "ANH",
+      "target_tag": "ANH",
+      "status": "exact_localized_name",
+      "evidence": "Unique exact English or Chinese identity in installed game localization."
+    },
+    "1826": {
+      "source_tag": "SWZ",
+      "target_tag": "SCW",
+      "status": "exact_localized_name",
+      "evidence": "Unique exact English or Chinese identity in installed game localization."
+    },
+    "1833": {
+      "source_tag": "HES",
+      "target_tag": "HES",
+      "status": "exact_localized_name",
+      "evidence": "Unique exact English or Chinese identity in installed game localization."
+    },
+    "1841": {
+      "source_tag": "FRN",
+      "target_tag": "FRM",
+      "status": "exact_localized_name",
+      "evidence": "Unique exact English or Chinese identity in installed game localization."
+    },
+    "1863": {
+      "source_tag": "LPP",
+      "target_tag": "LIP",
+      "status": "exact_localized_name",
+      "evidence": "Unique exact English or Chinese identity in installed game localization."
+    },
+    "1870": {
+      "source_tag": "BRU",
+      "target_tag": "BRA",
+      "status": "exact_localized_name",
+      "evidence": "Unique exact English or Chinese identity in installed game localization."
+    },
+    "1880": {
+      "source_tag": "OLD",
+      "target_tag": "OLD",
+      "status": "exact_localized_name",
+      "evidence": "Unique exact English or Chinese identity in installed game localization."
+    },
+    "1889": {
+      "source_tag": "WDE",
+      "target_tag": "WLD",
+      "status": "exact_localized_name",
+      "evidence": "Unique exact English or Chinese identity in installed game localization."
+    },
+    "1917": {
+      "source_tag": "MKR",
+      "target_tag": "MAK",
+      "status": "exact_localized_name",
+      "evidence": "Unique exact English or Chinese identity in installed game localization."
+    },
+    "2009": {
+      "source_tag": "HAW",
+      "target_tag": "HAW",
+      "status": "exact_localized_name",
+      "evidence": "Unique exact English or Chinese identity in installed game localization."
+    },
+    "2015": {
+      "source_tag": "TOG",
+      "target_tag": "TNG",
+      "status": "reviewed",
+      "evidence": "源 Tu'i Tonga 对应 V3 Tonga；两游戏使用不同代码。"
+    },
+    "2024": {
+      "source_tag": "RUS",
+      "target_tag": "RUS",
+      "status": "exact_localized_name",
+      "evidence": "Unique exact English or Chinese identity in installed game localization."
+    },
+    "2090": {
+      "source_tag": "KHM",
+      "target_tag": "CAM",
+      "status": "reviewed",
+      "evidence": "源高棉国家对应柬埔寨 CAM；V3 KHM 是 Khmu，不能按同码匹配。"
+    },
+    "2092": {
+      "source_tag": "DAI",
+      "target_tag": "DAI",
+      "status": "reviewed",
+      "evidence": "源大越对应越南国家 DAI；保留大越名称，不继承原版大南王朝。"
+    },
+    "2097": {
+      "source_tag": "PEG",
+      "target_tag": "HTH",
+      "status": "exact_localized_name",
+      "evidence": "Unique exact English or Chinese identity in installed game localization."
+    },
+    "2104": {
+      "source_tag": "ARK",
+      "target_tag": "ARK",
+      "status": "reviewed",
+      "evidence": "源 Launggyet 是若开政权，对应 V3 Arakan；保留源政权名称。"
+    },
+    "2147": {
+      "source_tag": "HAB",
+      "target_tag": "AUS",
+      "status": "exact_localized_name",
+      "evidence": "Unique exact English or Chinese identity in installed game localization."
+    },
+    "2148": {
+      "source_tag": "BOH",
+      "target_tag": "BOH",
+      "status": "exact_localized_name",
+      "evidence": "Unique exact English or Chinese identity in installed game localization."
+    },
+    "2199": {
+      "source_tag": "WUR",
+      "target_tag": "WUR",
+      "status": "exact_localized_name",
+      "evidence": "Unique exact English or Chinese identity in installed game localization."
+    },
+    "2203": {
+      "source_tag": "BDE",
+      "target_tag": "BAD",
+      "status": "exact_localized_name",
+      "evidence": "Unique exact English or Chinese identity in installed game localization."
+    },
+    "2268": {
+      "source_tag": "OYO",
+      "target_tag": "OYO",
+      "status": "exact_localized_name",
+      "evidence": "Unique exact English or Chinese identity in installed game localization."
+    },
+    "2290": {
+      "source_tag": "MAL",
+      "target_tag": "MAL",
+      "status": "exact_localized_name",
+      "evidence": "Unique exact English or Chinese identity in installed game localization."
+    },
+    "2298": {
+      "source_tag": "BOR",
+      "target_tag": "BRG",
+      "status": "exact_localized_name",
+      "evidence": "Unique exact English or Chinese identity in installed game localization."
+    },
+    "2465": {
+      "source_tag": "ABA27",
+      "target_tag": "KLM",
+      "status": "exact_localized_name",
+      "evidence": "Unique exact English or Chinese identity in installed game localization."
+    },
+    "16779794": {
+      "source_tag": "ACA30",
+      "target_tag": "KNG",
+      "status": "exact_localized_name",
+      "evidence": "Unique exact English or Chinese identity in installed game localization."
+    },
+    "16779800": {
+      "source_tag": "ACA41",
+      "target_tag": "URL",
+      "status": "exact_localized_name",
+      "evidence": "Unique exact English or Chinese identity in installed game localization."
+    },
+    "67111307": {
+      "source_tag": "ACA20",
+      "target_tag": "USA",
+      "status": "exact_localized_name",
+      "evidence": "Unique exact English or Chinese identity in installed game localization."
+    },
+    "100665750": {
+      "source_tag": "ABA42",
+      "target_tag": "TUV",
+      "status": "exact_localized_name",
+      "evidence": "Unique exact English or Chinese identity in installed game localization."
+    }
+  }
+}

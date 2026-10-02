@@ -1,0 +1,3773 @@
+{
+  "schema": 1,
+  "status": "candidate_not_installed",
+  "baseline_profile_sha256": "227951775a341a4151641af88b7640b98ababa3d15aacbee1c0fc6358b4942b2",
+  "source_scaffold_profile": ".local/m4/runs/20261001-065707-148fbda9/demographics_profile.snapshot.json",
+  "policy": "Preserve existing V3 broad categories; remove all added residual catchalls. No automatic culture-family, neighbor, ruler, or population-size replacement. All small composites have a frozen membership and disclosed gameplay rationale. Single source broad labels remain source limitations, not completed reviews.",
+  "budget": {
+    "max_used_cultures": 600,
+    "max_resident_assets": 300,
+    "max_migrant_assets": 16,
+    "max_political_assets": 40,
+    "max_resident_heritage_groups": 0,
+    "max_resident_language_groups": 130,
+    "max_population_groups": 15700,
+    "max_effective_culture_definitions": 665,
+    "policy": "Candidate-only ceiling for complete removal of the 36 heterogeneous catchalls. Existing 400 ceiling required those catchalls; no automatic further expansion. Static asset/POP limits do not claim in-game performance."
+  },
+  "old_catchalls": [
+    {
+      "representative": "otomanguean_culture",
+      "members": [
+        "chiapanec_culture",
+        "chorotega_culture",
+        "guamar_culture",
+        "iztachichimecah_culture",
+        "matlatzinca_culture",
+        "otomanguean_culture",
+        "pame_culture",
+        "tapachultec_culture"
+      ],
+      "labels": {
+        "english": "Otopamean other peoples",
+        "simp_chinese": "奥托帕梅其他诸族"
+      }
+    },
+    {
+      "representative": "adhari_culture",
+      "members": [
+        "adhari_culture",
+        "pamiri_culture",
+        "talysh_culture"
+      ],
+      "labels": {
+        "english": "Iranian other peoples",
+        "simp_chinese": "伊朗其他诸族"
+      }
+    },
+    {
+      "representative": "bantoid",
+      "members": [
+        "bantoid",
+        "benue",
+        "gbari",
+        "idoma",
+        "igala",
+        "ijaw"
+      ],
+      "labels": {
+        "english": "Volta-Niger other peoples",
+        "simp_chinese": "沃尔特‑尼日尔其他诸族"
+      }
+    },
+    {
+      "representative": "totonac_culture",
+      "members": [
+        "ikoot_culture",
+        "mixe_culture",
+        "totonac_culture",
+        "zoque_culture"
+      ],
+      "labels": {
+        "english": "Totozoquean other peoples",
+        "simp_chinese": "托托索克其他诸族"
+      }
+    },
+    {
+      "representative": "popoloca_culture",
+      "members": [
+        "amuzgo_culture",
+        "popoloca_culture"
+      ],
+      "labels": {
+        "english": "Eastern Otomanguean other peoples",
+        "simp_chinese": "东欧托曼格其他诸族"
+      }
+    },
+    {
+      "representative": "malvi",
+      "members": [
+        "banjara",
+        "bhil",
+        "malvi",
+        "nagpuri_culture",
+        "nimadi",
+        "nuristani_culture",
+        "pashayi_culture",
+        "shina_culture"
+      ],
+      "labels": {
+        "english": "Indo-Aryan other peoples",
+        "simp_chinese": "印度‑雅利安其他诸族"
+      }
+    },
+    {
+      "representative": "gonga_culture",
+      "members": [
+        "agaw_culture",
+        "burji_culture",
+        "dahalo_culture",
+        "dhaasanac_culture",
+        "gonga_culture",
+        "ometo_culture",
+        "omo_culture",
+        "rendille_culture",
+        "south_cushitic_culture"
+      ],
+      "labels": {
+        "english": "Cushitic other peoples",
+        "simp_chinese": "库希特其他诸族"
+      }
+    },
+    {
+      "representative": "lenca_culture",
+      "members": [
+        "lenca_culture",
+        "mayangna_culture",
+        "ulwas_culture"
+      ],
+      "labels": {
+        "english": "Misumalpan other peoples",
+        "simp_chinese": "米苏马尔潘其他诸族"
+      }
+    },
+    {
+      "representative": "huetar_culture",
+      "members": [
+        "andaqui_culture",
+        "boruca_culture",
+        "cabecar_culture",
+        "chitarero_culture",
+        "guna_culture",
+        "huetar_culture",
+        "ngabe_culture",
+        "nutabe_culture",
+        "rama_culture",
+        "sutagao_culture",
+        "tahami_culture",
+        "timanae_culture",
+        "uwa_culture"
+      ],
+      "labels": {
+        "english": "Chibchan other peoples",
+        "simp_chinese": "奇布查其他诸族"
+      }
+    },
+    {
+      "representative": "daju_culture",
+      "members": [
+        "berta_culture",
+        "daju_culture",
+        "gumuz_culture"
+      ],
+      "labels": {
+        "english": "Nilo-Saharan other peoples",
+        "simp_chinese": "尼罗‑撒哈拉其他诸族"
+      }
+    },
+    {
+      "representative": "serer",
+      "members": [
+        "baga_culture",
+        "balanta",
+        "bullom",
+        "gola",
+        "jola",
+        "manjak",
+        "serer",
+        "sherbro",
+        "temne",
+        "tenda_culture"
+      ],
+      "labels": {
+        "english": "Atlantic other peoples",
+        "simp_chinese": "大西洋非洲其他诸族"
+      }
+    },
+    {
+      "representative": "orang_asli_culture",
+      "members": [
+        "bahnar_culture",
+        "blang_culture",
+        "ho_culture",
+        "kharia_culture",
+        "korku_culture",
+        "munda_culture",
+        "nicobarese_culture",
+        "orang_asli_culture",
+        "palaung_culture",
+        "santal_culture",
+        "sedang_culture",
+        "sora_culture",
+        "wa_culture"
+      ],
+      "labels": {
+        "english": "Austroasiatic other peoples",
+        "simp_chinese": "南亚其他诸族"
+      }
+    },
+    {
+      "representative": "gyalrong_culture",
+      "members": [
+        "bai_culture",
+        "bodo_culture",
+        "chakma_culture",
+        "chutia_culture",
+        "deori_culture",
+        "derung_culture",
+        "dimasa_culture",
+        "garo_culture",
+        "gyalrong_culture",
+        "karbi_culture",
+        "koch_culture",
+        "mishmi_culture",
+        "nashi_culture",
+        "nu_culture",
+        "pumi_culture",
+        "rabha_culture",
+        "rma_culture",
+        "tani_culture",
+        "tiwa_culture",
+        "tripuri_culture"
+      ],
+      "labels": {
+        "english": "Tibeto-Burman other peoples",
+        "simp_chinese": "藏缅其他诸族"
+      }
+    },
+    {
+      "representative": "jama_coaque_culture",
+      "members": [
+        "awa_culture",
+        "barbakoan_culture",
+        "jama_coaque_culture",
+        "puben_culture",
+        "tsachila_culture"
+      ],
+      "labels": {
+        "english": "Barbakoan other peoples",
+        "simp_chinese": "巴巴科安其他诸族"
+      }
+    },
+    {
+      "representative": "newar_culture",
+      "members": [
+        "gurung_culture",
+        "magar_culture",
+        "newar_culture",
+        "tamang_culture"
+      ],
+      "labels": {
+        "english": "Nepali other peoples",
+        "simp_chinese": "尼泊尔其他诸族"
+      }
+    },
+    {
+      "representative": "calusa_culture",
+      "members": [
+        "calusa_culture",
+        "timucua_culture",
+        "tocobaga_culture"
+      ],
+      "labels": {
+        "english": "Timucua other peoples",
+        "simp_chinese": "蒂穆夸其他诸族"
+      }
+    },
+    {
+      "representative": "coahuilteco_culture",
+      "members": [
+        "coahuilteco_culture",
+        "tamauliteco_culture"
+      ],
+      "labels": {
+        "english": "Coahuilteco other peoples",
+        "simp_chinese": "科阿韦尔特科其他诸族"
+      }
+    },
+    {
+      "representative": "guachichil_culture",
+      "members": [
+        "acaxee_culture",
+        "caxcan_culture",
+        "guachichil_culture",
+        "guasave_culture",
+        "huichol_culture",
+        "mayo_culture",
+        "naayeri_culture",
+        "opata_culture",
+        "raramuri_culture",
+        "sauzas_culture",
+        "tahue_culture",
+        "tepecan_culture",
+        "tepehuan_culture",
+        "toboso_culture",
+        "totorame_culture",
+        "xixime_culture",
+        "xumani_culture",
+        "yaqui_culture",
+        "yoli_culture",
+        "zacatecah_culture"
+      ],
+      "labels": {
+        "english": "Yutonahua other peoples",
+        "simp_chinese": "犹他‑纳瓦其他诸族"
+      }
+    },
+    {
+      "representative": "atakapa_culture",
+      "members": [
+        "atakapa_culture",
+        "quasmigdo_culture"
+      ],
+      "labels": {
+        "english": "Atakapa other peoples",
+        "simp_chinese": "阿塔卡帕其他诸族"
+      }
+    },
+    {
+      "representative": "tiou_culture",
+      "members": [
+        "avoyel_culture",
+        "natchez_culture",
+        "taensa_culture",
+        "tiou_culture"
+      ],
+      "labels": {
+        "english": "Natchez other peoples",
+        "simp_chinese": "纳奇兹其他诸族"
+      }
+    },
+    {
+      "representative": "bayagoula_culture",
+      "members": [
+        "bayagoula_culture",
+        "chitimacha_culture"
+      ],
+      "labels": {
+        "english": "Chitimacha other peoples",
+        "simp_chinese": "奇蒂马查其他诸族"
+      }
+    },
+    {
+      "representative": "ohlone_culture",
+      "members": [
+        "chinook_culture",
+        "coos_culture",
+        "ewksikni_culture",
+        "foothill_yokut_culture",
+        "kalapuyan_culture",
+        "koyoongkawi_culture",
+        "maiduan_culture",
+        "miwok_culture",
+        "modokni_culture",
+        "molalla_culture",
+        "nisenan_culture",
+        "nomlaki_culture",
+        "north_valley_yokut_culture",
+        "ohlone_culture",
+        "palouse_culture",
+        "patwin_culture",
+        "sahaptin_culture",
+        "salinan_culture",
+        "takelma_culture",
+        "tulumni_culture",
+        "willetpoos_culture",
+        "wintuan_culture",
+        "yakama_culture"
+      ],
+      "labels": {
+        "english": "Penutian other peoples",
+        "simp_chinese": "佩努蒂其他诸族"
+      }
+    },
+    {
+      "representative": "hadza_culture",
+      "members": [
+        "hadza_culture",
+        "sandawe_culture"
+      ],
+      "labels": {
+        "english": "Khoisan other peoples",
+        "simp_chinese": "科伊桑其他诸族"
+      }
+    },
+    {
+      "representative": "sui_culture",
+      "members": [
+        "dambro_culture",
+        "gelao_culture",
+        "sui_culture"
+      ],
+      "labels": {
+        "english": "Thai other peoples",
+        "simp_chinese": "泰其他诸族"
+      }
+    },
+    {
+      "representative": "malto_culture",
+      "members": [
+        "brahui_culture",
+        "khond_culture",
+        "kurukh_culture",
+        "malto_culture",
+        "tuluva"
+      ],
+      "labels": {
+        "english": "Dravidian other peoples",
+        "simp_chinese": "达罗毗荼其他诸族"
+      }
+    },
+    {
+      "representative": "monguor_culture",
+      "members": [
+        "bonan_culture",
+        "monguor_culture"
+      ],
+      "labels": {
+        "english": "Mongol other peoples",
+        "simp_chinese": "蒙古其他诸族"
+      }
+    },
+    {
+      "representative": "waunana_culture",
+      "members": [
+        "embera_culture",
+        "waunana_culture"
+      ],
+      "labels": {
+        "english": "Choco other peoples",
+        "simp_chinese": "乔科其他诸族"
+      }
+    },
+    {
+      "representative": "timbisha_culture",
+      "members": [
+        "taaqtam_culture",
+        "timbisha_culture",
+        "tongva_culture"
+      ],
+      "labels": {
+        "english": "Takic other peoples",
+        "simp_chinese": "塔基克其他诸族"
+      }
+    },
+    {
+      "representative": "wiyot_culture",
+      "members": [
+        "wiyot_culture",
+        "yurok_culture"
+      ],
+      "labels": {
+        "english": "Algic other peoples",
+        "simp_chinese": "阿尔吉克其他诸族"
+      }
+    },
+    {
+      "representative": "tlingit_culture",
+      "members": [
+        "eyak_culture",
+        "tlingit_culture"
+      ],
+      "labels": {
+        "english": "Nadene other peoples",
+        "simp_chinese": "纳‑德内其他诸族"
+      }
+    },
+    {
+      "representative": "buginese_culture",
+      "members": [
+        "buginese_culture",
+        "bungku_culture",
+        "gorontalo_culture",
+        "kaili_culture",
+        "makassarese_culture",
+        "mandarese_culture",
+        "minahasan_culture",
+        "mongondow_culture",
+        "mori_culture",
+        "moronene_culture",
+        "pamona_culture",
+        "sangirese_culture",
+        "talaud_culture",
+        "tolaki_culture",
+        "tomini_culture",
+        "torajan_culture"
+      ],
+      "labels": {
+        "english": "Sulawesi peoples",
+        "simp_chinese": "苏拉威西诸族"
+      }
+    },
+    {
+      "representative": "atoni_culture",
+      "members": [
+        "atoni_culture",
+        "bima_culture",
+        "dompu_culture",
+        "mambai_culture",
+        "sumba_culture"
+      ],
+      "labels": {
+        "english": "Lesser Sunda peoples",
+        "simp_chinese": "小巽他诸族"
+      }
+    },
+    {
+      "representative": "tagbanwa_culture",
+      "members": [
+        "aeta_culture",
+        "bontoc_culture",
+        "isnag_culture",
+        "kalinga_culture",
+        "kankanaey_culture",
+        "mangyan_culture",
+        "tagbanwa_culture"
+      ],
+      "labels": {
+        "english": "Philippine upland peoples",
+        "simp_chinese": "菲律宾山地诸族"
+      }
+    },
+    {
+      "representative": "madi_culture",
+      "members": [
+        "lugbara_culture",
+        "madi_culture",
+        "moru_culture"
+      ],
+      "labels": {
+        "english": "Central Sudanic peoples",
+        "simp_chinese": "中苏丹诸族"
+      }
+    },
+    {
+      "representative": "gbaya_culture",
+      "members": [
+        "banda_culture",
+        "gbaya_culture",
+        "mandja_culture",
+        "ngbandi_culture"
+      ],
+      "labels": {
+        "english": "Ubangian peoples",
+        "simp_chinese": "乌班吉诸族"
+      }
+    },
+    {
+      "representative": "chimu_culture",
+      "members": [
+        "bagua_culture",
+        "canta_culture",
+        "cara_culture",
+        "casma_culture",
+        "charka_culture",
+        "chicha_culture",
+        "chillque_culture",
+        "chimu_culture",
+        "chiribaya_culture",
+        "cholon_culture",
+        "collique_culture",
+        "guancavilca_culture",
+        "guayacundo_culture",
+        "kanari_culture",
+        "licanantay_culture",
+        "omaguaca_culture",
+        "pashash_culture",
+        "pazioca_culture",
+        "puruha_culture",
+        "tallan_culture",
+        "tastil_culture",
+        "uru_culture",
+        "yampara_culture"
+      ],
+      "labels": {
+        "english": "Other Andean peoples",
+        "simp_chinese": "安第斯其他诸族"
+      }
+    }
+  ],
+  "partitions": [
+    {
+      "target": "eu5_resident_north_valley_yokut_culture",
+      "members": [
+        "north_valley_yokut_culture",
+        "foothill_yokut_culture",
+        "tulumni_culture"
+      ],
+      "labels": {
+        "english": "Yokuts",
+        "simp_chinese": "约库茨"
+      },
+      "status": "named_composite_gameplay_design",
+      "sources": [
+        "https://repository.si.edu/server/api/core/bitstreams/035c8376-b4cf-4995-82f5-3589e7bbe11c/content"
+      ],
+      "basis": "将河谷、山麓和 Tulumni 三条约库茨支系设为约库茨文化；不再把整个加州和哥伦比亚高原并入奥隆。Kroeber 的区域民族志支持约库茨的具体部落划分；该文献较晚，不能直接充当1780边界。 成员名单封闭；这是一项游戏粒度设计，不宣称所有成员具有同一民族认同，原始身份与宗教留在台账。",
+      "language": {
+        "key": "yokuts",
+        "group": "language_group_penutian",
+        "labels": {
+          "english": "Yokuts languages",
+          "simp_chinese": "约库茨语言"
+        },
+        "basis": "Explicit language-set label for these named members only; evidence supports classification and cultural context, not a single homogeneous ethnicity."
+      }
+    },
+    {
+      "target": "eu5_resident_maiduan_culture",
+      "members": [
+        "maiduan_culture",
+        "koyoongkawi_culture"
+      ],
+      "labels": {
+        "english": "Northern Maidu",
+        "simp_chinese": "北迈杜"
+      },
+      "status": "named_composite_gameplay_design",
+      "sources": [
+        "https://www.mooretownrancheria-nsn.gov/Tribal-History/",
+        "https://www.mechoopda-nsn.gov/news-and-events/the-language-site-is-now-available",
+        "https://www.konkow.org/pages/about_lessons.php"
+      ],
+      "basis": "保留北迈杜与孔科迈杜的具体合称；部族自己的历史记录确认 Concow-Maidu 的称谓和长期贸易联系。尼塞南另列，不用宽泛的 Maidu 外名抹去它的独立身份。 成员名单封闭；这是一项游戏粒度设计，不宣称所有成员具有同一民族认同，原始身份与宗教留在台账。",
+      "language": {
+        "key": "northern_maidu",
+        "group": "language_group_penutian",
+        "labels": {
+          "english": "Northern Maidu languages",
+          "simp_chinese": "北迈杜语言"
+        },
+        "basis": "Explicit language-set label for these named members only; evidence supports classification and cultural context, not a single homogeneous ethnicity."
+      }
+    },
+    {
+      "target": "eu5_resident_wintuan_culture",
+      "members": [
+        "wintuan_culture",
+        "nomlaki_culture",
+        "patwin_culture"
+      ],
+      "labels": {
+        "english": "Wintun",
+        "simp_chinese": "温敦"
+      },
+      "status": "named_composite_gameplay_design",
+      "sources": [
+        "https://repository.si.edu/server/api/core/bitstreams/035c8376-b4cf-4995-82f5-3589e7bbe11c/content"
+      ],
+      "basis": "温图、诺姆拉基、帕特温采用既有民族志中的温敦集合粒度；保留三支来源，不扩大到邻近迈杜或米沃克。 成员名单封闭；这是一项游戏粒度设计，不宣称所有成员具有同一民族认同，原始身份与宗教留在台账。",
+      "language": {
+        "key": "wintun",
+        "group": "language_group_penutian",
+        "labels": {
+          "english": "Wintun languages",
+          "simp_chinese": "温敦语言"
+        },
+        "basis": "Explicit language-set label for these named members only; evidence supports classification and cultural context, not a single homogeneous ethnicity."
+      }
+    },
+    {
+      "target": "eu5_resident_sahaptin_culture",
+      "members": [
+        "sahaptin_culture",
+        "palouse_culture",
+        "yakama_culture"
+      ],
+      "labels": {
+        "english": "Sahaptin",
+        "simp_chinese": "萨哈普廷"
+      },
+      "status": "named_composite_gameplay_design",
+      "sources": [
+        "https://home.nps.gov/places/confluence-of-the-columbia-and-walla-walla-rivers.htm",
+        "https://npshistory.com/publications/laro/eoa.pdf"
+      ],
+      "basis": "采用哥伦比亚河高原萨哈普廷合称，限定帕卢斯、亚卡马与源萨哈普廷条目；渔业、季节性聚居和贸易联系作为语言之外的文化依据。内兹珀斯仍用原版独立类别。 成员名单封闭；这是一项游戏粒度设计，不宣称所有成员具有同一民族认同，原始身份与宗教留在台账。",
+      "language": {
+        "key": "sahaptin",
+        "group": "language_group_penutian",
+        "labels": {
+          "english": "Sahaptin languages",
+          "simp_chinese": "萨哈普廷语言"
+        },
+        "basis": "Explicit language-set label for these named members only; evidence supports classification and cultural context, not a single homogeneous ethnicity."
+      }
+    },
+    {
+      "target": "eu5_resident_mayangna_culture",
+      "members": [
+        "mayangna_culture",
+        "ulwas_culture"
+      ],
+      "labels": {
+        "english": "Sumu",
+        "simp_chinese": "苏穆"
+      },
+      "status": "named_composite_gameplay_design",
+      "sources": [
+        "https://ling-phil.mit.edu/papers/hale/papers/hale001.pdf"
+      ],
+      "basis": "采用苏穆这一明确的南北支合称，容纳 Mayangna 与 Ulwa；二者语言不互通，因此输出语言特质为复数合称，不冒称同一种语言。伦卡单列，不并入米斯基托。 成员名单封闭；这是一项游戏粒度设计，不宣称所有成员具有同一民族认同，原始身份与宗教留在台账。",
+      "language": {
+        "key": "sumu",
+        "group": "language_group_misumalpan",
+        "labels": {
+          "english": "Sumu languages",
+          "simp_chinese": "苏穆语言"
+        },
+        "basis": "Explicit language-set label for these named members only; evidence supports classification and cultural context, not a single homogeneous ethnicity."
+      }
+    },
+    {
+      "target": "eu5_resident_mayo_culture",
+      "members": [
+        "mayo_culture",
+        "yaqui_culture"
+      ],
+      "labels": {
+        "english": "Cahita",
+        "simp_chinese": "卡伊塔"
+      },
+      "status": "named_composite_gameplay_design",
+      "sources": [
+        "https://repository.si.edu/items/e5ccf975-9238-4ffb-9642-080ac7f23fee/full",
+        "https://b.asp.si.edu/exhibitions/circleofdance/yoreme.html"
+      ],
+      "basis": "马约和雅基采用卡伊塔合称：民族志与博物馆材料记录相关礼仪传统。政治共同体和族名仍有区别，合并只限定这两个源条目。 成员名单封闭；这是一项游戏粒度设计，不宣称所有成员具有同一民族认同，原始身份与宗教留在台账。",
+      "language": {
+        "key": "cahita",
+        "group": "language_group_uto_aztecan",
+        "labels": {
+          "english": "Cahita languages",
+          "simp_chinese": "卡伊塔语言"
+        },
+        "basis": "Explicit language-set label for these named members only; evidence supports classification and cultural context, not a single homogeneous ethnicity."
+      }
+    },
+    {
+      "target": "eu5_resident_dompu_culture",
+      "members": [
+        "dompu_culture",
+        "bima_culture"
+      ],
+      "labels": {
+        "english": "Mbojo (Bima-Dompu)",
+        "simp_chinese": "姆博乔（比马—栋普）"
+      },
+      "status": "named_composite_gameplay_design",
+      "sources": [
+        "https://petabahasa.kemendikdasmen.go.id/infobahasa2.php?idb=210&idp=Nusa+Tenggara+Barat",
+        "https://kebudayaan.kemdikbud.go.id/bpcbbali/bekas-istana-raja-dompu/"
+      ],
+      "basis": "以姆博乔名称容纳比马和栋普来源：印尼语言机构以此名称覆盖两地居民；历史上栋普与比马是不同政权，这次不合并国界，也不纳入阿托尼、松巴或曼拜。 成员名单封闭；这是一项游戏粒度设计，不宣称所有成员具有同一民族认同，原始身份与宗教留在台账。",
+      "language": {
+        "key": "mbojo",
+        "group": "language_group_austronesian",
+        "labels": {
+          "english": "Mbojo (Bima-Dompu) languages",
+          "simp_chinese": "姆博乔（比马—栋普）语言"
+        },
+        "basis": "Explicit language-set label for these named members only; evidence supports classification and cultural context, not a single homogeneous ethnicity."
+      }
+    },
+    {
+      "target": "eu5_resident_sherbro",
+      "members": [
+        "sherbro",
+        "bullom"
+      ],
+      "labels": {
+        "english": "Bullom-Sherbro",
+        "simp_chinese": "布隆—舍尔布罗"
+      },
+      "status": "named_composite_gameplay_design",
+      "sources": [
+        "https://www.cambridge.org/core/journals/africa/article/public-authority-and-its-demons-the-sherbro-leopard-murders-in-sierra-leone/AF4EAB885348A3C289BD5E8A9B80D014"
+      ],
+      "basis": "采用布隆—舍尔布罗双名称；殖民档案研究中的 Bullom 酋邦和 Bai Sherbro 显示名称与政治网络交叠，不与塞雷尔、滕姆奈混合。材料主要为19世纪，1780政治结构不据此回填。 成员名单封闭；这是一项游戏粒度设计，不宣称所有成员具有同一民族认同，原始身份与宗教留在台账。",
+      "language": {
+        "key": "bullom_sherbro",
+        "group": null,
+        "labels": {
+          "english": "Bullom-Sherbro languages",
+          "simp_chinese": "布隆—舍尔布罗语言"
+        },
+        "basis": "Explicit language-set label for these named members only; evidence supports classification and cultural context, not a single homogeneous ethnicity."
+      }
+    },
+    {
+      "target": "eu5_resident_natchez_culture",
+      "members": [
+        "natchez_culture",
+        "tiou_culture"
+      ],
+      "labels": {
+        "english": "Natchez-Tiou",
+        "simp_chinese": "纳切兹—提乌"
+      },
+      "status": "named_composite_gameplay_design",
+      "sources": [
+        "https://npgallery.nps.gov/NRHP/GetAsset/NHLS/00000263_text"
+      ],
+      "basis": "17—18世纪 Tioux 的相关记载支持与纳切兹采用双名称集合；不连带吸收语言资料不足的 Avoyel 或独立的 Taensa。 成员名单封闭；这是一项游戏粒度设计，不宣称所有成员具有同一民族认同，原始身份与宗教留在台账。",
+      "language": {
+        "key": "natchez_tiou",
+        "group": null,
+        "labels": {
+          "english": "Natchez-Tiou languages",
+          "simp_chinese": "纳切兹—提乌语言"
+        },
+        "basis": "Explicit language-set label for these named members only; evidence supports classification and cultural context, not a single homogeneous ethnicity."
+      }
+    },
+    {
+      "target": "eu5_resident_bodo_culture",
+      "members": [
+        "bodo_culture",
+        "dimasa_culture",
+        "chutia_culture",
+        "deori_culture",
+        "rabha_culture",
+        "tiwa_culture"
+      ],
+      "labels": {
+        "english": "Bodo-Kachari",
+        "simp_chinese": "博多—卡恰里"
+      },
+      "status": "named_composite_gameplay_design",
+      "sources": [
+        "https://repository.tribal.gov.in/bitstream/123456789/73965/1/AIRT_1983_0001_book.pdf",
+        "https://repository.tribal.gov.in/handle/123456789/73786?cat_handle=123456789%2F73706&viewItem=search",
+        "https://dhemaji.assam.gov.in/about-us/history"
+      ],
+      "basis": "使用博多—卡恰里历史民族志合称，限定六条阿萨姆来源；保留楚蒂亚等政治与地方身份记录。不扩大到白族、嘉绒、唐古特或所有藏缅语居民，也不依据现代行政民族分类改写1780政权。 成员名单封闭；这是一项游戏粒度设计，不宣称所有成员具有同一民族认同，原始身份与宗教留在台账。",
+      "language": {
+        "key": "bodo_kachari",
+        "group": "language_group_tibeto_burman",
+        "labels": {
+          "english": "Bodo-Kachari languages",
+          "simp_chinese": "博多—卡恰里语言"
+        },
+        "basis": "Explicit language-set label for these named members only; evidence supports classification and cultural context, not a single homogeneous ethnicity."
+      }
+    },
+    {
+      "target": "thai",
+      "members": [
+        "dambro_culture"
+      ],
+      "labels": {
+        "english": "Thai",
+        "simp_chinese": "泰"
+      },
+      "status": "existing_vanilla_category",
+      "sources": [],
+      "basis": "源条目明确使用 thai_dialect 和 thai_group，依固定游戏定义归入原版泰文化；只处理这一显式条目，不把其他壮侗身份一并归泰。"
+    },
+    {
+      "target": "hokan",
+      "members": [
+        "salinan_culture"
+      ],
+      "labels": {
+        "english": "Hokan",
+        "simp_chinese": "霍坎"
+      },
+      "status": "existing_vanilla_category",
+      "sources": [
+        "https://repository.si.edu/server/api/core/bitstreams/035c8376-b4cf-4995-82f5-3589e7bbe11c/content"
+      ],
+      "basis": "保留用户授权的原版霍坎大类，用于源游戏已经标记 hokan_language 的萨利南；这是原版粒度选择，不把有争论的霍坎远系关系认证为定论。"
+    },
+    {
+      "target": "paiute",
+      "members": [
+        "timbisha_culture"
+      ],
+      "labels": {
+        "english": "Paiute",
+        "simp_chinese": "派尤特"
+      },
+      "status": "existing_vanilla_category",
+      "sources": [
+        "https://www.nps.gov/deva/general-management-plan.htm"
+      ],
+      "basis": "延续已冻结的原版 Paiute 对肖肖尼支系的宽泛收纳：Timbisha 明确为 Death Valley Shoshone。此目标是V3现有大类，不声称Timbisha自称派尤特；不连带吞并同旧集合的Tongva与Taaqtam。"
+    },
+    {
+      "target": "eu5_resident_acaxee_culture",
+      "members": [
+        "acaxee_culture"
+      ],
+      "labels": {
+        "english": "Acaxee",
+        "simp_chinese": "阿卡塞"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_adhari_culture",
+      "members": [
+        "adhari_culture"
+      ],
+      "labels": {
+        "english": "Adhari",
+        "simp_chinese": "阿扎里"
+      },
+      "status": "prior_evidence_supported_split",
+      "sources": [
+        "https://www.iranicaonline.org/articles/azerbaijan-vii/"
+      ],
+      "basis": "保留战役中仍存续的伊朗语阿扎里身份，不与突厥语阿塞拜疆人等同，也不因现实历史中的衰退删除人口。"
+    },
+    {
+      "target": "eu5_resident_aeta_culture",
+      "members": [
+        "aeta_culture"
+      ],
+      "labels": {
+        "english": "Aeta",
+        "simp_chinese": "阿埃塔"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_agaw_culture",
+      "members": [
+        "agaw_culture"
+      ],
+      "labels": {
+        "english": "Agaw",
+        "simp_chinese": "阿高"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_amuzgo_culture",
+      "members": [
+        "amuzgo_culture"
+      ],
+      "labels": {
+        "english": "Amuzgo",
+        "simp_chinese": "阿穆斯戈"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_andaqui_culture",
+      "members": [
+        "andaqui_culture"
+      ],
+      "labels": {
+        "english": "Andaqui",
+        "simp_chinese": "安达基"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_atakapa_culture",
+      "members": [
+        "atakapa_culture"
+      ],
+      "labels": {
+        "english": "Ishak",
+        "simp_chinese": "伊沙克"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_atoni_culture",
+      "members": [
+        "atoni_culture"
+      ],
+      "labels": {
+        "english": "Atoni",
+        "simp_chinese": "阿托尼"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_avoyel_culture",
+      "members": [
+        "avoyel_culture"
+      ],
+      "labels": {
+        "english": "Avoyel",
+        "simp_chinese": "阿沃耶尔"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_awa_culture",
+      "members": [
+        "awa_culture"
+      ],
+      "labels": {
+        "english": "Awa",
+        "simp_chinese": "阿瓦皮特"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_baga_culture",
+      "members": [
+        "baga_culture"
+      ],
+      "labels": {
+        "english": "Baga",
+        "simp_chinese": "巴加"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_bagua_culture",
+      "members": [
+        "bagua_culture"
+      ],
+      "labels": {
+        "english": "Bagua",
+        "simp_chinese": "巴瓜"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_bahnar_culture",
+      "members": [
+        "bahnar_culture"
+      ],
+      "labels": {
+        "english": "Bahnar",
+        "simp_chinese": "巴拿"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_bai_culture",
+      "members": [
+        "bai_culture"
+      ],
+      "labels": {
+        "english": "Bai",
+        "simp_chinese": "白"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_balanta",
+      "members": [
+        "balanta"
+      ],
+      "labels": {
+        "english": "Balanta",
+        "simp_chinese": "巴兰塔"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_banda_culture",
+      "members": [
+        "banda_culture"
+      ],
+      "labels": {
+        "english": "Banda",
+        "simp_chinese": "班达"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_banjara",
+      "members": [
+        "banjara"
+      ],
+      "labels": {
+        "english": "Banjara",
+        "simp_chinese": "班贾拉"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_bantoid",
+      "members": [
+        "bantoid"
+      ],
+      "labels": {
+        "english": "Bantoid",
+        "simp_chinese": "班托伊"
+      },
+      "status": "source_label_broad_pending",
+      "sources": [],
+      "basis": "源游戏本身使用宽泛类别，保持单条源标签，不添入其他来源。不凭空推断具体民族；这不是新建的剩余兜底集合，进一步拆分需要源人口以外的可靠依据。"
+    },
+    {
+      "target": "eu5_resident_barbakoan_culture",
+      "members": [
+        "barbakoan_culture"
+      ],
+      "labels": {
+        "english": "Barbakoan",
+        "simp_chinese": "巴巴科安"
+      },
+      "status": "source_label_broad_pending",
+      "sources": [],
+      "basis": "源游戏本身使用宽泛类别，保持单条源标签，不添入其他来源。不凭空推断具体民族；这不是新建的剩余兜底集合，进一步拆分需要源人口以外的可靠依据。"
+    },
+    {
+      "target": "eu5_resident_bayagoula_culture",
+      "members": [
+        "bayagoula_culture"
+      ],
+      "labels": {
+        "english": "Bayagoula",
+        "simp_chinese": "巴亚古拉"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_benue",
+      "members": [
+        "benue"
+      ],
+      "labels": {
+        "english": "Benue",
+        "simp_chinese": "贝努埃"
+      },
+      "status": "source_label_broad_pending",
+      "sources": [],
+      "basis": "源游戏本身使用宽泛类别，保持单条源标签，不添入其他来源。不凭空推断具体民族；这不是新建的剩余兜底集合，进一步拆分需要源人口以外的可靠依据。"
+    },
+    {
+      "target": "eu5_resident_berta_culture",
+      "members": [
+        "berta_culture"
+      ],
+      "labels": {
+        "english": "Berta",
+        "simp_chinese": "贝尔塔"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_bhil",
+      "members": [
+        "bhil"
+      ],
+      "labels": {
+        "english": "Bhil",
+        "simp_chinese": "比尔"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_blang_culture",
+      "members": [
+        "blang_culture"
+      ],
+      "labels": {
+        "english": "Blang",
+        "simp_chinese": "布朗"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_bonan_culture",
+      "members": [
+        "bonan_culture"
+      ],
+      "labels": {
+        "english": "Bonan",
+        "simp_chinese": "保安"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_bontoc_culture",
+      "members": [
+        "bontoc_culture"
+      ],
+      "labels": {
+        "english": "Bontoc",
+        "simp_chinese": "邦都"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_boruca_culture",
+      "members": [
+        "boruca_culture"
+      ],
+      "labels": {
+        "english": "Boruca",
+        "simp_chinese": "博鲁卡"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_brahui_culture",
+      "members": [
+        "brahui_culture"
+      ],
+      "labels": {
+        "english": "Brahui",
+        "simp_chinese": "布拉灰"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_buginese_culture",
+      "members": [
+        "buginese_culture"
+      ],
+      "labels": {
+        "english": "Bugis",
+        "simp_chinese": "布吉"
+      },
+      "status": "prior_evidence_supported_split",
+      "sources": [
+        "https://press.anu.edu.au/publications/bugis-chronicle-bone",
+        "https://glottolog.org/resource/languoid/id/bugi1244"
+      ],
+      "basis": "Bone 编年史及独立布吉语证据支持布吉与望加锡分别保留；其他苏拉威西群体不冒用布吉名称。"
+    },
+    {
+      "target": "eu5_resident_bungku_culture",
+      "members": [
+        "bungku_culture"
+      ],
+      "labels": {
+        "english": "Bungku",
+        "simp_chinese": "朋古"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_burji_culture",
+      "members": [
+        "burji_culture"
+      ],
+      "labels": {
+        "english": "Burji",
+        "simp_chinese": "布尔吉"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_cabecar_culture",
+      "members": [
+        "cabecar_culture"
+      ],
+      "labels": {
+        "english": "Cabecar",
+        "simp_chinese": "卡贝卡尔"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_calusa_culture",
+      "members": [
+        "calusa_culture"
+      ],
+      "labels": {
+        "english": "Calusa",
+        "simp_chinese": "卡卢萨"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_canta_culture",
+      "members": [
+        "canta_culture"
+      ],
+      "labels": {
+        "english": "Canta",
+        "simp_chinese": "坎塔"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_cara_culture",
+      "members": [
+        "cara_culture"
+      ],
+      "labels": {
+        "english": "Cara",
+        "simp_chinese": "卡兰基"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_casma_culture",
+      "members": [
+        "casma_culture"
+      ],
+      "labels": {
+        "english": "Casma",
+        "simp_chinese": "卡斯马"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_caxcan_culture",
+      "members": [
+        "caxcan_culture"
+      ],
+      "labels": {
+        "english": "Caxcan",
+        "simp_chinese": "卡什坎"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_chakma_culture",
+      "members": [
+        "chakma_culture"
+      ],
+      "labels": {
+        "english": "Chakma",
+        "simp_chinese": "查克马"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_charka_culture",
+      "members": [
+        "charka_culture"
+      ],
+      "labels": {
+        "english": "Charka",
+        "simp_chinese": "查克拉"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_chiapanec_culture",
+      "members": [
+        "chiapanec_culture"
+      ],
+      "labels": {
+        "english": "Chiapanec",
+        "simp_chinese": "恰帕斯"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_chicha_culture",
+      "members": [
+        "chicha_culture"
+      ],
+      "labels": {
+        "english": "Chicha",
+        "simp_chinese": "希沙"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_chillque_culture",
+      "members": [
+        "chillque_culture"
+      ],
+      "labels": {
+        "english": "Chillque",
+        "simp_chinese": "奇尔克"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_chimu_culture",
+      "members": [
+        "chimu_culture"
+      ],
+      "labels": {
+        "english": "Chimu",
+        "simp_chinese": "奇穆"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_chinook_culture",
+      "members": [
+        "chinook_culture"
+      ],
+      "labels": {
+        "english": "Chinook",
+        "simp_chinese": "奇努克"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_chiribaya_culture",
+      "members": [
+        "chiribaya_culture"
+      ],
+      "labels": {
+        "english": "Chiribaya",
+        "simp_chinese": "奇里巴亚"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_chitarero_culture",
+      "members": [
+        "chitarero_culture"
+      ],
+      "labels": {
+        "english": "Chitarero",
+        "simp_chinese": "奇塔雷罗"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_chitimacha_culture",
+      "members": [
+        "chitimacha_culture"
+      ],
+      "labels": {
+        "english": "Chitimacha",
+        "simp_chinese": "奇蒂马查"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_cholon_culture",
+      "members": [
+        "cholon_culture"
+      ],
+      "labels": {
+        "english": "Cholon",
+        "simp_chinese": "乔隆"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_chorotega_culture",
+      "members": [
+        "chorotega_culture"
+      ],
+      "labels": {
+        "english": "Chorotega",
+        "simp_chinese": "乔罗特加"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_coahuilteco_culture",
+      "members": [
+        "coahuilteco_culture"
+      ],
+      "labels": {
+        "english": "Coahuilteco",
+        "simp_chinese": "科阿韦尔特科"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_collique_culture",
+      "members": [
+        "collique_culture"
+      ],
+      "labels": {
+        "english": "Collique",
+        "simp_chinese": "科利克"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_coos_culture",
+      "members": [
+        "coos_culture"
+      ],
+      "labels": {
+        "english": "Coos",
+        "simp_chinese": "库斯"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_dahalo_culture",
+      "members": [
+        "dahalo_culture"
+      ],
+      "labels": {
+        "english": "Dahalo",
+        "simp_chinese": "达哈洛"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_daju_culture",
+      "members": [
+        "daju_culture"
+      ],
+      "labels": {
+        "english": "Daju",
+        "simp_chinese": "达朱"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_derung_culture",
+      "members": [
+        "derung_culture"
+      ],
+      "labels": {
+        "english": "Derung",
+        "simp_chinese": "独龙"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_dhaasanac_culture",
+      "members": [
+        "dhaasanac_culture"
+      ],
+      "labels": {
+        "english": "Dhaasanac",
+        "simp_chinese": "达萨纳克"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_embera_culture",
+      "members": [
+        "embera_culture"
+      ],
+      "labels": {
+        "english": "Emberá",
+        "simp_chinese": "恩贝拉"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_ewksikni_culture",
+      "members": [
+        "ewksikni_culture"
+      ],
+      "labels": {
+        "english": "Ewksikni",
+        "simp_chinese": "尤克西克尼"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_eyak_culture",
+      "members": [
+        "eyak_culture"
+      ],
+      "labels": {
+        "english": "Eyak",
+        "simp_chinese": "埃雅克"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_garo_culture",
+      "members": [
+        "garo_culture"
+      ],
+      "labels": {
+        "english": "Garo",
+        "simp_chinese": "加罗"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_gbari",
+      "members": [
+        "gbari"
+      ],
+      "labels": {
+        "english": "Gbari",
+        "simp_chinese": "巴里"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_gbaya_culture",
+      "members": [
+        "gbaya_culture"
+      ],
+      "labels": {
+        "english": "Gbaya",
+        "simp_chinese": "格巴亚"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_gelao_culture",
+      "members": [
+        "gelao_culture"
+      ],
+      "labels": {
+        "english": "Gelao",
+        "simp_chinese": "仡佬"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_gola",
+      "members": [
+        "gola"
+      ],
+      "labels": {
+        "english": "Gola",
+        "simp_chinese": "戈拉"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_gonga_culture",
+      "members": [
+        "gonga_culture"
+      ],
+      "labels": {
+        "english": "Gonga",
+        "simp_chinese": "贡加"
+      },
+      "status": "source_label_broad_pending",
+      "sources": [],
+      "basis": "源游戏本身使用宽泛类别，保持单条源标签，不添入其他来源。不凭空推断具体民族；这不是新建的剩余兜底集合，进一步拆分需要源人口以外的可靠依据。"
+    },
+    {
+      "target": "eu5_resident_gorontalo_culture",
+      "members": [
+        "gorontalo_culture"
+      ],
+      "labels": {
+        "english": "Gorontalo",
+        "simp_chinese": "哥伦打洛"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_guachichil_culture",
+      "members": [
+        "guachichil_culture"
+      ],
+      "labels": {
+        "english": "Cuachíchitl",
+        "simp_chinese": "夸奇奇特尔"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_guamar_culture",
+      "members": [
+        "guamar_culture"
+      ],
+      "labels": {
+        "english": "Guamar",
+        "simp_chinese": "瓜马尔"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_guancavilca_culture",
+      "members": [
+        "guancavilca_culture"
+      ],
+      "labels": {
+        "english": "Guancavilca",
+        "simp_chinese": "万卡维尔卡"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_guasave_culture",
+      "members": [
+        "guasave_culture"
+      ],
+      "labels": {
+        "english": "Guasave",
+        "simp_chinese": "瓜萨韦"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_guayacundo_culture",
+      "members": [
+        "guayacundo_culture"
+      ],
+      "labels": {
+        "english": "Guayacundo",
+        "simp_chinese": "瓜亚昆多"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_gumuz_culture",
+      "members": [
+        "gumuz_culture"
+      ],
+      "labels": {
+        "english": "Gumuz",
+        "simp_chinese": "古马兹"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_guna_culture",
+      "members": [
+        "guna_culture"
+      ],
+      "labels": {
+        "english": "Guna",
+        "simp_chinese": "古纳"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_gurung_culture",
+      "members": [
+        "gurung_culture"
+      ],
+      "labels": {
+        "english": "Gurung",
+        "simp_chinese": "古隆"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_gyalrong_culture",
+      "members": [
+        "gyalrong_culture"
+      ],
+      "labels": {
+        "english": "Gyalrong",
+        "simp_chinese": "嘉绒"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_hadza_culture",
+      "members": [
+        "hadza_culture"
+      ],
+      "labels": {
+        "english": "Hadza",
+        "simp_chinese": "哈扎"
+      },
+      "status": "prior_evidence_supported_split",
+      "sources": [
+        "https://glottolog.org/resource/languoid/id/hadz1240",
+        "https://www.ucpress.edu/books/the-hadza/paper"
+      ],
+      "basis": "不能因点击音或源 khoisan_group 就将哈扎与桑达韦视为同族；先保留两种文化。"
+    },
+    {
+      "target": "eu5_resident_ho_culture",
+      "members": [
+        "ho_culture"
+      ],
+      "labels": {
+        "english": "Ho",
+        "simp_chinese": "霍"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_huetar_culture",
+      "members": [
+        "huetar_culture"
+      ],
+      "labels": {
+        "english": "Huetar",
+        "simp_chinese": "韦塔尔"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_huichol_culture",
+      "members": [
+        "huichol_culture"
+      ],
+      "labels": {
+        "english": "Wixárikas",
+        "simp_chinese": "维夏里卡斯"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_idoma",
+      "members": [
+        "idoma"
+      ],
+      "labels": {
+        "english": "Idoma",
+        "simp_chinese": "伊多马"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_igala",
+      "members": [
+        "igala"
+      ],
+      "labels": {
+        "english": "Igala",
+        "simp_chinese": "伊加拉"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_ijaw",
+      "members": [
+        "ijaw"
+      ],
+      "labels": {
+        "english": "Ijaw",
+        "simp_chinese": "伊乔"
+      },
+      "status": "evidence_supported_language_split",
+      "sources": [
+        "https://glottolog.org/glottolog?iso=ijc"
+      ],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。 伊乔独立处理，不沿用源游戏 Volta-Niger 集合的语言替代。使用Ijoid集合标签，不声称单一方言。",
+      "language": {
+        "key": "ijoid",
+        "group": null,
+        "labels": {
+          "english": "Ijoid languages",
+          "simp_chinese": "伊乔语言"
+        },
+        "basis": "伊乔独立处理，不沿用源游戏 Volta-Niger 集合的语言替代。使用Ijoid集合标签，不声称单一方言。"
+      }
+    },
+    {
+      "target": "eu5_resident_ikoot_culture",
+      "members": [
+        "ikoot_culture"
+      ],
+      "labels": {
+        "english": "Ikoot",
+        "simp_chinese": "伊科奥特"
+      },
+      "status": "evidence_supported_language_split",
+      "sources": [
+        "https://atlas.inali.gob.mx/agrupaciones/info/1101"
+      ],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。 Ikoot/Huave独立语言，不放入Totonac或Mixe-Zoque语言特质。",
+      "language": {
+        "key": "huave",
+        "group": null,
+        "labels": {
+          "english": "Huave",
+          "simp_chinese": "瓦维语"
+        },
+        "basis": "Ikoot/Huave独立语言，不放入Totonac或Mixe-Zoque语言特质。"
+      }
+    },
+    {
+      "target": "eu5_resident_isnag_culture",
+      "members": [
+        "isnag_culture"
+      ],
+      "labels": {
+        "english": "Isnag",
+        "simp_chinese": "伊斯纳格"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_iztachichimecah_culture",
+      "members": [
+        "iztachichimecah_culture"
+      ],
+      "labels": {
+        "english": "Iztachichimecah",
+        "simp_chinese": "伊斯塔奇奇梅卡"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_jama_coaque_culture",
+      "members": [
+        "jama_coaque_culture"
+      ],
+      "labels": {
+        "english": "Jama Coaque",
+        "simp_chinese": "哈马科阿克"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_jola",
+      "members": [
+        "jola"
+      ],
+      "labels": {
+        "english": "Jola",
+        "simp_chinese": "约拉"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_kaili_culture",
+      "members": [
+        "kaili_culture"
+      ],
+      "labels": {
+        "english": "Kaili",
+        "simp_chinese": "凯里"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_kalapuyan_culture",
+      "members": [
+        "kalapuyan_culture"
+      ],
+      "labels": {
+        "english": "Kalapuyan",
+        "simp_chinese": "卡拉普亚"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_kalinga_culture",
+      "members": [
+        "kalinga_culture"
+      ],
+      "labels": {
+        "english": "Kalinga",
+        "simp_chinese": "卡林加"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_kanari_culture",
+      "members": [
+        "kanari_culture"
+      ],
+      "labels": {
+        "english": "Kanari",
+        "simp_chinese": "佳纳利"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_kankanaey_culture",
+      "members": [
+        "kankanaey_culture"
+      ],
+      "labels": {
+        "english": "Kankanaey",
+        "simp_chinese": "坎卡奈"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_karbi_culture",
+      "members": [
+        "karbi_culture"
+      ],
+      "labels": {
+        "english": "Karbi",
+        "simp_chinese": "米基尔"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_kharia_culture",
+      "members": [
+        "kharia_culture"
+      ],
+      "labels": {
+        "english": "Kharia",
+        "simp_chinese": "卡里亚"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_khond_culture",
+      "members": [
+        "khond_culture"
+      ],
+      "labels": {
+        "english": "Khond",
+        "simp_chinese": "孔德"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_koch_culture",
+      "members": [
+        "koch_culture"
+      ],
+      "labels": {
+        "english": "Koch",
+        "simp_chinese": "库奇"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_korku_culture",
+      "members": [
+        "korku_culture"
+      ],
+      "labels": {
+        "english": "Korku",
+        "simp_chinese": "科尔库"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_kurukh_culture",
+      "members": [
+        "kurukh_culture"
+      ],
+      "labels": {
+        "english": "Kurukh",
+        "simp_chinese": "库鲁克"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_lenca_culture",
+      "members": [
+        "lenca_culture"
+      ],
+      "labels": {
+        "english": "Lenca",
+        "simp_chinese": "伦卡"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_licanantay_culture",
+      "members": [
+        "licanantay_culture"
+      ],
+      "labels": {
+        "english": "Licanantay",
+        "simp_chinese": "利卡南泰"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_lugbara_culture",
+      "members": [
+        "lugbara_culture"
+      ],
+      "labels": {
+        "english": "Lugbara",
+        "simp_chinese": "卢格巴拉"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_madi_culture",
+      "members": [
+        "madi_culture"
+      ],
+      "labels": {
+        "english": "Mà'dí",
+        "simp_chinese": "马迪"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_magar_culture",
+      "members": [
+        "magar_culture"
+      ],
+      "labels": {
+        "english": "Magar",
+        "simp_chinese": "马加尔"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_makassarese_culture",
+      "members": [
+        "makassarese_culture"
+      ],
+      "labels": {
+        "english": "Makassarese",
+        "simp_chinese": "望加锡"
+      },
+      "status": "prior_evidence_supported_split",
+      "sources": [
+        "https://press.anu.edu.au/publications/bugis-chronicle-bone",
+        "https://glottolog.org/resource/languoid/id/maka1311"
+      ],
+      "basis": "Gowa 与 Bone 具有独立政治传统；望加锡语与布吉语分别记录。"
+    },
+    {
+      "target": "eu5_resident_malto_culture",
+      "members": [
+        "malto_culture"
+      ],
+      "labels": {
+        "english": "Malto",
+        "simp_chinese": "马尔托"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_malvi",
+      "members": [
+        "malvi"
+      ],
+      "labels": {
+        "english": "Malvi",
+        "simp_chinese": "摩腊婆"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_mambai_culture",
+      "members": [
+        "mambai_culture"
+      ],
+      "labels": {
+        "english": "Mambai",
+        "simp_chinese": "曼拜"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_mandarese_culture",
+      "members": [
+        "mandarese_culture"
+      ],
+      "labels": {
+        "english": "Mandarese",
+        "simp_chinese": "曼达里"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_mandja_culture",
+      "members": [
+        "mandja_culture"
+      ],
+      "labels": {
+        "english": "Mandja",
+        "simp_chinese": "曼贾"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_mangyan_culture",
+      "members": [
+        "mangyan_culture"
+      ],
+      "labels": {
+        "english": "Mangyan",
+        "simp_chinese": "芒扬"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_manjak",
+      "members": [
+        "manjak"
+      ],
+      "labels": {
+        "english": "Manjak",
+        "simp_chinese": "曼扎克"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_matlatzinca_culture",
+      "members": [
+        "matlatzinca_culture"
+      ],
+      "labels": {
+        "english": "Matlatzinca",
+        "simp_chinese": "马特拉钦卡"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_minahasan_culture",
+      "members": [
+        "minahasan_culture"
+      ],
+      "labels": {
+        "english": "Minahasan",
+        "simp_chinese": "米纳哈沙"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_mishmi_culture",
+      "members": [
+        "mishmi_culture"
+      ],
+      "labels": {
+        "english": "Mishmi",
+        "simp_chinese": "僜"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_miwok_culture",
+      "members": [
+        "miwok_culture"
+      ],
+      "labels": {
+        "english": "Miwok",
+        "simp_chinese": "米沃克"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_mixe_culture",
+      "members": [
+        "mixe_culture"
+      ],
+      "labels": {
+        "english": "Mixe",
+        "simp_chinese": "米赫"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_modokni_culture",
+      "members": [
+        "modokni_culture"
+      ],
+      "labels": {
+        "english": "Modokni",
+        "simp_chinese": "莫多克尼"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_molalla_culture",
+      "members": [
+        "molalla_culture"
+      ],
+      "labels": {
+        "english": "Molalla",
+        "simp_chinese": "莫拉拉"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_mongondow_culture",
+      "members": [
+        "mongondow_culture"
+      ],
+      "labels": {
+        "english": "Mongondow",
+        "simp_chinese": "蒙贡多"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_monguor_culture",
+      "members": [
+        "monguor_culture"
+      ],
+      "labels": {
+        "english": "Monguor",
+        "simp_chinese": "土"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_mori_culture",
+      "members": [
+        "mori_culture"
+      ],
+      "labels": {
+        "english": "Mori",
+        "simp_chinese": "末里"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_moronene_culture",
+      "members": [
+        "moronene_culture"
+      ],
+      "labels": {
+        "english": "Moronene",
+        "simp_chinese": "莫罗内内"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_moru_culture",
+      "members": [
+        "moru_culture"
+      ],
+      "labels": {
+        "english": "Moru",
+        "simp_chinese": "莫鲁"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_munda_culture",
+      "members": [
+        "munda_culture"
+      ],
+      "labels": {
+        "english": "Munda",
+        "simp_chinese": "蒙达"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_naayeri_culture",
+      "members": [
+        "naayeri_culture"
+      ],
+      "labels": {
+        "english": "Náayeri",
+        "simp_chinese": "纳亚里"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_nagpuri_culture",
+      "members": [
+        "nagpuri_culture"
+      ],
+      "labels": {
+        "english": "Nagpuri",
+        "simp_chinese": "那格浦尔"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_nashi_culture",
+      "members": [
+        "nashi_culture"
+      ],
+      "labels": {
+        "english": "Nashi",
+        "simp_chinese": "纳西"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_newar_culture",
+      "members": [
+        "newar_culture"
+      ],
+      "labels": {
+        "english": "Newar",
+        "simp_chinese": "尼瓦尔"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_ngabe_culture",
+      "members": [
+        "ngabe_culture"
+      ],
+      "labels": {
+        "english": "Ngabe",
+        "simp_chinese": "恩戈韦"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_ngbandi_culture",
+      "members": [
+        "ngbandi_culture"
+      ],
+      "labels": {
+        "english": "Ngbandi",
+        "simp_chinese": "恩本迪"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_nicobarese_culture",
+      "members": [
+        "nicobarese_culture"
+      ],
+      "labels": {
+        "english": "Nicobarese",
+        "simp_chinese": "尼科巴"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_nimadi",
+      "members": [
+        "nimadi"
+      ],
+      "labels": {
+        "english": "Nimadi",
+        "simp_chinese": "尼马尔"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_nisenan_culture",
+      "members": [
+        "nisenan_culture"
+      ],
+      "labels": {
+        "english": "Nisena'n",
+        "simp_chinese": "尼塞南"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_nu_culture",
+      "members": [
+        "nu_culture"
+      ],
+      "labels": {
+        "english": "Nu",
+        "simp_chinese": "怒"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_nuristani_culture",
+      "members": [
+        "nuristani_culture"
+      ],
+      "labels": {
+        "english": "Nuristani",
+        "simp_chinese": "努里斯坦"
+      },
+      "status": "evidence_supported_language_split",
+      "sources": [
+        "https://www.iranicaonline.org/articles/nurestani-languages-archive/"
+      ],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。 努里斯坦语作为印度—伊朗语独立支系；原版没有相应高层组，单设语言组，不再直接使用源 kashmiri_language。Nuristani名称的19世纪末背景另保留待审。",
+      "language": {
+        "key": "nuristani",
+        "group": null,
+        "labels": {
+          "english": "Nuristani languages",
+          "simp_chinese": "努里斯坦语言"
+        },
+        "basis": "努里斯坦语作为印度—伊朗语独立支系；原版没有相应高层组，单设语言组，不再直接使用源 kashmiri_language。Nuristani名称的19世纪末背景另保留待审。"
+      }
+    },
+    {
+      "target": "eu5_resident_nutabe_culture",
+      "members": [
+        "nutabe_culture"
+      ],
+      "labels": {
+        "english": "Nutabe",
+        "simp_chinese": "努塔贝"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_ohlone_culture",
+      "members": [
+        "ohlone_culture"
+      ],
+      "labels": {
+        "english": "Ohlone",
+        "simp_chinese": "奥洛内"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_omaguaca_culture",
+      "members": [
+        "omaguaca_culture"
+      ],
+      "labels": {
+        "english": "Omaguaca",
+        "simp_chinese": "奥马瓦卡"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_ometo_culture",
+      "members": [
+        "ometo_culture"
+      ],
+      "labels": {
+        "english": "Ometo",
+        "simp_chinese": "奥梅托"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_omo_culture",
+      "members": [
+        "omo_culture"
+      ],
+      "labels": {
+        "english": "Omo",
+        "simp_chinese": "奥莫"
+      },
+      "status": "source_label_broad_pending",
+      "sources": [],
+      "basis": "源游戏本身使用宽泛类别，保持单条源标签，不添入其他来源。不凭空推断具体民族；这不是新建的剩余兜底集合，进一步拆分需要源人口以外的可靠依据。"
+    },
+    {
+      "target": "eu5_resident_opata_culture",
+      "members": [
+        "opata_culture"
+      ],
+      "labels": {
+        "english": "Opata",
+        "simp_chinese": "奥帕塔"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_orang_asli_culture",
+      "members": [
+        "orang_asli_culture"
+      ],
+      "labels": {
+        "english": "Orang Asli",
+        "simp_chinese": "阿斯里"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_otomanguean_culture",
+      "members": [
+        "otomanguean_culture"
+      ],
+      "labels": {
+        "english": "Otomanguean",
+        "simp_chinese": "欧托曼格"
+      },
+      "status": "source_label_broad_pending",
+      "sources": [],
+      "basis": "源游戏本身使用宽泛类别，保持单条源标签，不添入其他来源。不凭空推断具体民族；这不是新建的剩余兜底集合，进一步拆分需要源人口以外的可靠依据。"
+    },
+    {
+      "target": "eu5_resident_palaung_culture",
+      "members": [
+        "palaung_culture"
+      ],
+      "labels": {
+        "english": "Palaung",
+        "simp_chinese": "德昂"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_pame_culture",
+      "members": [
+        "pame_culture"
+      ],
+      "labels": {
+        "english": "Xi'oi",
+        "simp_chinese": "希奥伊"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_pamiri_culture",
+      "members": [
+        "pamiri_culture"
+      ],
+      "labels": {
+        "english": "Pamiri",
+        "simp_chinese": "帕米尔"
+      },
+      "status": "prior_evidence_supported_split",
+      "sources": [
+        "https://www.iranicaonline.org/articles/central-asia-xiii/",
+        "https://www.iranicaonline.org/articles/chinese-turkestan-vi/"
+      ],
+      "basis": "从伊朗其他诸族中分离帕米尔诸族，内部保留V3可用的山地集合粒度，不进一步细分每条山谷。"
+    },
+    {
+      "target": "eu5_resident_pamona_culture",
+      "members": [
+        "pamona_culture"
+      ],
+      "labels": {
+        "english": "Pamona",
+        "simp_chinese": "帕莫那"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_pashash_culture",
+      "members": [
+        "pashash_culture"
+      ],
+      "labels": {
+        "english": "Pashash",
+        "simp_chinese": "帕沙什"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_pashayi_culture",
+      "members": [
+        "pashayi_culture"
+      ],
+      "labels": {
+        "english": "Pashayi",
+        "simp_chinese": "帕沙伊"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_pazioca_culture",
+      "members": [
+        "pazioca_culture"
+      ],
+      "labels": {
+        "english": "Pazioca",
+        "simp_chinese": "帕西奥卡"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_popoloca_culture",
+      "members": [
+        "popoloca_culture"
+      ],
+      "labels": {
+        "english": "Popoloca",
+        "simp_chinese": "波波洛卡"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_puben_culture",
+      "members": [
+        "puben_culture"
+      ],
+      "labels": {
+        "english": "Puben",
+        "simp_chinese": "普本"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_pumi_culture",
+      "members": [
+        "pumi_culture"
+      ],
+      "labels": {
+        "english": "Pumi",
+        "simp_chinese": "普米"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_puruha_culture",
+      "members": [
+        "puruha_culture"
+      ],
+      "labels": {
+        "english": "Puruhá",
+        "simp_chinese": "普鲁哈"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_quasmigdo_culture",
+      "members": [
+        "quasmigdo_culture"
+      ],
+      "labels": {
+        "english": "Quasmigdo",
+        "simp_chinese": "夸斯米格多"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_rama_culture",
+      "members": [
+        "rama_culture"
+      ],
+      "labels": {
+        "english": "Rama",
+        "simp_chinese": "拉马"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_raramuri_culture",
+      "members": [
+        "raramuri_culture"
+      ],
+      "labels": {
+        "english": "Raramuri",
+        "simp_chinese": "拉拉穆里"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_rendille_culture",
+      "members": [
+        "rendille_culture"
+      ],
+      "labels": {
+        "english": "Rendille",
+        "simp_chinese": "朗迪耶"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_rma_culture",
+      "members": [
+        "rma_culture"
+      ],
+      "labels": {
+        "english": "Rma",
+        "simp_chinese": "尔玛"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_sandawe_culture",
+      "members": [
+        "sandawe_culture"
+      ],
+      "labels": {
+        "english": "Sandawe",
+        "simp_chinese": "桑达韦"
+      },
+      "status": "prior_evidence_supported_split",
+      "sources": [
+        "https://glottolog.org/resource/languoid/id/sand1273",
+        "https://www.cambridge.org/core/journals/journal-of-the-international-phonetic-association/article/sandawe/A3827FC654CC94E923C176EDD68661C3"
+      ],
+      "basis": "独立桑达韦身份及语言；不把尚有争议的远亲语言假说变成已证实的共同传承。"
+    },
+    {
+      "target": "eu5_resident_sangirese_culture",
+      "members": [
+        "sangirese_culture"
+      ],
+      "labels": {
+        "english": "Sangirese",
+        "simp_chinese": "桑吉尔斯"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_santal_culture",
+      "members": [
+        "santal_culture"
+      ],
+      "labels": {
+        "english": "Santal",
+        "simp_chinese": "桑塔尔"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_sauzas_culture",
+      "members": [
+        "sauzas_culture"
+      ],
+      "labels": {
+        "english": "Sauzas",
+        "simp_chinese": "绍萨"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_sedang_culture",
+      "members": [
+        "sedang_culture"
+      ],
+      "labels": {
+        "english": "Sedang",
+        "simp_chinese": "色当"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_serer",
+      "members": [
+        "serer"
+      ],
+      "labels": {
+        "english": "Serer",
+        "simp_chinese": "塞雷尔"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_shina_culture",
+      "members": [
+        "shina_culture"
+      ],
+      "labels": {
+        "english": "Shina",
+        "simp_chinese": "希纳"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_sora_culture",
+      "members": [
+        "sora_culture"
+      ],
+      "labels": {
+        "english": "Sora",
+        "simp_chinese": "萨瓦拉"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_south_cushitic_culture",
+      "members": [
+        "south_cushitic_culture"
+      ],
+      "labels": {
+        "english": "South Cushitic",
+        "simp_chinese": "南库希特"
+      },
+      "status": "source_label_broad_pending",
+      "sources": [],
+      "basis": "源游戏本身使用宽泛类别，保持单条源标签，不添入其他来源。不凭空推断具体民族；这不是新建的剩余兜底集合，进一步拆分需要源人口以外的可靠依据。"
+    },
+    {
+      "target": "eu5_resident_sui_culture",
+      "members": [
+        "sui_culture"
+      ],
+      "labels": {
+        "english": "Sui",
+        "simp_chinese": "水"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_sumba_culture",
+      "members": [
+        "sumba_culture"
+      ],
+      "labels": {
+        "english": "Sumba",
+        "simp_chinese": "松巴"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_sutagao_culture",
+      "members": [
+        "sutagao_culture"
+      ],
+      "labels": {
+        "english": "Sutagao",
+        "simp_chinese": "苏塔高"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_taaqtam_culture",
+      "members": [
+        "taaqtam_culture"
+      ],
+      "labels": {
+        "english": "Taaqtam",
+        "simp_chinese": "塔克坦"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_taensa_culture",
+      "members": [
+        "taensa_culture"
+      ],
+      "labels": {
+        "english": "Taensa",
+        "simp_chinese": "坦萨"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_tagbanwa_culture",
+      "members": [
+        "tagbanwa_culture"
+      ],
+      "labels": {
+        "english": "Tagbanwa",
+        "simp_chinese": "塔班瓦"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_tahami_culture",
+      "members": [
+        "tahami_culture"
+      ],
+      "labels": {
+        "english": "Tahami",
+        "simp_chinese": "塔哈米"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_tahue_culture",
+      "members": [
+        "tahue_culture"
+      ],
+      "labels": {
+        "english": "Tahue",
+        "simp_chinese": "塔惠"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_takelma_culture",
+      "members": [
+        "takelma_culture"
+      ],
+      "labels": {
+        "english": "Takelma",
+        "simp_chinese": "塔克尔马"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_talaud_culture",
+      "members": [
+        "talaud_culture"
+      ],
+      "labels": {
+        "english": "Talaud",
+        "simp_chinese": "塔劳德"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_tallan_culture",
+      "members": [
+        "tallan_culture"
+      ],
+      "labels": {
+        "english": "Tallan",
+        "simp_chinese": "塔阳"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_talysh_culture",
+      "members": [
+        "talysh_culture"
+      ],
+      "labels": {
+        "english": "Talysh",
+        "simp_chinese": "塔雷什"
+      },
+      "status": "prior_evidence_supported_split",
+      "sources": [
+        "https://www.iranicaonline.org/articles/astara-tales-region-on-the-caspian-coast/",
+        "https://www.iranicaonline.org/articles/azerbaijan-vii/",
+        "https://glottolog.org/resource/languoid/id/taly1247"
+      ],
+      "basis": "塔雷什作为里海西南沿岸身份单列；阿斯塔拉的16—18世纪塔雷什汗历史提供时段相关证据。"
+    },
+    {
+      "target": "eu5_resident_tamang_culture",
+      "members": [
+        "tamang_culture"
+      ],
+      "labels": {
+        "english": "Tamang",
+        "simp_chinese": "塔芒"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_tamauliteco_culture",
+      "members": [
+        "tamauliteco_culture"
+      ],
+      "labels": {
+        "english": "Tamauliteco",
+        "simp_chinese": "塔毛利特科"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_tani_culture",
+      "members": [
+        "tani_culture"
+      ],
+      "labels": {
+        "english": "Tani",
+        "simp_chinese": "珞巴"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_tapachultec_culture",
+      "members": [
+        "tapachultec_culture"
+      ],
+      "labels": {
+        "english": "Tapachultec",
+        "simp_chinese": "塔帕丘尔特克"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_tastil_culture",
+      "members": [
+        "tastil_culture"
+      ],
+      "labels": {
+        "english": "Tastil",
+        "simp_chinese": "塔斯蒂尔"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_temne",
+      "members": [
+        "temne"
+      ],
+      "labels": {
+        "english": "Temne",
+        "simp_chinese": "泰姆内"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_tenda_culture",
+      "members": [
+        "tenda_culture"
+      ],
+      "labels": {
+        "english": "Tenda",
+        "simp_chinese": "滕达"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_tepecan_culture",
+      "members": [
+        "tepecan_culture"
+      ],
+      "labels": {
+        "english": "Tepecan",
+        "simp_chinese": "特佩坎"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_tepehuan_culture",
+      "members": [
+        "tepehuan_culture"
+      ],
+      "labels": {
+        "english": "O'dam",
+        "simp_chinese": "奥达姆"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_timanae_culture",
+      "members": [
+        "timanae_culture"
+      ],
+      "labels": {
+        "english": "Timanae",
+        "simp_chinese": "蒂马纳埃"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_timucua_culture",
+      "members": [
+        "timucua_culture"
+      ],
+      "labels": {
+        "english": "Timucua",
+        "simp_chinese": "蒂穆夸"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_tlingit_culture",
+      "members": [
+        "tlingit_culture"
+      ],
+      "labels": {
+        "english": "Tlingit",
+        "simp_chinese": "特林吉特"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_toboso_culture",
+      "members": [
+        "toboso_culture"
+      ],
+      "labels": {
+        "english": "Toboso",
+        "simp_chinese": "托沃索"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_tocobaga_culture",
+      "members": [
+        "tocobaga_culture"
+      ],
+      "labels": {
+        "english": "Tocobaga",
+        "simp_chinese": "托科巴加"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_tolaki_culture",
+      "members": [
+        "tolaki_culture"
+      ],
+      "labels": {
+        "english": "Tolaki",
+        "simp_chinese": "托拉基"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_tomini_culture",
+      "members": [
+        "tomini_culture"
+      ],
+      "labels": {
+        "english": "Tomini",
+        "simp_chinese": "托米尼"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_tongva_culture",
+      "members": [
+        "tongva_culture"
+      ],
+      "labels": {
+        "english": "Tongva",
+        "simp_chinese": "通瓦"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_torajan_culture",
+      "members": [
+        "torajan_culture"
+      ],
+      "labels": {
+        "english": "Torajan",
+        "simp_chinese": "托拉查"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_totonac_culture",
+      "members": [
+        "totonac_culture"
+      ],
+      "labels": {
+        "english": "Tutunakú",
+        "simp_chinese": "托托纳克"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_totorame_culture",
+      "members": [
+        "totorame_culture"
+      ],
+      "labels": {
+        "english": "Totorame",
+        "simp_chinese": "托托拉梅"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_tripuri_culture",
+      "members": [
+        "tripuri_culture"
+      ],
+      "labels": {
+        "english": "Tripuri",
+        "simp_chinese": "特里普拉"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_tsachila_culture",
+      "members": [
+        "tsachila_culture"
+      ],
+      "labels": {
+        "english": "Tsáchila",
+        "simp_chinese": "察奇拉"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_tuluva",
+      "members": [
+        "tuluva"
+      ],
+      "labels": {
+        "english": "Tuluva",
+        "simp_chinese": "图卢"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_uru_culture",
+      "members": [
+        "uru_culture"
+      ],
+      "labels": {
+        "english": "Uru",
+        "simp_chinese": "乌鲁"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_uwa_culture",
+      "members": [
+        "uwa_culture"
+      ],
+      "labels": {
+        "english": "U'wa",
+        "simp_chinese": "乌瓦"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_wa_culture",
+      "members": [
+        "wa_culture"
+      ],
+      "labels": {
+        "english": "Wa",
+        "simp_chinese": "佤"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_waunana_culture",
+      "members": [
+        "waunana_culture"
+      ],
+      "labels": {
+        "english": "Waunana",
+        "simp_chinese": "瓦乌纳纳"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_wiyot_culture",
+      "members": [
+        "wiyot_culture"
+      ],
+      "labels": {
+        "english": "Wiyot",
+        "simp_chinese": "维约特"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_xixime_culture",
+      "members": [
+        "xixime_culture"
+      ],
+      "labels": {
+        "english": "Xixime",
+        "simp_chinese": "希希梅"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_xumani_culture",
+      "members": [
+        "xumani_culture"
+      ],
+      "labels": {
+        "english": "Xumani",
+        "simp_chinese": "舒马尼"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_yampara_culture",
+      "members": [
+        "yampara_culture"
+      ],
+      "labels": {
+        "english": "Yampara",
+        "simp_chinese": "扬帕拉"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_yoli_culture",
+      "members": [
+        "yoli_culture"
+      ],
+      "labels": {
+        "english": "Yoli",
+        "simp_chinese": "约利"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_yurok_culture",
+      "members": [
+        "yurok_culture"
+      ],
+      "labels": {
+        "english": "Oohl",
+        "simp_chinese": "尤罗克"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_zacatecah_culture",
+      "members": [
+        "zacatecah_culture"
+      ],
+      "labels": {
+        "english": "Zacatecah",
+        "simp_chinese": "萨卡特卡"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_zoque_culture",
+      "members": [
+        "zoque_culture"
+      ],
+      "labels": {
+        "english": "Zoque",
+        "simp_chinese": "索克"
+      },
+      "status": "source_identity_preserved_pending",
+      "sources": [],
+      "basis": "撤销新增兜底集合，恢复源游戏的这条居民身份；不因人口少就替换成邻近大族。语言、传承和资产仍按字段列为待考证。"
+    },
+    {
+      "target": "eu5_resident_willetpoos_culture",
+      "members": [
+        "willetpoos_culture"
+      ],
+      "labels": {
+        "english": "Cayuse",
+        "simp_chinese": "卡尤塞"
+      },
+      "status": "evidence_supported_language_split",
+      "sources": [
+        "https://www.nps.gov/whmi/learn/education/upload/Cayuse-Teacher-Guide-2022-2.pdf"
+      ],
+      "basis": "Willetpoose/Weyii letpuu 为卡尤塞相关称谓，不是瓦拉瓦拉。NPS 与原住民材料区分旧卡尤塞语言和19世纪逐渐采用的内兹珀斯语；单列文化并保留原语言，不将19世纪语言转移回填到1780。",
+      "language": {
+        "key": "cayuse",
+        "group": null,
+        "labels": {
+          "english": "Cayuse",
+          "simp_chinese": "卡尤塞语"
+        },
+        "basis": "原卡尤塞语按独立语言处理，源 penutian_language 不足以定义居民的具体语言。"
+      }
+    }
+  ],
+  "source_scaffold_profile_sha256": "d67951a4cdcd9406ea003b4df5314da269c217012b0c1c0b702dd0a0ece0d590"
+}

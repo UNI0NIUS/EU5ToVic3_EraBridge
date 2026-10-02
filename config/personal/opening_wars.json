@@ -1,0 +1,141 @@
+{
+  "schema": 1,
+  "rule_version": "opening-wars-2.1",
+  "status": "implemented_runtime_release_gated",
+  "source_date": "1780.7.4",
+  "source_sha256": "d4e6bcb5f0c9d91f3d5abe73a5644b6bd99364060f3c76120c60529ad3ac6f74",
+  "initialization": "history_staged_then_set_war_before_first_tick",
+  "participants": {
+    "include_statuses": [
+      "Active"
+    ],
+    "exclude_statuses": [
+      "Left",
+      "Potential"
+    ],
+    "unknown_status": "block_war",
+    "unmapped_secondary": "omit_and_report",
+    "unmapped_principal": "block_war",
+    "auto_add_allies_or_bloc_members": false,
+    "subject_auto_join": "verify_exact_membership_before_release"
+  },
+  "territorial_goals": {
+    "expansion_authorization": "User explicitly allows goals smaller than a V3 state to expand to one state.",
+    "max_target_states_per_source_goal": null,
+    "target_scope": "enemy_owned_region_state",
+    "selection": [
+      "eligible_source_goal_state",
+      "shared_border_split_state",
+      "defender_border_homeland",
+      "defender_remote_homeland",
+      "larger_existing_state_part",
+      "stable_state_and_owner_id"
+    ],
+    "population_basis": "unscaled_source_staging_centipersons",
+    "zero_population_fallback": "capital_overlap_then_stable_state_id",
+    "preserve_neutral_state_parts": true,
+    "change_ownership_at_start": false,
+    "no_enemy_overlap": "block_goal",
+    "with_existing_target_claim": "return_state",
+    "without_existing_target_claim": "conquer_state",
+    "source_goal_usage": "initialization_seed_and_priority_only_overridden_by_budgeted_border_candidates"
+  },
+  "war_overrides": {
+    "3741319168": {
+      "source_goal": "superiority_rival",
+      "route": "humiliation_approximation",
+      "status": "implemented_runtime_release_gated",
+      "attacker": "ORI",
+      "original_target": "E7Q",
+      "territorial_goal": false
+    },
+    "3053453313": {
+      "source_goal": "parliament_conquer_province",
+      "route": "one_state_territorial_goal",
+      "attacker": "GEO",
+      "original_target": "E0X",
+      "candidate_defender_leader": "E5Q",
+      "target_state": "STATE_TABRIZ",
+      "target_owner": "E0X",
+      "status": "implemented_runtime_release_gated"
+    },
+    "2751463426": {
+      "source_goal": "independence",
+      "route": "native_independence_with_suspended_dependency_bridge",
+      "attacker": "EA4",
+      "original_target": "MAY",
+      "status": "implemented_runtime_release_gated",
+      "territorial_goal": false
+    },
+    "3137339395": {
+      "source_goal": "parliament_conquer_province",
+      "route": "one_state_territorial_goal",
+      "attacker": "E1W",
+      "original_target": "E7Q",
+      "target_state": "STATE_HYDERABAD",
+      "target_owner": "E7Q",
+      "status": "implemented_runtime_release_gated"
+    },
+    "2634022917": {
+      "source_goal": "take_capital_colony_war",
+      "route": "one_state_territorial_goal",
+      "attacker": "E9C",
+      "original_target": "E11",
+      "target_state": "STATE_SOUTH_MADAGASCAR",
+      "target_owner": "E11",
+      "forbidden_extra_participant": "ITA",
+      "status": "implemented_runtime_release_gated"
+    },
+    "2365587464": {
+      "source_goal": "independence",
+      "source_revolt": true,
+      "route": "native_secession_bridge",
+      "attacker": "E8S",
+      "original_target": "E7N",
+      "status": "implemented_runtime_release_gated",
+      "territorial_goal": false,
+      "attacker_peace_goal": "eu5_recognize_secession_using_native_revoke_all_claims_without_claim_presence_requirement",
+      "defender_peace_goal": "native_annex_country_mother_only_reintegration"
+    }
+  },
+  "war_progress": {
+    "occupation": "record_only_not_restored",
+    "owner_changes_for_occupation": false,
+    "source_warscore_to_v3_support": false,
+    "reapply_historical_losses": false,
+    "force_full_world_mobilization": false,
+    "resume_battle_and_siege_ticks": false,
+    "historical_dates": "source_date_in_audit_v3_wars_start_1836_1_1"
+  },
+  "release": {
+    "unresolved_principal_or_goal": "no_silent_fallback",
+    "partial_restoration": "explicit_coverage_report_required",
+    "recreate_after_peace": false,
+    "runtime_validation_required": true,
+    "install_after_both_peace_outcome_tests": true
+  },
+  "unified_mode": "all_six_active_wars_with_reset_v3_progress",
+  "territorial_budget": {
+    "per_side": 30,
+    "beneficiaries": "original_attacker_and_original_defender",
+    "ordinary_wars": "shared_border_split_states",
+    "defender_extra_candidates": "primary_culture_homelands_owned_by_active_enemies",
+    "priority": [
+      "eligible_original_goal",
+      "shared_border",
+      "border_homeland",
+      "other_homeland"
+    ],
+    "pricing": "native_runtime_infamy_plus_conservative_positive_rank_and_country_modifiers_and_one_percent_margin",
+    "primary_goals_per_war": 1,
+    "zero_affordable_targets": "block_release",
+    "additional_demands": "secondary"
+  },
+  "war_goal_cleanup": {
+    "seed_model": "read_native_play_war_goal_and_mirror_war_goal_by_side",
+    "mirrored_play": "retain_both_native_objectives_unless_explicit_replacement_is_planned",
+    "removal": "only_remove_existing_seed_of_the_same_side_once",
+    "runtime_guard": "has_play_goal",
+    "missing_or_duplicate_removal": "block_export"
+  }
+}

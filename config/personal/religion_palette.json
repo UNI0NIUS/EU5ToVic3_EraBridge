@@ -1,0 +1,22 @@
+{
+  "revision": "religion-map-20261003",
+  "notes": "Display palette only. Hex RGB is converted to Victoria 3 normalized RGB; no religious identity, heritage, taboo or population is changed.",
+  "colors": {
+    "bogomilism": "#C45476",
+    "bon": "#29BDCF",
+    "bosnian_church": "#A884A6",
+    "catharism": "#B5AEEC",
+    "druzism": "#46B895",
+    "jain": "#E9C75D",
+    "judaism": "#557DB8",
+    "mandeaism": "#87C9AC",
+    "manichaeism": "#EAE1AF",
+    "nestorianism": "#DE8F72",
+    "paulicianism": "#AE498D",
+    "samaritanism": "#4CABB3",
+    "sammitiya": "#AC7544",
+    "waldensian": "#8678C9",
+    "yazidism": "#6470D7",
+    "zoroastrian": "#EF8538"
+  }
+}

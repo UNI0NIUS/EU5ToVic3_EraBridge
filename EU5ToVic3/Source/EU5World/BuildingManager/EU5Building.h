@@ -1,6 +1,7 @@
 #ifndef EU5_BUILDING_H
 #define EU5_BUILDING_H
 #include "Parser.h"
+#include "PopulationManager/PopulationManager.h"
 #include <optional>
 #include <set>
 #include <string>
@@ -18,7 +19,8 @@ class Building: commonItems::parser
 	[[nodiscard]] int getLevel() const { return level; }
 	[[nodiscard]] int getLocationID() const { return locationID; }
 	[[nodiscard]] int getOwnerEstateID() const { return ownerEstateID; }
-	[[nodiscard]] std::optional<int> getPopID() const { return popID; }
+	[[nodiscard]] int getOwnerID() const { return ownerEstateID; }
+	[[nodiscard]] std::optional<PopID> getPopID() const { return popID; }
 	[[nodiscard]] double getEmployed() const { return employed; }
 	[[nodiscard]] int getEmploymentRequirement() const { return employmentRequirement; }
 	[[nodiscard]] const auto& getEmploymentRequirementStatus() const { return employmentRequirementStatus; }
@@ -37,7 +39,7 @@ class Building: commonItems::parser
 	int level = 0;
 	int locationID = 0;
 	int ownerEstateID = 0;
-	std::optional<int> popID;
+	std::optional<PopID> popID;
 	double employed = 0;
 	int employmentRequirement = 100;
 	std::string employmentRequirementStatus;

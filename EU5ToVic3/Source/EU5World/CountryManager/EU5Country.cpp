@@ -1,5 +1,6 @@
 #include "EU5Country.h"
 #include "ParserHelpers.h"
+#include "PopulationManager/PopulationManager.h"
 #include <ranges>
 
 EU5::Country::Country(int theCountryID, std::istream& theStream): countryID(std::move(theCountryID))
@@ -41,5 +42,10 @@ void EU5::Country::registerKeys()
 	registerKeyword("country_type", [this](std::istream& theStream) {
 		countryType = commonItems::getString(theStream);
 	});
-	registerRegex(commonItems::catchallRegex, commonItems::ignoreAndLogItem);
+	registerKeyword("definition", [this](std::istream& stream) { definition = commonItems::getString(stream); });
+	registerKeyword("owned_locations", [this](std::istream& stream) { ownedLocations = commonItems::getInts(stream); });
+	registerKeyword("primary_culture", [this](std::istream& stream) { primaryCulture = readEntityID(stream); });
+	registerKeyword("primary_religion", [this](std::istream& stream) { primaryReligion = readEntityID(stream); });
+	registerKeyword("capital", [this](std::istream& stream) { capital = readEntityID(stream); });
+	IgnoreAndStoreUnregisteredItems(ignoredFields);
 }

@@ -1,0 +1,4 @@
+# Validated with Python 3.13.9; source requires Python 3.11+.
+# Tk must be supplied by the Python installation.
+numpy==2.3.1
+Pillow==12.0.0

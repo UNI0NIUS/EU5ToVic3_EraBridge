@@ -1,0 +1,16 @@
+{
+  "version": "regional-claims-0.1",
+  "japan": {
+    "states": ["STATE_HOKKAIDO", "STATE_TOHOKU", "STATE_KANTO", "STATE_TOKAI", "STATE_KANSAI", "STATE_KYOTO", "STATE_HOKUSHINETSU", "STATE_CHUGOKU", "STATE_SHIKOKU", "STATE_KYUSHU", "STATE_RYUKYU_ISLANDS"],
+    "reserved_tag": "JAP",
+    "laws": ["law_bakufu", "law_eu5_bakufu"],
+    "bloc_identity": "identity_eu5_shogunate"
+  },
+  "tibet": {
+    "states": ["STATE_NGARI", "STATE_LHASA", "STATE_QINGHAI"],
+    "heritage": "heritage_tibetan",
+    "native_culture": "tibetan",
+    "source_culture_group": "tibetan_group",
+    "requires_decentralized_land": true
+  }
+}

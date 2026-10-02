@@ -1,0 +1,1238 @@
+{
+  "schema": 1,
+  "audit": ".local/m5/culture-identity-audit/20261003-010045-202813/audit.json",
+  "mappings": {
+    "mi_niah_culture": "eu5_framework_tangut",
+    "ngacang_culture": "eu5_framework_achang",
+    "kado_culture": "eu5_framework_kadu",
+    "bru_culture": "eu5_framework_bru_kuy",
+    "kuy_culture": "eu5_framework_bru_kuy",
+    "monpa_culture": "eu5_framework_monpa",
+    "kohistani": "eu5_framework_kohistani",
+    "zaza_culture": "eu5_framework_zaza",
+    "unalaska_culture": "eu5_framework_unangan",
+    "atka_culture": "eu5_framework_unangan",
+    "attu_culture": "eu5_framework_unangan",
+    "lozi_culture": "eu5_framework_lozi",
+    "abkhazian_culture": "eu5_framework_abkhaz_abaza",
+    "abazin_culture": "eu5_framework_abkhaz_abaza",
+    "sardinian": "eu5_framework_sardinian",
+    "anglo_irish": "eu5_framework_anglo_irish",
+    "ciboney": "eu5_framework_ciboney",
+    "hohokam_culture": "eu5_framework_hohokam",
+    "cahokia_culture": "eu5_framework_cahokia",
+    "quimbaya_culture": "eu5_framework_quimbaya",
+    "tumaco_culture": "eu5_framework_tumaco",
+    "pankararu_culture": "eu5_framework_pankararu",
+    "gula_iro_culture": "eu5_framework_gula_iro",
+    "mbunda": "eu5_chokwe",
+    "luvale": "eu5_chokwe",
+    "luchazi_culture": "eu5_chokwe",
+    "manaos_culture": "amazonian",
+    "yuri_culture": "amazonian"
+  },
+  "assets": {
+    "eu5_framework_tangut": {
+      "labels": [
+        "Tangut",
+        "党项"
+      ],
+      "template": "tibetan",
+      "heritage": "heritage_tibetan",
+      "homelands": [
+        "STATE_NINGXIA"
+      ],
+      "anchors": [
+        "ningxia"
+      ],
+      "homeland_sources": [
+        "https://rubinmuseum.org/projecthimalayanart/glossary/tanguts/"
+      ],
+      "homeland_basis": "EU5 Chinese label and source comment identify Tangut, not modern Muya; Western Xia core. Tibetan heritage is a broad gameplay grouping.",
+      "new_language": [
+        "tangut",
+        "language_group_tibeto_burman",
+        "Tangut",
+        "党项语"
+      ]
+    },
+    "eu5_framework_achang": {
+      "labels": [
+        "Achang",
+        "阿昌"
+      ],
+      "template": "kachin",
+      "heritage": "heritage_burmese",
+      "homelands": [
+        "STATE_YUNNAN"
+      ],
+      "anchors": [
+        "tengchong"
+      ],
+      "homeland_sources": [
+        "https://www.neac.gov.cn/seac/ztzl/acz/lsyg.shtml"
+      ],
+      "homeland_basis": "Husa and Lianghe core recorded before 1780; no automatic Putao or overseas claims.",
+      "new_language": [
+        "achang",
+        "language_group_tibeto_burman",
+        "Achang",
+        "阿昌语"
+      ]
+    },
+    "eu5_framework_kadu": {
+      "labels": [
+        "Kadu",
+        "卡杜"
+      ],
+      "template": "burmese",
+      "heritage": "heritage_burmese",
+      "homelands": [
+        "STATE_KACHIN"
+      ],
+      "anchors": [
+        "katha"
+      ],
+      "homeland_sources": [
+        "https://sealang.net/archives/ltba/pdf/LTBA-36.2.15.pdf"
+      ],
+      "homeland_basis": "Katha core; modern language evidence distinguishes Kadu from Burmese, not a census of 1780.",
+      "new_language": [
+        "kadu",
+        "language_group_tibeto_burman",
+        "Kadu",
+        "卡杜语"
+      ]
+    },
+    "eu5_framework_bru_kuy": {
+      "labels": [
+        "Bru–Kuy",
+        "布鲁—奎"
+      ],
+      "template": "khmu",
+      "heritage": "heritage_cambodian",
+      "homelands": [
+        "STATE_LAOS",
+        "STATE_NAKHON_RATCHASIMA"
+      ],
+      "anchors": [
+        "savannakhet",
+        "khukhan"
+      ],
+      "homeland_sources": [
+        "https://www.researchgate.net/publication/327860779_Language_Shift_and_Maintenance_of_Non-Tai_Communities_in_Northeastern_Thailand_Kuay_and_Bru"
+      ],
+      "homeland_basis": "Closed two-member Katuic gameplay aggregate. Limited Mekong/Isan cores; modern fieldwork is a conservative geographic back-projection, not proof of a single historical nation.",
+      "new_language": [
+        "bru_kuy",
+        "language_group_austroasiatic",
+        "Bru and Kuy",
+        "布鲁—奎语"
+      ]
+    },
+    "eu5_framework_monpa": {
+      "labels": [
+        "Monpa",
+        "门巴"
+      ],
+      "template": "tibetan",
+      "heritage": "heritage_tibetan",
+      "homelands": [
+        "STATE_EASTERN_HIMALAYAS"
+      ],
+      "anchors": [
+        "tawang"
+      ],
+      "homeland_sources": [
+        "https://www.neac.gov.cn/seac/ztzl/mbz/lsyg.shtml"
+      ],
+      "homeland_basis": "Tawang/Monyul core. State projection is not a present-day sovereignty statement. No automatic claims from emigrants.",
+      "new_language": [
+        "monpa",
+        "language_group_tibeto_burman",
+        "Monpa",
+        "门巴语"
+      ]
+    },
+    "eu5_framework_kohistani": {
+      "labels": [
+        "Kohistani",
+        "科希斯坦"
+      ],
+      "template": "kashmiri",
+      "heritage": "heritage_kashmiri",
+      "homelands": [
+        "STATE_KASHMIR"
+      ],
+      "anchors": [
+        "kandia"
+      ],
+      "homeland_sources": [
+        "https://www.iranicaonline.org/articles/dardestan-ii-languages/"
+      ],
+      "homeland_basis": "Indus Kohistan core projected through Kandia; broad Dardic language is a gameplay simplification.",
+      "language": "language_dardic"
+    },
+    "eu5_framework_zaza": {
+      "labels": [
+        "Zaza",
+        "扎扎"
+      ],
+      "template": "kurdish",
+      "heritage": "heritage_iranian",
+      "homelands": [
+        "STATE_DIYARBAKIR"
+      ],
+      "anchors": [
+        "harput"
+      ],
+      "homeland_sources": [
+        "https://www.iranicaonline.org/articles/dimli/"
+      ],
+      "homeland_basis": "Upper Euphrates core. Linguistic distinction does not settle contested modern Kurdish self-identification.",
+      "new_language": [
+        "zaza",
+        "language_group_iranic",
+        "Zazaki",
+        "扎扎语"
+      ]
+    },
+    "eu5_framework_unangan": {
+      "labels": [
+        "Unangan",
+        "乌南干"
+      ],
+      "template": "inuit",
+      "heritage": "heritage_circumpolar",
+      "homelands": [
+        "STATE_ALASKA"
+      ],
+      "anchors": [
+        "qawalangin"
+      ],
+      "homeland_sources": [
+        "https://www.nps.gov/aleu/learn/historyculture/unangax-history-and-culture.htm"
+      ],
+      "homeland_basis": "Three Aleut island identities merged into one established Unangan aggregate; coarse Alaska state includes Aleutian core, not every Alaskan region.",
+      "new_language": [
+        "unangan",
+        "language_group_eskaleut",
+        "Unangam Tunuu",
+        "乌南干语"
+      ]
+    },
+    "eu5_framework_lozi": {
+      "labels": [
+        "Luyi",
+        "卢伊"
+      ],
+      "template": "sotho",
+      "heritage": "heritage_eastern_bantu",
+      "homelands": [
+        "STATE_ZAMBIA"
+      ],
+      "anchors": [
+        "zambesia_katongo"
+      ],
+      "homeland_sources": [
+        "https://www.cambridge.org/core/books/abs/five-hundred-years-rediscovered/mfecane-mutation-in-central-africa-a-comparison-of-the-makololo-and-the-ngoni-in-zambia-1830s1898/4F4969CAABB6A8E4F2CBB60A082ED7B3"
+      ],
+      "homeland_basis": "Pre-Makololo Luyi/Barotse core; do not backdate the 1830s Sotho-language transformation to the source start.",
+      "new_language": [
+        "lozi",
+        "language_group_bantu",
+        "Luyana",
+        "卢伊语"
+      ]
+    },
+    "eu5_framework_abkhaz_abaza": {
+      "labels": [
+        "Abkhaz–Abaza",
+        "阿布哈兹—阿巴扎"
+      ],
+      "template": "circassian",
+      "heritage": "heritage_north_caucasian",
+      "homelands": [
+        "STATE_GREATER_CAUCASUS",
+        "STATE_KUBAN"
+      ],
+      "anchors": [
+        "pitsunda",
+        "costa"
+      ],
+      "homeland_sources": [
+        "https://academic.oup.com/edited-volume/37095/chapter-abstract/323239876"
+      ],
+      "homeland_basis": "Closed two-member composite; preserve western Caucasus source-region cores, not all Circassian claims. Language survey establishes distinction, not exact 1780 boundaries.",
+      "new_language": [
+        "abkhaz_abaza",
+        "language_group_circassic",
+        "Abkhaz and Abaza",
+        "阿布哈兹—阿巴扎语"
+      ]
+    },
+    "eu5_framework_sardinian": {
+      "labels": [
+        "Sardinian",
+        "撒丁"
+      ],
+      "template": "south_italian",
+      "heritage": "heritage_italic",
+      "homelands": [
+        "STATE_SARDINIA"
+      ],
+      "anchors": [
+        "terralba"
+      ],
+      "homeland_sources": [
+        "https://www.sardegnacultura.it/categoria/lingua/storia-della-lingua"
+      ],
+      "homeland_basis": "Island historical language and identity; no continental South Italian homelands.",
+      "new_language": [
+        "sardinian",
+        "language_group_romance",
+        "Sardinian",
+        "撒丁语"
+      ]
+    },
+    "eu5_framework_anglo_irish": {
+      "labels": [
+        "Anglo-Irish",
+        "盎格鲁—爱尔兰"
+      ],
+      "template": "irish",
+      "heritage": "heritage_british",
+      "homelands": [
+        "STATE_LEINSTER"
+      ],
+      "anchors": [
+        "dublin"
+      ],
+      "homeland_sources": [
+        "https://academic.oup.com/reference/62337/reference-article-abstract/554129006"
+      ],
+      "homeland_basis": "Historical English-speaking Irish community, not automatically Protestant. Pale/Leinster core; no claim over all Ireland.",
+      "language": "language_anglophone"
+    },
+    "eu5_framework_ciboney": {
+      "labels": [
+        "Ciboney",
+        "西博内"
+      ],
+      "template": "amazonian",
+      "heritage": "heritage_caribbean",
+      "homelands": [
+        "STATE_WESTERN_CUBA"
+      ],
+      "anchors": [
+        "guaniguanico"
+      ],
+      "homeland_sources": [
+        "https://www.cambridge.org/core/journals/antiquity/article/creating-the-guanahatabey-ciboney-the-modern-genesis-of-an-extinct-culture/33C6799D77A0B74B7CCC10DBE6AC78D6"
+      ],
+      "homeland_basis": "Cuban source identity retained, not Amazonian. Western Cuba is a bounded gameplay core under the older Ciboney interpretation; conflation with Guanahatabey and language remain disputed, not historically certified.",
+      "new_language": [
+        "ciboney",
+        "eu5_framework_language_group_ciboney",
+        "Ciboney",
+        "西博内语"
+      ]
+    },
+    "eu5_framework_hohokam": {
+      "labels": [
+        "Hohokam",
+        "霍霍坎"
+      ],
+      "template": "oodham",
+      "heritage": "heritage_southwest_indian",
+      "homelands": [
+        "STATE_ARIZONA"
+      ],
+      "anchors": [
+        "tse_binestie"
+      ],
+      "homeland_sources": [
+        "https://www.nps.gov/cagr/learn/historyculture/the-ancestral-sonoran-desert-people.htm"
+      ],
+      "homeland_basis": "Sonoran Salt/Gila archaeological core. Source survival retained; no unique modern descendant or Hokan language claim.",
+      "new_language": [
+        "hohokam",
+        "eu5_framework_language_group_hohokam",
+        "Hohokam",
+        "霍霍坎语"
+      ]
+    },
+    "eu5_framework_cahokia": {
+      "labels": [
+        "Cahokian",
+        "卡霍基亚"
+      ],
+      "template": "siouan",
+      "heritage": "heritage_southeast_indian",
+      "homelands": [
+        "STATE_ILLINOIS"
+      ],
+      "anchors": [
+        "cahokia"
+      ],
+      "homeland_sources": [
+        "https://www.nps.gov/articles/000/cahokia-mounds-state-historic-site-world-heritage-site.htm"
+      ],
+      "homeland_basis": "American Bottom archaeological core. Does not equate archaeological Cahokia with the later Illinois tribe or certify a Siouan language.",
+      "new_language": [
+        "cahokia",
+        "eu5_framework_language_group_cahokia",
+        "Cahokian",
+        "卡霍基亚语"
+      ]
+    },
+    "eu5_framework_quimbaya": {
+      "labels": [
+        "Quimbaya",
+        "金巴亚"
+      ],
+      "template": "cariban",
+      "heritage": "eu5_shared_heritage_isthmo_colombian",
+      "homelands": [
+        "STATE_CUNDINAMARCA"
+      ],
+      "anchors": [
+        "otun"
+      ],
+      "homeland_sources": [
+        "https://enciclopedia.banrepcultural.org/Quimbaya"
+      ],
+      "homeland_basis": "Middle Cauca core; distinguish archaeological periods and contact-era populations. Cariban affiliation is not established.",
+      "new_language": [
+        "quimbaya",
+        "eu5_framework_language_group_quimbaya",
+        "Quimbaya",
+        "金巴亚语"
+      ]
+    },
+    "eu5_framework_tumaco": {
+      "labels": [
+        "Tumaco–La Tolita",
+        "图马科—拉托利塔"
+      ],
+      "template": "cariban",
+      "heritage": "eu5_shared_heritage_isthmo_colombian",
+      "homelands": [
+        "STATE_ECUADOR"
+      ],
+      "anchors": [
+        "tumaco"
+      ],
+      "homeland_sources": [
+        "https://publicaciones.banrepcultural.org/index.php/fian/article/view/5434/0"
+      ],
+      "homeland_basis": "Pacific coastal core projected by mapped Tumaco to the coarse Ecuador state, not the surviving emigrants in Cajamarca. Language unknown.",
+      "new_language": [
+        "tumaco",
+        "eu5_framework_language_group_tumaco",
+        "Tumaco–La Tolita",
+        "图马科—拉托利塔语"
+      ]
+    },
+    "eu5_framework_pankararu": {
+      "labels": [
+        "Pankararu",
+        "潘卡拉鲁"
+      ],
+      "template": "tupinamba",
+      "heritage": "heritage_atlantic",
+      "homelands": [
+        "STATE_PERNAMBUCO"
+      ],
+      "anchors": [
+        "pankararu"
+      ],
+      "homeland_sources": [
+        "https://pib.socioambiental.org/pt/Povo%3APankararu"
+      ],
+      "homeland_basis": "Pernambuco Sao Francisco core; source location spans two game states but only Pernambuco is granted. No assumption of Tupi language affiliation.",
+      "new_language": [
+        "pankararu",
+        "eu5_framework_language_group_pankararu",
+        "Pankararu",
+        "潘卡拉鲁语"
+      ]
+    },
+    "eu5_framework_gula_iro": {
+      "labels": [
+        "Gula Iro",
+        "伊罗古拉"
+      ],
+      "template": "sara",
+      "heritage": "heritage_sahelian",
+      "homelands": [
+        "STATE_WADDAI"
+      ],
+      "anchors": [
+        "bahr_salamat"
+      ],
+      "homeland_sources": [
+        "https://asjp.clld.org/languages/GULA_IRO"
+      ],
+      "homeland_basis": "Lake Iro/Salamat core; Bua language, not Sara Gula. Modern linguistic location is a limited historical back-projection.",
+      "new_language": [
+        "gula_iro",
+        "eu5_framework_language_group_bua",
+        "Gula Iro",
+        "伊罗古拉语"
+      ]
+    }
+  },
+  "overrides": {},
+  "labels": {
+    "mazanderani": [
+      "Mazanderani",
+      "马赞德兰"
+    ],
+    "paiute": [
+      "Numic",
+      "努米克"
+    ],
+    "tupinamba": [
+      "Tupi",
+      "图皮"
+    ],
+    "rajput": [
+      "Rajasthani",
+      "拉贾斯坦"
+    ],
+    "bedouin": [
+      "Bedouin",
+      "贝都因"
+    ],
+    "burmese": [
+      "Burmese",
+      "缅甸"
+    ],
+    "vietnamese": [
+      "Vietnamese",
+      "京"
+    ],
+    "shan": [
+      "Shan",
+      "掸"
+    ],
+    "marathi": [
+      "Marathi",
+      "马拉地"
+    ],
+    "uzbek": [
+      "Uzbek",
+      "乌兹别克"
+    ],
+    "chuvash": [
+      "Chuvash",
+      "楚瓦什"
+    ],
+    "manchu": [
+      "Manchu",
+      "满洲"
+    ],
+    "chechen": [
+      "Nakh",
+      "纳赫"
+    ],
+    "romanian": [
+      "Romanian",
+      "罗马尼亚"
+    ],
+    "kanuri": [
+      "Kanuri",
+      "卡努里"
+    ],
+    "eu5_chokwe": [
+      "Chokwe",
+      "乔奎"
+    ],
+    "language_tabari": [
+      "Tabari",
+      "塔巴里语"
+    ],
+    "language_burmic": [
+      "Burmese",
+      "缅语"
+    ],
+    "language_shan": [
+      "Shan",
+      "掸语"
+    ],
+    "polish": [
+      "Polish",
+      "波兰"
+    ]
+  },
+  "decisions": {
+    "gilaki": {
+      "members": [
+        "gilak_culture"
+      ],
+      "decision": "封闭合称吉兰—马赞德兰；继承原版伊朗传承，语言显示亦改为两成员合称。",
+      "evidence_status": "bounded_gameplay_decision",
+      "refs": [
+        "https://iranian-languages.arizona.edu/node/8"
+      ]
+    },
+    "hohokam": {
+      "members": [
+        "hohokam_culture"
+      ],
+      "decision": "保留考古文化的架空存续，不指认为霍坎或单一现代后裔。",
+      "evidence_status": "bounded_gameplay_decision",
+      "refs": [
+        "https://www.nps.gov/cagr/learn/historyculture/the-ancestral-sonoran-desert-people.htm"
+      ]
+    },
+    "ciboney": {
+      "members": [
+        "ciboney"
+      ],
+      "decision": "恢复加勒比西博内具名资产；西古巴为保守游戏核心。标签与Guanahatabey的混用及语言仍有争论，不作已知阿拉瓦克/西瓜约语断言。",
+      "evidence_status": "historical_boundary_unresolved",
+      "refs": []
+    },
+    "numic": {
+      "members": [
+        "nuwuvi_culture",
+        "numu_culture",
+        "nuuchi_culture",
+        "penkwitikka_culture",
+        "kusiutta_culture",
+        "kuccuntikka_culture",
+        "bannock_culture",
+        "tukudeka_culture",
+        "agaideka_culture",
+        "haivodika_culture",
+        "watatikka_culture",
+        "wiyimpihtikka_culture",
+        "tetadeka_culture",
+        "nuwuvu_culture",
+        "timbisha_culture",
+        "yapahruka_culture",
+        "monachi_culture",
+        "kuhtsutuuka_culture"
+      ],
+      "decision": "用努米克宽名涵盖肖肖尼、派尤特、尤特等；保留原版大盆地传承与努米克语言。",
+      "evidence_status": "bounded_gameplay_decision",
+      "refs": [
+        "https://home.nps.gov/grba/learn/historyculture/historic-tribes-of-the-great-basin.htm"
+      ]
+    },
+    "tupi": {
+      "members": [
+        "ava_culture",
+        "tupiniquim_culture",
+        "wuyjuyu_culture",
+        "catagua_culture",
+        "satere_mawe_culture",
+        "kagwahiva_culture",
+        "kaapor_culture",
+        "kawaiwete_culture",
+        "tupinamba_culture",
+        "kaete_culture",
+        "guarasugwe_culture",
+        "yjxa_culture",
+        "makurap_culture",
+        "awa_canoeiro_culture",
+        "kukakma_culture",
+        "awa_brazil_culture",
+        "tapajo_culture",
+        "arua_culture",
+        "paiter_culture",
+        "kambeba_culture"
+      ],
+      "decision": "图皮南巴名称扩大为图皮；Catagua源语言为Macro-Je，另列证据缺口，不视为已确认图皮身份。",
+      "evidence_status": "historical_boundary_unresolved",
+      "refs": [
+        "https://pib.socioambiental.org/en/Povo%3AMunduruku"
+      ]
+    },
+    "tupi_uncertain": {
+      "members": [
+        "manaos_culture",
+        "pankararu_culture",
+        "yuri_culture"
+      ],
+      "decision": "Manaos/Yuri退回原版亚马孙宽类；Pankararu保留具名身份，不再断言图皮归属。",
+      "evidence_status": "bounded_gameplay_decision",
+      "refs": []
+    },
+    "rajput": {
+      "members": [
+        "dhundhari",
+        "harauti",
+        "mewari",
+        "marwari",
+        "shekhawati",
+        "mewati",
+        "bagri"
+      ],
+      "decision": "地区语言群不能都标为拉杰普特社会身份；使用拉贾斯坦宽称，原版传承不变。",
+      "evidence_status": "bounded_gameplay_decision",
+      "refs": []
+    },
+    "bedouin": {
+      "members": [
+        "najdi_culture",
+        "hijazi_culture",
+        "omani_culture",
+        "kaliji_culture"
+      ],
+      "decision": "按用户命名偏好保留原版“贝都因”显示名；已审查的合并范围、居民宗教及传承不变。",
+      "evidence_status": "bounded_gameplay_decision",
+      "refs": []
+    },
+    "lozi": {
+      "members": [
+        "lozi_culture"
+      ],
+      "decision": "恢复前科洛洛卢伊身份及语言；不把19世纪语言变化提前。",
+      "evidence_status": "bounded_gameplay_decision",
+      "refs": [
+        "https://www.cambridge.org/core/books/abs/five-hundred-years-rediscovered/mfecane-mutation-in-central-africa-a-comparison-of-the-makololo-and-the-ngoni-in-zambia-1830s1898/4F4969CAABB6A8E4F2CBB60A082ED7B3"
+      ]
+    },
+    "minyak": {
+      "members": [
+        "mi_niah_culture"
+      ],
+      "decision": "固定EU5注释和中文本地化明确为党项，不是木雅；恢复宁夏党项及藏缅语言。",
+      "evidence_status": "bounded_gameplay_decision",
+      "refs": []
+    },
+    "achang": {
+      "members": [
+        "ngacang_culture"
+      ],
+      "decision": "阿昌独立居民身份，复用缅甸大传承。",
+      "evidence_status": "bounded_gameplay_decision",
+      "refs": [
+        "https://www.moe.gov.cn/jyb_sjzl/wenzi/202108/t20210827_554992.html"
+      ]
+    },
+    "kadu": {
+      "members": [
+        "kado_culture"
+      ],
+      "decision": "卡杜保留独立身份与Luish语言；复用缅甸大传承。",
+      "evidence_status": "bounded_gameplay_decision",
+      "refs": []
+    },
+    "rakhine": {
+      "members": [
+        "rakhine_culture"
+      ],
+      "decision": "使用缅—若开合称；保留若开区域差异于来源台账，复用缅甸大传承。",
+      "evidence_status": "bounded_gameplay_decision",
+      "refs": []
+    },
+    "kuy": {
+      "members": [
+        "kuy_culture"
+      ],
+      "decision": "奎与布鲁组成成员封闭的游戏合称；共同大陆东南亚文化传统，不等于高棉民族。",
+      "evidence_status": "bounded_gameplay_decision",
+      "refs": []
+    },
+    "bru": {
+      "members": [
+        "bru_culture"
+      ],
+      "decision": "与奎共同采用封闭合称；取消克木语同义假定。",
+      "evidence_status": "bounded_gameplay_decision",
+      "refs": []
+    },
+    "muong": {
+      "members": [
+        "muong_culture"
+      ],
+      "decision": "使用越—芒合称，保留原版越语支及越南大传承，不宣称二者同民族。",
+      "evidence_status": "bounded_gameplay_decision",
+      "refs": []
+    },
+    "bo": {
+      "members": [
+        "bo_culture"
+      ],
+      "decision": "复核源定义后仍缺少足以确定新边界的证据；保留当前游戏聚合，不把同语言/邻近等同于同民族，也不据此扩大历史本土。",
+      "evidence_status": "historical_boundary_unresolved",
+      "refs": []
+    },
+    "tai_shan": {
+      "members": [
+        "dai_culture",
+        "tai_nua_culture",
+        "tai_lu_culture"
+      ],
+      "decision": "掸—傣宽称；北傣与傣泐不全改称某一掸分支。",
+      "evidence_status": "bounded_gameplay_decision",
+      "refs": []
+    },
+    "thai_regions": {
+      "members": [
+        "khon_muang_culture",
+        "dambro_culture"
+      ],
+      "decision": "保留原版泰宽类，覆盖北部与南部区域来源；不把每个地方支系重建为资产。",
+      "evidence_status": "bounded_gameplay_decision",
+      "refs": []
+    },
+    "tibetan_border": {
+      "members": [
+        "monpa_culture",
+        "tebbu_culture"
+      ],
+      "decision": "门巴保留具名身份；迭部按源定义藏族地域文化保留。",
+      "evidence_status": "bounded_gameplay_decision",
+      "refs": []
+    },
+    "marathi_border": {
+      "members": [
+        "konkani",
+        "khandeshi"
+      ],
+      "decision": "明确列出马拉地、孔卡尼、坎德什三个成员，避免窄名吞并。语言字段为游戏聚合，不声称同一种语言。",
+      "evidence_status": "bounded_gameplay_decision",
+      "refs": []
+    },
+    "kohistani": {
+      "members": [
+        "kohistani"
+      ],
+      "decision": "科希斯坦独立身份，复用克什米尔传承与达尔德宽语类。",
+      "evidence_status": "bounded_gameplay_decision",
+      "refs": []
+    },
+    "khorezm": {
+      "members": [
+        "khorezmian_culture"
+      ],
+      "decision": "源文化明确使用Karluk，合称仅涵盖突厥化花剌子模，不指古代伊朗语花剌子模。",
+      "evidence_status": "bounded_gameplay_decision",
+      "refs": []
+    },
+    "bulghar": {
+      "members": [
+        "bolghar_culture"
+      ],
+      "decision": "封闭楚瓦什—伏尔加保加尔连续传统；Oghuric不改成保加利亚斯拉夫语。",
+      "evidence_status": "bounded_gameplay_decision",
+      "refs": []
+    },
+    "jurchen": {
+      "members": [
+        "jurchen_culture",
+        "haixi_culture",
+        "hurga_culture"
+      ],
+      "decision": "满洲—女真合称符合本局存续来源；Hurga/Nanai仍有语言边界疑问，保留限制。",
+      "evidence_status": "historical_boundary_unresolved",
+      "refs": []
+    },
+    "sibe": {
+      "members": [
+        "sibe_culture"
+      ],
+      "decision": "在满洲—女真—锡伯的明确宽称内保留来源，不认定锡伯即满族。",
+      "evidence_status": "bounded_gameplay_decision",
+      "refs": [
+        "https://www.moe.gov.cn/jyb_sjzl/wenzi/202108/t20210827_554992.html"
+      ]
+    },
+    "baltic": {
+      "members": [
+        "curonian",
+        "pruthenian"
+      ],
+      "decision": "复核源定义后仍缺少足以确定新边界的证据；保留当前游戏聚合，不把同语言/邻近等同于同民族，也不据此扩大历史本土。",
+      "evidence_status": "historical_boundary_unresolved",
+      "refs": []
+    },
+    "uralic": {
+      "members": [
+        "merya_culture",
+        "bjarmian"
+      ],
+      "decision": "复核源定义后仍缺少足以确定新边界的证据；保留当前游戏聚合，不把同语言/邻近等同于同民族，也不据此扩大历史本土。",
+      "evidence_status": "historical_boundary_unresolved",
+      "refs": []
+    },
+    "caucasus_west": {
+      "members": [
+        "abkhazian_culture",
+        "abazin_culture"
+      ],
+      "decision": "阿布哈兹—阿巴扎封闭合称，保留两成员，不直接改称切尔克斯。",
+      "evidence_status": "bounded_gameplay_decision",
+      "refs": []
+    },
+    "nakh": {
+      "members": [
+        "nakh_culture"
+      ],
+      "decision": "使用纳赫宽称，保留原版Vainakh语言和北高加索传承。",
+      "evidence_status": "bounded_gameplay_decision",
+      "refs": []
+    },
+    "german_diaspora": {
+      "members": [
+        "german_transylvanian",
+        "german_carpathian"
+      ],
+      "decision": "保留原版德语文化粒度；移民来源在台账保留，不强制据移居地另造民族或扩大本土。",
+      "evidence_status": "bounded_gameplay_decision",
+      "refs": []
+    },
+    "caspian_other": {
+      "members": [
+        "semnani_culture",
+        "dehwar_culture"
+      ],
+      "decision": "复核源定义后仍缺少足以确定新边界的证据；保留当前游戏聚合，不把同语言/邻近等同于同民族，也不据此扩大历史本土。",
+      "evidence_status": "historical_boundary_unresolved",
+      "refs": []
+    },
+    "zaza": {
+      "members": [
+        "zaza_culture"
+      ],
+      "decision": "恢复扎扎语与居民标签；共用伊朗传承，不对现代民族自我认同争议作裁决。",
+      "evidence_status": "bounded_gameplay_decision",
+      "refs": []
+    },
+    "sardinian": {
+      "members": [
+        "sardinian"
+      ],
+      "decision": "恢复撒丁居民及语言，复用原版意大利传承，本土限撒丁岛。",
+      "evidence_status": "bounded_gameplay_decision",
+      "refs": []
+    },
+    "italian_border": {
+      "members": [
+        "ladin",
+        "friulian",
+        "dalmatian"
+      ],
+      "decision": "复核源定义后仍缺少足以确定新边界的证据；保留当前游戏聚合，不把同语言/邻近等同于同民族，也不据此扩大历史本土。",
+      "evidence_status": "historical_boundary_unresolved",
+      "refs": []
+    },
+    "aromanian": {
+      "members": [
+        "aromanian"
+      ],
+      "decision": "封闭罗马尼亚—阿罗马尼亚合称；保留原版东罗曼语与罗马尼亚传承。",
+      "evidence_status": "bounded_gameplay_decision",
+      "refs": []
+    },
+    "regional_slavic": {
+      "members": [
+        "kashubian"
+      ],
+      "decision": "沿用原版波兰宽类；卡舒布来源持续可回溯，不据现代标准强制无限细分。",
+      "evidence_status": "bounded_gameplay_decision",
+      "refs": []
+    },
+    "rusyn": {
+      "members": [
+        "rusyn_culture"
+      ],
+      "decision": "沿用原版乌克兰/东斯拉夫宽类；鲁塞尼亚边界争议不写为已解决的同义关系。",
+      "evidence_status": "bounded_gameplay_decision",
+      "refs": []
+    },
+    "anglo_irish": {
+      "members": [
+        "anglo_irish"
+      ],
+      "decision": "恢复英语爱尔兰居民，继续共用不列颠传承；实际宗教完全保留。",
+      "evidence_status": "bounded_gameplay_decision",
+      "refs": []
+    },
+    "kanembu": {
+      "members": [
+        "kanembu_culture"
+      ],
+      "decision": "卡努里—卡涅姆布封闭合称；沿用原版萨赫勒传承。",
+      "evidence_status": "bounded_gameplay_decision",
+      "refs": []
+    },
+    "tuareg_history": {
+      "members": [
+        "messufa_culture",
+        "lamtuna_culture"
+      ],
+      "decision": "复核源定义后仍缺少足以确定新边界的证据；保留当前游戏聚合，不把同语言/邻近等同于同民族，也不据此扩大历史本土。",
+      "evidence_status": "historical_boundary_unresolved",
+      "refs": []
+    },
+    "kongo_border": {
+      "members": [
+        "yaka",
+        "suku",
+        "bwende"
+      ],
+      "decision": "保留原版刚果宽类的有限游戏聚合；Yaka/Suku/Bwende并非民族同义词，不复制整个刚果帝国疆域为本土。",
+      "evidence_status": "bounded_gameplay_decision",
+      "refs": []
+    },
+    "luba_border": {
+      "members": [
+        "bena_lwalwa",
+        "bindji",
+        "lwalwa",
+        "mbala",
+        "songye",
+        "hemba",
+        "kete",
+        "pende",
+        "kasayi",
+        "kunda"
+      ],
+      "decision": "原版卢巴宽类暂保留；王权/艺术传统传播不等于所有Kasai成员同族，具体语言仍保留未决标记于报告。",
+      "evidence_status": "historical_boundary_unresolved",
+      "refs": []
+    },
+    "lunda_border": {
+      "members": [
+        "mbunda",
+        "luvale",
+        "luchazi_culture"
+      ],
+      "decision": "与现有乔奎资产合并为明确成员的乔奎—卢瓦莱—姆本达传统；Luchazi列入封闭成员台账，共用刚果传承。",
+      "evidence_status": "bounded_gameplay_decision",
+      "refs": []
+    },
+    "mbundu": {
+      "members": [
+        "ambundu",
+        "haneka_humbe"
+      ],
+      "decision": "复核源定义后仍缺少足以确定新边界的证据；保留当前游戏聚合，不把同语言/邻近等同于同民族，也不据此扩大历史本土。",
+      "evidence_status": "historical_boundary_unresolved",
+      "refs": []
+    },
+    "chewa_border": {
+      "members": [
+        "tumbuka_culture",
+        "nsenga"
+      ],
+      "decision": "复核源定义后仍缺少足以确定新边界的证据；保留当前游戏聚合，不把同语言/邻近等同于同民族，也不据此扩大历史本土。",
+      "evidence_status": "historical_boundary_unresolved",
+      "refs": []
+    },
+    "mossi_border": {
+      "members": [
+        "gurma",
+        "gurunsi",
+        "mamprusi"
+      ],
+      "decision": "复核源定义后仍缺少足以确定新边界的证据；保留当前游戏聚合，不把同语言/邻近等同于同民族，也不据此扩大历史本土。",
+      "evidence_status": "historical_boundary_unresolved",
+      "refs": []
+    },
+    "sukuma_border": {
+      "members": [
+        "rukwa_culture",
+        "bena_culture"
+      ],
+      "decision": "复核源定义后仍缺少足以确定新边界的证据；保留当前游戏聚合，不把同语言/邻近等同于同民族，也不据此扩大历史本土。",
+      "evidence_status": "historical_boundary_unresolved",
+      "refs": []
+    },
+    "swahili_border": {
+      "members": [
+        "mbugu_culture",
+        "ruvu_culture",
+        "seuta_culture",
+        "matuumbi_culture"
+      ],
+      "decision": "复核源定义后仍缺少足以确定新边界的证据；保留当前游戏聚合，不把同语言/邻近等同于同民族，也不据此扩大历史本土。",
+      "evidence_status": "historical_boundary_unresolved",
+      "refs": []
+    },
+    "sara_border": {
+      "members": [
+        "gula_iro_culture"
+      ],
+      "decision": "伊罗古拉独立，纠正Sara Gula与Bua Gula Iro的混淆。",
+      "evidence_status": "bounded_gameplay_decision",
+      "refs": []
+    },
+    "cahokia": {
+      "members": [
+        "cahokia_culture"
+      ],
+      "decision": "保留源考古文化存续，撤销已知苏语族归属假定；本土限伊利诺伊核心。",
+      "evidence_status": "bounded_gameplay_decision",
+      "refs": []
+    },
+    "colombia": {
+      "members": [
+        "quimbaya_culture",
+        "yarigui_culture",
+        "tumaco_culture"
+      ],
+      "decision": "Quimbaya/Tumaco保留具名来源和有限历史核心，撤销Cariban确证假定；Yarigui保留原版加勒比宽类但记录证据限制。",
+      "evidence_status": "historical_boundary_unresolved",
+      "refs": []
+    },
+    "andes_quechua": {
+      "members": [
+        "wari_culture",
+        "chincha_culture",
+        "ychsma_culture",
+        "huarco_culture",
+        "chancay_culture"
+      ],
+      "decision": "保留原版克丘亚大类和源语言；考古名称的年代、后续语言变化不据此认定全部有连续民族史。",
+      "evidence_status": "historical_boundary_unresolved",
+      "refs": []
+    },
+    "andes_aymara": {
+      "members": [
+        "chango_culture",
+        "chuwi_culture",
+        "churajon_culture",
+        "kallawaya_culture",
+        "yaro_culture",
+        "yawyu_culture",
+        "mollo_culture"
+      ],
+      "decision": "保留原版艾马拉大类；Chango/Kallawaya等边缘语言并未确证为同一民族，报告明确保留未决项。",
+      "evidence_status": "historical_boundary_unresolved",
+      "refs": []
+    },
+    "arctic": {
+      "members": [
+        "unalaska_culture",
+        "atka_culture",
+        "attu_culture"
+      ],
+      "decision": "Unalaska/Atka/Attu合并为乌南干；与因纽特共用环极传承、使用独立阿留申语。",
+      "evidence_status": "bounded_gameplay_decision",
+      "refs": []
+    },
+    "dorset": {
+      "members": [
+        "dorset_culture"
+      ],
+      "decision": "保留原版环极大类作为游戏压缩；不称多塞特与现代因纽特为已证实同一民族。",
+      "evidence_status": "historical_boundary_unresolved",
+      "refs": []
+    },
+    "nakoda": {
+      "members": [
+        "nakoda_culture"
+      ],
+      "decision": "保留原版达科他宽类，纳科达成员单独记账；共用苏语及原版传承。",
+      "evidence_status": "bounded_gameplay_decision",
+      "refs": []
+    },
+    "moro_sama": {
+      "members": [
+        "sama_culture"
+      ],
+      "decision": "原版Moro为地区宽类可保留；Sama并不等于单一宗教，实际居民宗教不受文化合并影响。",
+      "evidence_status": "historical_boundary_unresolved",
+      "refs": []
+    },
+    "amazon_border": {
+      "members": [
+        "arawak_culture",
+        "caquetio_culture"
+      ],
+      "decision": "沿用用户接受的原版亚马孙宽类；阿拉瓦克与Caquetio的外围边界不通过全域本土补足。",
+      "evidence_status": "bounded_gameplay_decision",
+      "refs": []
+    },
+    "melanesia_border": {
+      "members": [
+        "alor_culture",
+        "makasae_culture"
+      ],
+      "decision": "暂保留原版美拉尼西亚宽类；帝汶—阿洛尔与新几内亚不同，不将其语言字段认定为谱系结论。",
+      "evidence_status": "historical_boundary_unresolved",
+      "refs": []
+    },
+    "patagonia_border": {
+      "members": [
+        "pikumche_culture",
+        "purun_awqa_culture",
+        "warpe_culture",
+        "chana_culture",
+        "kamiare_culture"
+      ],
+      "decision": "保留原版巴塔哥尼亚宽类作游戏粒度；北部Mapudungun和Huarpe/Chana等边界仍有证据缺口。",
+      "evidence_status": "historical_boundary_unresolved",
+      "refs": []
+    }
+  },
+  "sources": {
+    "tangut": "https://rubinmuseum.org/projecthimalayanart/glossary/tanguts/",
+    "achang": "https://www.neac.gov.cn/seac/ztzl/acz/lsyg.shtml",
+    "kadu": "https://sealang.net/archives/ltba/pdf/LTBA-36.2.15.pdf",
+    "katuic": "https://www.researchgate.net/publication/327860779_Language_Shift_and_Maintenance_of_Non-Tai_Communities_in_Northeastern_Thailand_Kuay_and_Bru",
+    "monpa": "https://www.neac.gov.cn/seac/ztzl/mbz/lsyg.shtml",
+    "kohistani": "https://www.iranicaonline.org/articles/dardestan-ii-languages/",
+    "zaza": "https://www.iranicaonline.org/articles/dimli/",
+    "unangan": "https://www.nps.gov/aleu/learn/historyculture/unangax-history-and-culture.htm",
+    "gula": "https://asjp.clld.org/languages/GULA_IRO",
+    "cahokia": "https://www.nps.gov/articles/000/cahokia-mounds-state-historic-site-world-heritage-site.htm",
+    "quimbaya": "https://enciclopedia.banrepcultural.org/Quimbaya",
+    "tumaco": "https://publicaciones.banrepcultural.org/index.php/fian/article/view/5434/0",
+    "pankararu": "https://pib.socioambiental.org/pt/Povo%3APankararu",
+    "mapuche": "https://www.memoriachilena.gob.cl/archivos2/pdfs/MC0070055.pdf",
+    "lunda": "https://fowler.ucla.edu/exhibitions/makishi-mask-characters-of-zambia/",
+    "luba": "https://www.metmuseum.org/de/essays/kingdoms-of-the-savanna-the-luba-and-lunda-empires",
+    "gilan": "https://www.iranicaonline.org/articles/gilan-x/",
+    "abkhaz": "https://academic.oup.com/edited-volume/37095/chapter-abstract/323239876",
+    "sardinian": "https://www.sardegnacultura.it/categoria/lingua/storia-della-lingua",
+    "anglo_irish": "https://academic.oup.com/reference/62337/reference-article-abstract/554129006",
+    "ciboney": "https://www.cambridge.org/core/journals/antiquity/article/creating-the-guanahatabey-ciboney-the-modern-genesis-of-an-extinct-culture/33C6799D77A0B74B7CCC10DBE6AC78D6",
+    "oirat": "https://www.repository.cam.ac.uk/items/76f6c930-6715-4533-b937-fd73c0fcee98",
+    "romansh": "https://www.eda.admin.ch/en/emna-rumantscha-en",
+    "frisian": "https://www.fryske-akademy.nl/en/research/language-and-multilingualism/",
+    "indonesia": "https://petabahasa.kemendikdasmen.go.id/databahasa.php",
+    "philippines": "https://www.deped.gov.ph/2016/10/24/mother-tongue-based-learning-makes-lessonsmore-interactive-and-easier-for-students/",
+    "limbu": "https://nfdin.gov.np/pages/limbu/",
+    "china_languages": "https://www.moe.gov.cn/jyb_sjzl/wenzi/202108/t20210827_554992.html",
+    "mulam": "https://www.neac.gov.cn/seac/ztzl/mlz/gk.shtml",
+    "maonan": "https://www.neac.gov.cn/seac/ztzl/mnz/lsyg.shtml",
+    "gurage": "https://glottolog.org/resource/languoid/id/seba1251",
+    "tigre": "https://eprints.soas.ac.uk/34084/1/11015900.pdf",
+    "gilaki": "https://iranian-languages.arizona.edu/node/8",
+    "norn": "https://pure.uhi.ac.uk/files/2094937/Between_Scotland_and_Norway_FINAL_2017.pdf",
+    "yuchi": "https://www.yuchilanguage.org/",
+    "hohokam": "https://www.nps.gov/cagr/learn/historyculture/the-ancestral-sonoran-desert-people.htm",
+    "lucayan": "https://www.tcmuseum.org/culture-history/lucayans/",
+    "lucayan_research": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5877975/",
+    "numic": "https://home.nps.gov/grba/learn/historyculture/historic-tribes-of-the-great-basin.htm",
+    "tupi": "https://pib.socioambiental.org/en/Povo%3AMunduruku",
+    "lozi": "https://www.cambridge.org/core/books/abs/five-hundred-years-rediscovered/mfecane-mutation-in-central-africa-a-comparison-of-the-makololo-and-the-ngoni-in-zambia-1830s1898/4F4969CAABB6A8E4F2CBB60A082ED7B3"
+  },
+  "budget": {
+    "max_used_cultures": 640,
+    "max_effective_cultures": 705,
+    "max_population_groups": 16100,
+    "max_new_cultures": 30,
+    "max_resident_assets": 380
+  },
+  "policy": "Retain native broad classes. Closed composites are gameplay aggregates, not synonyms or claims of shared ethnic identity. Reuse existing heritage and heritage groups. Historical cores are independently projected; migrants retain strict statewide >50%. No blanket historical approval of inherited names, appearance or source language hypotheses.",
+  "asset_limitations": "Name pools and appearance are inherited. Archaeological continuity is alternate-history survival from the source save; uncertain language traits are mechanical distinctions, not attested language families.",
+  "source_label_decisions": {
+    "bantoid": "保留源标签及居民；成员不足以具名拆分，不授予整个语言区域的本土。",
+    "omo_culture": "保留源标签及居民；成员不足以具名拆分，不授予整个语言区域的本土。",
+    "barbakoan_culture": "保留源标签及居民；成员不足以具名拆分，不授予整个语言区域的本土。",
+    "gonga_culture": "保留源标签及居民；成员不足以具名拆分，不授予整个语言区域的本土。",
+    "otomanguean_culture": "保留源标签及居民；成员不足以具名拆分，不授予整个语言区域的本土。",
+    "benue": "保留源标签及居民；成员不足以具名拆分，不授予整个语言区域的本土。",
+    "south_cushitic_culture": "保留源标签及居民；成员不足以具名拆分，不授予整个语言区域的本土。"
+  },
+  "display_name_policy": "2026-10-03: user requests familiar single culture names (Manchu, Jing, Uzbek, Polish); restore other enumerated composite display names. Mapping membership and distinct culture identities are unchanged."
+}

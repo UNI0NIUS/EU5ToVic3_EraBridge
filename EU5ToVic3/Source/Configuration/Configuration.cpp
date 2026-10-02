@@ -1,4 +1,5 @@
 #include "Configuration.h"
+#include "EU5VersionProbe.h"
 #include "CommonFunctions.h"
 #include "CommonRegexes.h"
 #include "ConverterVersion.h"
@@ -114,7 +115,7 @@ void Configuration::setOutputName()
 
 void Configuration::verifyEU5Version(const commonItems::ConverterVersion& converterVersion)
 {
-	EU5Version = GameVersion::extractVersionFromBranchTxt(EU5Path / "clausewitz_branch.txt");
+	EU5Version = EU5::installedVersion(EU5Path);
 	if (!EU5Version)
 	{
 		Log(LogLevel::Error) << "EU5 version could not be determined, proceeding blind!";

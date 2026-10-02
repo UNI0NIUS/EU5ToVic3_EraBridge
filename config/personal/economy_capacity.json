@@ -1,0 +1,120 @@
+{
+  "schema": 1,
+  "supply_chain": {
+    "naval_construction_utilization": 1.0,
+    "household_wealth_scenario": 10,
+    "note": "Full native supply-ship construction capacity is an input stress scenario, not a forecast of queue utilization. Preserve inherited factory levels and jobs; improve existing equal-job production methods first. Extra consumer levels require available upstream inputs. Glass output upgrades require household demand support. Country deficits are import dependencies, not proof of a market shortage."
+  },
+  "employment": {
+    "geography_policy": "vanilla_capacity",
+    "workforce_share": 0.25,
+    "maximum_formal_workforce_share": 0.25,
+    "formal_staffing_safety_fraction": 0.75,
+    "preserve_nonrural_employment_capacity": false,
+    "commercial_rural_workforce_limit": 1.0,
+    "rural_classes": ["peasants", "tribesmen", "slaves"],
+    "note": "25% workforce and 75% staffing remain diagnostic assumptions. Original arable land and fixed resource caps are geographic constraints; population/source employment never expands them. Unmet rural/fallback demand is reported explicitly."
+  },
+  "food": {
+    "target_worker_wealth": 10,
+    "reference": "Vanilla Britain domestic grain/fish/meat/fruit/groceries output at base prices per resident",
+    "domestic_food_reference_scale": 1.15,
+    "note": "Capacity anchor, not an equilibrium consumption or famine prediction; includes a 15% planning reserve."
+  },
+  "agriculture": {
+    "maximum_peasant_commercialization_fraction": 0.20,
+    "note": "Paid agriculture follows observed source employment. A gameplay allowance commercializes at most 20% of rural workers at development 100, linearly scaled by local development (10% at 50). Remaining rural livelihoods reserve finite subsistence land; overcrowded states share land proportionally rather than expanding it. Food or input deficits cannot bypass either ceiling. This is an explicit conversion assumption, not a historical statistic."
+  },
+  "ownership": {
+    "noble_reference_share": 0.01,
+    "burgher_reference_share": 0.05,
+    "burgher_investor_fraction": 0.20,
+    "reference_share_floor": 0.02,
+    "vanilla_reference_profiles": {
+      "agrarian": ["RUS", "CHI", "JAP"],
+      "mixed": ["AUS", "USA", "SAR", "TUS", "SIC"],
+      "industrial": ["GBR", "FRA", "PRU"]
+    },
+    "sectors": ["agriculture", "plantation", "resource", "industry", "trade"],
+    "law_multipliers": {
+      "law_serfdom": {"sectors": ["agriculture", "plantation"], "manor": 1.25, "finance": 0.5},
+      "law_manorialism": {"sectors": ["agriculture", "plantation"], "manor": 1.25},
+      "law_homesteading": {"sectors": ["agriculture", "plantation"], "self": 3.0},
+      "law_peasant_proprietorship": {"sectors": ["agriculture", "plantation"], "self": 3.0},
+      "law_commercialized_agriculture": {"sectors": ["agriculture", "plantation"], "finance": 1.5},
+      "law_collectivized_agriculture": {"sectors": ["agriculture", "plantation"], "manor": 0.0, "finance": 0.0},
+      "law_cooperative_ownership": {"manor": 0.0, "finance": 0.0},
+      "law_command_economy": {"manor": 0.0, "finance": 0.0}
+    },
+    "note": "Judge each mapped province before aggregating to its state-country portfolio. Weights are explicit gameplay assumptions, not historic wealth shares. Local class pools and workforce constrain owner districts using 75% productive staffing and full owner staffing; full-staffing pressure is reported. No country-average quota, cross-state investor transfer, extra productive levels or diplomatic change. Command/cooperative laws do not create new elite holdings; government and foreign/company holdings remain intact."
+  },
+  "priorities": ["food_security_and_living_standards", "economic_input_and_output_balance", "public_budget_balance"],
+  "development": {
+    "manufacturing_expansion_base": 1.25,
+    "manufacturing_expansion_industrial": 0.75,
+    "observed_manufacturing_tolerance": 1.5,
+    "artisan_workforce_ceiling": 0.02,
+    "urban_artisan_workforce_fraction": 0.10,
+    "food_reference_floor": 0.15,
+    "food_commercial_weight": 0.60,
+    "food_industrial_weight": 0.25,
+    "trade_reference_floor": 0.10,
+    "trade_commercial_weight": 0.60,
+    "trade_industrial_weight": 0.30,
+    "new_heavy_industry_intensity_min": 0.35,
+    "heavy_industry_kinds": ["building_steel_mill", "building_motor_industry", "building_chemical_plant", "building_explosives_factory", "building_electrics_industry", "building_synthetics_plant"],
+    "note": "Source-relative industrial expansion envelopes; small deficits are acceptable. No national budget target, automatic disarmament, fabricated trade or universal industrial self-sufficiency."
+  },
+  "public_buildings": {
+    "expand_universities_by_population": false,
+    "expand_construction_by_population": false,
+    "administration": "national_bureaucracy_floor_then_discretionary_local_tax_capacity",
+    "note": "No automatic population-proportional expansion of discretionary government expenditure. Military establishments preserved at user request; deficits are reported."
+  },
+  "bureaucracy": {
+    "staffing_fraction": 0.75,
+    "demand_reserve_fraction": 0.15,
+    "minimum_other_cost_reserve": 25,
+    "institution_cost_per_population_unit": 1.0,
+    "note": "National planning floor independent of local marginal revenue. Institution population coefficient is a planning assumption awaiting runtime confirmation; public ownership allowance is conservative."
+  },
+  "military": {
+    "regular_manpower_scale": 1.0,
+    "military_population_weight": 0.70,
+    "state_military_population_ceiling": 0.10,
+    "source_basis": "Inherited full-strength regular combat units; 1000 establishment persons per V3 battalion",
+    "levies": "report_separately_not_permanent_barracks",
+    "mercenaries": "exclude_from_national_permanent_establishment",
+    "auxiliary": "report_as_logistical_manpower_not_combat_battalions"
+  },
+  "market": {
+    "foreign_transit_policy": "preserve_existing_diplomacy_user_decision_20261001",
+    "trade_scale": 1.0,
+    "overseas_infrastructure_shipping_rate": 0.1,
+    "shipping_distance_buffer": 1.5,
+    "note": "Both ends of detached land components require owned productive ports. Landlocked foreign transit and actual shipping distances remain runtime checks."
+  },
+  "input_support": {
+    "iterations": 5,
+    "goods": {
+      "paper": ["building_paper_mill"],
+      "fabric": ["building_cotton_plantation", "building_livestock_ranch"],
+      "dye": ["building_dye_plantation"],
+      "silk": ["building_silk_plantation"],
+      "sugar": ["building_sugar_plantation"],
+      "wood": ["building_logging_camp"],
+      "hardwood": ["building_logging_camp"],
+      "iron": ["building_iron_mine"],
+      "lead": ["building_lead_mine"],
+      "sulfur": ["building_sulfur_mine"],
+      "fertilizer": ["building_chemical_plant", "building_livestock_ranch"],
+      "coal": ["building_coal_mine"],
+      "tools": ["building_tooling_workshop"],
+      "steel": ["building_steel_mill"],
+      "engines": ["building_motor_industry"],
+      "clippers": ["building_shipyard"],
+      "small_arms": ["building_arms_industry"],
+      "artillery": ["building_artillery_foundry"]
+    }
+  }
+}

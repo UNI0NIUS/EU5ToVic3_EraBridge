@@ -1,0 +1,104 @@
+{
+  "schema": 1,
+  "source_sha256": "d4e6bcb5f0c9d91f3d5abe73a5644b6bd99364060f3c76120c60529ad3ac6f74",
+  "mapping_sha256": "bdb0146680ba8c6c7759a32e9e9ae8085a4d13218110197ff0e24ba81d6aceac",
+  "islands": [
+    {
+      "state": "STATE_KOLYMA",
+      "province": "x55CE19",
+      "from": "RUS",
+      "to": "UN1",
+      "target_culture": "siberian",
+      "anchor_province": "xD52578"
+    },
+    {
+      "state": "STATE_CHUKOTKA",
+      "province": "x601E0C",
+      "from": "RUS",
+      "to": "UR5",
+      "target_culture": "siberian",
+      "anchor_province": "x235ED2"
+    },
+    {
+      "state": "STATE_CHUKOTKA",
+      "province": "x6DD6EC",
+      "from": "RUS",
+      "to": "UR5",
+      "target_culture": "siberian",
+      "anchor_province": "x235ED2"
+    },
+    {
+      "state": "STATE_KOLYMA",
+      "province": "x9F6CD6",
+      "from": "RUS",
+      "to": "UN1",
+      "target_culture": "siberian",
+      "anchor_province": "xD52578"
+    },
+    {
+      "state": "STATE_KOLYMA",
+      "province": "xA3A805",
+      "from": "RUS",
+      "to": "UN1",
+      "target_culture": "siberian",
+      "anchor_province": "xE24A71"
+    },
+    {
+      "state": "STATE_KOLYMA",
+      "province": "xA49864",
+      "from": "RUS",
+      "to": "UN1",
+      "target_culture": "siberian",
+      "anchor_province": "xE24A71"
+    },
+    {
+      "state": "STATE_KOLYMA",
+      "province": "xBA10C7",
+      "from": "RUS",
+      "to": "UN1",
+      "target_culture": "siberian",
+      "anchor_province": "xD52578"
+    },
+    {
+      "state": "STATE_KOLYMA",
+      "province": "xD50988",
+      "from": "RUS",
+      "to": "UN1",
+      "target_culture": "siberian",
+      "anchor_province": "xE24A71"
+    },
+    {
+      "state": "STATE_KOLYMA",
+      "province": "xD9FCA0",
+      "from": "RUS",
+      "to": "UN1",
+      "target_culture": "siberian",
+      "anchor_province": "xE24A71"
+    }
+  ],
+  "decision": "User reviewed both northern island groups as Siberian; attach each to its corresponding nearby Siberian country.",
+  "population_corrections": {
+    "kitagnaq": {
+      "province": "x5C9007",
+      "state": "STATE_ALASKA",
+      "reason": "Source polygon EE53BF crosses x=0/16384. Arithmetic centroid incorrectly fell in Yakutsk. Use the existing Alaska island proxy also reviewed for St Matthew; preserve omitted source microstate handling."
+    }
+  },
+  "native_rechecks": [
+    {
+      "state": "STATE_YAKUTSK",
+      "province": "x667A9B",
+      "from": "RUS"
+    },
+    {
+      "state": "STATE_YAKUTSK",
+      "province": "x94EDAA",
+      "from": "RUS"
+    },
+    {
+      "state": "STATE_YAKUTSK",
+      "province": "xE831FD",
+      "from": "RUS"
+    }
+  ]
+}

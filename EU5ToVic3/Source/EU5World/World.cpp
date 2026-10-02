@@ -143,7 +143,7 @@ void EU5::World::registerKeys(const std::shared_ptr<Configuration>& theConfigura
 			Log(LogLevel::Error) << "Converter requires a maximum save from v" << converterVersion.getMaxSource().toShortString();
 			throw std::runtime_error("Savegame vs converter version mismatch!");
 		}
-		if (version > theConfiguration->getEU5Version())
+		if (theConfiguration->getEU5Version() && version > *theConfiguration->getEU5Version())
 		{
 			Log(LogLevel::Error) << "Installation version: " << theConfiguration->getEU5Version()->toString()
 										<< " is older than savegame version: " << version.toString() << "! This is a no-go!";

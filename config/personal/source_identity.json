@@ -1,0 +1,6 @@
+{
+  "source_sha256": "d4e6bcb5f0c9d91f3d5abe73a5644b6bd99364060f3c76120c60529ad3ac6f74",
+  "rank_overrides": {},
+  "confirmed_ranks": {"289": "rank_empire", "1142": "rank_kingdom", "382": "rank_kingdom", "1960": "rank_kingdom", "1962": "rank_kingdom"},
+  "reason": "User clarified England is empire rank; France, Romania, Volhynia and Kyiv are kingdom rank. All agree with the named rank history; no manual override is necessary. Numeric serialized level is not independently decoded."
+}

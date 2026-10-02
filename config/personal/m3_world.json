@@ -1,0 +1,427 @@
+{
+  "source_sha256": "d4e6bcb5f0c9d91f3d5abe73a5644b6bd99364060f3c76120c60529ad3ac6f74",
+  "source_date": "1780.7.4",
+  "target_version": "1.13.11",
+  "start_date": "1836.1.1",
+  "hre_market_mode": "personal_balance",
+  "country_tag_overrides": {
+    "1481": "ITA",
+    "2024": "RUS"
+  },
+  "country_tag_mapping_file": "config/personal/country_tag_mappings.json",
+  "regional_anchor_profile": "config/personal/m2_italy_provence.json",
+  "province_anchor_overrides": {
+    "xB5726E": [
+      "rome"
+    ]
+  },
+  "uncolonized_region_overrides": {
+    "STATE_ACRE": {
+      "from": [
+        "BOL"
+      ],
+      "to": "AMZ"
+    },
+    "STATE_PASTAZA": {
+      "from": [
+        "ECU"
+      ],
+      "to": "AMZ"
+    },
+    "STATE_CAJAMARCA": {
+      "from": [
+        "NPU"
+      ],
+      "to": "AMZ"
+    }
+  },
+  "fallback_country_overrides": {
+    "AMZ": {
+      "country_type": "decentralized",
+      "name_english": "Amazonian Peoples",
+      "name_simp_chinese": "亚马逊原住民"
+    }
+  },
+  "decentralize_source_countries": [
+    "182",
+    "1069",
+    "1092",
+    "1093",
+    "1096"
+  ],
+  "unmapped_state_anchors": {
+    "STATE_MALTA": [
+      "malta"
+    ],
+    "STATE_NAURU": [
+      "nauru"
+    ],
+    "STATE_TONGA": [
+      "tongatapu"
+    ],
+    "STATE_TAHITI": [
+      "tahiti"
+    ]
+  },
+  "government_laws": {
+    "monarchy": "law_monarchy",
+    "republic": "law_presidential_republic",
+    "theocracy": "law_theocracy",
+    "tribe": "law_monarchy"
+  },
+  "subject_types": {
+    "personal_union": "personal_union",
+    "colonial_nation": "colony",
+    "trade_company": "chartered_company",
+    "dominion": "dominion",
+    "vassal": "vassal",
+    "fiefdom": "vassal",
+    "maha_samanta": "vassal",
+    "tributary": "tributary",
+    "state_bank": "chartered_company",
+    "hanseatic_member": "protectorate",
+    "secessionists": "protectorate"
+  },
+  "culture_aliases": {
+    "ligurian": "north_italian",
+    "tuscan": "north_italian",
+    "lombard": "north_italian",
+    "median": "south_italian",
+    "venetian": "north_italian",
+    "neapolitan": "south_italian",
+    "sicilian": "south_italian",
+    "greek_culture": "greek",
+    "english": "british",
+    "castilian": "spanish",
+    "muscovite": "russian",
+    "novgorodian": "russian",
+    "smolenskian": "russian",
+    "serb": "serb",
+    "tanoan_culture": "pueblo",
+    "cahokia_culture": "siouan",
+    "kanienkehaka_culture": "iroquoian",
+    "onyotaaka_culture": "iroquoian",
+    "onondowaga_culture": "iroquoian",
+    "rhine_franconian": "south_german",
+    "moselle_franconian": "south_german",
+    "east_franconian": "south_german",
+    "high_alemannic": "alemannic",
+    "rhine_alemannic": "south_german",
+    "danube_bavarian": "south_german",
+    "lower_saxon": "north_german",
+    "saxon": "north_german",
+    "western_pomeranian": "north_german",
+    "angrian": "north_german",
+    "ripuarian_franconian": "north_german",
+    "westphalian": "north_german",
+    "brandenburgish": "north_german",
+    "markish": "north_german",
+    "eastphalian": "north_german",
+    "low_franconian": "dutch",
+    "frisian": "dutch",
+    "upper_palatine": "south_german",
+    "swabian": "south_german",
+    "saigoku_culture": "japanese",
+    "tougoku_culture": "japanese",
+    "lesser_polish": "polish",
+    "farsi_culture": "persian",
+    "wallachian": "romanian",
+    "jurchen_culture": "manchu",
+    "arpitan": "francoprovencal",
+    "gascon": "occitan",
+    "angevin": "french",
+    "walloon": "wallonian",
+    "picard": "french",
+    "smolenskian_culture": "byelorussian",
+    "volhynian_culture": "ukrainian",
+    "ruthenian": "ukrainian",
+    "jianghuai_culture": "han",
+    "bhojpuri_culture": "bihari",
+    "maithili_culture": "bihari",
+    "garhwali": "pahari",
+    "hmong_culture": "miao",
+    "khampa_culture": "tibetan",
+    "amdowa_culture": "tibetan",
+    "utsang_culture": "tibetan",
+    "mongolian_culture": "mongol",
+    "oirat_culture": "kalmyk",
+    "telugu": "telegu",
+    "orissan": "oriya",
+    "sindhi": "sindi",
+    "baloch_culture": "baluchi",
+    "dhundhari": "rajput",
+    "javanese_culture": "javan",
+    "bicolano_culture": "filipino",
+    "boholano_culture": "visayan",
+    "sama_culture": "moro",
+    "nsudi": "bakongo",
+    "yucatec_culture": "mayan",
+    "itza_culture": "mayan",
+    "khorasani_culture": "persian",
+    "kanaka_maoli_culture": "hawaiian",
+    "tonga_oceania_culture": "polynesian",
+    "astrakhani": "tatar",
+    "crimean": "tatar",
+    "mandinka": "mande",
+    "godala_culture": "berber",
+    "kyrgyz_culture": "kirgiz",
+    "khorezmian_culture": "uzbek",
+    "khanty_culture": "ugrian",
+    "bolghar_culture": "chuvash",
+    "formosan_culture": "yuanzhumin",
+    "mishar": "tatar",
+    "punjabi": "panjabi",
+    "pipil_culture": "nahua",
+    "zafiraminia_culture": "malagasy",
+    "tandroy_culture": "malagasy",
+    "antaisaka_culture": "malagasy",
+    "chincha_culture": "quechua",
+    "yemeni_culture": "yemenite",
+    "najdi_culture": "bedouin",
+    "yerle_qaliq_culture": "tatar",
+    "turkoman_culture": "turkmen",
+    "aukstaitian": "lithuanian",
+    "bara_culture": "malagasy",
+    "cabinda": "bakongo",
+    "chaoui": "berber",
+    "hassaniya": "bidan",
+    "hijazi_culture": "bedouin",
+    "hiligaynon_culture": "visayan",
+    "holsatian": "north_german",
+    "kannadiga": "kannada",
+    "libyan_arabic_culture": "maghrebi",
+    "mahican_culture": "algonquian",
+    "makhuwa_culture": "makua",
+    "malay_culture": "malay",
+    "marwari": "rajput",
+    "mopan_culture": "mayan",
+    "moravian": "czech",
+    "pequot_culture": "algonquian",
+    "piedmontese": "north_italian",
+    "pontic_greek_culture": "greek",
+    "rappahannock_culture": "algonquian",
+    "ryazanian": "russian",
+    "severian": "ukrainian",
+    "shekhawati": "rajput",
+    "southern_bavarian": "south_german",
+    "ternate_culture": "moluccan",
+    "touhoku_culture": "japanese",
+    "gayogohono_culture": "iroquoian"
+  },
+  "religion_aliases": {
+    "lutheran": "protestant",
+    "calvinist": "protestant",
+    "anglican": "protestant",
+    "miaphysite": "oriental_orthodox",
+    "mahayana": "mahayana",
+    "theravada": "theravada",
+    "vajrayana": "gelugpa",
+    "shinto": "shinto",
+    "confucianism": "confucian",
+    "kachina_religion": "animist",
+    "mississippian_ceremonial": "animist",
+    "iroquoian_totemism": "animist",
+    "sanjiao": "confucian",
+    "tibetan_buddhism": "gelugpa",
+    "shia": "shiite",
+    "tengri": "animist",
+    "inti": "animist",
+    "nahuatl": "animist",
+    "umina_religion": "animist",
+    "mayan": "animist",
+    "isese_religion": "animist",
+    "tungusic_shamanism": "animist",
+    "anitism_religion": "animist",
+    "tapu_religion": "animist",
+    "pi_religion": "animist",
+    "buton_religion": "animist",
+    "kirin_koda_religion": "animist",
+    "bantu_religion": "animist",
+    "akan_religion": "animist",
+    "shamanism": "animist",
+    "hmongism": "animist",
+    "wan_aisa_religion": "animist",
+    "jama_religion": "animist",
+    "nacuco_religion": "animist",
+    "buyli_religion": "animist"
+  },
+  "notes": [
+    "Population, buildings, literacy, wealth, technology and military are V3 regional initialization templates, not EU5 economic conversion.",
+    "Province owner is selected by source population-weighted majority. Tiny countries may have no target territory; do not invent provinces for them.",
+    "Tribal governments in vanilla decentralized territory become decentralized only if they have no surviving dependency relationships.",
+    "Unowned habitable EU5 locations retain vanilla province ownership; wasteland and new target provinces inherit the nearest mapped province inside their target state.",
+    "Ruler age is preserved at the new start date. A source interregnum uses its active regent, explicitly recorded in the report.",
+    "Reviewed real country identities reuse installed V3 tags. Unmatched countries and dynamic subjects retain custom tags. Reuse does not import vanilla history; later tag-specific events remain a compatibility risk to audit.",
+    "Independent native tribal governments 182, 1069, 1092, 1093 and 1096 use decentralized country type; hereditary kingdoms and countries with dependency links remain centralized.",
+    "Retain the previously reviewed Piedmont/Provence territorial anchors over upstream coarse links."
+  ],
+  "custom_cultures": {
+    "xllang_culture": {
+      "template": "quechua",
+      "language_group": null,
+      "reason": "Preserve source identity; template supplies name lists and graphics, distinct heritage and language traits prevent identity substitution."
+    },
+    "palta_culture": {
+      "template": "amazonian",
+      "language_group": null,
+      "reason": "Preserve source identity; template supplies name lists and graphics, distinct heritage and language traits prevent identity substitution."
+    },
+    "bahrani_culture": {
+      "template": "bedouin",
+      "language_group": "language_group_semitic",
+      "reason": "Preserve source identity; template supplies name lists and graphics, distinct heritage and language traits prevent identity substitution.",
+      "language_trait": "language_arabic"
+    },
+    "soqotri_culture": {
+      "template": "yemenite",
+      "language_group": "language_group_semitic",
+      "reason": "Preserve source identity; template supplies name lists and graphics, distinct heritage and language traits prevent identity substitution."
+    },
+    "tujia_culture": {
+      "template": "yi",
+      "language_group": "language_group_tibeto_burman",
+      "reason": "Preserve source identity; template supplies name lists and graphics, distinct heritage and language traits prevent identity substitution."
+    },
+    "kam_culture": {
+      "template": "zhuang",
+      "language_group": "language_group_daic",
+      "reason": "Preserve source identity; template supplies name lists and graphics, distinct heritage and language traits prevent identity substitution."
+    },
+    "buton_culture": {
+      "template": "moluccan",
+      "language_group": "language_group_austronesian",
+      "reason": "Preserve source identity; template supplies name lists and graphics, distinct heritage and language traits prevent identity substitution."
+    },
+    "lamaholot_culture": {
+      "template": "moluccan",
+      "language_group": "language_group_austronesian",
+      "reason": "Preserve source identity; template supplies name lists and graphics, distinct heritage and language traits prevent identity substitution."
+    },
+    "tetum_culture": {
+      "template": "moluccan",
+      "language_group": "language_group_austronesian",
+      "reason": "Preserve source identity; template supplies name lists and graphics, distinct heritage and language traits prevent identity substitution."
+    },
+    "buruwai_culture": {
+      "template": "melanesian",
+      "language_group": null,
+      "reason": "Preserve source identity; template supplies name lists and graphics, distinct heritage and language traits prevent identity substitution."
+    },
+    "lawa_culture": {
+      "template": "khmu",
+      "language_group": "language_group_austroasiatic",
+      "reason": "Preserve source identity; template supplies name lists and graphics, distinct heritage and language traits prevent identity substitution."
+    },
+    "nupe": {
+      "template": "yoruba",
+      "language_group": "language_group_benue_congo",
+      "reason": "Preserve source identity; template supplies name lists and graphics, distinct heritage and language traits prevent identity substitution."
+    },
+    "bariba": {
+      "template": "mossi",
+      "language_group": "language_group_gur",
+      "reason": "Preserve source identity; template supplies name lists and graphics, distinct heritage and language traits prevent identity substitution."
+    },
+    "dagbani": {
+      "template": "mossi",
+      "language_group": "language_group_gur",
+      "reason": "Preserve source identity; template supplies name lists and graphics, distinct heritage and language traits prevent identity substitution."
+    },
+    "teleut_culture": {
+      "template": "tuvan",
+      "language_group": "language_group_turkic",
+      "reason": "Preserve source identity; template supplies name lists and graphics, distinct heritage and language traits prevent identity substitution.",
+      "language_trait": "language_kipchak"
+    },
+    "chelkans_culture": {
+      "template": "tuvan",
+      "language_group": "language_group_turkic",
+      "reason": "Preserve source identity; template supplies name lists and graphics, distinct heritage and language traits prevent identity substitution."
+    },
+    "rawa_papua_culture": {
+      "template": "melanesian",
+      "language_group": null,
+      "reason": "Preserve source identity; template supplies name lists and graphics, distinct heritage and language traits prevent identity substitution."
+    },
+    "sacha_p_qulla_culture": {
+      "template": "cariban",
+      "language_group": "language_group_cariban",
+      "reason": "Preserve source identity; template supplies name lists and graphics, distinct heritage and language traits prevent identity substitution."
+    },
+    "matagalpa_culture": {
+      "template": "miskito",
+      "language_group": null,
+      "reason": "Preserve source identity; template supplies name lists and graphics, distinct heritage and language traits prevent identity substitution."
+    },
+    "atacame_culture": {
+      "template": "muisca",
+      "language_group": null,
+      "reason": "Preserve source identity; template supplies name lists and graphics, distinct heritage and language traits prevent identity substitution."
+    },
+    "panche_culture": {
+      "template": "muisca",
+      "language_group": null,
+      "reason": "Preserve source identity; template supplies name lists and graphics, distinct heritage and language traits prevent identity substitution."
+    },
+    "manta_culture": {
+      "template": "quechua",
+      "language_group": null,
+      "reason": "Preserve source identity; template supplies name lists and graphics, distinct heritage and language traits prevent identity substitution."
+    },
+    "silesian": {
+      "template": "polish",
+      "language_group": "language_group_slavic",
+      "reason": "Preserve source identity; template supplies name lists and graphics, distinct heritage and language traits prevent identity substitution.",
+      "language_trait": "language_west_slavic"
+    },
+    "nogai": {
+      "template": "tatar",
+      "language_group": "language_group_turkic",
+      "reason": "Preserve source identity; template supplies name lists and graphics, distinct heritage and language traits prevent identity substitution.",
+      "language_trait": "language_kipchak"
+    },
+    "khasi_culture": {
+      "template": "assamese",
+      "language_group": "language_group_austroasiatic",
+      "reason": "Preserve distinct source identity for the incumbent ruler and subsequent population mapping."
+    },
+    "mephaa_culture": {
+      "template": "mixtec",
+      "language_group": null,
+      "reason": "Preserve distinct source identity for the incumbent ruler and subsequent population mapping."
+    },
+    "cuicas_culture": {
+      "template": "muisca",
+      "language_group": null,
+      "reason": "Preserve distinct source identity for the incumbent ruler and subsequent population mapping."
+    },
+    "dhivehi_culture": {
+      "template": "sinhala",
+      "language_group": "language_group_indo_aryan",
+      "reason": "Preserve distinct source identity for the incumbent ruler and subsequent population mapping."
+    },
+    "tem": {
+      "template": "mossi",
+      "language_group": "language_group_gur",
+      "reason": "Preserve distinct source identity for the incumbent ruler and subsequent population mapping."
+    },
+    "sundanese_culture": {
+      "template": "javan",
+      "language_group": "language_group_austronesian",
+      "reason": "Preserve distinct source identity for the incumbent ruler and subsequent population mapping."
+    },
+    "namau_culture": {
+      "template": "melanesian",
+      "language_group": null,
+      "reason": "Preserve distinct source identity for the incumbent ruler and subsequent population mapping."
+    },
+    "chokwe": {
+      "template": "lunda",
+      "language_group": "language_group_bantu",
+      "reason": "Preserve distinct source identity for the incumbent ruler and subsequent population mapping."
+    }
+  },
+  "source_flag_overrides": [
+    "CHI"
+  ]
+}

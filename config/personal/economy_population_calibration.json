@@ -1,0 +1,22 @@
+{
+  "schema": 1,
+  "policy": "one_time_bounded_population_calibration",
+  "workforce_share": 0.25,
+  "productive_staffing_fraction": 0.75,
+  "owner_staffing_fraction": 1.0,
+  "workforce_reserve_fraction": 0.15,
+  "maximum_state_country_reduction_fraction": 0.20,
+  "maximum_country_reduction_fraction": 0.15,
+  "minimum_persons_per_existing_group": 1,
+  "user_choice": "2026-10-02: retain 15% workforce above planning capacity; state 20% and country 15% reduction limits presented and accepted.",
+  "rules": [
+    "Apply once to original source-derived starting population; never to a running save and never repeatedly compound cuts.",
+    "Capacity is 75% of productive formal jobs, 100% of owner-building jobs, plus available subsistence jobs. Workforce ratio is 25%.",
+    "Desired workforce is at least 115% of capacity, subject to conservative state/country reduction caps; caps can leave a larger surplus.",
+    "Reduce total population groups proportionally, rather than deleting workers while leaving their dependents. Game initialization determines workforce and professions.",
+    "Template fallback people are preserved. Do not transfer people between states, countries, cultures or religions.",
+    "Round retained groups upwards, preserve at least one person, and leave each literacy selector/rate unchanged.",
+    "Preserve local aristocrat/capitalist staffing pools for existing manor/financial ownership. Preserve strict culture/religion majority status at state-country and whole-state scope.",
+    "Keep buildings, ownership, land/resources, diplomacy, laws and military establishments unchanged. Lower tax base may worsen budgets; no fiscal balance guarantee."
+  ]
+}

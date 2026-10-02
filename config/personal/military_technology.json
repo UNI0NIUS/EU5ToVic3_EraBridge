@@ -1,0 +1,517 @@
+{
+  "schema": 1,
+  "rule_version": "military-design-0.1",
+  "source_version": "1.3.11",
+  "target_version": "1.13.11",
+  "status": "deployment_policy",
+  "military_generic_progress_grants": false,
+  "rules": {
+    "standing_army": {
+      "mode": "evidence",
+      "reason": "常备军制度或实际常备陆军；规模不决定研究等级。",
+      "any_of": [
+        {
+          "advances_any": [
+            "professional_armies_advance",
+            "barracks_advance",
+            "regimental_camp_advance"
+          ]
+        },
+        {
+          "institutions_any": [
+            "professional_armies"
+          ]
+        },
+        {
+          "regular_army": true
+        }
+      ]
+    },
+    "navigation": {
+      "mode": "evidence",
+      "reason": "已研究造船/港口能力或实际舰船；运输船也可证明基础航海。",
+      "any_of": [
+        {
+          "advances_any": [
+            "ship_building_advance",
+            "dock_advance",
+            "protected_harbor_advance",
+            "shipyard_advance"
+          ]
+        },
+        {
+          "any_ship": true
+        }
+      ]
+    },
+    "drydocks": {
+      "mode": "evidence",
+      "reason": "明确干船坞及其后继造船设施证据。重型船数量本身不算干船坞研究证据。",
+      "any_of": [
+        {
+          "advances_any": [
+            "dry_dock_advance",
+            "grand_shipyard_advance",
+            "naval_base_advance"
+          ]
+        }
+      ]
+    },
+    "mandatory_service": {
+      "mode": "evidence",
+      "reason": "征募体系研究证据；只映射能力，不改变军制法律。",
+      "any_of": [
+        {
+          "advances_any": [
+            "conscription_advance",
+            "levee_en_masse_advance",
+            "conscription_center_advance"
+          ]
+        },
+        {
+          "institutions_any": [
+            "levee_en_masse"
+          ]
+        }
+      ]
+    },
+    "gunsmithing": {
+      "mode": "evidence",
+      "reason": "火器制造、已解锁火器单位或实际本国火器部队。",
+      "any_of": [
+        {
+          "advances_any": [
+            "gun_smith_advance",
+            "guns_workshop_advance",
+            "firearms_manufactory_advance",
+            "firearms_factory_advance"
+          ]
+        },
+        {
+          "unlocked_units_any": [
+            "a_handgonners",
+            "a_early_arquebusiers",
+            "a_arquebusiers",
+            "a_musketeers",
+            "a_hunters",
+            "a_fusiliers",
+            "a_grenadiers",
+            "a_sharpshooters"
+          ]
+        },
+        {
+          "actual_units_any": [
+            "a_handgonners",
+            "a_early_arquebusiers",
+            "a_arquebusiers",
+            "a_musketeers",
+            "a_hunters",
+            "a_fusiliers",
+            "a_grenadiers",
+            "a_sharpshooters"
+          ]
+        }
+      ]
+    },
+    "artillery": {
+      "mode": "evidence",
+      "reason": "火炮制造、已解锁炮兵或本国实际炮兵，不由一般武器/火药奖励推断。",
+      "any_of": [
+        {
+          "advances_any": [
+            "cannon_maker_advance",
+            "cannon_workshop_advance",
+            "cannon_foundry_advance",
+            "gun_factory_advance"
+          ]
+        },
+        {
+          "unlocked_units_any": [
+            "a_houfnice",
+            "a_falconet",
+            "a_chambered_cannon",
+            "a_royal_mortar",
+            "a_flying_battery"
+          ]
+        },
+        {
+          "actual_units_any": [
+            "a_houfnice",
+            "a_falconet",
+            "a_chambered_cannon",
+            "a_royal_mortar",
+            "a_flying_battery"
+          ]
+        }
+      ]
+    },
+    "military_drill": {
+      "mode": "evidence",
+      "reason": "军队操练能力或训练设施的明确证据。",
+      "any_of": [
+        {
+          "advances_any": [
+            "drill_army_advance",
+            "military_drill",
+            "training_fields_advance"
+          ]
+        }
+      ]
+    },
+    "line_infantry": {
+      "mode": "evidence",
+      "reason": "源线列战术或晚期常备步兵；研究和实际装备均可提供证据。",
+      "any_of": [
+        {
+          "advances_any": [
+            "line_infantry"
+          ]
+        },
+        {
+          "unlocked_units_any": [
+            "a_musketeers",
+            "a_fusiliers",
+            "a_grenadiers"
+          ]
+        },
+        {
+          "actual_units_any": [
+            "a_musketeers",
+            "a_fusiliers",
+            "a_grenadiers"
+          ]
+        }
+      ]
+    },
+    "napoleonic_warfare": {
+      "mode": "evidence",
+      "reason": "直接战术对应；或飞行炮兵与合成兵种两项证据共同满足。",
+      "any_of": [
+        {
+          "advances_any": [
+            "napoleonic_warfare"
+          ]
+        },
+        {
+          "advances_all": [
+            "unlock_flying_battery_advance",
+            "combined_arms_advance_revolutions"
+          ]
+        }
+      ]
+    },
+    "admiralty": {
+      "mode": "evidence",
+      "reason": "源海军部研究是直接组织证据；现存舰队需要部门科技时另列兼容授予。",
+      "any_of": [
+        {
+          "advances_any": [
+            "admiralty_advance"
+          ]
+        }
+      ]
+    },
+    "army_reserves": {
+      "mode": "evidence",
+      "reason": "全民动员思潮/研究，或征募与征兵中心共同证据。",
+      "any_of": [
+        {
+          "advances_any": [
+            "levee_en_masse_advance"
+          ]
+        },
+        {
+          "institutions_any": [
+            "levee_en_masse"
+          ]
+        },
+        {
+          "advances_all": [
+            "conscription_advance",
+            "conscription_center_advance"
+          ]
+        }
+      ]
+    },
+    "general_staff": {
+      "mode": "combined",
+      "reason": "军团组织与拿破仑战术或战场协同共同满足；不是凭军队规模推断。",
+      "any_of": [
+        {
+          "advances_all": [
+            "corps_organisation"
+          ],
+          "advances_any": [
+            "napoleonic_warfare",
+            "march_to_the_sound_of_the_guns_advance"
+          ]
+        }
+      ]
+    },
+    "logistics": {
+      "mode": "combined",
+      "reason": "成熟后勤部队、军团组织与改良补给线共同满足；早期补给车不够。",
+      "any_of": [
+        {
+          "advances_all": [
+            "corps_organisation",
+            "improved_supply_lines"
+          ],
+          "unlocked_units_any": [
+            "a_logistics_corps"
+          ]
+        },
+        {
+          "advances_all": [
+            "corps_organisation",
+            "improved_supply_lines"
+          ],
+          "actual_units_any": [
+            "a_logistics_corps"
+          ]
+        }
+      ]
+    },
+    "field_works": {
+      "mode": "withhold",
+      "reason": "永久棱堡、围城能力及防御奖励不能直接证明野战工事制度。",
+      "any_of": [],
+      "related_advances": [
+        "star_fort_advance",
+        "fortress_advance"
+      ]
+    },
+    "triage": {
+      "mode": "withhold",
+      "reason": "缺少战场检伤分类/军医组织证据；普通医院、疫苗和寿命加成不足。",
+      "any_of": []
+    },
+    "percussion_cap": {
+      "mode": "withhold",
+      "reason": "未发现击发帽技术证据；长枪与火器工厂不等于雷汞击发帽。",
+      "any_of": []
+    },
+    "rifling": {
+      "mode": "withhold",
+      "reason": "long_rifle 与神射手属于相关证据，但其定义不证明完整目标工艺链；不得闭包凭空授予 percussion_cap。",
+      "any_of": [],
+      "related_advances": [
+        "long_rifle",
+        "unlock_sharpshooters_advance",
+        "firearms_factory_advance"
+      ]
+    },
+    "shell_gun": {
+      "mode": "withhold",
+      "reason": "迫击炮/炸弹船不直接证明目标爆炸弹炮及工业弹药体系。",
+      "any_of": [],
+      "related_advances": [
+        "unlock_royal_mortar_advance",
+        "unlock_bomb_ketch"
+      ]
+    },
+    "paddle_steamer": {
+      "mode": "withhold",
+      "reason": "陆上蒸汽机、RGO 蒸汽加成不证明蒸汽推进舰船。",
+      "any_of": [],
+      "related_advances": [
+        "rgo_size_advance_revolutions"
+      ]
+    },
+    "screw_frigate": {
+      "mode": "withhold",
+      "reason": "缺少船用螺旋桨推进证据。",
+      "any_of": []
+    },
+    "power_of_the_purse": {
+      "mode": "withhold",
+      "reason": "缺少可审计的海军预算与监督制度映射；舰船数量和海军士气不足。",
+      "any_of": []
+    },
+    "hydraulic_cranes": {
+      "mode": "withhold",
+      "reason": "大船厂与建造速度不证明液压起重机械。",
+      "any_of": []
+    },
+    "modern_nursing": {
+      "mode": "withhold",
+      "reason": "普通医疗改进不足以证明专业战地护理体系。",
+      "any_of": []
+    },
+    "enlistment_offices": {
+      "mode": "withhold",
+      "reason": "早期征募人数/速度不等于目标制度化征兵办公室。",
+      "any_of": []
+    },
+    "electric_telegraph": {
+      "mode": "withhold",
+      "reason": "缺少电报技术；道路、邮政和军团协同不能替代。",
+      "any_of": []
+    },
+    "military_statistics": {
+      "mode": "withhold",
+      "reason": "缺少统计参谋制度及电报前置。",
+      "any_of": []
+    },
+    "repeaters": {
+      "mode": "withhold",
+      "reason": "缺少连发枪机械与装备证据。",
+      "any_of": []
+    },
+    "breech_loading_artillery": {
+      "mode": "withhold",
+      "reason": "缺少后装火炮工艺及装备证据。",
+      "any_of": []
+    },
+    "handcranked_machine_gun": {
+      "mode": "withhold",
+      "reason": "缺少手摇机枪证据。",
+      "any_of": []
+    },
+    "self_propelled_torpedoes": {
+      "mode": "withhold",
+      "reason": "缺少自航鱼雷证据。",
+      "any_of": []
+    },
+    "monitor_tech": {
+      "mode": "withhold",
+      "reason": "缺少铁甲炮塔舰证据。",
+      "any_of": []
+    },
+    "ironclad_tech": {
+      "mode": "withhold",
+      "reason": "重型木帆舰和钢铁冶炼不能直接证明铁甲军舰。",
+      "any_of": []
+    },
+    "jeune_ecole": {
+      "mode": "withhold",
+      "reason": "缺少与自航鱼雷对应的青年学派学说证据。",
+      "any_of": []
+    },
+    "floating_harbor": {
+      "mode": "withhold",
+      "reason": "普通港口、干船坞不证明浮动港工程。",
+      "any_of": []
+    },
+    "gantry_cranes": {
+      "mode": "withhold",
+      "reason": "缺少大型龙门吊证据。",
+      "any_of": []
+    },
+    "trench_works": {
+      "mode": "withhold",
+      "reason": "堡垒等级不等于工业时代堑壕战体系。",
+      "any_of": []
+    },
+    "war_propaganda": {
+      "mode": "withhold",
+      "reason": "一般宣传、声望和士气不证明大众战争宣传体系。",
+      "any_of": []
+    },
+    "wargaming": {
+      "mode": "withhold",
+      "reason": "缺少兵棋推演制度证据。",
+      "any_of": []
+    },
+    "defense_in_depth": {
+      "mode": "withhold",
+      "reason": "普通防御奖励不证明纵深防御体系。",
+      "any_of": []
+    },
+    "bolt_action_rifles": {
+      "mode": "withhold",
+      "reason": "长枪/猎枪不等于栓动步枪。",
+      "any_of": []
+    },
+    "automatic_machine_guns": {
+      "mode": "withhold",
+      "reason": "缺少自动机枪证据。",
+      "any_of": []
+    },
+    "submarine": {
+      "mode": "withhold",
+      "reason": "缺少潜艇证据。",
+      "any_of": []
+    },
+    "destroyer": {
+      "mode": "withhold",
+      "reason": "轻型帆船不等于驱逐舰。",
+      "any_of": []
+    },
+    "pre_dreadnought_tech": {
+      "mode": "withhold",
+      "reason": "风帆战列舰不等于前无畏舰。",
+      "any_of": []
+    },
+    "dreadnought_tech": {
+      "mode": "withhold",
+      "reason": "缺少无畏舰及完整技术链证据。",
+      "any_of": []
+    },
+    "sea_lane_strategies": {
+      "mode": "withhold",
+      "reason": "护航/反海盗经验不直接证明目标现代海路战略。",
+      "any_of": []
+    },
+    "landing_craft": {
+      "mode": "withhold",
+      "reason": "运输帆船不等于专用登陆艇。",
+      "any_of": []
+    },
+    "concrete_dockyards": {
+      "mode": "withhold",
+      "reason": "缺少钢筋混凝土船坞证据。",
+      "any_of": []
+    },
+    "nco_training": {
+      "mode": "withhold",
+      "reason": "一般操练不证明现代士官培训体系。",
+      "any_of": []
+    },
+    "chemical_warfare": {
+      "mode": "withhold",
+      "reason": "火药和化工生产不等于化学战能力。",
+      "any_of": []
+    },
+    "stormtroopers": {
+      "mode": "withhold",
+      "reason": "普通突击加成不证明现代突击队战术。",
+      "any_of": []
+    },
+    "concrete_fortifications": {
+      "mode": "withhold",
+      "reason": "棱堡/堡垒不等于混凝土工事。",
+      "any_of": []
+    },
+    "mobile_armor": {
+      "mode": "withhold",
+      "reason": "骑兵和马车不等于装甲战车。",
+      "any_of": []
+    },
+    "military_aviation": {
+      "mode": "withhold",
+      "reason": "缺少军用航空证据。",
+      "any_of": []
+    },
+    "flamethrowers": {
+      "mode": "withhold",
+      "reason": "古代燃烧武器不等于现代喷火器。",
+      "any_of": []
+    },
+    "carrier_tech": {
+      "mode": "withhold",
+      "reason": "缺少航空母舰证据。",
+      "any_of": []
+    },
+    "battleship_tech": {
+      "mode": "withhold",
+      "reason": "缺少现代战列舰证据。",
+      "any_of": []
+    },
+    "battlefleet_tactics": {
+      "mode": "withhold",
+      "reason": "一般海军学说不证明现代主力舰队战术。",
+      "any_of": []
+    }
+  }
+}

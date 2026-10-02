@@ -30,7 +30,8 @@ void EU5::CountryManager::registerKeys()
 		auto tag = commonItems::getString(theStream);
 		if (tag != "---" && tag != "DUMMY" && tag != "PIR" && tag != "MER") // Ignore ---, dummy, pirates and mercenaries.
 		{
-			tagRegistry.emplace(std::stoi(theID), tag);
+			if (!tagRegistry.emplace(std::stoi(theID), tag).second)
+				throw std::runtime_error("Duplicate country registry ID: " + theID);
 		}
 	});
 	tagRegistryParser.registerRegex(commonItems::catchallRegex, commonItems::ignoreItem);
@@ -44,10 +45,19 @@ void EU5::CountryManager::registerKeys()
 		const auto countryID = std::stoi(theID);
 		if (tagRegistry.contains(countryID))
 		{
+			commonItems::parser::getNextTokenWithoutMatching(theStream);
+			theStream >> std::ws;
+			if (theStream.peek() != '{')
+			{
+				if (commonItems::parser::getNextTokenWithoutMatching(theStream) != "none")
+					throw std::runtime_error("Unexpected country sentinel: " + theID);
+				return;
+			}
 			const auto& tag = tagRegistry.at(countryID);
 			auto newCountry = std::make_shared<Country>(countryID, theStream);
 			newCountry->setTag(tag);
-			countries.emplace(tag, newCountry);
+			if (!countriesByID.emplace(countryID, newCountry).second || !countries.emplace(tag, newCountry).second)
+				throw std::runtime_error("Duplicate live country ID/tag: " + theID + "/" + tag);
 		}
 		else
 		{
@@ -68,10 +78,7 @@ void EU5::CountryManager::registerKeys()
 
 std::shared_ptr<EU5::Country> EU5::CountryManager::getCountryByID(int countryID) const
 {
-	for (const auto& country: countries | std::views::values)
-	{
-		if (country->getID() == countryID)
-			return country;
-	}
+	if (const auto it = countriesByID.find(countryID); it != countriesByID.end())
+		return it->second;
 	return nullptr;
 }

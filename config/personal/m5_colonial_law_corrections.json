@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "scope": "confirmed_building_company_false_positive_only",
+  "source_sha256": "d4e6bcb5f0c9d91f3d5abe73a5644b6bd99364060f3c76120c60529ad3ac6f74",
+  "countries": {
+    "KAS": {"source_id": "1353", "building_companies": ["33556984", "100665871"], "old_law": "law_colonial_exploitation", "old_institution_level": 2, "law": "law_no_colonial_affairs", "institution_level": 0},
+    "KOR": {"source_id": "607", "building_companies": ["16779835"], "old_law": "law_colonial_exploitation", "old_institution_level": 2, "law": "law_no_colonial_affairs", "institution_level": 0}
+  },
+  "preserve": ["all_existing_technologies", "all_other_laws_and_institutions", "political_borders", "population", "literacy", "homelands", "buildings_and_production_methods", "subjects"],
+  "frontier_review": ["RUS", "MCH"],
+  "frontier_policy": "Do not force enactment or invent cultural homelands; record current native frontier conditions and retain existing laws when not established.",
+  "side_effect": "Native no-colonial-affairs law adds homeland acceptance +10. Removing an enabling law deactivates colonial affairs; omit the obsolete investment assignment. Keep existing technologies and administration buildings; institution demand cannot increase under these changes."
+}

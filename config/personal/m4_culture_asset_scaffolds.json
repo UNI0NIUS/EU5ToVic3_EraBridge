@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "purpose": "Asset-only scaffolds for a complete identity-preserving first pass. Source file selects reusable name/portrait/graphics/tradition/default-religion fields, NEVER an ethnic alias, language inference or reviewed heritage relationship. Every source identity keeps its own culture and heritage. New heritage groups are provisional independent groups. All inherited fields require historical/gameplay review.",
+  "templates_by_source_file": {
+    "south_east_asia.txt": "thai", "indonesia.txt": "malay", "egypt.txt": "misri",
+    "mesoamerican.txt": "nahua", "east_asia.txt": "han", "persian.txt": "persian",
+    "indo_aryan.txt": "hindustani", "west_african.txt": "yoruba", "kongolese.txt": "bakongo",
+    "arabia.txt": "bedouin", "italian.txt": "north_italian", "oceanic.txt": "polynesian",
+    "argentinian.txt": "patagonian", "horn_of_africa.txt": "amhara", "peruvian.txt": "quechua",
+    "central_america.txt": "mayan", "east_slavic.txt": "russian", "southamerican.txt": "guarani",
+    "baltic.txt": "lithuanian", "east_african.txt": "swahili", "levantine.txt": "mashriqi",
+    "iberian.txt": "spanish", "caribbean.txt": "cariban", "brasilian.txt": "amazonian",
+    "carpathian.txt": "hungarian", "permic.txt": "ugrian", "west_slavic.txt": "polish",
+    "eastcoast.txt": "algonquian", "bengal.txt": "bengali", "british.txt": "british",
+    "aridoamerican.txt": "oodham", "finno_ugric.txt": "finnish", "south_slavic.txt": "serb",
+    "caucasian.txt": "georgian", "turkic.txt": "turkish", "papuan.txt": "melanesian",
+    "greek.txt": "greek", "german.txt": "north_german", "south_africa.txt": "zulu",
+    "israelite.txt": "sephardic", "great_bassin.txt": "paiute", "canadian.txt": "cree",
+    "tartar.txt": "tatar", "maghrebi.txt": "maghrebi", "central_north_american.txt": "dakota",
+    "australian.txt": "aborigine", "scandinavian.txt": "swedish", "dravidian.txt": "tamil",
+    "alaska.txt": "inuit", "romani.txt": "hindustani"
+  }
+}

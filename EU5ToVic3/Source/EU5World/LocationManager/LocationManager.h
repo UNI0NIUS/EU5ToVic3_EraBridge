@@ -12,6 +12,7 @@ class LocationManager: commonItems::parser
 
 	void loadLocations(std::istream& theStream);
 	void registerLocation(int theLocationID, const std::string& locationName);
+	void setStrictValidation(bool value) { strictValidation = value; }
 
 	[[nodiscard]] const auto& getSeenLocations() const { return seenLocations; }
 	[[nodiscard]] const auto& getAllLocations() const { return locations; }
@@ -21,6 +22,9 @@ class LocationManager: commonItems::parser
 	void registerKeys();
 
 	std::map<std::string, std::shared_ptr<Location>> seenLocations;
+	std::map<int, std::shared_ptr<Location>> locationsByID;
+	std::set<int> loadedIDs;
+	bool strictValidation = false;
 
 	std::map<std::string, std::shared_ptr<Location>> locations;				// Important ones.
 	std::map<std::string, std::shared_ptr<Location>> wastelands;			// Wastelands we DO care for but can't use as we'd use regular Locations.

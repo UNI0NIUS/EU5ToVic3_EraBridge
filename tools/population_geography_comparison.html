@@ -1,0 +1,66 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>人口分布与容量算法修正</title>
+<style>
+:root{color-scheme:light;--ink:#263e49;--teal:#216e69;--line:#d6e0df}*{box-sizing:border-box}body{margin:0;background:#f4f6f3;color:var(--ink);font:15px/1.7 "Microsoft YaHei",system-ui,sans-serif}main{max-width:1440px;padding:36px 26px 60px;margin:auto}h1{font-size:30px;margin:0 0 5px}h2{font-size:21px;margin:26px 0 12px}h3{font-size:17px}p{margin:8px 0 14px}small,.muted{color:#58707a}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.card{background:white;border:1px solid var(--line);border-radius:8px;padding:18px}.big{font-size:28px;font-weight:650}.note{background:#fff6dc;border-left:4px solid #b3832f;padding:14px 18px;margin:20px 0}.cols{display:grid;grid-template-columns:1fr 1fr;gap:20px}.controls{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:18px 0}button,input,select{font:inherit;border:1px solid #a6bbc1;border-radius:4px;padding:7px 12px;background:white;color:inherit}button{cursor:pointer}button.on{color:white;background:var(--teal)}button:hover{filter:brightness(.93)}input[type=search]{min-width:290px}.tablewrap{overflow:auto;background:white;border:1px solid var(--line)}table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums}th,td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}th{background:#e7eeec;white-space:nowrap}tr:nth-child(even){background:#f8faf8}.num{text-align:right;white-space:nowrap}.id{display:block;font-size:11px;color:#627d88}.hot{color:#a04d1e;font-weight:bold}.pill{font-size:12px;background:#e7eeec;padding:2px 6px;white-space:nowrap}dialog{border:1px solid #9db5b9;border-radius:8px;width:min(1180px,95vw);max-height:90vh;padding:24px;color:var(--ink)}dialog::backdrop{background:#17333a99}dialog h2{margin-top:0}.close{float:right}.formula{white-space:pre-wrap;background:#edf2f1;padding:15px;border-radius:4px}.examples{display:flex;flex-wrap:wrap;gap:8px}.sources{font:12px/1.8 monospace;overflow-wrap:anywhere}footer{margin-top:28px;font-size:13px;color:#58707a}@media(max-width:850px){main{padding:20px 12px}.cards,.cols{grid-template-columns:1fr}h1{font-size:24px}}
+</style><main>
+<h1>人口分布与容量算法修正</h1><p class="muted" id="version"></p>
+<p><strong>先核对人口，再约束容量。</strong>以相同的 V3 整州边界比较原版 1836 人口与 EU5 转换开局人口。人口统计包括家属，不是劳动力；当前人口来自安装包的开局定义，不是推进后的存档。</p>
+<div class="cards" id="headline"></div>
+<div class="note"><strong>世界总量增幅有限，局部集中非常明显。</strong>高于原版不能单独证明人口转换错误。本页同时展示源地点人口贡献、旧算法扩容和新规则容量，区分人口分布与分割州放大。原版零人口的州标为“新增”，不编造倍率。</div>
+<div class="cols"><section class="card"><h2 style="margin-top:0">新规则：原版地理容量作为约束</h2><div class="formula">耕地与固定资源上限 = 原版同州数值
+人口、产业就业、国界碎片化均不增加容量
+源产业就业 × 25% ÷ 科技对应每级岗位 → 建设需求
+建设等级 ≤ 本国州内原版容量份额
+全部商业农业共用一份耕地容量
+容纳不下的需求 → 明确报告缺口</div><p><small>75% 岗位折算仍用于自给就业安全检查。原版没有对应固定资源的州，不因就业数字自动新增矿藏；未发现资源机制保持原版。</small></p></section>
+<section class="card"><h2 style="margin-top:0">本次输出的范围</h2><p>算法已修改并生成审查用覆盖文件，<strong>尚未替换当前游戏安装版</strong>。人口、科技、法律、军队和外交未在本次审查中调整。</p><p>审查覆盖文件以当前已建建筑为起点，只裁掉超过原版容量的农业和资源建筑；没有重新平衡粮食、工资或财政。容量不足会直接暴露失业风险，因此不能把此文件当作已经通过生活水平验收的版本。</p><p id="gaps"></p></section></div>
+<h2>人口守恒核对</h2><p id="conservation"></p>
+<h2>两国同一领土范围的对照</h2><p class="muted">原版只有州级人口；下表的“原版同领土估算”按当前各国占全州的省份数量分摊，不能当作精确的原版省级人口。整州表无需这一步估算。</p><div class="tablewrap" id="countries"></div>
+<h2>重点州</h2><div class="examples" id="examples"></div>
+<div class="controls" id="tabs"><button class="on" data-tab="states">整州人口与耕地</button><button data-tab="parts">各国州内人口份额</button><button data-tab="resources">资源容量修正</button><button id="download">下载完整 JSON</button></div>
+<div class="controls"><label>国家 <select id="country"><option value="">全部</option><option value="ITA">意大利 ITA</option><option value="BOH">波西米亚 BOH</option></select></label><input id="search" type="search" placeholder="搜索州名、州 ID 或资源"><label>排序 <select id="sort"><option value="delta">人口增加量</option><option value="ratio">人口倍率</option><option value="land">旧耕地扩容量</option><option value="split">分割州放大量</option><option value="name">州 ID</option></select></label><label><input id="tenfold" type="checkbox">仅人口 ≥ 10 倍</label></div>
+<p id="scope" class="muted"></p><div class="tablewrap" id="table"></div>
+<h2>如何解读分割州放大</h2><p>旧算法先求各国所需容量，再除以其省份份额，取整州最大值。一个仅占 4% 的国家需要 5 级资源，就可能要求整州 125 级。详情中的“整州合计需求下限”把各国目标相加，并保留原版下限；它仅用于诊断放大程度，不能保证每个国家按领土份额都能获得足够容量。</p>
+<p>科技仍改变每级建筑的岗位与产出，但不会增加地理储量。新规则把这些差异留在建筑、生产方式及市场供需中处理。不能用固定资源容量之和当作原料产出，也不能把岗位容量当作实际就业。</p>
+<details><summary>数据与核验</summary><p>安装包人口逐项匹配人口模块输出；源人口分配总量守恒；审查覆盖文件的耕地与固定资源容量逐州匹配原版；建筑重读并检查各国容量份额。源付薪农业采用上一轮台账的取整值，仅影响就业诊断，不影响人口对照与地理容量。</p><div id="sources" class="sources"></div></details>
+<footer>生成于 2026-10-02。容量的单位为可建设等级。点击“依据”查看源地点、各国就业缺口与需调整建筑。</footer>
+</main><dialog id="detail"></dialog><script>
+const D=__DATA__,S=D.stats,$=s=>document.querySelector(s),n=(v,d=0)=>Number(v).toLocaleString('zh-CN',{maximumFractionDigits:d});
+const e=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const cell=(v,num=false)=>`<td class="${num?'num':''}">${v}</td>`;
+const table=(h,rows)=>`<table><thead><tr>${h.map(v=>`<th>${v}</th>`).join('')}</tr></thead><tbody>${rows.map(r=>`<tr>${r.join('')}</tr>`).join('')}</tbody></table>`;
+const ratio=v=>v===null?'新增':`${n(v,2)}×`,sign=v=>(v>0?'+':'')+n(v),names=r=>cell(`${e(r.name)}<span class="id">${e(r.state)}</span>`);
+$('#version').textContent=`当前安装 ${D.installed_version} · 原版人口与州定义对照 · 新规则审查稿`;
+$('#headline').innerHTML=[['世界人口',`${n(S.current_population/1e8,3)} 亿`, `原版 ${n(S.original_population/1e8,3)} 亿 → 增加 ${n((S.current_population/S.original_population-1)*100,2)}%`],['局部人口集中',`${S.double_states} 州 ≥ 2 倍`,`${S.tenfold_states} 州 ≥ 10 倍；共核对 ${S.states} 州`],['耕地容量回归原版',`${n(S.previous_land)} → ${n(S.original_land)}`,`全部州合计；停止用就业需求自动扩地`]].map(v=>`<div class="card"><small>${v[0]}</small><div class="big">${v[1]}</div><small>${v[2]}</small></div>`).join('');
+$('#gaps').innerHTML=`按当前建筑裁减后，${n(S.employment_gap_parts)} 个本国州份额仍有满员岗位缺口，合计约 <strong>${n(S.employment_gap_workers/1e4,1)} 万劳动力</strong>。这是规划容量缺口，不是实测失业。`;
+$('#conservation').textContent=`EU5 分配人口 ${n(S.source_population,2)} + 空白地区原版补充 ${n(S.template_population)} = ${n(S.source_population+S.template_population,2)}；安装包实际 ${n(S.current_population)}，整数化差异 ${n(S.rounding_difference,2)} 人。未发现人口分配重复造成的世界总量膨胀；地理落点是否合理仍需逐州审查。`;
+$('#countries').innerHTML=table(['国家','原版同领土估算','当前人口','倍率','原容量下满员岗位缺口','需裁减农业/资源等级'],Object.entries(D.countries).map(([t,r])=>[cell(`${e(r.name)} ${t}`),cell(n(r.original_same_territory_estimate),true),cell(n(r.current_population),true),cell(ratio(r.current_population/r.original_same_territory_estimate),true),cell(n(r.employment_gap),true),cell(n(r.removed_building_levels),true)]));
+$('#sources').innerHTML=Object.keys(D.input_sha256).map(p=>`<div>${e(p)}</div>`).join('');
+const lookup=Object.fromEntries(D.states.map(r=>[r.state,r]));
+$('#examples').innerHTML=['STATE_UMBRIA','STATE_YEMEN','STATE_LUZON','STATE_BOHEMIA','STATE_SOUTH_SUMATRA','STATE_WESTERN_AUSTRALIA'].map(s=>`<button data-state="${s}">${e(lookup[s].name)} · 人口 ${ratio(lookup[s].population_ratio)}</button>`).join('');
+$('#examples').querySelectorAll('button').forEach(b=>b.onclick=()=>detail(lookup[b.dataset.state]));
+let tab='states',visible=[];
+const source=()=>tab==='resources'?D.states.flatMap(s=>s.resources.map(r=>({...s,resource:r}))):D[tab];
+function draw(){const tag=$('#country').value,q=$('#search').value.toLowerCase(),sort=$('#sort').value,ten=$('#tenfold').checked;
+visible=source().filter(r=>{const s=lookup[r.state];return (!tag||(tab==='parts'?r.country===tag:s.countries.includes(tag)))&&(!ten||(s.population_ratio??0)>=10)&&JSON.stringify([r.name,r.state,r.resource?.name]).toLowerCase().includes(q)});
+const score=r=>{const s=lookup[r.state];return sort==='ratio'?(tab==='parts'?r.ratio:s.population_ratio)??Number.MAX_VALUE:sort==='land'?s.previous_land-s.original_land:sort==='split'?s.land_split_amplification:tab==='parts'?r.current-r.original_estimate:s.population_delta};
+visible.sort((a,b)=>sort==='name'?a.state.localeCompare(b.state):score(b)-score(a));
+const btn=r=>cell(`<button data-state="${r.state}">依据</button>`);let h,rows;
+if(tab==='states'){h=['州','原版人口','当前人口','人口增加','人口倍率','原版耕地','旧算法耕地','新规则耕地',''];rows=visible.map(r=>[names(r),cell(n(r.original_population),true),cell(n(r.current_population),true),cell(sign(r.population_delta),true),cell(`<span class="${r.population_ratio>=10?'hot':''}">${ratio(r.population_ratio)}</span>`,true),cell(n(r.original_land),true),cell(n(r.previous_land),true),cell(n(r.revised_land),true),btn(r)])}
+else if(tab==='parts'){h=['州','国家','原版人口估分','当前人口','倍率',''];rows=visible.map(r=>[names(r),cell(e(r.country)),cell(n(r.original_estimate),true),cell(n(r.current),true),cell(ratio(r.ratio),true),btn(r)])}
+else{h=['州','资源','人口倍率','原版容量','旧算法容量','新规则容量','当前已建','审查已建',''];rows=visible.map(r=>[names(r),cell(e(r.resource.name)),cell(ratio(r.population_ratio),true),cell(n(r.resource.original),true),cell(n(r.resource.previous),true),cell(n(r.resource.revised),true),cell(n(r.resource.current_built),true),cell(n(r.resource.review_built),true),btn(r)])}
+$('#table').innerHTML=table(h,rows);$('#scope').textContent=`共 ${visible.length} 行。${tab==='parts'?'原版人数按当前省份份额估分，当前人数为实际转换定义。':'国家筛选选出其涉及的州，人口和容量仍显示整州总数。'}${tab==='resources'?'资源页列上一轮扩容的 687 项，其他容量保持原版。':''}`;
+$('#table').querySelectorAll('button').forEach(b=>b.onclick=()=>detail(lookup[b.dataset.state]));}
+function detail(r){let html=`<button class="close" id="close">关闭</button><h2>${e(r.name)}：人口与容量依据</h2><p>${e(r.state)} · 归属 ${e(r.countries.join(' / '))}</p><div class="formula">原版整州人口 ${n(r.original_population)} → 当前 ${n(r.current_population)}，${ratio(r.population_ratio)}
+源人口 ${n(r.source_population,2)} + 原版补充 ${n(r.template_population)}
+耕地：原版 ${n(r.original_land)} → 旧算法 ${n(r.previous_land)} → 新规则 ${n(r.revised_land)}
+旧需求保持时的整州合计需求下限 ${n(r.aggregate_land_demand_without_fragment_multiplier)}
+旧算法比合计需求下限多出 ${n(r.land_split_amplification)} 级</div>`;
+if(r.resources.length)html+='<h3>资源修正</h3><div class="tablewrap">'+table(['资源','原版','旧算法','新规则','合计需求下限','旧算法多出','当前已建','审查已建'],r.resources.map(x=>[cell(e(x.name)),cell(n(x.original),true),cell(n(x.previous),true),cell(n(x.revised),true),cell(n(x.aggregate_demand_without_fragment_multiplier),true),cell(n(x.split_amplification),true),cell(n(x.current_built),true),cell(n(x.review_built),true)]))+'</div>';
+html+='<h3>各国就业诊断：保持人口，约束容量</h3><div class="tablewrap">'+table(['国家','当前人口','原版耕地份额','农业等级','正规岗位','自给岗位','满员缺口','安全折算缺口'],r.employment.map(x=>[cell(e(x.country)),cell(n(x.population),true),cell(n(x.new_arable_share),true),cell(n(x.commercial_arable_levels),true),cell(n(x.formal_job_capacity),true),cell(n(x.new_subsistence_job_capacity),true),cell(n(x.capacity_gap_full_staffing),true),cell(n(x.capacity_gap_safety_staffing),true)]))+'</div><p><small>含原州定义允许的自给岗位。满员缺口未计招聘率、资格和自动生成城市建筑；安全折算沿用 75%，孤立地区沿用 0% 抵扣。</small></p>';
+if(r.building_adjustments.length)html+='<h3>超过原容量的已有建筑</h3><div class="tablewrap">'+table(['国家','建筑 ID','当前等级','审查等级','减少岗位容量'],r.building_adjustments.map(x=>[cell(e(x.country)),cell(e(x.building)),cell(n(x.before),true),cell(n(x.after),true),cell(n(x.displaced_job_capacity),true)]))+'</div>';
+html+=`<h3>源地点人口贡献：前 25 / 共 ${r.source_places.length} 个地点</h3><div class="tablewrap">`+table(['源地点 ID','分配到本州人口'],r.source_places.slice(0,25).map(x=>[cell(e(x.location)),cell(n(x.population,2),true)]))+'</div><p><small>这里只展示实际映射结果，并不据此认定地点分配正确。全部源地点在 JSON 中。</small></p>';
+$('#detail').innerHTML=html;$('#close').onclick=()=>$('#detail').close();$('#detail').showModal();}
+$('#tabs').querySelectorAll('[data-tab]').forEach(b=>b.onclick=()=>{tab=b.dataset.tab;$('#tabs').querySelectorAll('[data-tab]').forEach(x=>x.classList.toggle('on',x===b));draw()});
+['country','search','sort','tenfold'].forEach(k=>$('#'+k).addEventListener('input',draw));
+$('#download').onclick=()=>{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(D,null,2)],{type:'application/json'}));a.download='人口与容量修正对照.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)};draw();
+</script></html>

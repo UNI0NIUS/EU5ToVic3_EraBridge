@@ -1,0 +1,3853 @@
+{
+  "schema": 1,
+  "scope": "Reusable source-location to target-land geography only. Ownership and population are recomputed from each input save.",
+  "source_map_sha256": "bfbb8840343560367240f2b29e1e0621292aaa81616c06827c7fe566e2ec2b83",
+  "target_map_sha256": "e3911fd80a40c6b297a68f66e898d9b187863b64483a9608123606143ee2ea78",
+  "locations": {
+    "sarzana": {
+      "targets": [
+        {
+          "province": "x904061",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "nanhui": {
+      "targets": [
+        {
+          "province": "xE9E92E",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "jaffna": {
+      "targets": [
+        {
+          "province": "x8D6FA8",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "wenchang": {
+      "targets": [
+        {
+          "province": "xCB457A",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "changxing": {
+      "targets": [
+        {
+          "province": "x5BE9C6",
+          "weight": 4
+        },
+        {
+          "province": "x7E7930",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "madakalapu": {
+      "targets": [
+        {
+          "province": "x602050",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "cixi": {
+      "targets": [
+        {
+          "province": "x9C0372",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "tanjungpinang": {
+      "targets": [
+        {
+          "province": "x91B001",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "trincomalee": {
+      "targets": [
+        {
+          "province": "xC23350",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "haiyan": {
+      "targets": [
+        {
+          "province": "xAB5BE9",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "akhmim": {
+      "targets": [
+        {
+          "province": "x50D060",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "qena": {
+      "targets": [
+        {
+          "province": "xD26E7A",
+          "weight": 2
+        },
+        {
+          "province": "x7B75E6",
+          "weight": 2
+        },
+        {
+          "province": "x01735F",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "bracciano": {
+      "targets": [
+        {
+          "province": "xB040A0",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "yixing": {
+      "targets": [
+        {
+          "province": "x6E575B",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "liamuiga": {
+      "targets": [
+        {
+          "province": "x89337A",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "shanghai": {
+      "targets": [
+        {
+          "province": "xE9E92E",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "sibumbong": {
+      "targets": [
+        {
+          "province": "x2EE734",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "santubong": {
+      "targets": [
+        {
+          "province": "x91B40F",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "casale": {
+      "targets": [
+        {
+          "province": "x1140E0",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "peureulak": {
+      "targets": [
+        {
+          "province": "x5BDF4D",
+          "weight": 1
+        },
+        {
+          "province": "xA0DFD0",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "bengkalis": {
+      "targets": [
+        {
+          "province": "x48428B",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "weda": {
+      "targets": [
+        {
+          "province": "xB346EB",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "perbaungan": {
+      "targets": [
+        {
+          "province": "x01317D",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "xiangshan": {
+      "targets": [
+        {
+          "province": "xB09000",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "wadadli": {
+      "targets": [
+        {
+          "province": "x89334D",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "lahaina": {
+      "targets": [
+        {
+          "province": "x6090C0",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "azemmour": {
+      "targets": [
+        {
+          "province": "x43DA94",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "lomello": {
+      "targets": [
+        {
+          "province": "x1140E0",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "amis": {
+      "targets": [
+        {
+          "province": "x44797F",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "maba_celebes": {
+      "targets": [
+        {
+          "province": "xB346EB",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "changguo": {
+      "targets": [
+        {
+          "province": "xB09000",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "nakijin": {
+      "targets": [
+        {
+          "province": "xF0F061",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "voghera": {
+      "targets": [
+        {
+          "province": "xD04060",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "saitama": {
+      "targets": [
+        {
+          "province": "xF011C0",
+          "weight": 3
+        },
+        {
+          "province": "xEF9040",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "asni": {
+      "targets": [
+        {
+          "province": "xBF1DC0",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "lavagna": {
+      "targets": [
+        {
+          "province": "x904061",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "tortona": {
+      "targets": [
+        {
+          "province": "xACB500",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "debre_tabor": {
+      "targets": [
+        {
+          "province": "xDF37BE",
+          "weight": 1
+        },
+        {
+          "province": "x0DED25",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "kara": {
+      "targets": [
+        {
+          "province": "x117021",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "parita": {
+      "targets": [
+        {
+          "province": "x30B080",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "panama": {
+      "targets": [
+        {
+          "province": "x910E14",
+          "weight": 5
+        },
+        {
+          "province": "xD0EF40",
+          "weight": 5
+        },
+        {
+          "province": "x50C29C",
+          "weight": 2
+        },
+        {
+          "province": "x8A8A20",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "lodi": {
+      "targets": [
+        {
+          "province": "xD04060",
+          "weight": 3
+        },
+        {
+          "province": "x4713EE",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "sarangani": {
+      "targets": [
+        {
+          "province": "x62D16D",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "jerusalem": {
+      "targets": [
+        {
+          "province": "xE05060",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "guancavilca": {
+      "targets": [
+        {
+          "province": "xC8F0FB",
+          "weight": 2
+        },
+        {
+          "province": "x5A704F",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "arari": {
+      "targets": [
+        {
+          "province": "xE8A10B",
+          "weight": 1
+        },
+        {
+          "province": "xFF0F6F",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "cardiff": {
+      "targets": [
+        {
+          "province": "x2020C0",
+          "weight": 1
+        },
+        {
+          "province": "xA2308A",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "tutuila": {
+      "targets": [
+        {
+          "province": "xA7F8A1",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "banda_island": {
+      "targets": [
+        {
+          "province": "x079110",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "mbegela": {
+      "targets": [
+        {
+          "province": "xD2F7C4",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "kavaratti_atoll": {
+      "targets": [
+        {
+          "province": "x95AAA3",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "tokunoshima": {
+      "targets": [
+        {
+          "province": "xF0D080",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "leti": {
+      "targets": [
+        {
+          "province": "xD986F1",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "rangpur_bengal": {
+      "targets": [
+        {
+          "province": "xF04684",
+          "weight": 1
+        },
+        {
+          "province": "xD28E5F",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "quimperle": {
+      "targets": [
+        {
+          "province": "x2BD902",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "ramree": {
+      "targets": [
+        {
+          "province": "xD5DB0B",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "girona": {
+      "targets": [
+        {
+          "province": "xD616D2",
+          "weight": 5
+        },
+        {
+          "province": "x08B4D6",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "mevouillon": {
+      "targets": [
+        {
+          "province": "xC03918",
+          "weight": 5
+        },
+        {
+          "province": "xB8E48D",
+          "weight": 1
+        },
+        {
+          "province": "x73F176",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "nata": {
+      "targets": [
+        {
+          "province": "x50C29C",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "xingzi": {
+      "targets": [
+        {
+          "province": "x50D080",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "alba": {
+      "targets": [
+        {
+          "province": "xD080E0",
+          "weight": 6
+        },
+        {
+          "province": "xA9397D",
+          "weight": 1
+        },
+        {
+          "province": "x11C061",
+          "weight": 4
+        }
+      ],
+      "review_note": ""
+    },
+    "chieri": {
+      "targets": [
+        {
+          "province": "xA9397D",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "arles": {
+      "targets": [
+        {
+          "province": "x31C0DF",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "vercelli": {
+      "targets": [
+        {
+          "province": "x1140E0",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "anace": {
+      "targets": [
+        {
+          "province": "xD54255",
+          "weight": 1
+        },
+        {
+          "province": "xE29237",
+          "weight": 4
+        }
+      ],
+      "review_note": ""
+    },
+    "sausaya": {
+      "targets": [
+        {
+          "province": "x08BBBC",
+          "weight": 4
+        },
+        {
+          "province": "xDF4030",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "coruna": {
+      "targets": [
+        {
+          "province": "xB85939",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "kubuna": {
+      "targets": [
+        {
+          "province": "x53FA6E",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "lanzo": {
+      "targets": [
+        {
+          "province": "xDA86EA",
+          "weight": 3
+        },
+        {
+          "province": "xAA6958",
+          "weight": 2
+        },
+        {
+          "province": "xA9397D",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "pinerolo": {
+      "targets": [
+        {
+          "province": "xAA6958",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "niyazabad": {
+      "targets": [
+        {
+          "province": "x69FE0D",
+          "weight": 3
+        },
+        {
+          "province": "xBFD159",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "upolu": {
+      "targets": [
+        {
+          "province": "xC00010",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "morgex": {
+      "targets": [
+        {
+          "province": "x90C060",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "acqui": {
+      "targets": [
+        {
+          "province": "x11C061",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "tabukan": {
+      "targets": [
+        {
+          "province": "x6E4206",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "zihuatlan": {
+      "targets": [
+        {
+          "province": "x6CE1F2",
+          "weight": 1
+        },
+        {
+          "province": "x4CF985",
+          "weight": 2
+        }
+      ],
+      "review_note": ""
+    },
+    "tarascon": {
+      "targets": [
+        {
+          "province": "x31C0DF",
+          "weight": 5
+        },
+        {
+          "province": "xB0C0E0",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "batanes": {
+      "targets": [
+        {
+          "province": "xCDE626",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "seongwi": {
+      "targets": [
+        {
+          "province": "xB0D080",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "novi": {
+      "targets": [
+        {
+          "province": "xACB500",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "linhuai": {
+      "targets": [
+        {
+          "province": "xCFABF8",
+          "weight": 1
+        },
+        {
+          "province": "x11D080",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "ananatuba": {
+      "targets": [
+        {
+          "province": "xF66408",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "frejus": {
+      "targets": [
+        {
+          "province": "x3040E0",
+          "weight": 4
+        },
+        {
+          "province": "xB0C060",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "walichi": {
+      "targets": [
+        {
+          "province": "x89337A",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "yuanjiang": {
+      "targets": [
+        {
+          "province": "x252DF2",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "vauvau": {
+      "targets": [
+        {
+          "province": "x208030",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "apt": {
+      "targets": [
+        {
+          "province": "xB0C0E0",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "freising": {
+      "targets": [
+        {
+          "province": "xE76994",
+          "weight": 4
+        },
+        {
+          "province": "xFE59E7",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "babuyan_islands": {
+      "targets": [
+        {
+          "province": "xCDE626",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "brignoles": {
+      "targets": [
+        {
+          "province": "x3040E0",
+          "weight": 6
+        },
+        {
+          "province": "x31C0DF",
+          "weight": 4
+        },
+        {
+          "province": "xB040E0",
+          "weight": 1
+        },
+        {
+          "province": "xB0C0E0",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "limasawa": {
+      "targets": [
+        {
+          "province": "xCAFE73",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "havaii": {
+      "targets": [
+        {
+          "province": "xA000B0",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "biella": {
+      "targets": [
+        {
+          "province": "x90C060",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "changle_fujian": {
+      "targets": [
+        {
+          "province": "x553A28",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "orasul_de_floci": {
+      "targets": [
+        {
+          "province": "x690E91",
+          "weight": 3
+        },
+        {
+          "province": "x2164E0",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "kleve": {
+      "targets": [
+        {
+          "province": "x41C0A0",
+          "weight": 1
+        },
+        {
+          "province": "xAF3A54",
+          "weight": 1
+        },
+        {
+          "province": "x8001E0",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "makary": {
+      "targets": [
+        {
+          "province": "x915193",
+          "weight": 1
+        },
+        {
+          "province": "x2A283A",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "tetioneshohon": {
+      "targets": [
+        {
+          "province": "x308040",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "grasse": {
+      "targets": [
+        {
+          "province": "xB0C060",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "ballymena": {
+      "targets": [
+        {
+          "province": "xAA6FA1",
+          "weight": 4
+        },
+        {
+          "province": "x0A38AF",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "pragelato": {
+      "targets": [
+        {
+          "province": "x1B4B66",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "haapai": {
+      "targets": [
+        {
+          "province": "x208030",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "kaua_i": {
+      "targets": [
+        {
+          "province": "x6090C0",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "vanua_balavu_atoll": {
+      "targets": [
+        {
+          "province": "x53FA6E",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "igaracu": {
+      "targets": [
+        {
+          "province": "x4F2FCD",
+          "weight": 1
+        },
+        {
+          "province": "x0C8E72",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "klipgat": {
+      "targets": [
+        {
+          "province": "x306050",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "savaii": {
+      "targets": [
+        {
+          "province": "xD98CDA",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "enggano": {
+      "targets": [
+        {
+          "province": "x7945C0",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "tonameca": {
+      "targets": [
+        {
+          "province": "x90B040",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "chiru": {
+      "targets": [
+        {
+          "province": "x50C29C",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "forcalquier": {
+      "targets": [
+        {
+          "province": "xB040E0",
+          "weight": 1
+        },
+        {
+          "province": "x6D5E3F",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "pakil": {
+      "targets": [
+        {
+          "province": "x0D8236",
+          "weight": 5
+        },
+        {
+          "province": "xB0F0E0",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "yap": {
+      "targets": [
+        {
+          "province": "x414170",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "barjols": {
+      "targets": [
+        {
+          "province": "xB040E0",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "coahuayana": {
+      "targets": [
+        {
+          "province": "x97CE08",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "nanchang": {
+      "targets": [
+        {
+          "province": "x1186AE",
+          "weight": 4
+        },
+        {
+          "province": "x37F6F7",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "evian": {
+      "targets": [
+        {
+          "province": "x56B04B",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "derbent": {
+      "targets": [
+        {
+          "province": "x9F1D8F",
+          "weight": 2
+        },
+        {
+          "province": "xDA5ABE",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "brienne": {
+      "targets": [
+        {
+          "province": "x4B7684",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "petrovaradin": {
+      "targets": [
+        {
+          "province": "x902161",
+          "weight": 4
+        },
+        {
+          "province": "x10A060",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "tututepec": {
+      "targets": [
+        {
+          "province": "x51A981",
+          "weight": 1
+        },
+        {
+          "province": "xC0C070",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "subi_islands": {
+      "targets": [
+        {
+          "province": "x01C030",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "royan": {
+      "targets": [
+        {
+          "province": "xD0A040",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "tarawa_atoll": {
+      "targets": [
+        {
+          "province": "x808011",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "huamelula": {
+      "targets": [
+        {
+          "province": "xC83AE5",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "jenipaboacu": {
+      "targets": [
+        {
+          "province": "xA6BA83",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "candia": {
+      "targets": [
+        {
+          "province": "x6010A0",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "bardi_australia": {
+      "targets": [
+        {
+          "province": "x3B8960",
+          "weight": 1
+        },
+        {
+          "province": "x8B93A1",
+          "weight": 1
+        },
+        {
+          "province": "x59C38A",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "kazhi": {
+      "targets": [
+        {
+          "province": "x5056A4",
+          "weight": 3
+        },
+        {
+          "province": "x5F792D",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "kechemeche": {
+      "targets": [
+        {
+          "province": "xF00000",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "cuauhtolco": {
+      "targets": [
+        {
+          "province": "x90B040",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "puget_theniers": {
+      "targets": [
+        {
+          "province": "xCB9C34",
+          "weight": 2
+        },
+        {
+          "province": "xB0C060",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "lapseki": {
+      "targets": [
+        {
+          "province": "x34C810",
+          "weight": 1
+        },
+        {
+          "province": "xB020E0",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "skagen": {
+      "targets": [
+        {
+          "province": "x770871",
+          "weight": 1
+        },
+        {
+          "province": "x951AF2",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "inalumaala": {
+      "targets": [
+        {
+          "province": "xA8029D",
+          "weight": 1
+        },
+        {
+          "province": "xA5B2DA",
+          "weight": 1
+        },
+        {
+          "province": "x3F684C",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "kavalan": {
+      "targets": [
+        {
+          "province": "x6DAB21",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "ulithi_atoll": {
+      "targets": [
+        {
+          "province": "x414170",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "varna": {
+      "targets": [
+        {
+          "province": "xF0A0A0",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "jalan_buani_buali": {
+      "targets": [
+        {
+          "province": "x937BB2",
+          "weight": 1
+        },
+        {
+          "province": "xEF50A0",
+          "weight": 1
+        },
+        {
+          "province": "xDEE039",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "newport": {
+      "targets": [
+        {
+          "province": "x2020C0",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "cairo_montenotte": {
+      "targets": [
+        {
+          "province": "x11C061",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "tremembe": {
+      "targets": [
+        {
+          "province": "x2B8A36",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "taveuni": {
+      "targets": [
+        {
+          "province": "x53FA6E",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "tete": {
+      "targets": [
+        {
+          "province": "x2E9622",
+          "weight": 1
+        },
+        {
+          "province": "xD3F0C6",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "guahan": {
+      "targets": [
+        {
+          "province": "xA7F7E3",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "burica": {
+      "targets": [
+        {
+          "province": "x8537FE",
+          "weight": 1
+        },
+        {
+          "province": "x10EF80",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "kandavu": {
+      "targets": [
+        {
+          "province": "x61A3E3",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "carmagnola": {
+      "targets": [
+        {
+          "province": "xA9397D",
+          "weight": 1
+        },
+        {
+          "province": "xD080E0",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "accomac": {
+      "targets": [
+        {
+          "province": "xF08000",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "epi": {
+      "targets": [
+        {
+          "province": "x75A377",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "itzalku": {
+      "targets": [
+        {
+          "province": "x3DB036",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "efate": {
+      "targets": [
+        {
+          "province": "x75A377",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "wicomico": {
+      "targets": [
+        {
+          "province": "xF08000",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "ceva": {
+      "targets": [
+        {
+          "province": "xD080E0",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "chiang_khan": {
+      "targets": [
+        {
+          "province": "xDFCAA8",
+          "weight": 1
+        },
+        {
+          "province": "x57E793",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "nantucket": {
+      "targets": [
+        {
+          "province": "x13444D",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "maden": {
+      "targets": [
+        {
+          "province": "x39DD3B",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "banana_islands": {
+      "targets": [
+        {
+          "province": "x6216D1",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "milos": {
+      "targets": [
+        {
+          "province": "x6090A0",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "nengone": {
+      "targets": [
+        {
+          "province": "x2BEBD1",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "binangonan": {
+      "targets": [
+        {
+          "province": "x0D8236",
+          "weight": 1
+        },
+        {
+          "province": "x51BC8C",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "moce_atoll": {
+      "targets": [
+        {
+          "province": "x61A3E3",
+          "weight": 1
+        },
+        {
+          "province": "x53FA6E",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "gochacalla": {
+      "targets": [
+        {
+          "province": "xA3F17B",
+          "weight": 1
+        },
+        {
+          "province": "x2B7493",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "yasawa": {
+      "targets": [
+        {
+          "province": "x61A3E3",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "exeter": {
+      "targets": [
+        {
+          "province": "xC900EF",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "somogyvar": {
+      "targets": [
+        {
+          "province": "x2668FB",
+          "weight": 1
+        },
+        {
+          "province": "xB02121",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "beqa_lagoon": {
+      "targets": [
+        {
+          "province": "x61A3E3",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "sancha": {
+      "targets": [
+        {
+          "province": "x19B590",
+          "weight": 1
+        },
+        {
+          "province": "x584DF4",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "aneityum": {
+      "targets": [
+        {
+          "province": "x75A377",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "kehek_aike": {
+      "targets": [
+        {
+          "province": "x918823",
+          "weight": 3
+        },
+        {
+          "province": "x77D750",
+          "weight": 3
+        },
+        {
+          "province": "xCA2941",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "puna": {
+      "targets": [
+        {
+          "province": "x5A704F",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "babar": {
+      "targets": [
+        {
+          "province": "xD986F1",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "manialtepec": {
+      "targets": [
+        {
+          "province": "x1BC4D0",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "nonouti_atoll": {
+      "targets": [
+        {
+          "province": "x808011",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "maragheh": {
+      "targets": [
+        {
+          "province": "x018E23",
+          "weight": 1
+        },
+        {
+          "province": "x2B1395",
+          "weight": 3
+        }
+      ],
+      "review_note": ""
+    },
+    "erromango": {
+      "targets": [
+        {
+          "province": "x75A377",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "arona": {
+      "targets": [
+        {
+          "province": "xF00544",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "arubeira": {
+      "targets": [
+        {
+          "province": "x1D9B6B",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "anhialo": {
+      "targets": [
+        {
+          "province": "xF0A0A0",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "minguannan": {
+      "targets": [
+        {
+          "province": "xEBA646",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "fulaga_atoll": {
+      "targets": [
+        {
+          "province": "x53FA6E",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "santa_cruz_flores": {
+      "targets": [
+        {
+          "province": "x90A080",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "barcelonnette": {
+      "targets": [
+        {
+          "province": "x1B4B66",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "tanna": {
+      "targets": [
+        {
+          "province": "x75A377",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "golino": {
+      "targets": [
+        {
+          "province": "x834B21",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "abemama_atoll": {
+      "targets": [
+        {
+          "province": "x808011",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "varallo": {
+      "targets": [
+        {
+          "province": "x1140E0",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "rarotonga_atoll": {
+      "targets": [
+        {
+          "province": "xA000B0",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "qelelevu_atoll": {
+      "targets": [
+        {
+          "province": "x53FA6E",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "kabara_atoll": {
+      "targets": [
+        {
+          "province": "x53FA6E",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "itekiatonhniarikon": {
+      "targets": [
+        {
+          "province": "x9484F3",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "jicayan": {
+      "targets": [
+        {
+          "province": "x51A981",
+          "weight": 4
+        },
+        {
+          "province": "xC0C070",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "ngau": {
+      "targets": [
+        {
+          "province": "x61A3E3",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "oqumkikiak": {
+      "targets": [
+        {
+          "province": "xF95D47",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "magdalenas": {
+      "targets": [
+        {
+          "province": "x02AE5B",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "kilivila": {
+      "targets": [
+        {
+          "province": "x719040",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "nuku_hiva": {
+      "targets": [
+        {
+          "province": "xA000B0",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "rodrigues": {
+      "targets": [
+        {
+          "province": "xD0E090",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "machang": {
+      "targets": [
+        {
+          "province": "xE19EFE",
+          "weight": 1
+        },
+        {
+          "province": "xBE7B7A",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "abaiang_atoll": {
+      "targets": [
+        {
+          "province": "x808011",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "tabiteuea_atoll": {
+      "targets": [
+        {
+          "province": "x808011",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "ouvea_atoll": {
+      "targets": [
+        {
+          "province": "x2BEBD1",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "damar": {
+      "targets": [
+        {
+          "province": "xE90740",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "akei": {
+      "targets": [
+        {
+          "province": "x504090",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "nganaa_nui_atoll": {
+      "targets": [
+        {
+          "province": "xA000B0",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "apataki_atoll": {
+      "targets": [
+        {
+          "province": "x998293",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "rangiroa_atoll": {
+      "targets": [
+        {
+          "province": "x0181B0",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "matandang_nayon": {
+      "targets": [
+        {
+          "province": "x31F0E0",
+          "weight": 1
+        },
+        {
+          "province": "xF001E2",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "nukunonu_atoll": {
+      "targets": [
+        {
+          "province": "x208030",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "kiritimati": {
+      "targets": [
+        {
+          "province": "x208030",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "tarifa": {
+      "targets": [
+        {
+          "province": "x4E5464",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "funafuti_atoll": {
+      "targets": [
+        {
+          "province": "x808090",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "butaritari_atoll": {
+      "targets": [
+        {
+          "province": "x808011",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "futoro": {
+      "targets": [
+        {
+          "province": "x210B6E",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "mangareva": {
+      "targets": [
+        {
+          "province": "xA000B0",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "manihi_atoll": {
+      "targets": [
+        {
+          "province": "xA000B0",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "cuauhcapolca": {
+      "targets": [
+        {
+          "province": "x10EFC0",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "tolomako": {
+      "targets": [
+        {
+          "province": "x504090",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "makemo_atoll": {
+      "targets": [
+        {
+          "province": "xF1DBF3",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "hiva_oa": {
+      "targets": [
+        {
+          "province": "xA000B0",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "apaqtukowatek": {
+      "targets": [
+        {
+          "province": "x406FBA",
+          "weight": 1
+        },
+        {
+          "province": "xC060C0",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "misima": {
+      "targets": [
+        {
+          "province": "x719040",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "mattawa": {
+      "targets": [
+        {
+          "province": "x7A5E12",
+          "weight": 2
+        },
+        {
+          "province": "x0538F5",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "mono": {
+      "targets": [
+        {
+          "province": "x9BC5AD",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "moloka_i": {
+      "targets": [
+        {
+          "province": "x6090C0",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "ambae": {
+      "targets": [
+        {
+          "province": "x75A377",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "acteon": {
+      "targets": [
+        {
+          "province": "xA000B0",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "uvea_atoll": {
+      "targets": [
+        {
+          "province": "x208030",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "vanikoro": {
+      "targets": [
+        {
+          "province": "x75A377",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "satawan_atoll": {
+      "targets": [
+        {
+          "province": "x414170",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "kauehi_atoll": {
+      "targets": [
+        {
+          "province": "xC6B798",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "taunga_tauranga_atoll": {
+      "targets": [
+        {
+          "province": "x54BB3D",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "nendo": {
+      "targets": [
+        {
+          "province": "x75A377",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "fakarava_atoll": {
+      "targets": [
+        {
+          "province": "x98C69C",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "ambrym": {
+      "targets": [
+        {
+          "province": "x75A377",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "chatillonaos": {
+      "targets": [
+        {
+          "province": "x90C060",
+          "weight": 5
+        },
+        {
+          "province": "x1140E0",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "taenga_atoll": {
+      "targets": [
+        {
+          "province": "x887771",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "enewetak_atoll": {
+      "targets": [
+        {
+          "province": "x808011",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "faaite_atoll": {
+      "targets": [
+        {
+          "province": "x5E2464",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "taungataki_atoll": {
+      "targets": [
+        {
+          "province": "xBA6E55",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "raroia_atoll": {
+      "targets": [
+        {
+          "province": "xDBAE9F",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "curacaute": {
+      "targets": [
+        {
+          "province": "xB03080",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "vave": {
+      "targets": [
+        {
+          "province": "x75A377",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "santiago_islands": {
+      "targets": [
+        {
+          "province": "x6ECA62",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "tahanea_atoll": {
+      "targets": [
+        {
+          "province": "x643424",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "tikehau_atoll": {
+      "targets": [
+        {
+          "province": "xA000B0",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "arno_atoll": {
+      "targets": [
+        {
+          "province": "x808011",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "sakao": {
+      "targets": [
+        {
+          "province": "x504090",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "carteret_atoll": {
+      "targets": [
+        {
+          "province": "x308254",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "aitutaki_atoll": {
+      "targets": [
+        {
+          "province": "xA000B0",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "santa_cruz_islands": {
+      "targets": [
+        {
+          "province": "x6ECA62",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "tabuaeran": {
+      "targets": [
+        {
+          "province": "x208030",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "mweru": {
+      "targets": [
+        {
+          "province": "xB982CA",
+          "weight": 1
+        },
+        {
+          "province": "x75FDD0",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "aupouri": {
+      "targets": [
+        {
+          "province": "xB2E71F",
+          "weight": 3
+        },
+        {
+          "province": "xF3D71B",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "nukutavake": {
+      "targets": [
+        {
+          "province": "xA000B0",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "tongareva": {
+      "targets": [
+        {
+          "province": "x208030",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "aopuni_atoll": {
+      "targets": [
+        {
+          "province": "xA000B0",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "vanu_aroaroa": {
+      "targets": [
+        {
+          "province": "x75A377",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "marutea": {
+      "targets": [
+        {
+          "province": "xA000B0",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "mili_atoll": {
+      "targets": [
+        {
+          "province": "x808011",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "badhu": {
+      "targets": [
+        {
+          "province": "x904090",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "pulusuk_atoll": {
+      "targets": [
+        {
+          "province": "x414170",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "ailinglaplap_atoll": {
+      "targets": [
+        {
+          "province": "x808011",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "gambaru": {
+      "targets": [
+        {
+          "province": "x915193",
+          "weight": 1
+        },
+        {
+          "province": "x7A78DD",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "maiana_atoll": {
+      "targets": [
+        {
+          "province": "x808090",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "itzcuintlan": {
+      "targets": [
+        {
+          "province": "xDEC8D3",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "toau_atoll": {
+      "targets": [
+        {
+          "province": "x59885E",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "gaua": {
+      "targets": [
+        {
+          "province": "x75A377",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "kaukura_atoll": {
+      "targets": [
+        {
+          "province": "x888659",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "mu_ngava": {
+      "targets": [
+        {
+          "province": "x898945",
+          "weight": 1
+        },
+        {
+          "province": "xF5F405",
+          "weight": 1
+        },
+        {
+          "province": "x874589",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "raraka_atoll": {
+      "targets": [
+        {
+          "province": "xC6B798",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "kakol_kiej": {
+      "targets": [
+        {
+          "province": "x42124E",
+          "weight": 4
+        },
+        {
+          "province": "x1030C0",
+          "weight": 1
+        },
+        {
+          "province": "xD030C0",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "aratika_atoll": {
+      "targets": [
+        {
+          "province": "x98C3C6",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "takaroa_atoll": {
+      "targets": [
+        {
+          "province": "xA000B0",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "motutunga_atoll": {
+      "targets": [
+        {
+          "province": "xA000B0",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "manuae_atoll": {
+      "targets": [
+        {
+          "province": "x208030",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "niue": {
+      "targets": [
+        {
+          "province": "x208030",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "belau": {
+      "targets": [
+        {
+          "province": "x414170",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "woleai_atoll": {
+      "targets": [
+        {
+          "province": "x414170",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "mahitahi": {
+      "targets": [
+        {
+          "province": "x8385E4",
+          "weight": 3
+        },
+        {
+          "province": "x1C59CC",
+          "weight": 3
+        },
+        {
+          "province": "x738A48",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "marokau_atoll": {
+      "targets": [
+        {
+          "province": "xA000B0",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "downpatrick": {
+      "targets": [
+        {
+          "province": "x688E79",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "ndom": {
+      "targets": [
+        {
+          "province": "x66C85A",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "jaluit_atoll": {
+      "targets": [
+        {
+          "province": "x808011",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "vanua_lava": {
+      "targets": [
+        {
+          "province": "x75A377",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "ngamotu": {
+      "targets": [
+        {
+          "province": "x810EEB",
+          "weight": 2
+        },
+        {
+          "province": "xC4FF1C",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "tamambo": {
+      "targets": [
+        {
+          "province": "x504090",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "motu_maha": {
+      "targets": [
+        {
+          "province": "xA1C4D2",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "rongelap_atoll": {
+      "targets": [
+        {
+          "province": "xCD1EA0",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "kosrae": {
+      "targets": [
+        {
+          "province": "x808011",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "majuro_atoll": {
+      "targets": [
+        {
+          "province": "x808011",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "maloelap_atoll": {
+      "targets": [
+        {
+          "province": "x80C011",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "khoja_idat_kala": {
+      "targets": [
+        {
+          "province": "xBB15CC",
+          "weight": 1
+        },
+        {
+          "province": "xBE7494",
+          "weight": 1
+        },
+        {
+          "province": "x9B9047",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "vasknarva": {
+      "targets": [
+        {
+          "province": "x25CC83",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "rongerik_atoll": {
+      "targets": [
+        {
+          "province": "x808011",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "hamar": {
+      "targets": [
+        {
+          "province": "x1255CC",
+          "weight": 5
+        },
+        {
+          "province": "x907B35",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "namu_atoll": {
+      "targets": [
+        {
+          "province": "x808011",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "manicouagan": {
+      "targets": [
+        {
+          "province": "xF903C7",
+          "weight": 1
+        },
+        {
+          "province": "xF7DBB7",
+          "weight": 1
+        },
+        {
+          "province": "xEB2761",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "riantana": {
+      "targets": [
+        {
+          "province": "x66C85A",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "kandas": {
+      "targets": [
+        {
+          "province": "xD2799B",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "ishpiialawaache": {
+      "targets": [
+        {
+          "province": "x52839A",
+          "weight": 1
+        },
+        {
+          "province": "xD74652",
+          "weight": 1
+        },
+        {
+          "province": "xF89B9D",
+          "weight": 1
+        },
+        {
+          "province": "xB6CA16",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "rekohu": {
+      "targets": [
+        {
+          "province": "xC25D9D",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "maewo": {
+      "targets": [
+        {
+          "province": "x75A377",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "mahnahwoonan": {
+      "targets": [
+        {
+          "province": "xC0049D",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "malte": {
+      "targets": [
+        {
+          "province": "x4CF080",
+          "weight": 1
+        },
+        {
+          "province": "x38CA10",
+          "weight": 1
+        },
+        {
+          "province": "x06CB06",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "taramakau": {
+      "targets": [
+        {
+          "province": "x0C69F3",
+          "weight": 1
+        },
+        {
+          "province": "x21E8F0",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "wotje_atoll": {
+      "targets": [
+        {
+          "province": "x80C011",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "ilalumaala": {
+      "targets": [
+        {
+          "province": "xFA990A",
+          "weight": 1
+        },
+        {
+          "province": "xA5B2DA",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "opiticiwan": {
+      "targets": [
+        {
+          "province": "xEA68F6",
+          "weight": 1
+        },
+        {
+          "province": "x0F9997",
+          "weight": 1
+        },
+        {
+          "province": "xD11049",
+          "weight": 1
+        },
+        {
+          "province": "xDA0669",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "ailuk_atoll": {
+      "targets": [
+        {
+          "province": "x808011",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "okarito": {
+      "targets": [
+        {
+          "province": "x21E8F0",
+          "weight": 1
+        },
+        {
+          "province": "x8385E4",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "arutua_atoll": {
+      "targets": [
+        {
+          "province": "xCBC996",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "chuainisin": {
+      "targets": [
+        {
+          "province": "xB0E4AA",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "niigugis": {
+      "targets": [
+        {
+          "province": "xC00000",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "likiep_atoll": {
+      "targets": [
+        {
+          "province": "x808011",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "bikini_atoll": {
+      "targets": [
+        {
+          "province": "x808011",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "shumushu": {
+      "targets": [
+        {
+          "province": "xA060DF",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "caguatl": {
+      "targets": [
+        {
+          "province": "x239726",
+          "weight": 1
+        },
+        {
+          "province": "xFF3CFE",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "kwajalein_atoll": {
+      "targets": [
+        {
+          "province": "xF5DBBF",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "naahmigus": {
+      "targets": [
+        {
+          "province": "xC00000",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "ujae_atoll": {
+      "targets": [
+        {
+          "province": "x808011",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "nunligran": {
+      "targets": [
+        {
+          "province": "xF6C660",
+          "weight": 1
+        },
+        {
+          "province": "x0E7119",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "nutepylmyn": {
+      "targets": [
+        {
+          "province": "xD42234",
+          "weight": 1
+        },
+        {
+          "province": "xCCFE72",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "kitagnaq": {
+      "targets": [
+        {
+          "province": "x5C9007",
+          "weight": 1
+        }
+      ],
+      "review_note": "Source polygon EE53BF crosses x=0/16384. Arithmetic centroid incorrectly fell in Yakutsk. Use the existing Alaska island proxy also reviewed for St Matthew; preserve omitted source microstate handling."
+    },
+    "aur_atoll": {
+      "targets": [
+        {
+          "province": "x808011",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "sasignan": {
+      "targets": [
+        {
+          "province": "xC00000",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "sivuqaq": {
+      "targets": [
+        {
+          "province": "xF423DB",
+          "weight": 1
+        },
+        {
+          "province": "x5C9007",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "savoonga": {
+      "targets": [
+        {
+          "province": "x63A92C",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "st_matthew": {
+      "targets": [
+        {
+          "province": "x5C9007",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "taka_atoll": {
+      "targets": [
+        {
+          "province": "x808011",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "onnekotan": {
+      "targets": [
+        {
+          "province": "xA060DF",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "yoniveem": {
+      "targets": [
+        {
+          "province": "x77B793",
+          "weight": 3
+        },
+        {
+          "province": "xA5205F",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "ostrov_beringa": {
+      "targets": [
+        {
+          "province": "xB42AD1",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "utumaala": {
+      "targets": [
+        {
+          "province": "x706090",
+          "weight": 1
+        },
+        {
+          "province": "xCC30AA",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "akuugun": {
+      "targets": [
+        {
+          "province": "xC00000",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "yeskumaala": {
+      "targets": [
+        {
+          "province": "x706090",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "vankarem": {
+      "targets": [
+        {
+          "province": "x983566",
+          "weight": 1
+        },
+        {
+          "province": "x40AE32",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "guvrel": {
+      "targets": [
+        {
+          "province": "x633AE3",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "iultin": {
+      "targets": [
+        {
+          "province": "xF492A2",
+          "weight": 2
+        },
+        {
+          "province": "x32E617",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "nuvuqaq": {
+      "targets": [
+        {
+          "province": "x521127",
+          "weight": 1
+        },
+        {
+          "province": "x54E2E1",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "amguema": {
+      "targets": [
+        {
+          "province": "x97B34B",
+          "weight": 1
+        },
+        {
+          "province": "x3030D2",
+          "weight": 1
+        },
+        {
+          "province": "xA44617",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "ervykynnot": {
+      "targets": [
+        {
+          "province": "x1A9D71",
+          "weight": 1
+        },
+        {
+          "province": "xACEE60",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "ryrkaypiy": {
+      "targets": [
+        {
+          "province": "xEEE151",
+          "weight": 1
+        },
+        {
+          "province": "xC8AB5B",
+          "weight": 1
+        },
+        {
+          "province": "x0A8D89",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "yanrakynnot": {
+      "targets": [
+        {
+          "province": "x9F9682",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "keniergyn": {
+      "targets": [
+        {
+          "province": "x848E35",
+          "weight": 1
+        },
+        {
+          "province": "x4DCE0E",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "enmyl_yn": {
+      "targets": [
+        {
+          "province": "x115976",
+          "weight": 1
+        },
+        {
+          "province": "xF6C660",
+          "weight": 1
+        },
+        {
+          "province": "xFC93AB",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "qaxun": {
+      "targets": [
+        {
+          "province": "xC00000",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "sigheneg": {
+      "targets": [
+        {
+          "province": "x330EB5",
+          "weight": 1
+        },
+        {
+          "province": "x2FD41A",
+          "weight": 1
+        },
+        {
+          "province": "xD6110A",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "kytryn": {
+      "targets": [
+        {
+          "province": "xC90EA4",
+          "weight": 2
+        },
+        {
+          "province": "x48EE75",
+          "weight": 2
+        },
+        {
+          "province": "x54E2E1",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "innurmin": {
+      "targets": [
+        {
+          "province": "x77DF2D",
+          "weight": 1
+        },
+        {
+          "province": "x4B9F7B",
+          "weight": 1
+        },
+        {
+          "province": "x710F78",
+          "weight": 1
+        },
+        {
+          "province": "xBB532D",
+          "weight": 1
+        },
+        {
+          "province": "xDBAC0C",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "amiq": {
+      "targets": [
+        {
+          "province": "x27049B",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "erikub_atoll": {
+      "targets": [
+        {
+          "province": "x808011",
+          "weight": 1
+        }
+      ],
+      "review_note": ""
+    },
+    "payaku": {
+      "targets": [
+        {
+          "province": "xE29237",
+          "weight": 1
+        },
+        {
+          "province": "x9C9F0B",
+          "weight": 1
+        },
+        {
+          "province": "xD54255",
+          "weight": 1
+        },
+        {
+          "province": "x140E0C",
+          "weight": 1
+        }
+      ],
+      "review_note": "User explicitly added x140E0C to Payaku; retain existing links and equal-share weights."
+    },
+    "pawcatuck": {
+      "targets": [
+        {
+          "province": "x1A77EA",
+          "weight": 1
+        },
+        {
+          "province": "xC5CE93",
+          "weight": 1
+        }
+      ],
+      "review_note": "User explicitly added xC5CE93 to Pawcatuck; retain existing link and equal-share weights."
+    },
+    "buriari": {
+      "targets": [
+        {
+          "province": "xECC061",
+          "weight": 1
+        }
+      ],
+      "review_note": "User explicitly replaced Buriari targets with xECC061 only."
+    },
+    "malta": {
+      "targets": [
+        {
+          "province": "x015121",
+          "weight": 1
+        },
+        {
+          "province": "x3A8B51",
+          "weight": 1
+        }
+      ],
+      "review_note": "Existing named-island geographic anchor, promoted without its campaign owner or population."
+    },
+    "tahiti": {
+      "targets": [
+        {
+          "province": "x0181B0",
+          "weight": 1
+        },
+        {
+          "province": "x2A4340",
+          "weight": 1
+        },
+        {
+          "province": "x2C2E13",
+          "weight": 1
+        },
+        {
+          "province": "x42432A",
+          "weight": 1
+        },
+        {
+          "province": "x54BB3D",
+          "weight": 1
+        },
+        {
+          "province": "x59885E",
+          "weight": 1
+        },
+        {
+          "province": "x5E2464",
+          "weight": 1
+        },
+        {
+          "province": "x643424",
+          "weight": 1
+        },
+        {
+          "province": "x718885",
+          "weight": 1
+        },
+        {
+          "province": "x728871",
+          "weight": 1
+        },
+        {
+          "province": "x7D7D62",
+          "weight": 1
+        },
+        {
+          "province": "x887771",
+          "weight": 1
+        },
+        {
+          "province": "x888659",
+          "weight": 1
+        },
+        {
+          "province": "x98C3C6",
+          "weight": 1
+        },
+        {
+          "province": "x98C69C",
+          "weight": 1
+        },
+        {
+          "province": "x998293",
+          "weight": 1
+        },
+        {
+          "province": "xBA6E55",
+          "weight": 1
+        },
+        {
+          "province": "xC6B798",
+          "weight": 1
+        },
+        {
+          "province": "xCBC996",
+          "weight": 1
+        },
+        {
+          "province": "xDBAE9F",
+          "weight": 1
+        },
+        {
+          "province": "xF1DBF3",
+          "weight": 1
+        }
+      ],
+      "review_note": "Existing named-island geographic anchor, promoted without its campaign owner or population."
+    },
+    "tongatapu": {
+      "targets": [
+        {
+          "province": "x208030",
+          "weight": 1
+        },
+        {
+          "province": "xA7F8A1",
+          "weight": 1
+        },
+        {
+          "province": "xC00010",
+          "weight": 1
+        },
+        {
+          "province": "xD98CDA",
+          "weight": 1
+        }
+      ],
+      "review_note": "Existing named-island geographic anchor, promoted without its campaign owner or population."
+    },
+    "nauru": {
+      "targets": [
+        {
+          "province": "x418382",
+          "weight": 1
+        },
+        {
+          "province": "xC041F0",
+          "weight": 1
+        }
+      ],
+      "review_note": "Existing named-island geographic anchor, promoted without its campaign owner or population."
+    }
+  },
+  "provenance": {
+    "review_file": "D:\\Data\\Other\\EU5toV3\\.local\\economy\\packages\\m5-frontier-20261002-100604-390008\\location_reviews.rebased.json",
+    "review_file_sha256": "f765faf2b30cc74c06261528f13ea55c095743920ce558a0ce449822250d2df4",
+    "note": "Only geometric targets/weights retained; no 1780 country, population, culture or island ownership decisions copied.",
+    "named_island_anchor_stage": "D:\\Data\\Other\\EU5toV3\\.local\\economy\\packages\\m5-frontier-20261002-100604-390008\\demographic\\staging\\location_crosswalk.csv"
+  }
+}

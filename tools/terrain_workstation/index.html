@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>1337 荒地映射工作站</title><link rel="stylesheet" href="/style.css"></head>
+<body>
+<header><div><strong>1337 · 荒地映射工作站</strong><span id="progress">载入审查结果…</span></div><nav><button id="refresh-review">刷新核准</button><button id="help">使用说明</button><button id="export">导出记录</button><label class="button">导入记录<input id="import" type="file" accept=".json" hidden></label></nav></header>
+<div id="message" role="status">正在加载 1337 源证据与目标地图…</div>
+<main>
+<aside class="queue"><h2>待审地块组 <small>复核分州或查看原始缺口</small></h2><select id="scope-filter" aria-label="审查批次"><option value="empty_parts">本轮空分州复核</option><option value="original">原始缺口与旧标注</option><option value="resolutions">已落实特别修正</option><option value="all">全部地块组</option></select><input id="filter" placeholder="搜索州名 / 地块编号" aria-label="筛选连通片"><select id="status-filter" aria-label="筛选状态"><option value="all">全部连通片</option><option value="pending">尚未全部匹配</option><option value="mapped">已全部匹配</option><option value="deferred">含暂缓地块</option></select><div id="queue"></div></aside>
+<section class="maps">
+<div class="map-panel"><div class="map-head"><strong>源地图 · EU5 · 1337.4.1</strong><div><button id="source-focus">定位参考区域</button><button id="source-world">全球</button></div></div><div class="legend"><i class="white"></i> 无主可居住地 <i class="grey"></i> 荒地 <span>蓝色为国家；浅褐色为无主民族地区</span></div><canvas id="source-map" tabindex="0" aria-label="1337 EU5 源地图，拖动平移，滚轮缩放"></canvas><div id="source-caption" class="caption">邻近位置仅供导航，不会自动匹配</div></div>
+<div class="map-panel"><div class="map-head"><strong>目标地图 · V3 地块覆盖</strong><div><button id="target-focus">定位当前连通片</button><button id="target-world">全球</button></div></div><div class="legend"><i class="white"></i> 松散部落 <i style="background:#4a718b"></i> 国家 <i class="gold"></i> 当前连通片 <i class="cyan"></i> 本次选中 <span>点击地块切换选择</span></div><canvas id="target-map" tabindex="0" aria-label="V3 目标地图，拖动平移，滚轮缩放"></canvas><div id="target-caption" class="caption"></div></div>
+</section>
+<aside class="editor"><h2 id="group-title">选择连通片</h2><p class="muted">可整组指定，也可分块指定不同源地点。旧标注会保留，需要重新保存才能确认本轮复核。</p>
+<div id="adjudication" class="detail" hidden></div><div id="review-issue" class="detail" hidden></div><div class="row"><button id="all">整片全选</button><button id="none">清空选择</button><span id="selected-count"></span></div><div id="provinces"></div>
+<h3>1 · 选择源地点</h3><input id="search" placeholder="中文 / 英文 / 源地点键" aria-label="搜索源地点"><div id="search-results"></div>
+<div id="source-detail" class="detail">点击源地图或搜索地点。</div><div class="row"><button id="use-source">设为地理对应</button><button id="use-reference">设为归属参考</button></div>
+<div class="assignment"><label>地理对应 <b id="chosen-source">尚未指定</b></label><label>归属参考（可选） <b id="chosen-reference">默认使用地理对应</b> <button id="clear-reference" class="link">清除参考</button></label><p id="evidence" class="muted">归属与主体民族随输入存档重新读取；不转移人口。</p></div>
+<label for="note">备注</label><textarea id="note" rows="2" maxlength="4000" placeholder="例如：该离岸地块对应源地图的某岛"></textarea>
+<div class="actions"><button id="save" class="primary">保存所选匹配</button><button id="defer">暂缓所选</button><button id="reset">设为待审</button><button id="next">下一待补片 →</button></div><p class="muted" id="save-status">保存到本地独立审定记录</p>
+<details><summary>邻近源地点（仅供导航）</summary><div id="candidates"></div></details>
+</aside>
+</main>
+<dialog id="help-dialog"><h2>补充 1337 地理缺口</h2><ol><li>左侧选连通片；目标地图中金色为该片，青色圈表示本次选择。可点图或勾选地块拆分。</li><li>在源地图点击，或搜索中文、英文和地点键。点击“设为地理对应”。</li><li>源地点若是无人口荒地，可另选有归属或人口证据的源地点，点击“设为归属参考”。这是一条需要你审定的地理规则。</li><li>点击“保存所选匹配”。地理对应、参考地点与备注写入本地文件，保留版本历史；下次打开继续。</li></ol><p>地图可拖动、滚轮缩放、方向键平移，左右经度接缝连续。小岛可通过列表定位。邻近地点仅辅助导航，不代表正确匹配。</p><p>记录可跨存档复用，归属和民族每次重新读取。源地点没有有效证据时仍会阻止预检导出。此处不改模组、不迁移人口。</p><button id="close-help">开始匹配</button></dialog>
+<script src="/app.js"></script></body></html>

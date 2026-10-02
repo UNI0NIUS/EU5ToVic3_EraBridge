@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.25)
 set(VERBOSE true)
 
 project(EU5ToVic3)
+option(BUILD_FRONTEND "Build the optional converter GUI" ON)
 if (RUN_CLANG_TIDY)
 	set(BUILD_TYPE "Clang-tidy")
 else (RUN_CLANG_TIDY)
@@ -10,6 +11,7 @@ endif (RUN_CLANG_TIDY)
 
 set(CONVERTER_SOURCE_DIR ${CMAKE_SOURCE_DIR}/EU5ToVic3/Source)
 set(CONVERTER_DIR ${CMAKE_SOURCE_DIR}/EU5ToVic3)
+set(RAKALY_DIR "${CONVERTER_DIR}/Resources" CACHE PATH "Directory containing the Rakaly runtime and import library")
 set(FRONTER_DIR ${CMAKE_SOURCE_DIR}/Fronter/)
 set(FRONTER_SOURCE_DIR ${CMAKE_SOURCE_DIR}/Fronter/Fronter/Source)
 set(FRONTER_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/build/${BUILD_TYPE}-${PLATFORM})
@@ -97,6 +99,8 @@ add_library(commonLib ${COMMON_SOURCES})
 
 
 #### Fronter ####
+
+if (BUILD_FRONTEND)
 
 # Ideally, this would all be set up in the Fronter's cmake file and we'd just need to `add_subdirectory(${FRONTER_DIR})`
 
@@ -224,6 +228,8 @@ elseif (PLATFORM STREQUAL "Linux" AND NOT RUN_CLANG_TIDY)
 endif (PLATFORM STREQUAL "Windows" AND NOT RUN_CLANG_TIDY)
 
 
+endif (BUILD_FRONTEND)
+
 ### Converter ####
 
 include_directories("${CONVERTER_DIR}")
@@ -235,8 +241,9 @@ include_directories("${CONVERTER_SOURCE_DIR}/V3World")
 include_directories("${CONVERTER_SOURCE_DIR}/Helpers")
 include_directories("${CONVERTER_SOURCE_DIR}/Output")
 include_directories("${CONVERTER_SOURCE_DIR}/Configuration")
+include_directories("${CMAKE_SOURCE_DIR}/commonItems/external/json/single_include")
 
-link_directories(${CONVERTER_DIR}/Resources)
+link_directories(${RAKALY_DIR})
 
 file(GLOB MAIN_SOURCES "${CONVERTER_SOURCE_DIR}/*.cpp")
 file(GLOB CONFIGURATION_SOURCES "${CONVERTER_SOURCE_DIR}/Configuration/*.cpp")
@@ -253,7 +260,6 @@ file(GLOB OUT_SUBSUBDIR_SOURCES "${CONVERTER_SOURCE_DIR}/Output/*/*/*.cpp")
 file(GLOB MAPPER_SOURCES "${CONVERTER_SOURCE_DIR}/Mappers/*/*.cpp")
 file(GLOB MAPPER_SUBDIR_SOURCES "${CONVERTER_SOURCE_DIR}/Mappers/*/*/*.cpp")
 
-link_directories("${CONVERTER_DIR}/resources") # You may need to place the rakaly files in a subfolder named rakaly for this to work properly
 
 if (RUN_CLANG_TIDY)
 	set(CMAKE_CXX_CLANG_TIDY clang-tidy --exclude-header-filter=.*commonItems|Fronter.* --config-file=${CMAKE_SOURCE_DIR}/.clang-tidy --extra-arg=/EHsc)
@@ -309,7 +315,7 @@ if (NOT RUN_CLANG_TIDY)
 	file(COPY "${CONVERTER_DIR}/Data_Files/blankMod" DESTINATION "${CONVERTER_OUTPUT_DIRECTORY}")
 	file(COPY "${CONVERTER_DIR}/Data_Files/configurables" DESTINATION "${CONVERTER_OUTPUT_DIRECTORY}")
 	if (PLATFORM STREQUAL "Windows")
-		configure_file("${CONVERTER_DIR}/resources/rakaly.dll" "${CONVERTER_OUTPUT_DIRECTORY}/rakaly.dll" COPYONLY) # if you update the rakaly location also update it here
+		configure_file("${RAKALY_DIR}/rakaly.dll" "${CONVERTER_OUTPUT_DIRECTORY}/rakaly.dll" COPYONLY)
 	endif (PLATFORM STREQUAL "Windows")
 	add_custom_command(TARGET EU5ToVic3Converter POST_BUILD WORKING_DIRECTORY ${CMAKE_SOURCE_DIR} COMMAND git rev-parse HEAD > ${CONVERTER_OUTPUT_DIRECTORY}/../commit_id.txt)
 endif (NOT RUN_CLANG_TIDY)
@@ -348,3 +354,12 @@ target_precompile_headers(EU5ToVic3Tests REUSE_FROM EU5ToVic3lib)
 target_link_libraries(EU5ToVic3Tests LINK_PUBLIC EU5ToVic3lib gtest)
 
 file(COPY "EU5ToVic3Tests/TestFiles" DESTINATION "${TEST_OUTPUT_DIRECTORY}")
+
+if (PLATFORM STREQUAL "Windows")
+	add_custom_command(TARGET EU5ToVic3Tests POST_BUILD
+		COMMAND ${CMAKE_COMMAND} -E copy_if_different
+		"${RAKALY_DIR}/rakaly.dll" "$<TARGET_FILE_DIR:EU5ToVic3Tests>")
+endif ()
+enable_testing()
+add_test(NAME converter_tests COMMAND EU5ToVic3Tests)
+set_tests_properties(converter_tests PROPERTIES WORKING_DIRECTORY "${TEST_OUTPUT_DIRECTORY}")

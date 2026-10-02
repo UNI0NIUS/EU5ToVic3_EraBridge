@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "enabled": true,
+  "country_type": "decentralized",
+  "unowned_source_owners": [
+    "0"
+  ],
+  "grouping": "connected_land_component_of_mapped_primary_culture",
+  "primary_culture": "largest_source_population_before_culture_mapping",
+  "tie_break": "source_culture_key",
+  "missing_evidence": "retain_and_report",
+  "note": "Choose each target province's source-population plurality, then merge land-connected uncolonized provinces with the same mapped primary culture across state borders. Seas, other cultures and owned land do not bridge components. Only explicitly source-unowned habitable territory qualifies; no population creation or loss of source-owned territory. Native V3 colonization requirements remain in force.",
+  "generated_native_military": {
+    "copy_template_conscription_bonuses": false,
+    "basis": "Generated source-unowned ethnic components have no source-country military evidence; do not inherit country-specific native_conscription multipliers from the graphics/culture template. Retain ordinary native V3 laws and conscription mechanics. Explicit vanilla population-template countries are exempt."
+  }
+}

@@ -1,0 +1,63 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>资源与耕地调整对照</title>
+<style>
+:root{color-scheme:light;--ink:#203442;--muted:#526a77;--line:#d7e0e2;--blue:#245d73;--teal:#16716c}*{box-sizing:border-box}body{margin:0;background:#f3f5f2;color:var(--ink);font:15px/1.65 "Microsoft YaHei",system-ui,sans-serif}main{max-width:1400px;margin:auto;padding:35px 30px 60px}h1{font-size:30px;margin:0 0 8px}h2{font-size:21px;margin:26px 0 12px}h3{font-size:17px;margin:18px 0 8px}p{margin:8px 0 12px}.muted{color:var(--muted)}.card{background:white;border:1px solid var(--line);border-radius:8px;padding:20px;margin-top:18px}.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.metrics .card{border-top:4px solid var(--teal)}.big{font-size:30px;font-weight:650;line-height:1.3}small{font-size:13px;color:var(--muted)}.cols{display:grid;grid-template-columns:1fr 1fr;gap:20px}.note{border-left:4px solid #bd8c37;background:#fffaeb;padding:12px 18px;margin:18px 0}.formula{background:#edf3f4;padding:15px;font-family:inherit;white-space:pre-wrap;line-height:1.85;border-radius:5px}.tabs{display:flex;gap:8px;margin:26px 0 10px;flex-wrap:wrap}button{border:1px solid #aec1c8;background:white;color:var(--ink);padding:8px 15px;border-radius:5px;font:inherit;cursor:pointer}button.on{background:var(--blue);border-color:var(--blue);color:white}button:hover{filter:brightness(.95)}.controls{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin:15px 0}select,input{font:inherit;padding:8px;border:1px solid #b2c5cd;border-radius:4px;background:white}input[type=search]{min-width:280px}.tablewrap{overflow:auto;border:1px solid var(--line);background:white}table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums}th,td{padding:10px 13px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}th{background:#e9eff0;white-space:nowrap;position:sticky;top:0}tbody tr:nth-child(even){background:#f8faf9}td.num,th.num{text-align:right;white-space:nowrap}.delta{color:var(--teal);font-weight:600}.id{font:11px/1.4 ui-monospace,monospace;color:#657c87;display:block;word-break:break-all}.tight th,.tight td{padding:7px 10px}.close{float:right}.src{overflow-wrap:anywhere;font:12px/1.8 ui-monospace,monospace}.pill{font-size:12px;color:#775c2f;background:#f7ebd0;padding:2px 6px;border-radius:3px}#detail{scroll-margin-top:15px}footer{margin-top:28px;color:var(--muted);font-size:13px}@media(max-width:850px){main{padding:20px 12px}.metrics,.cols{grid-template-columns:1fr}.big{font-size:26px}h1{font-size:24px}}
+</style><main>
+<h1>资源与耕地调整对照</h1><p class="muted" id="version"></p>
+<p>对照基准为本机 V3 原版州定义，调整结果为当前安装包。只读报告，不会修改模组。所有容量单位均为<strong>可建设等级</strong>，不是土地面积、矿藏吨数，也不是已经建好的建筑数量。</p>
+<div class="metrics" id="metrics"></div>
+<div class="note"><strong>25% 与 75% 用在不同环节。</strong>25% 把人口或源就业人口当量折算为 V3 预计劳动力；75% 只用于计算“如果正规岗位未完全就业，需要留多少自给岗位”。资源上限不乘 75%。分割州采用省份数量份额，可能将一个小份额所需容量放大到整州。</div>
+<div class="cols"><section class="card"><h2 style="margin-top:0">耕地如何算</h2><div class="formula">预计劳动力 = 人口 × 25%
+源农业底线 = 源农村劳动力 − 商业农业岗位
+就业退路 = 预计劳动力 − 正规岗位容量 × 75%
+自给等级 = 向上取整[max(0, 源农业底线, 就业退路) ÷ 每级自给岗位]
+所需耕地份额 = 商业农业等级 + 自给等级</div><p><small>内陆孤立地区的正规岗位抵扣为 0%，为全部预计劳动力留自给退路。普通自给农场每级 5,000 岗位，稻田通常 10,000，按实际定义计算。原版耕地作为下限，只增不减。</small></p></section>
+<section class="card"><h2 style="margin-top:0">资源上限如何算</h2><div class="formula">源就业证据 = 地点 RGO 就业 + 相关生产建筑总就业
+目标等级 = 四舍五入[映射到本国州份额的源就业 × 25% ÷ 每级岗位]
+整州上限 = max(原版上限, 各国目标等级 ÷ 省份份额)
+向上取整，再检查最大余数分配是否满足各国目标</div><p><small>本轮只由源证据扩容伐木、渔业、煤、铁、铅五类；硫磺、金矿、油田等未用此规则扩容。科技和生产方式改变每级岗位，因此相同源就业可能得到不同上限。已建等级另受劳动力、科技、海岸和后续产业调整约束。</small></p></section></div>
+<h2>意大利与波西米亚：本国份额</h2><p class="muted">汇总包含该国全部领土。渔业容量份额不等于可建渔港：波西米亚没有自有海岸，已建渔港仍为 0。</p><div class="cols" id="countries"></div>
+<h2>资源总量：全世界固定资源上限</h2><p class="muted">包括未调整的原版固定上限；“新增资源州项”表示原版该州没有此项上限，转换后新增。未发现资源的潜力不是此表统计对象。</p><div class="tablewrap" id="resourceSummary"></div>
+<div class="tabs"><button class="on" data-tab="land">耕地：整州前后</button><button data-tab="parts">耕地：各国份额与岗位</button><button data-tab="resources">资源：上限与已建</button><button id="download">下载完整依据 JSON</button></div>
+<div class="controls"><label>国家 <select id="country"><option value="">全部</option><option value="ITA">意大利 ITA</option><option value="BOH">波西米亚 BOH</option></select></label><input id="search" type="search" placeholder="搜索中文州名、州 ID 或资源名"><label>排序 <select id="sort"><option value="delta">增加量从大到小</option><option value="ratio">倍率从大到小</option><option value="name">州 ID</option></select></label><label><input id="changed" type="checkbox" checked>仅显示有变化</label></div>
+<p id="scope" class="muted"></p><div class="tablewrap" id="table"></div><section id="detail" class="card" hidden></section>
+<h2>解读边界</h2><p>耕地增加是在目标游戏中为人口安排就业退路；资源增加是在目标游戏中容纳源产业就业的容量换算。两者都<strong>不是读取 EU5 土地面积或地下储量后直接迁移</strong>。分割州的整州扩容还会增加其他国家份额。尤其应复核小份额引起的大幅放大，不能把公式输出当作已经验证的地理合理性。</p>
+<p>本页的本国容量份额按省份数量和最大余数法推算，不是游戏运行后的实测分配。岗位是容量而非实际招聘，不能据此直接推定收入、价格或生活水平。土地依据中农村人数已在原台账取整，逐步展示以存档中的“所需自给等级”作为精确规则输出。</p>
+<details><summary>来源与核验</summary><p id="verification"></p><div id="sources" class="src"></div></details><footer>生成日期：2026-10-02。可以筛选国家、搜索州名，点击“依据”查看每一州的计算及源地点就业。筛选国家不会把整州表自动改成本国份额；本国份额请看对应标签页或展开依据。</footer>
+</main><script>
+const D=__DATA__;
+const $=s=>document.querySelector(s),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const n=(x,d=0)=>Number(x).toLocaleString('zh-CN',{maximumFractionDigits:d});const pct=x=>n(x*100,2)+'%';
+const cell=(x,num=false)=>`<td class="${num?'num':''}">${x}</td>`;
+function table(headers,rows){return '<table><thead><tr>'+headers.map(x=>'<th>'+x+'</th>').join('')+'</tr></thead><tbody>'+rows.map(r=>'<tr>'+r.join('')+'</tr>').join('')+'</tbody></table>'}
+$('#version').textContent=`当前安装 ${D.installed_version} · 经济来源 ${D.run} · 原版州定义与实际输出逐项比对`;
+$('#metrics').innerHTML=[['调整耕地',`${D.totals.changed_land_states} 州`,`这些州合计 ${n(D.totals.land_before)} → ${n(D.totals.land_after)}，增加 ${n(D.totals.land_after-D.totals.land_before)}`],['调整资源上限',`${D.totals.resource_entries} 项`,`覆盖 ${D.totals.resource_states} 州；同一州多种资源分项统计`],['规则中的参数','25% / 75%','预计劳动力比例 / 正规岗位安全抵扣比例']].map(a=>`<div class="card"><small>${a[0]}</small><div class="big">${a[1]}</div><small>${a[2]}</small></div>`).join('');
+$('#countries').innerHTML=Object.entries(D.summary).map(([t,s])=>`<div class="card"><h3 style="margin-top:0">${esc(s.name)} ${t}</h3><p>耕地份额 <strong>${n(s.land_before)} → ${n(s.land_after)}</strong>，增加 ${n(s.land_after-s.land_before)}；${s.changed_parts} 个本国州份额变化。</p><div class="tablewrap tight">${table(['资源','原上限份额','新上限份额','已建等级'],s.resources.map(r=>[cell(esc(r.name)),cell(n(r.before),true),cell(n(r.after),true),cell(n(r.built),true)]))}</div></div>`).join('');
+$('#resourceSummary').innerHTML=table(['资源','原世界上限','新世界上限','增加','变化州项','其中从 0 新增'],D.groups.filter(r=>r.changed).map(r=>[cell(esc(r.name)),cell(n(r.before),true),cell(n(r.after),true),cell('+'+n(r.after-r.before),true),cell(n(r.changed),true),cell(n(r.new),true)]));
+$('#verification').textContent=`安装版州定义与 ${D.run} 一致；${D.verification.land_caps_reconstructed} 州耕地从就业台账和份额重新计算一致；${D.verification.resource_caps_reconstructed} 项资源上限从源就业、各国份额和生产方式重新计算一致；源就业总量与资源台账一致。`;
+$('#sources').innerHTML=D.sources.map(s=>'<div>'+esc(s)+'</div>').join('');
+const tags=[...new Set(D.parts.map(r=>r.country))].filter(t=>!['ITA','BOH'].includes(t)).sort();$('#country').innerHTML+=tags.map(t=>`<option value="${esc(t)}">${esc(t)}</option>`).join('');
+let tab='land',visible=[];
+const ratio=r=>{const a=r.before??r.old_arable_share,b=r.after??r.new_arable_share;return a?b/a:(b?Number.MAX_VALUE:1)};
+function draw(){const c=$('#country').value,q=$('#search').value.toLowerCase(),sort=$('#sort').value;visible=D[tab].filter(r=>(!c||(tab==='parts'?r.country===c:r.countries.includes(c)))&&(!$('#changed').checked||r.delta!==0)&&JSON.stringify([r.name,r.state,r.resource_name,r.country]).toLowerCase().includes(q));visible.sort((a,b)=>sort==='name'?a.state.localeCompare(b.state):sort==='ratio'?(ratio(b)-ratio(a)):b.delta-a.delta);
+let h,rs;
+const name=r=>cell(`${esc(r.name)}<span class="id">${esc(r.state)}</span>`),btn=i=>cell(`<button data-row="${i}">依据</button>`);
+if(tab==='land'){h=['州','归属','原整州耕地','新整州耕地','增加','倍率','主要需求方',''];rs=visible.map((r,i)=>[name(r),cell(esc(r.countries.join(' / '))),cell(n(r.before),true),cell(n(r.after),true),cell('+'+n(r.delta),true),cell(r.multiple?n(r.multiple,2)+'×':'新增',true),cell(`${esc(r.driver)}（${pct(r.driver_share)}）`),btn(i)]);}
+else if(tab==='parts'){h=['州','国家','省份占比','原耕地份额','新耕地份额','增加','预计劳动力','正规岗位容量',''];rs=visible.map((r,i)=>[name(r),cell(esc(r.country)),cell(pct(r.province_share),true),cell(n(r.old_arable_share),true),cell(n(r.new_arable_share),true),cell('+'+n(r.delta),true),cell(n(r.estimated_workforce),true),cell(n(r.formal_job_capacity),true),btn(i)]);}
+else{h=['州','资源','原整州上限','新整州上限','增加','整州已建','源就业当量','分割州',''];rs=visible.map((r,i)=>[name(r),cell(esc(r.resource_name)),cell(n(r.before),true),cell(n(r.after),true),cell('+'+n(r.delta),true),cell(n(r.built),true),cell(n(r.source_people,2),true),cell(r.split?'是':'否'),btn(i)]);}
+$('#table').innerHTML=table(h,rs);$('#scope').textContent=`共 ${visible.length} 行。${tab==='parts'?'这里列各国在州内的份额。':'这里列整州容量；国家筛选表示“该国拥有此州的一部分”，数值仍为整州。'} 资源页仅含实际调整的 687 项，未调整种类不在明细中。`;
+$('#table').querySelectorAll('[data-row]').forEach(b=>b.onclick=()=>detail(visible[+b.dataset.row]));}
+function landDetail(ps){return ps.map(r=>`<h3>${esc(r.country_name)} ${esc(r.country)}：占 ${r.province_count}/${r.province_total} 个省份</h3><div class="formula">居民 ${n(r.population)} × 25% = ${n(r.population*.25,2)} 预计劳动力
+正规岗位 ${n(r.formal_job_capacity)} × ${pct(r.formal_staffing_credit)} = ${n(r.formal_job_capacity*r.formal_staffing_credit,2)} 岗位抵扣
+就业退路 = ${n(Math.max(0,r.fallback_workers),2)}；源农业底线剩余 = ${n(r.rural_workers_remaining)}
+源农业所需自给等级 ${n(r.source_rural_subsistence_levels)}；退路所需自给等级 ${n(Math.ceil(Math.max(0,r.fallback_workers)/r.subsistence_jobs_per_level))}
+商业农业 ${n(r.commercial_arable_levels)} 级 + 自给 ${n(r.required_arable_share-r.commercial_arable_levels)} 级 = 所需份额 ${n(r.required_arable_share)}
+实际分配份额：${n(r.old_arable_share)} → ${n(r.new_arable_share)}；每级自给岗位 ${n(r.subsistence_jobs_per_level)}</div><p><small>主要约束：${r.constraint}。${r.isolated_market_full_workforce_fallback?'内陆孤立地区，正规岗位不抵扣。':''} 分割州先以份额反推整州容量，再用最大余数法核对。</small></p>`).join('');}
+function detail(r){let body=`<button class="close" onclick="document.querySelector('#detail').hidden=true">收起</button><h2 style="margin-top:0">${esc(r.name)} ${esc(r.resource_name||'')} 的调整依据</h2>`;
+if(tab==='resources'){body+=`<p>整州上限 ${r.before} → ${r.after}；源就业当量合计 ${n(r.source_people,2)}。表中“目标级数”使用资源播种阶段的生产方式；最终已建建筑可能在后续采用不同自动化。</p><div class="tablewrap">`+table(['国家','省份份额','源就业当量','×25%','每级岗位','目标级数','旧份额','新份额','已建'],r.allocations.map(x=>[cell(esc(x.country)),cell(`${x.province_count}/${x.province_total}`),cell(n(x.source_people,2),true),cell(n(x.source_people*.25,2),true),cell(x.jobs_per_level===null?'不适用':n(x.jobs_per_level),true),cell(n(x.requested),true),cell(n(x.before),true),cell(n(x.after),true),cell(n(x.built),true)]))+'</div>';
+body+=r.allocations.filter(x=>x.pms.length).map(x=>`<p class="src">${esc(x.country)} 的生产方式：${esc(x.pms.join(' / '))}</p>`).join('');body+=`<h3>源地点贡献（按就业当量排序，显示前 20 / 共 ${r.evidence.length} 项）</h3><div class="tablewrap">`+table(['源地点 ID 名称','目标国','RGO 就业映射','建筑就业映射','合计'],r.evidence.slice(0,20).map(e=>[cell(esc(e.location)),cell(esc(e.country)),cell(n(e.rgo,2),true),cell(n(e.buildings,2),true),cell(n(e.total,2),true)]))+'</div><p><small>源建筑就业是建筑总数值 × 1,000，不再乘建筑等级；分割地点按既有人口地理映射分摊。全部地点贡献保存在完整 JSON。</small></p>';}
+else body+=landDetail(tab==='parts'?[r]:r.parts);
+$('#detail').innerHTML=body;$('#detail').hidden=false;$('#detail').scrollIntoView({behavior:'smooth',block:'start'});}
+document.querySelectorAll('[data-tab]').forEach(b=>b.onclick=()=>{tab=b.dataset.tab;document.querySelectorAll('[data-tab]').forEach(x=>x.classList.toggle('on',x===b));$('#detail').hidden=true;draw()});['country','search','sort','changed'].forEach(id=>$('#'+id).addEventListener('input',draw));
+$('#download').onclick=()=>{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(D,null,2)],{type:'application/json'}));a.download='资源与耕地完整对照.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)};draw();
+</script></html>

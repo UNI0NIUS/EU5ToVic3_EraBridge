@@ -14,10 +14,10 @@ void EU5::Location::parseData(std::istream& theStream)
 void EU5::Location::registerKeys()
 {
 	registerKeyword("owner", [this](std::istream& theStream) {
-		ownerID = commonItems::getInt(theStream);
+		ownerID = readEntityID(theStream);
 	});
 	registerKeyword("controller", [this](std::istream& theStream) {
-		controllerID = commonItems::getInt(theStream);
+		controllerID = readEntityID(theStream);
 	});
 	registerKeyword("previous_owner", [this](std::istream& theStream) {
 		previousOwnerID = commonItems::getInt(theStream);
@@ -52,10 +52,10 @@ void EU5::Location::registerKeys()
 	});
 
 	registerKeyword("religion", [this](std::istream& theStream) {
-		religionID = commonItems::getInt(theStream);
+		religionID = readEntityID(theStream);
 	});
 	registerKeyword("culture", [this](std::istream& theStream) {
-		cultureID = commonItems::getInt(theStream);
+		cultureID = readEntityID(theStream);
 	});
 	registerKeyword("secondary_culture", [this](std::istream& theStream) {
 		secondaryCultureID = commonItems::getInt(theStream);
@@ -72,7 +72,7 @@ void EU5::Location::registerKeys()
 	});
 
 	registerKeyword("max_raw_material_workers", [this](std::istream& theStream) {
-		maxRawMaterialWorkers = commonItems::getInt(theStream);
+		maxRawMaterialWorkers = commonItems::getDouble(theStream);
 	});
 	registerKeyword("control", [this](std::istream& theStream) {
 		control = commonItems::getDouble(theStream);
@@ -116,16 +116,16 @@ void EU5::Location::registerKeys()
 	});
 
 	registerKeyword("units", [this](std::istream& theStream) {
-		unitIDs = commonItems::getInts(theStream);
+		unitIDs = readObjectIDs(theStream);
 	});
 	registerKeyword("port", [this](std::istream& theStream) {
-		portIDs = commonItems::getInts(theStream);
+		portIDs = readObjectIDs(theStream);
 	});
 	//
 	registerKeyword("population", [this](std::istream& theStream) {
 		commonItems::parser parser;
 		parser.registerKeyword("pops", [this](std::istream& popsStream) {
-			popIDs = commonItems::getInts(popsStream);
+			popIDs = readPopIDs(popsStream);
 		});
 		parser.registerRegex(commonItems::catchallRegex, commonItems::ignoreItem);
 		parser.parseStream(theStream);

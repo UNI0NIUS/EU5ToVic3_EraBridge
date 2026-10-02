@@ -24,3 +24,37 @@ tests.xml
 *DotSettings.user
 lib/
 build/
+
+# Local personal-development tools, game snapshots and generated reports.
+.tools/
+.local/
+CMakeUserPresets.json
+__pycache__/
+
+# Private inputs, generated reports and local release packages.
+/outputs/
+/log.txt
+*.py[cod]
+*.eu5
+*.v3
+.env
+.env.*
+!.env.example
+/PERSONAL_DEVELOPMENT_PLAN.md
+
+# Keep local research logs; publish the maintained user/developer documents.
+/docs/*
+!/docs/CONVERTER_WORKBENCH.md
+!/docs/CONVERTER_IDENTITY_SETTINGS.md
+!/docs/CONVERTER_SOURCE_CORES.md
+!/docs/FLAG_GENERATION_RULES.md
+!/docs/BUILDING.md
+!/docs/LICENSING.md
+!/docs/PUBLICATION.md
+
+# One-machine installation helpers are not part of the source distribution.
+/tools/install_economy_test.ps1
+/tools/install_m4_population_test.ps1
+/tools/update_m4_population_test.ps1
+/tools/update_m5_integrated_test.ps1
+/tools/Select-PopulationMode.ps1

@@ -1,0 +1,64 @@
+{
+  "schema": 1,
+  "authorization": "2026-10-01 user: append Payaku and Pawcatuck, replace Buriari, defer x800111, retain templates for empty states.",
+  "location_overrides": {
+    "payaku": {
+      "operation": "add",
+      "expected_weights": {
+        "x9C9F0B": 1,
+        "xD54255": 1,
+        "xE29237": 1
+      },
+      "targets": {
+        "x140E0C": 1
+      },
+      "reason": "User explicitly added x140E0C to Payaku; retain existing links and equal-share weights."
+    },
+    "pawcatuck": {
+      "operation": "add",
+      "expected_weights": {
+        "x1A77EA": 1
+      },
+      "targets": {
+        "xC5CE93": 1
+      },
+      "reason": "User explicitly added xC5CE93 to Pawcatuck; retain existing link and equal-share weights."
+    },
+    "buriari": {
+      "operation": "replace",
+      "expected_weights": {
+        "xB03080": 1
+      },
+      "targets": {
+        "xECC061": 1
+      },
+      "reason": "User explicitly replaced Buriari targets with xECC061 only."
+    }
+  },
+  "deferred_target_provinces": {},
+  "empty_state_templates": {
+    "STATE_ACRE": "AMZ",
+    "STATE_NAURU": "NRU"
+  },
+  "empty_state_owner_modes": {
+    "STATE_ACRE": "join_adjacent_same_template_culture"
+  },
+  "island_population_templates": {
+    "x800111": {
+      "state": "STATE_KANTO",
+      "geographical_source": "hahajima",
+      "culture_reference": "saipan",
+      "population_reference_file": "common/history/pops/11_east_asia.txt",
+      "commented_template_owner": "MCR",
+      "reason": "User explicitly requested vanilla-referenced Hahajima population and the same mapped culture as Saipan; vanilla keeps a commented 26-person Bonin template."
+    }
+  },
+  "resolved_target_provinces": {
+    "x800111": {
+      "state": "STATE_KANTO",
+      "reason": "User cannot identify a source equivalent and explicitly deferred this province.",
+      "risk": "If a polity retains only this province, no source population is guaranteed. Require explicit population/mapping decision before export; do not invent source people or change borders.",
+      "resolution": "User requested the commented vanilla Bonin 26-person template, with mapped Saipan culture, on 2026-10-02."
+    }
+  }
+}

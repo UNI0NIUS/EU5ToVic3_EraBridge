@@ -18,13 +18,13 @@ void EU5::Building::registerKeys()
 		level = commonItems::getInt(theStream);
 	});
 	registerKeyword("location", [this](std::istream& theStream) {
-		locationID = commonItems::getInt(theStream);
+		locationID = readEntityID(theStream);
 	});
 	registerKeyword("owner", [this](std::istream& theStream) {
 		ownerEstateID = commonItems::getInt(theStream);
 	});
 	registerKeyword("pop", [this](std::istream& theStream) {
-		popID = commonItems::getInt(theStream);
+		popID = parsePopID(commonItems::getString(theStream));
 	});
 	registerKeyword("employed", [this](std::istream& theStream) {
 		employed = commonItems::getDouble(theStream);

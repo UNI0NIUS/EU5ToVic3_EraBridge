@@ -1,0 +1,51 @@
+{
+  "recorded": "2026-09-30",
+  "msvc": "14.44.35207",
+  "compiler": "19.44.35229",
+  "sdk": "10.0.26100.0",
+  "cmake": "3.31.6",
+  "ninja_python_package": "1.11.1.4",
+  "rakaly": "0.12.7",
+  "files": [
+    {
+      "path": ".tools/portable-msvc.py",
+      "bytes": 14560,
+      "sha256": "1791cccca594ff083ce8d3e0a139e6156d2c312e24332a909e608010f0230a51"
+    },
+    {
+      "path": ".tools/msvc/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe",
+      "bytes": 677776,
+      "sha256": "fe251ef50a1545b1b0835ee17b1e785459712b38d79e45b5c1d3d28970a36619"
+    },
+    {
+      "path": ".tools/python/Lib/site-packages/cmake/data/bin/cmake.exe",
+      "bytes": 12029392,
+      "sha256": "3fe22eb02e1c6184ec207366ed21a6f2f9c3828c1e9f3324546befadfb362be3"
+    },
+    {
+      "path": ".tools/python/Scripts/ninja.exe",
+      "bytes": 564736,
+      "sha256": "9ee2fc6bc8c0acd1de6e6dcadf009c0598e6336646b87cfb5ed2918604b81597"
+    },
+    {
+      "path": ".tools/rakaly-0.12.7/package.tar.gz",
+      "bytes": 1148461,
+      "sha256": "fca77183bf4d68dbc09cba2c422211a323e3770ce010e754bdc75adbec43caef"
+    },
+    {
+      "path": ".tools/rakaly-0.12.7/librakaly-0.12.7-win-msvc/rakaly.dll",
+      "bytes": 4003840,
+      "sha256": "39f79fe1f13c83cba4482a38eb95e186f6ddf11dfa9b5a550fb75e1c72b249be"
+    },
+    {
+      "path": ".tools/rakaly-0.12.7/librakaly-0.12.7-win-msvc/rakaly.dll.lib",
+      "bytes": 6554,
+      "sha256": "f0505a36552b4adfd5950f99f5e212b20c2dc56b7ff9080ebaaefcc1cd58eb68"
+    },
+    {
+      "path": "EU5ToVic3/Resources/rakaly.dll",
+      "bytes": 3832832,
+      "sha256": "9335f9bcd6bd8a0376a5305b0e3777be8381281355d15755da07f9680491c850"
+    }
+  ]
+}
