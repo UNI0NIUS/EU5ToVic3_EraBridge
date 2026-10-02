@@ -135,7 +135,8 @@ def main():
         if package:
             report['project'] = check_project(package, args.game, out / 'workspace')
         report['status'] = 'passed'
-        report['scope'] = 'static_conversion_and_export' if package else 'integrity_and_runtime_smoke_only'
+        report['scope'] = ('static_conversion_and_export' if args.save else
+                           'existing_project_and_export' if package else 'integrity_and_runtime_smoke_only')
     except Exception as error:
         report['status'] = 'failed'
         report['error'] = str(error)
