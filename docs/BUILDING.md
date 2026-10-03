@@ -16,15 +16,18 @@ git submodule update --init --recursive
 
 ## C++ 导入器与测试
 
-准备 Python 3.11 或更新版本。在 PowerShell 中运行：
+准备 Python 3.11 或更新版本、CMake、Ninja 和 librakaly 0.12.7。Windows 发行构建使用 Visual Studio Community 2022 的 C++ 桌面开发工具与 Windows SDK；使用者应先确认适用资格并接受产品条款。`Setup-PersonalEnvironment.ps1` 可下载其他本地工具，但不能替代适用的 Visual Studio 产品许可。
+
+`Enter-DevEnvironment.ps1` 优先使用 `.tools/VisualStudio2022` 的正式安装；也可传入 `-VisualStudioPath` 初始化其他安装位置。更换编译器时使用新的 CMake 构建目录，避免旧缓存仍指向其他工具链：
 
 ```powershell
-./tools/Setup-PersonalEnvironment.ps1
-./tools/Build-Personal.ps1
+. ./tools/Enter-DevEnvironment.ps1
+cmake --preset x64-release-windows -B build/community-release -DBUILD_FRONTEND=OFF -DCMAKE_MAKE_PROGRAM="$PWD/.tools/python/Scripts/ninja.exe" -DRAKALY_DIR="$PWD/.tools/rakaly-0.12.7/librakaly-0.12.7-win-msvc"
+cmake --build build/community-release --target EU5ToVic3Converter EU5ToVic3Tests --parallel 8
+ctest --test-dir build/community-release --output-on-failure
 ```
 
-环境脚本在 `.tools/` 内下载并校验工具链，建立 CMake/Ninja 环境；MSVC 和 Windows SDK 来自微软下载渠道。安装前应阅读脚本及相应组件条款，脚本包含向工具链提取器传递 `--accept-license` 的步骤。已有环境时只需执行构建脚本。
-
+沿用同一工具链的日常构建也可运行 `tools/Build-Personal.ps1`。
 构建输出位于 `build/Release-Windows/EU5ToVic3/`，测试日志位于 `.local/m0/`。`Build-Personal.ps1` 默认运行 CTest；`-ConfigureOnly` 仅配置，`-Jobs 4` 可降低并行任务数。
 
 ## Python 工具与测试
@@ -58,4 +61,4 @@ python -X utf8 -m unittest discover -s tools -p 'test_*.py'
 
 输出目录必须位于仓库内且尚不存在。打包器目前按本机 Python 发行版的目录布局收集依赖，其他 Python 安装可能需要调整。`-SkipRuntime` 用于刷新已有本地构建，不用于制作干净发行包。
 
-旧构建或使用 `-IncludeLocalRules` 的 ZIP 可能包含本地默认路径和游戏资源，不应直接作为公开下载。公开二进制前需另行核查依赖许可证、资产来源、路径清理和干净机器运行结果。
+旧构建或使用 `-IncludeLocalRules` 的 ZIP 可能包含本地默认路径和游戏资源，不应直接作为公开下载。公开二进制前需核查依赖许可证、资产来源和路径清理；开发机检查与独立机器验收分别记录。

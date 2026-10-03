@@ -1,0 +1,11 @@
+EraBridge：第三方组件使用条款
+
+EraBridge 自有代码和沿用的上游代码采用根目录 LICENSE 中的 MIT 许可。下列条款仅用于本包的第三方组件，不限制 MIT 或其他开源许可证已经授予的权利。
+
+Microsoft Visual C++ 运行库和 Windows SDK 运行组件由各自权利人提供，按本包附带的原始许可使用。Visual Studio 许可位于 licenses/microsoft-community-2022/，原文为 LICENSE.docx，LICENSE.txt 为阅读副本；Windows SDK 组件许可位于 licenses/runtime/ucrt-* 目录。使用者须遵守适用的安装、使用、转让、再分发、逆向工程及出口限制，不得去除版权或许可声明；适用法律和原许可明确允许的例外仍然适用。不得将微软组件改按 EraBridge 的 MIT 许可分发。
+
+微软组件按其原许可中的担保排除和责任限制提供。EraBridge 不代表微软提供担保，也不声称得到微软认可。任何再分发须保留原组件许可，并确保接收者同意适用条款；本包不额外授予微软组件的再分发权。
+
+Python、NumPy、Pillow、Tcl/Tk、Rakaly 及其他依赖按随附的各自许可使用。版本、文件来源和通知见 licenses/runtime-inventory.json、licenses/README.md 与 licenses/THIRD_PARTY_NOTICES.md。
+
+首次启动时，选择“是”表示同意遵守以上条款及所引用的适用第三方许可；选择“否”可打开本文件阅读，选择“取消”退出。源码构建及使用开源组件时，仍以对应组件的实际许可证为准。

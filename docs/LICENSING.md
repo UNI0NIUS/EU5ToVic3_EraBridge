@@ -1,6 +1,6 @@
 # 来源与再发布许可
 
-核查日期：2026-10-03。本次核查针对源码发布；现有本地 ZIP 和转换结果不在发布范围内。
+核查日期：2026-10-03。本次核查针对 v0.12.2-beta.2 源码和 Windows x64 便携包。
 
 ## 上游代码
 
@@ -14,19 +14,23 @@
 
 `commonItems`、`Fronter` 按 `.gitmodules` 的地址和 Git 固定提交引用。各组件及其内嵌依赖的版权、许可证仍适用；根目录的 MIT 不替代它们。
 
-公开源码不新增分发 Python、NumPy、Pillow、Tk、MSVC、Windows SDK 或下载的 Rakaly 二进制。上游历史中已有的第三方文件保持其原来源。后续若发布可执行包，需按实际打包清单收集许可证和通知文件，并核查各 DLL 的分发条件；不能仅凭构建成功判断可公开分发。
+便携包包含 Python、NumPy、Pillow、Tcl/Tk、Rakaly 和运行依赖。实际版本、文件摘要和来源列于包内 `licenses/runtime-inventory.json`；原许可和必要署名随包保留。源码仓库不提交这些运行环境的二进制文件。
 
-候选包整理另保存了 [librakaly 0.12.7 许可原文](../licenses/README.md)，并按 DLL 摘要核对版本。运行库通知依据实际打包文件收集。该版本的 [Cargo.lock](https://github.com/rakaly/librakaly/blob/v0.12.7/Cargo.lock) 将 `eu5save`、`vic3save` 等固定到 pdx-tools 提交 `153678d140cc04602a0c316f601a8ab9e0882a7e`，该提交的[根许可证为 AGPL v3](https://github.com/pdx-tools/pdx-tools/blob/153678d140cc04602a0c316f601a8ab9e0882a7e/LICENSE)。相关 crate 未声明单独许可证；目前未找到预编译 DLL 的单独授权说明，因此不能把外层 MIT 当作整个 DLL 的分发依据。依赖通知清单不是授权结论，也不是完整对应源码。公开二进制前须确认授权范围或落实适用的源码与分发义务。
+### Rakaly
 
-微软运行库按实际来源及产品条款核查。[微软分发说明](https://learn.microsoft.com/en-us/cpp/windows/redistributing-visual-cpp-files?view=msvc-170) 将分发权与许可条件关联；从包缓存取得 DLL 和许可文本本身不足以证明分发资格。剩余条件见[发布准备](RELEASING.md)。
+本版使用 librakaly 0.12.7，文件摘要与工具链锁文件核对。维护者已确认取得本版所用 Rakaly 的再分发许可；本项目不另行推定该许可适用于其他版本或其他发布者。[许可目录](../licenses/README.md)保留包装层 MIT 和锁定依赖的通知。部分解析依赖来自 AGPL 仓库，外层 MIT 不替代它们；附带通知不是完整对应源码，也不向下游另授超出原许可的权利。
 
-进一步核对 [Visual Studio 2022 Build Tools 条款](https://visualstudio.microsoft.com/license-terms/vs2022-ga-diagnosticbuildtools/)后，未持有 Visual Studio 产品许可时的例外仅涵盖构建所依赖的第三方开源组件，不等同于任意开发、测试或再分发授权。[Community 条款](https://visualstudio.microsoft.com/license-terms/vs2022-ga-community/)另有个人使用和可分发代码规定，但适用资格及接受许可的事实需由维护者确认。仅有 VS Code、工具链下载记录或 `--accept-license` 参数不足以证明这一点。
+### 微软组件
 
-当前发行链尚未建立适用的 Visual Studio 产品许可依据，微软 DLL 的公开分发条件仍未满足。二进制发布可在确认适用产品许可后，从官方可分发清单核对实际 DLL，并满足通知和终端用户条款；也可另行设计使用者从官方安装运行库的方案。后者仍需验证启动与缺失依赖提示，不能简单删除 DLL 后继续宣称免安装可用。FreeType、JPEG 等所需署名另列于[运行组件通知](../licenses/THIRD_PARTY_NOTICES.md)。
+发行构建使用已按个人开发者条款许可的 Visual Studio Community 2022。C++ 导入器和启动器均由该工具链重建。Visual C++ DLL 从安装目录的 `VC/Redist/MSVC/<version>/x64` 取得，保持原文件，排除 `debug_nonredist`；这些目录列于[微软可分发清单](https://learn.microsoft.com/en-us/visualstudio/releases/2022/redistribution)。UCRT 文件按实际来源匹配 Windows SDK 组件，保留其原许可。
+
+[Community 条款](https://visualstudio.microsoft.com/license-terms/vs2022-ga-community/)和[微软分发说明](https://learn.microsoft.com/en-us/cpp/windows/redistributing-visual-cpp-files?view=msvc-170)约束微软组件。许可文本、终端用户条款和必要通知随包提供；首次启动要求使用者阅读并接受第三方组件条款。微软组件不改用本项目的 MIT，也不因本次发行而向接收者授予不受限制的再分发权。
+
+FreeType、JPEG 等补充署名见[运行组件通知](../licenses/THIRD_PARTY_NOTICES.md)。依赖来源核对与运行验收分别记录，不能用运行成功代替许可核查。
 
 ## 游戏、模组与图标
 
-Europa Universalis V、Victoria 3 及其商标、游戏脚本、美术和其他资源属于相应权利人。转换器代码的 MIT 许可不授权再分发这些内容。本次排除 `.local/`、`build/`、`outputs/`、存档、完整候选模组及提取素材。
+Europa Universalis V、Victoria 3 及其商标、游戏脚本、美术和其他资源属于相应权利人。转换器代码的 MIT 许可不授权再分发这些内容。公开材料排除 `.local/`、`outputs/`、存档、完整候选模组及提取素材。`build/` 不提交到源码仓库，仅将核对后的便携 ZIP 上传为 Release 附件。
 
 部分工具会在使用者本机读取游戏和创意工坊内容，再生成转换结果。这些结果的发布需要按其实际包含的材料另行判断。本次没有取得创意工坊整包再分发许可，源码发布不包含这些整包。
 

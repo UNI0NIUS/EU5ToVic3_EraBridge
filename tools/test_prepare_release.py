@@ -4,7 +4,7 @@ import tempfile
 import unittest
 import zipfile
 
-from prepare_release import copy_tree, prepare, seal, sha256, license_inventory, copy_public_docs, PUBLIC_DOCUMENTS
+from prepare_release import copy_tree, prepare, seal, sha256, license_inventory, copy_public_docs, PUBLIC_DOCUMENTS, stage_visual_cpp
 
 
 class ReleasePreparationTests(unittest.TestCase):
@@ -42,8 +42,41 @@ class ReleasePreparationTests(unittest.TestCase):
                 self.assertEqual({'candidate/sample.txt', 'candidate/build_manifest.json'}, set(zipped.namelist()))
                 self.assertEqual(json.loads(zipped.read('candidate/build_manifest.json')), manifest)
             self.assertEqual(sha256(stage / 'sample.txt'), manifest['files']['sample.txt'])
+            self.assertTrue(manifest['internal_candidate'])
             with self.assertRaises(FileExistsError):
                 seal(stage, archive)
+
+    def test_public_preview_seals_same_bytes_with_public_channel(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            stage = root / 'preview'
+            stage.mkdir()
+            (stage / 'payload.txt').write_bytes(b'public preview')
+            manifest = seal(stage, root / 'preview.zip', public_preview=True, source_commit='a' * 40)
+            self.assertFalse(manifest['internal_candidate'])
+            self.assertEqual('community_preview', manifest['channel'])
+            self.assertEqual('a' * 40, manifest['source_commit'])
+            self.assertEqual(sha256(stage / 'payload.txt'), manifest['files']['payload.txt'])
+
+    def test_official_runtime_replaces_old_copies_and_reaches_importer(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            source = root / 'redist/x64/Microsoft.VC143.CRT/vcruntime140.dll'
+            source.parent.mkdir(parents=True)
+            source.write_bytes(b'official')
+            stage = root / 'stage'
+            (stage / 'native').mkdir(parents=True)
+            for name in ('runtime/vcruntime140.dll', 'runtime/DLLs/vcruntime140.dll'):
+                path = stage / name
+                path.parent.mkdir(parents=True, exist_ok=True)
+                path.write_bytes(b'old')
+            sources = {'vcruntime140.dll': source}
+            stage_visual_cpp(stage, sources)
+            for name in ('native/vcruntime140.dll', 'runtime/vcruntime140.dll', 'runtime/DLLs/vcruntime140.dll'):
+                self.assertEqual(b'official', (stage / name).read_bytes())
+            self.assertEqual([], license_inventory(stage, root / 'python', sources)['unmatched_binaries'])
+            (stage / 'runtime/vcruntime140.dll').write_bytes(b'changed')
+            self.assertEqual(['runtime/vcruntime140.dll'], license_inventory(stage, root / 'python', sources)['unmatched_binaries'])
 
     def test_metadata_cannot_certify_a_different_binary(self):
         with tempfile.TemporaryDirectory() as tmp:

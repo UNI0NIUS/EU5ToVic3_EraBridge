@@ -59,6 +59,7 @@ __pycache__/
 !/docs/releases/
 /docs/releases/*
 !/docs/releases/v0.12.2-beta.1.md
+!/docs/releases/v0.12.2-beta.2.md
 
 # One-machine installation helpers are not part of the source distribution.
 /tools/install_economy_test.ps1

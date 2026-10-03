@@ -1,4 +1,4 @@
-"""Prepare an internal Windows candidate and evidence; never publish a release.
+"""Prepare a Windows candidate and evidence; never upload or publish a release.
 
 Private generated resources and user data are omitted; reconstruction recipes are included. A successful run means
 that preparation finished, not that the candidate is approved for distribution.
@@ -15,13 +15,13 @@ import subprocess
 import sys
 import zipfile
 
-VERSION = '0.12.2-beta.1'
+VERSION = '0.12.2-beta.2'
 PUBLIC_DOCUMENTS = (
     'README.md', 'BUILDING.md', 'ARCHITECTURE.md', 'CONVERSION_RULES.md',
     'CONVERTER_WORKBENCH.md', 'CONVERTER_IDENTITY_SETTINGS.md',
     'CONVERTER_SOURCE_CORES.md', 'FLAG_GENERATION_RULES.md',
     'LICENSING.md', 'PUBLICATION.md', 'RELEASING.md', 'ACCEPTANCE.md',
-    'releases/v0.12.2-beta.1.md',
+    'releases/v0.12.2-beta.1.md', 'releases/v0.12.2-beta.2.md',
 )
 EXCLUDED_PARTS = {'__pycache__', '.git', '.local', 'tests', 'test', 'logs'}
 EXCLUDED_SUFFIXES = {'.pyc', '.pyo', '.obj', '.pdb', '.lib', '.res', '.eu5', '.v3'}
@@ -64,12 +64,15 @@ def copy_public_docs(root, stage):
         shutil.copy2(source, target)
 
 
-def seal(stage, archive):
+def seal(stage, archive, public_preview=False, source_commit=None):
     """Record exact payload bytes and archive only those files plus the manifest."""
     stage = Path(stage)
     paths = sorted(p for p in stage.rglob('*') if p.is_file() and p.name != 'build_manifest.json')
-    manifest = {'version': VERSION, 'internal_candidate': True,
+    manifest = {'version': VERSION, 'internal_candidate': not public_preview,
+                'channel': 'community_preview' if public_preview else 'internal',
                 'files': {p.relative_to(stage).as_posix(): sha256(p) for p in paths}}
+    if source_commit:
+        manifest['source_commit'] = source_commit
     write_json(stage / 'build_manifest.json', manifest)
     with zipfile.ZipFile(archive, 'x', zipfile.ZIP_DEFLATED, compresslevel=6) as out:
         for path in paths + [stage / 'build_manifest.json']:
@@ -77,7 +80,29 @@ def seal(stage, archive):
     return manifest
 
 
-def license_inventory(stage, python_base):
+def visual_cpp_sources(visual_studio):
+    versions = sorted((Path(visual_studio) / 'VC/Redist/MSVC').glob('[0-9]*'),
+                      key=lambda p: tuple(int(n) for n in p.name.split('.')))
+    if not versions:
+        raise ValueError('Installed Visual Studio x64 redistributables not found')
+    sources = {p.name.lower(): p for p in (versions[-1] / 'x64').rglob('*.dll')}
+    if not {'msvcp140.dll', 'vcruntime140.dll', 'vcruntime140_1.dll'} <= sources.keys():
+        raise ValueError('Incomplete Visual Studio x64 redistributables')
+    return sources
+
+
+def stage_visual_cpp(stage, sources):
+    # Replace the Python distribution's copies with the installed release redist.
+    for path in (stage / 'runtime').rglob('*.dll'):
+        if path.name.lower() in sources:
+            shutil.copy2(sources[path.name.lower()], path)
+    # The importer is a separate process; Python's DLL search path does not apply.
+    for name, source in sources.items():
+        if source.parent.name.endswith('.CRT'):
+            shutil.copy2(source, stage / 'native' / name)
+
+
+def license_inventory(stage, python_base, microsoft_sources=None):
     """Match runtime binary bytes to cached conda packages, not just filenames.
 
 Package metadata is provenance evidence, not a redistribution approval. Pip may
@@ -123,6 +148,9 @@ have replaced files belonging to conda packages, so unmatched files stay unknown
                 key = data['name'] + '-' + data['version'] + '-' + data.get('build', '')
                 matches.append(key)
                 matched_packages[key] = (data, cache)
+        source = (microsoft_sources or {}).get(path.name.lower())
+        if source and sha256(source) == digest:
+            matches.append('microsoft-vc143-official-redist')
         binaries.append({'file': path.relative_to(stage).as_posix(), 'sha256': digest,
                          'matched_packages': matches})
     packages = wheel_packages
@@ -134,12 +162,19 @@ have replaced files belonging to conda packages, so unmatched files stay unknown
         packages.append({'package': key, 'declared_license': data.get('license'),
                          'license_files': sorted(p.relative_to(stage).as_posix() for p in dest.rglob('*') if p.is_file()),
                          'redistribution_review': 'pending'})
+    if microsoft_sources:
+        packages.append({'package': 'microsoft-vc143-official-redist',
+                         'declared_license': 'Microsoft Visual Studio Community 2022',
+                         'source': 'Visual Studio 2022 VC/Redist/MSVC/<version>/x64',
+                         'license_files': ['licenses/microsoft-community-2022/LICENSE.docx',
+                                           'licenses/microsoft-community-2022/LICENSE.txt'],
+                         'redistribution_review': 'See docs/LICENSING.md'})
     return {'binaries': binaries, 'packages': packages,
             'unmatched_binaries': [p['file'] for p in binaries if not p['matched_packages']],
             'note': 'Exact cached-file or wheel RECORD SHA-256 matches only. No license approval is inferred.'}
 
 
-def prepare(root, app, out, python_base, make_archive=True):
+def prepare(root, app, out, python_base, make_archive=True, public_preview=False):
     root, app, out = (Path(p).resolve() for p in (root, app, out))
     if not out.is_relative_to(root / 'build') or out == root / 'build':
         raise ValueError('Output must be a new subdirectory of the workspace build directory')
@@ -152,10 +187,14 @@ def prepare(root, app, out, python_base, make_archive=True):
     if out.exists():
         raise ValueError('Output already exists; choose a new directory')
     out.mkdir(parents=True)
-    stage = out / ('EraBridge-' + VERSION + '-windows-x64-INTERNAL')
+    stage = out / ('EraBridge-' + VERSION + '-windows-x64' + ('' if public_preview else '-INTERNAL'))
     stage.mkdir()
     for name in ('runtime', 'native'):
         copy_tree(app / name, stage / name)
+    microsoft_sources = None
+    if public_preview:
+        microsoft_sources = visual_cpp_sources(root / '.tools/VisualStudio2022')
+        stage_visual_cpp(stage, microsoft_sources)
     shutil.copy2(app / 'EU5Converter.exe', stage / 'EU5Converter.exe')
     shutil.copy2(root / 'tools/Test-PortableRelease.ps1', stage / 'Test-PortableRelease.ps1')
     (stage / 'tools').mkdir()
@@ -171,6 +210,8 @@ def prepare(root, app, out, python_base, make_archive=True):
     (stage / 'licenses').mkdir(exist_ok=True)
     shutil.copy2(root / 'licenses/README.md', stage / 'licenses/README.md')
     shutil.copy2(root / 'licenses/THIRD_PARTY_NOTICES.md', stage / 'licenses/THIRD_PARTY_NOTICES.md')
+    shutil.copy2(root / 'licenses/END_USER_TERMS.txt', stage / 'licenses/END_USER_TERMS.txt')
+    copy_tree(root / 'licenses/microsoft-community-2022', stage / 'licenses/microsoft-community-2022')
     for source, name in [(root / 'commonItems/LICENSE', 'commonItems-LICENSE'),
                          (root / 'commonItems/external/json/LICENSE.MIT', 'nlohmann-json-LICENSE'),
                          (root / 'commonItems/external/zip/UNLICENSE', 'zip-UNLICENSE')]:
@@ -194,33 +235,42 @@ def prepare(root, app, out, python_base, make_archive=True):
     if rules.is_dir():
         excluded = [{'file': p.relative_to(app).as_posix(), 'sha256': sha256(p)}
                     for p in sorted(rules.rglob('*')) if p.is_file()]
-    inventory = license_inventory(stage, python_base)
+    inventory = license_inventory(stage, python_base, microsoft_sources)
+    if microsoft_sources:
+        inventory['native_runtime_binaries'] = [
+            {'file': p.relative_to(stage).as_posix(), 'sha256': sha256(p),
+             'matched_packages': ['microsoft-vc143-official-redist']}
+            for p in sorted((stage / 'native').glob('*.dll'))
+            if p.name.lower() in microsoft_sources and sha256(p) == sha256(microsoft_sources[p.name.lower()])]
+    if public_preview and (not rakaly_version or inventory['unmatched_binaries']):
+        raise ValueError('Public preview requires a known Rakaly version and matched runtime provenance')
     write_json(stage / 'licenses/runtime-inventory.json', inventory)
     revision = subprocess.run(['git', 'rev-parse', 'HEAD'], cwd=root, capture_output=True, text=True, check=True).stdout.strip()
     dirty = bool(subprocess.run(['git', 'status', '--porcelain'], cwd=root, capture_output=True, text=True, check=True).stdout.strip())
-    blockers = [
+    limitations = [
         '完整规则及基准存档由使用者本机生成；独立 Windows 环境的初始化与端到端验收仍待执行。',
         '游戏资源采用本机引用重建，原始素材不随包分发；当前规则限定已验证地图和资源版本。',
-        'Rakaly 锁定部分 AGPL 仓库依赖，二进制独立授权或相应分发方案仍待确认；微软运行库的分发依据也需确认。',
         '尚未完成无开发环境机器上的安装、端到端转换、导出和游戏内验收。',
         '开发机首周引擎检查仍发现资源建筑容量和原版脚本报错，游戏内验收尚未整体通过。',
     ]
     report = {'version': VERSION, 'ready_for_publication': False, 'source_commit': revision,
+              'channel': 'community_preview' if public_preview else 'internal',
               'source_worktree_dirty': dirty, 'rakaly_version_matching_lock': rakaly_version, 'input_binaries': {rel: sha256(app / rel) for rel in required},
               'excluded_rules': excluded, 'unmatched_runtime_binaries': inventory['unmatched_binaries'],
-              'blockers': blockers, 'checks': {'empty_user_defaults': True, 'user_data_copied': False,
+              'blockers': ['此准备报告尚未附上最终包的完整性与运行验收结果。'],
+              'known_limitations': limitations, 'checks': {'empty_user_defaults': True, 'user_data_copied': False,
               'rules_copied': False, 'relocated_runtime_smoke_test': 'not_run', 'clean_machine_test': 'not_run'}}
     write_json(out / 'release-readiness.json', report)
     (stage / 'README.txt').write_text(
-        'EraBridge ' + VERSION + ' — 内部发布候选\n\n'
-        '本目录用于检查发布结构与运行环境，尚未通过公开发行验收。\n'
-        '双击 EU5Converter.exe 可检查桌面界面。保留整个目录，不要单独复制 EXE。\n'
+        'EraBridge ' + VERSION + (' — 社区测试版\n\n' if public_preview else ' — 内部发布候选\n\n') +
+        ('本版供社区测试，已知问题包括资源建筑容量和部分游戏脚本报错。长期战役与独立 Windows 环境尚未验证。\n' if public_preview else '本目录用于检查发布结构与运行环境，尚未通过公开发行验收。\n') +
+        '双击 EU5Converter.exe 启动。保留整个目录，不要单独复制 EXE。首次启动请阅读并接受第三方组件条款。\n'
         '首次使用点击“准备转换规则”，选择两款游戏安装及自己的 V3 原版 1836.1.1 开局存档。\n'
         '游戏素材与基准存档仅在本机读取或生成，不随软件分发。独立验收用 Test-PortableRelease.ps1。\n'
         '发布流程见 docs/RELEASING.md；依赖清单见 licenses/runtime-inventory.json。\n', encoding='utf-8')
     if make_archive:
         archive = out / (stage.name + '.zip')
-        manifest = seal(stage, archive)
+        manifest = seal(stage, archive, public_preview, revision)
         (out / 'SHA256SUMS.txt').write_text(sha256(archive) + '  ' + archive.name + '\n', encoding='ascii')
         report['archive'] = {'file': archive.name, 'sha256': sha256(archive), 'payload_files': len(manifest['files'])}
         write_json(out / 'release-readiness.json', report)
@@ -234,5 +284,6 @@ if __name__ == '__main__':
     parser.add_argument('--out', type=Path, required=True)
     parser.add_argument('--python-base', type=Path, default=Path(sys.base_prefix))
     parser.add_argument('--no-archive', action='store_true')
+    parser.add_argument('--public-preview', action='store_true', help='Prepare community preview packaging; does not publish or certify testing')
     args = parser.parse_args()
-    print(prepare(args.root, args.app, args.out, args.python_base, not args.no_archive))
+    print(prepare(args.root, args.app, args.out, args.python_base, not args.no_archive, args.public_preview))
