@@ -2,7 +2,7 @@
 
 ![EraBridge 图标](tools/converter_ui/icons/erabridge-beta-128.png)
 
-EraBridge 将 Europa Universalis V 存档转换为 Victoria 3 候选模组，并提供 Windows 桌面工作台，用于查看地图、调整人口与耕地、编辑地区和导出结果。当前源码版本为 **0.12.2，开发中**，主要验证环境是 EU5 1.3.11 与 Victoria 3 1.13.11。
+EraBridge 将 Europa Universalis V 存档转换为 Victoria 3 候选模组，并提供 Windows 桌面工作台，用于查看地图、调整人口与耕地、编辑地区和导出结果。当前源码版本为 **0.12.2-beta.1，源码预览版**，主要验证环境是 EU5 1.3.11 与 Victoria 3 1.13.11。
 
 项目基于 [ParadoxGameConverters/EU5ToVic3](https://github.com/ParadoxGameConverters/EU5ToVic3) 独立修改，与上游团队没有官方隶属关系。上游基线为 `56ee636b6ebd8a110b54d3133794f964af0f0e1e`。本分支开发使用了 AI 辅助；上游不接受此类贡献，相关反馈请留在本 fork。
 
@@ -17,7 +17,9 @@ EraBridge 将 Europa Universalis V 存档转换为 Victoria 3 候选模组，并
 
 ## 使用与构建
 
-目前公开的是源码、配置、测试、应用图标和文档。Windows 便携版正在准备，尚无经过发布验收的下载包；后续安装包会放在 [Releases](https://github.com/UNI0NIUS/EU5ToVic3_EraBridge/releases)。GitHub 自动生成的 Source code 压缩包仅包含源码。
+[v0.12.2-beta.1](https://github.com/UNI0NIUS/EU5ToVic3_EraBridge/releases/tag/v0.12.2-beta.1) 提供源码、配置、测试、应用图标和文档，供自行构建及社区测试。当前没有便携安装附件，GitHub 自动生成的 Source code 压缩包不能直接运行；克隆时还需初始化子模块。依赖分发许可确认后再提供 Windows 便携包。
+
+资源建筑容量与部分原版脚本报错是本版已知问题，独立 Windows 和长期运行尚未验证。复现问题请提交到[本项目 Issues](https://github.com/UNI0NIUS/EU5ToVic3_EraBridge/issues/new?template=bug_report.md)，附版本和操作步骤；完整验证范围见[验证记录](docs/PUBLICATION.md)。
 
 仓库不包含游戏本体、玩家存档、基准存档、游戏提取的贴图或本机生成的完整规则包。发布条件及剩余问题见[发布准备](docs/RELEASING.md)。
 
