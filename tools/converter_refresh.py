@@ -113,7 +113,8 @@ def upgrade(package,game,rules,output):
     if not (rules/'identity_policy.json').exists():return package
     signature=REVISION+':'+digest(rules/'manifest.json')
     from converter_source_claims import REVISION as CLAIMS_REVISION
-    if report.get('refresh_signature')==signature and report.get('source_claims_revision')==CLAIMS_REVISION:return package
+    from converter_startup_compatibility import REVISION as STARTUP_REVISION, apply as startup_compatibility
+    if report.get('refresh_signature')==signature and report.get('source_claims_revision')==CLAIMS_REVISION and report.get('startup_compatibility_revision')==STARTUP_REVISION:return package
     run=source_run(package,report)
     if run is None:return package
     politics=read(run/'source/politics.json')
@@ -122,7 +123,7 @@ def upgrade(package,game,rules,output):
     if (eu5/'game').exists():eu5=eu5/'game'
     from converter_pipeline import validate_rules
     validate_rules(rules/'manifest.json',game,eu5)
-    key=digest(package/'package_report.json')[:16]+'-'+digest(rules/'manifest.json')[:12]+'-'+hashlib.sha256((REVISION+CLAIMS_REVISION).encode()).hexdigest()[:8]
+    key=digest(package/'package_report.json')[:16]+'-'+digest(rules/'manifest.json')[:12]+'-'+hashlib.sha256((REVISION+CLAIMS_REVISION+STARTUP_REVISION).encode()).hexdigest()[:8]
     out=output/key
     if (out/'package_report.json').exists():return out
     if digest(run/'source/decoded.eu5')!=politics['source_sha256']:raise ValueError('源存档证据已变化，不能升级')
@@ -132,6 +133,9 @@ def upgrade(package,game,rules,output):
     # Leave room for long source flag filenames on Windows.
     temp=out.with_name('.building-'+uuid.uuid4().hex[:8]);temp.mkdir(parents=True)
     mod=temp/'eu5_converted';shutil.copytree(old.mod,mod);countries=deepcopy(old.countries)
+    # An exported project can have edited borders and wars. Never regenerate
+    # its original source war history over the player's reconciled history.
+    startup_run=None if 'settings' in report else run
     # A verified identity repair must not repeat the economic pass,
     # remap already converted POPs, or discard edits in an imported export.
     previous=report.get('refresh_signature','').removeprefix(REVISION+':')
@@ -150,7 +154,9 @@ def upgrade(package,game,rules,output):
             selected=dated_mapping(read(rules/'culture_mapping.json'),read(rules/'identity_policy.json'),politics['date'])
             prior=read(package/'source_claims.json') if (package/'source_claims.json').exists() else None
             write(temp/'source_claims.json',claims(mod,game,run,rules,countries,selected,previous=prior))
+        write(temp/'startup_compatibility.json',startup_compatibility(mod,game,startup_run))
         write(temp/'identity_verification.json',verify(mod,game,countries))
+        report['startup_compatibility_revision']=STARTUP_REVISION
         report.update(mod_directory='eu5_converted',version='0.12.2',source_claims_revision=CLAIMS_REVISION,countries=countries,source_run=str(run.resolve()),refresh_signature=signature,
                       output_sha256={p.relative_to(mod).as_posix():digest(p) for p in mod.rglob('*') if p.is_file()},upgraded_from=str(package.resolve()))
         write(temp/'package_report.json',report);temp.rename(out)
@@ -168,6 +174,8 @@ def upgrade(package,game,rules,output):
     from converter_command_capacity import install as commands
     write(temp/'command_capacity_verification.json',commands(game,mod))
     from converter_identity_audit import verify
+    write(temp/'startup_compatibility.json',startup_compatibility(mod,game,startup_run))
+    report['startup_compatibility_revision']=STARTUP_REVISION
     write(temp/'identity_verification.json',verify(mod,game,countries))
     report.update(mod_directory='eu5_converted',countries=countries,source_run=str(run.resolve()),refresh_signature=signature,version='0.12.2',source_claims_revision=CLAIMS_REVISION,identity_policy=identity['policy'],runtime_verified=False,
                   output_sha256={p.relative_to(mod).as_posix():digest(p) for p in mod.rglob('*') if p.is_file()},upgraded_from=str(package.resolve()))

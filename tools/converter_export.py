@@ -179,6 +179,11 @@ def export_candidate(world, project, output):
         # Tiny synthetic export fixtures have no installed game rules.
         if hasattr(world,'game') and (world.game/'common/commander_ranks').exists():
             write(temp/'command_capacity_verification.json',install_command_capacity(world.game,mod))
+        if world.report.get('startup_compatibility_revision'):
+            from converter_startup_compatibility import apply as startup_compatibility
+            # Recalculate the law whitelist after country edits, while keeping
+            # the already reconciled war history intact.
+            write(temp/'startup_compatibility.json',startup_compatibility(mod,world.game))
         if world.report.get('refresh_signature'):
             from converter_identity_audit import verify as verify_identity
             write(temp/'identity_verification.json',verify_identity(mod,world.game,{t:c for t,c in world.countries.items() if t not in aliases}))
@@ -187,11 +192,12 @@ def export_candidate(world, project, output):
                     output_sha256={p.relative_to(mod).as_posix():digest(p) for p in mod.rglob('*') if p.is_file()},
                     input_fingerprint=world.fingerprint,settings=options,merges=operations,runtime_verified=False,
                     countries={t:c for t,c in world.countries.items() if t not in aliases},
+                    startup_compatibility_revision=world.report.get('startup_compatibility_revision'),
                     source_run=world.report.get('source_run'),refresh_signature=world.report.get('refresh_signature'),identity_policy=world.report.get('identity_policy'),source_claims_revision=core_report['revision'] if core_report else None,
                     checks=dict(population=sum(actual.values()),provinces=len(expected),building_levels=sum(r['levels'] for r in actual_buildings)),
                     population_groups_rounded_to_zero=sum(n==0 for n in scaled.values()),
                     adjustments=world._edit_notes+political_notes,bulk_outcomes=world._bulk_outcomes,limitations=preview['assumptions'])
-        for name in ('identity_refresh.json','source_claims.json','opening_balance.json'):
+        for name in ('identity_refresh.json','source_claims.json','opening_balance.json','startup_compatibility.json'):
             if not (temp/name).exists() and hasattr(original,'package') and (original.package/name).exists():shutil.copyfile(original.package/name,temp/name)
         write(temp/'package_report.json',report);write(temp/'risk_report.json',preview);write(temp/'project.json',project)
         (temp/'README.txt').write_text('独立候选包；需新开游戏验证。\n把 eu5_converted 目录及同名 .mod 文件放入 Victoria 3 用户 mod 目录。\n只在启动器启用本候选包，避免与其他世界转换包同时启用。\n参数和风险模型见 project.json、risk_report.json。\n',encoding='utf-8')

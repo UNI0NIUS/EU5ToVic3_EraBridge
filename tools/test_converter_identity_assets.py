@@ -47,6 +47,7 @@ class IdentityAssetTests(unittest.TestCase):
         self.assertIn('icon = "bon.dds"',updated)
         self.assertIn('taboos = { wine }',updated)
         self.assertTrue(all(0 <= n <= 1 for n in color('bon')))
+        self.assertTrue(all(len(str(n).partition('.')[2]) <= 5 for n in color('bon')))
         self.assertIsNone(color('unknown_faith'))
         self.assertEqual(apply('unknown_faith',original),original)
 

@@ -136,6 +136,7 @@ def finalize(request,stage):
     culture_modifiers(game,mod,write=True);flag_assets(game,mod,eu5)
     from converter_command_capacity import install as install_command_capacity
     write(package/'command_capacity_verification.json',install_command_capacity(game,mod))
+    from converter_startup_compatibility import apply as startup_compatibility
     if (run/'rules/identity_policy.json').exists():
         from verify_converter_identity import verify_output
         stage('Identity and population readback',lambda:write(package/'identity_verification.json',verify_output(run,game)))
@@ -145,6 +146,7 @@ def finalize(request,stage):
         from converter_identity_repair import repair
         stage('Campaign text and Jing homelands',lambda:write(package/'identity_repair.json',repair(mod,game,run)))
         stage('Country labels and icons',lambda:write(package/'country_identity_verification.json',verify_identity(mod,game,read(run/'political/conversion_report.json')['countries'])))
+    stage('Starting laws, localization and opening wars',lambda:write(package/'startup_compatibility.json',startup_compatibility(mod,game,run)))
     if digest(save)!=sha or digest(original_save)!=original_sha:raise ValueError('Source save changed during conversion')
     name='EU5 Converted '+auditdoc['date'];metadata=mod/'.metadata/metadata.json'
     if metadata.exists():
@@ -155,8 +157,10 @@ def finalize(request,stage):
                 political_run=str(run/'political'),demographic_run=str(run/'demographic'),runtime_verified=False,
                 output_sha256=world.files(mod),rules_sha256=digest(Path(request['rules'])),summary=read(package/'summary.json'))
     from converter_refresh import REVISION
+    from converter_startup_compatibility import REVISION as STARTUP_REVISION
     from converter_source_claims import REVISION as CLAIMS_REVISION
     report['source_claims_revision']=CLAIMS_REVISION
+    report['startup_compatibility_revision']=STARTUP_REVISION
     report.update(source_run=str(run.resolve()),refresh_signature=REVISION+':'+digest(Path(request['rules'])),identity_policy=read(run/'rules/identity_policy.json')['revision'] if (run/'rules/identity_policy.json').exists() else None)
     write(package/'package_report.json',report)
     (package/'eu5_converted.mod').write_text(f'name="EU5 Converted {auditdoc["date"]}"\nversion="0.12.2"\nsupported_version="1.13.*"\npath="mod/eu5_converted"\n',encoding='utf-8-sig')

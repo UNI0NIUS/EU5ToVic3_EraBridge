@@ -69,18 +69,13 @@ def country_record_condition(tags):
 
 def export_constitutions(exporter, blocs):
     from build_m3_world import block
-    journals, history = [], []
+    journals = []
     for b in blocs:
         c = b.get('constitution')
         if not c: continue
         ids = journal_ids(c)
-        # Seed after POWER_BLOCS initialization, using the native GLOBAL history stage.
-        for tag in b['members']:
-            entries = [ids['charter']]
-            if tag in c['electors']: entries.append(ids['elector'])
-            if tag in c['roles']['free_city']['members']: entries.append(ids['free_city'])
-            if tag in c['associated_members']: entries.append(ids['associated'])
-            history.append(block('c:' + tag + ' ?', ''.join(block('add_journal_entry', 'type = ' + entry) for entry in entries)))
+        # The native possible lifecycle activates these records. Also seeding
+        # them in GLOBAL history causes duplicate journal creation on startup.
         for role, key in ids.items():
             eligible = {'charter': b['members'], 'elector': c['electors'],
                         'free_city': c['roles']['free_city']['members'],
@@ -142,4 +137,4 @@ def export_constitutions(exporter, blocs):
                 exporter.localization[lang][key + '_status'] = ('Source constitution record' if not lang_index else '原档宪制记录')
     if journals:
         exporter.write('common/journal_entries/zz_eu5_hre_constitution.txt', ''.join(journals))
-        exporter.write('common/history/global/01_eu5_hre_constitution.txt', block('GLOBAL', ''.join(history)))
+        exporter.write('common/history/global/01_eu5_hre_constitution.txt', block('GLOBAL', ''))

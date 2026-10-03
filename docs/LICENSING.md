@@ -20,6 +20,10 @@
 
 微软运行库按实际来源及产品条款核查。[微软分发说明](https://learn.microsoft.com/en-us/cpp/windows/redistributing-visual-cpp-files?view=msvc-170) 将分发权与许可条件关联；从包缓存取得 DLL 和许可文本本身不足以证明分发资格。剩余条件见[发布准备](RELEASING.md)。
 
+进一步核对 [Visual Studio 2022 Build Tools 条款](https://visualstudio.microsoft.com/license-terms/vs2022-ga-diagnosticbuildtools/)后，未持有 Visual Studio 产品许可时的例外仅涵盖构建所依赖的第三方开源组件，不等同于任意开发、测试或再分发授权。[Community 条款](https://visualstudio.microsoft.com/license-terms/vs2022-ga-community/)另有个人使用和可分发代码规定，但适用资格及接受许可的事实需由维护者确认。仅有 VS Code、工具链下载记录或 `--accept-license` 参数不足以证明这一点。
+
+当前发行链尚未建立适用的 Visual Studio 产品许可依据，微软 DLL 的公开分发条件仍未满足。二进制发布可在确认适用产品许可后，从官方可分发清单核对实际 DLL，并满足通知和终端用户条款；也可另行设计使用者从官方安装运行库的方案。后者仍需验证启动与缺失依赖提示，不能简单删除 DLL 后继续宣称免安装可用。FreeType、JPEG 等所需署名另列于[运行组件通知](../licenses/THIRD_PARTY_NOTICES.md)。
+
 ## 游戏、模组与图标
 
 Europa Universalis V、Victoria 3 及其商标、游戏脚本、美术和其他资源属于相应权利人。转换器代码的 MIT 许可不授权再分发这些内容。本次排除 `.local/`、`build/`、`outputs/`、存档、完整候选模组及提取素材。

@@ -7,3 +7,5 @@
 其中 pdx-tools 的 `eu5save`、`vic3save`、`bumpalo-serde` 与派生宏来自 AGPL 仓库，保留对应根许可。外层 MIT 不能单独证明整个 DLL 的分发条件已满足，具体问题见[许可说明](../docs/LICENSING.md)。此目录不是完整对应源码，也不是二进制分发授权结论。
 
 Python 运行库的许可由准备脚本从匹配的包缓存和运行环境中收集，不将本机缓存目录提交到仓库。详细流程见[Release 准备](../docs/RELEASING.md)。
+
+运行组件的补充署名及所选许可分支见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。

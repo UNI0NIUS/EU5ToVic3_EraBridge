@@ -170,6 +170,7 @@ def prepare(root, app, out, python_base, make_archive=True):
     shutil.copy2(root / 'LICENSE', stage / 'LICENSE')
     (stage / 'licenses').mkdir(exist_ok=True)
     shutil.copy2(root / 'licenses/README.md', stage / 'licenses/README.md')
+    shutil.copy2(root / 'licenses/THIRD_PARTY_NOTICES.md', stage / 'licenses/THIRD_PARTY_NOTICES.md')
     for source, name in [(root / 'commonItems/LICENSE', 'commonItems-LICENSE'),
                          (root / 'commonItems/external/json/LICENSE.MIT', 'nlohmann-json-LICENSE'),
                          (root / 'commonItems/external/zip/UNLICENSE', 'zip-UNLICENSE')]:
@@ -202,6 +203,7 @@ def prepare(root, app, out, python_base, make_archive=True):
         '游戏资源采用本机引用重建，原始素材不随包分发；当前规则限定已验证地图和资源版本。',
         'Rakaly 锁定部分 AGPL 仓库依赖，二进制独立授权或相应分发方案仍待确认；微软运行库的分发依据也需确认。',
         '尚未完成无开发环境机器上的安装、端到端转换、导出和游戏内验收。',
+        '开发机首周引擎检查仍发现资源建筑容量和原版脚本报错，游戏内验收尚未整体通过。',
     ]
     report = {'version': VERSION, 'ready_for_publication': False, 'source_commit': revision,
               'source_worktree_dirty': dirty, 'rakaly_version_matching_lock': rakaly_version, 'input_binaries': {rel: sha256(app / rel) for rel in required},

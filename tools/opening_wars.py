@@ -97,7 +97,9 @@ def valid_play(row,setup=False):
     goal_check='OR = { has_play_goal = secession has_play_goal = annex_country }' if row['goal']=='secession' else 'has_play_goal = '+row['goal']
     if 'candidates' in row and not setup:goal_check='OR = { has_play_goal = conquer_state has_play_goal = return_state }'
     checks=['initiator = { this = c:'+row['attacker']+' }','target = { this = c:'+row['leader_target']+' }',goal_check]
-    checks.append('NOT = { any_scope_play_involved = { NOT = { '+allowed_members(row)+' } } }')
+    # Involved countries include neutral observers, which are not war members.
+    aligned='OR = { is_diplomatic_play_ally_of = c:'+row['attacker']+' is_diplomatic_play_enemy_of = c:'+row['attacker']+' }'
+    checks.append('NOT = { any_scope_play_involved = { '+aligned+' NOT = { '+allowed_members(row)+' } } }')
     for tag in row['attackers']:
         checks.append('any_scope_play_involved = { this = c:'+tag+' is_diplomatic_play_ally_of = c:'+row['attacker']+' }' if tag!=row['attacker'] else 'any_scope_play_involved = { this = c:'+tag+' }')
     for tag in row['defenders']:

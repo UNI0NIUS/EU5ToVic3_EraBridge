@@ -12,7 +12,8 @@ def color(source):
         return None
     if not re.fullmatch(r'#[0-9A-Fa-f]{6}', value):
         raise ValueError('Invalid religion palette color: '+source)
-    return [round(int(value[i:i+2], 16)/255, 6) for i in (1, 3, 5)]
+    # V3's fixed-point reader rejects color components with six decimals.
+    return [round(int(value[i:i+2], 16)/255, 5) for i in (1, 3, 5)]
 
 
 def apply(source, body):

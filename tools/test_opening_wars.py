@@ -9,6 +9,27 @@ from border_war_goals import candidates,allocation_script
 
 
 class WarTests(unittest.TestCase):
+    def test_membership_accepts_observers_but_rejects_extra_combatants(self):
+        from opening_wars import valid_play
+        row={'attacker':'AAA','leader_target':'BBB','attackers':['AAA','CCC'],
+             'defenders':['BBB'],'goal':'conquer_state'}
+        predicate=next(v for k,v in root(valid_play(row)).entries() if k=='NOT')
+        def matches(obj, country, members):
+            def check(key,value):
+                if key=='OR':return any(check(k,v) for k,v in value.entries())
+                if key=='NOT':return not matches(value,country,members)
+                if key=='any_scope_play_involved':return any(matches(value,c,members) for c in members)
+                if key=='this':return country[0]==value.removeprefix('c:')
+                if key=='is_diplomatic_play_ally_of':return country[1]=='attacker'
+                if key=='is_diplomatic_play_enemy_of':return country[1]=='defender'
+                raise AssertionError(key)
+            return all(check(k,v) for k,v in obj.entries())
+        # This object is the rejected-extra-members predicate inside NOT.
+        members=[('AAA','attacker'),('CCC','attacker'),('BBB','defender')]
+        self.assertFalse(matches(predicate,None,members+[('ER2','neutral')]))
+        self.assertTrue(matches(predicate,None,members+[('ER2','attacker')]))
+        self.assertTrue(matches(predicate,None,members+[('ER2','defender')]))
+
     def test_named_aggression_is_explicit_approximation_not_unknown_fallback(self):
         from extract_war_source import extract
         from m3_world import digest
