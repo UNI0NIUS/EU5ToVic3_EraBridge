@@ -45,6 +45,11 @@ __pycache__/
 # Publish maintained technical documents; keep conversation and campaign logs local.
 /docs/*
 !/docs/README.md
+!/docs/README.en.md
+!/docs/BUILDING.en.md
+!/docs/CONVERTER_WORKBENCH.en.md
+!/docs/LOCALIZATION.md
+!/docs/LOCALIZATION.en.md
 !/docs/BUILDING.md
 !/docs/ARCHITECTURE.md
 !/docs/CONVERSION_RULES.md
@@ -67,3 +72,5 @@ __pycache__/
 /tools/update_m4_population_test.ps1
 /tools/update_m5_integrated_test.ps1
 /tools/Select-PopulationMode.ps1
+
+!/docs/releases/v0.12.2-beta.3.md

@@ -123,6 +123,22 @@ class ExportTests(unittest.TestCase):
             history=(td/'out/eu5_converted/common/history/countries/world.txt').read_text(encoding='utf-8-sig')
             self.assertNotIn('law_type:a',history);self.assertIn('c:BBB ?=',history)
             for rel,text in data.items():self.assertEqual((mod/rel).read_text(encoding='utf-8'),text)
+            from test_converter_i18n import localization
+            localization(mod,'english',' AAA:0 "Alpha"\n BBB:0 "Beta"\n')
+            localization(mod,'simp_chinese',' AAA:0 "甲国"\n BBB:0 "乙国"\n')
+            result_en=export_candidate(w,dict(p,output_language='en'),td/'english')
+            self.assertEqual(result_en['population'],result['population'])
+            self.assertEqual((td/'english/eu5_converted'/POPS).read_bytes(),(td/'out/eu5_converted'/POPS).read_bytes())
+            report=json.loads((td/'english/package_report.json').read_text(encoding='utf-8'))
+            self.assertEqual(report['output_language'],'en')
+            self.assertIn('Set Victoria 3 language to English',(td/'english/README.txt').read_text(encoding='utf-8'))
+            self.assertTrue((td/'english/eu5_converted/localization/simp_chinese').is_dir())
+            self.assertEqual(json.loads((td/'english/localization_verification.json').read_text(encoding='utf-8'))['checked_keys'],2)
+            localization(mod,'english',' AAA:0 "Alpha"\n')
+            with self.assertRaisesRegex(ValueError,'Missing english localization: BBB'):
+                export_candidate(w,dict(p,output_language='en'),td/'invalid')
+            self.assertFalse((td/'invalid').exists())
+            self.assertEqual(len(list(td.glob('invalid.building-*/FAILED.json'))),1)
 
 class ServerTests(unittest.TestCase):
     def test_local_host_and_mutation_token_required(self):

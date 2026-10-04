@@ -11,6 +11,7 @@ assignees: ''
 - EraBridge 版本或提交：
 - Windows 版本：
 - EU5 / Victoria 3 版本：
+- 工作台语言 / 所选输出语言 / V3 游戏语言：
 - 启用的模组：
 - 来源：Release 便携包 / 自行构建 / 其他（请说明）
 

@@ -55,7 +55,12 @@ def runtime_smoke(root, workspace):
     assert library.rakaly_vic3_file and library.rakaly_eu5_file
     window = tk.Tk(); window.withdraw()
     try:
-        ui = Workbench(window, workspace, autoload=False)
+        ui = Workbench(window, workspace, autoload=False, language='en')
+        assert ui.tr('准备转换规则') == 'Prepare rules'
+        ui.language_choice.set('简体中文'); ui.change_language()
+        assert ui.tr('准备转换规则') == '准备转换规则'
+        ui.language_choice.set('English'); ui.change_language()
+        assert ui.tr('准备转换规则') == 'Prepare rules'
         window.update_idletasks()
         ui.initialize_dialog()
         window.update_idletasks()
@@ -69,7 +74,7 @@ def runtime_smoke(root, workspace):
         except tk.TclError: pass
     return {'python': platform.python_version(), 'numpy': np.__version__, 'pillow': PIL.__version__,
             'tk': tk.TkVersion, 'isolated_python_paths': True, 'native_library_loaded': True,
-            'desktop_and_initialization_dialog': 'passed'}
+            'desktop_and_initialization_dialog': 'passed', 'chinese_english_switch': 'passed'}
 
 
 def check_project(package, game, workspace):

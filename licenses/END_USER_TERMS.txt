@@ -9,3 +9,15 @@ Microsoft Visual C++ 运行库和 Windows SDK 运行组件由各自权利人提�
 Python、NumPy、Pillow、Tcl/Tk、Rakaly 及其他依赖按随附的各自许可使用。版本、文件来源和通知见 licenses/runtime-inventory.json、licenses/README.md 与 licenses/THIRD_PARTY_NOTICES.md。
 
 首次启动时，选择“是”表示同意遵守以上条款及所引用的适用第三方许可；选择“否”可打开本文件阅读，选择“取消”退出。源码构建及使用开源组件时，仍以对应组件的实际许可证为准。
+
+EraBridge: Third-party component terms
+
+EraBridge's own code and inherited upstream code use the MIT license in the root LICENSE file. The terms below concern this package's third-party components only; they do not restrict rights already granted by MIT or other open-source licenses.
+
+Microsoft Visual C++ runtime libraries and Windows SDK runtime components are provided by their respective rights holders and used under their original licenses bundled with this package. The Visual Studio license is under licenses/microsoft-community-2022/: LICENSE.docx is the original and LICENSE.txt is a reading copy. Windows SDK component licenses are under licenses/runtime/ucrt-*. Users must comply with applicable installation, use, transfer, redistribution, reverse-engineering and export restrictions and retain copyright and license notices. Exceptions expressly permitted by applicable law and the original licenses continue to apply. Microsoft components must not be redistributed under EraBridge's MIT license.
+
+Microsoft components are supplied subject to the warranty exclusions and liability limitations in their original licenses. EraBridge provides no warranty on Microsoft's behalf and does not claim Microsoft's endorsement. Any redistribution must retain the original component licenses and ensure recipients agree to applicable terms. This package grants no additional redistribution rights for Microsoft components.
+
+Python, NumPy, Pillow, Tcl/Tk, Rakaly and other dependencies use their respective bundled licenses. See licenses/runtime-inventory.json, licenses/README.md and licenses/THIRD_PARTY_NOTICES.md for versions, file provenance and notices.
+
+On first launch, choosing Yes means you agree to comply with the terms above and the applicable third-party licenses they reference. No opens this file for reading; Cancel exits. Source builds and use of open-source components remain governed by the actual licenses of those components.

@@ -1,4 +1,5 @@
 """Shared local project model; independent of any GUI or HTTP transport."""
+from converter_i18n import Message
 from copy import deepcopy
 import io
 from pathlib import Path
@@ -17,7 +18,7 @@ class App:
         self.workspace=Path(workspace).resolve();self.workspace.mkdir(parents=True,exist_ok=True)
         self.token=secrets.token_urlsafe(32);self.lock=threading.RLock()
         self.world=None;self.project=None;self.preview=None
-        self.job=dict(status='idle',message='请选择候选包或新建转换任务');self.image_cache={}
+        self.job=dict(status='idle',message=Message('请选择候选包或新建转换任务'));self.image_cache={}
 
     def projects(self):
         result=[]
@@ -37,7 +38,7 @@ class App:
                 r=read(p/'package_report.json');candidates.append(dict(path=str(p),name=r.get('mod_name',p.name),date=r.get('source_date','')))
         generated=[]
         for p in sorted((self.workspace/'runs').glob('*/complete/package_report.json'),reverse=True):
-            r=read(p);generated.append(dict(path=str(p.parent),name=r.get('mod_name','通用流水线转换结果'),date=r.get('source_date','')))
+            r=read(p);generated.append(dict(path=str(p.parent),name=r.get('mod_name',Message('通用流水线转换结果')),date=r.get('source_date','')))
         candidates=generated+candidates
         return dict(game=d.get('game',''),
                     eu5=d.get('eu5',''),
@@ -52,18 +53,18 @@ class App:
         return dict(job=self.job,project=self.project,preview=self.preview)
 
     def check_revision(self, body):
-        if self.job['status']=='running':raise RuntimeError('任务进行中，请等待完成')
-        if not self.project:raise ValueError('请先载入项目')
-        if body.get('revision')!=self.project['revision']:raise RuntimeError('项目已更新，请刷新后重试')
+        if self.job['status']=='running':raise RuntimeError(Message('任务进行中，请等待完成'))
+        if not self.project:raise ValueError(Message('请先载入项目'))
+        if body.get('revision')!=self.project['revision']:raise RuntimeError(Message('项目已更新，请刷新后重试'))
 
     def background(self,label,fn):
         with self.lock:
-            if self.job['status']=='running':raise RuntimeError('已有任务运行中')
+            if self.job['status']=='running':raise RuntimeError(Message('已有任务运行中'))
             job_id=uuid.uuid4().hex;self.job=dict(id=job_id,status='running',message=label)
         def run():
             try:
                 result=fn()
-                with self.lock:self.job=dict(id=job_id,status='done',message=label+'完成',result=result)
+                with self.lock:self.job=dict(id=job_id,status='done',message=Message('{0}完成', label),result=result)
             except Exception as e:
                 log=self.workspace/'logs'/(job_id+'.log');log.parent.mkdir(exist_ok=True)
                 log.write_text(traceback.format_exc(),encoding='utf-8')
@@ -72,18 +73,20 @@ class App:
         return dict(job=self.job)
 
     def load(self, body):
-        return self.background('载入并计算地图',lambda:self.load_project(body))
+        return self.background(Message('载入并计算地图'),lambda:self.load_project(body))
 
     def load_project(self, body):
         if body.get('id'):
-            if not isinstance(body['id'],str) or not all(c in '0123456789abcdef' for c in body['id']) or len(body['id'])!=32:raise ValueError('项目编号无效')
+            if not isinstance(body['id'],str) or not all(c in '0123456789abcdef' for c in body['id']) or len(body['id'])!=32:raise ValueError(Message('项目编号无效'))
             project=read(self.workspace/'projects'/body['id']/'project.json')
         else:
-            project=dict(schema=1,id=uuid.uuid4().hex,name=body.get('name') or 'EU5 → Victoria 3 转换项目',
+            project=dict(schema=1,id=uuid.uuid4().hex,name=body.get('name') or Message('EU5 → Victoria 3 转换项目'),
                          package=str(Path(body['package']).resolve()),game=str(Path(body['game']).resolve()),
                          revision=0,settings=dict(DEFAULTS),merges=[])
         world=Candidate(project['package'],project['game'],self.workspace/'cache')
-        if project.get('fingerprint') and project['fingerprint']!=world.fingerprint:raise ValueError('项目输入指纹已改变，不能自动复用旧合并决定')
+        if 'output_language' not in project and world.report.get('output_language'):
+            project['output_language']=world.report['output_language']
+        if project.get('fingerprint') and project['fingerprint']!=world.fingerprint:raise ValueError(Message('项目输入指纹已改变，不能自动复用旧合并决定'))
         rules=self.workspace/'rules'
         if (rules/'identity_policy.json').exists():
             from converter_refresh import upgrade
@@ -107,27 +110,30 @@ class App:
             elif kind in ('merge','edit'):
                 new['merges'].append(body['operation'])
             elif kind=='undo':
-                if not new['merges']:raise ValueError('没有可撤销的编辑')
+                if not new['merges']:raise ValueError(Message('没有可撤销的编辑'))
                 new['merges'].pop()
             elif kind=='restore':new['merges']=[];new['settings']=dict(DEFAULTS)
-            else:raise ValueError('未知操作')
+            else:raise ValueError(Message('未知操作'))
             preview=self.world.preview(new['settings'],new['merges'])
             new['revision']+=1;self.project=new;self.preview=preview;self.image_cache={};self.save()
             return self.snapshot()
 
-    def configure_export_name(self,value,revision):
+    def configure_export_name(self,value,revision,output_language=None):
         from converter_project import mod_name
+        from converter_output_language import output_language as validate_language
         with self.lock:
             self.check_revision(dict(revision=revision))
             value=mod_name(value)
-            if self.project.get('mod_name')!=value:
+            language=validate_language(output_language) if output_language is not None else self.project.get('output_language')
+            if self.project.get('mod_name')!=value or self.project.get('output_language')!=language:
                 self.project=deepcopy(self.project);self.project['mod_name']=value
+                if language is not None:self.project['output_language']=language
                 self.project['revision']+=1;self.save()
             return deepcopy(self.project)
 
     def image(self,view):
-        if not self.world:raise ValueError('请先载入地图')
-        if view not in ('country','state','strategic_region','market','arable','unemployment','food','market_food','local_food'):raise ValueError('未知图层')
+        if not self.world:raise ValueError(Message('请先载入地图'))
+        if view not in ('country','state','strategic_region','market','arable','unemployment','food','market_food','local_food'):raise ValueError(Message('未知图层'))
         if view in self.image_cache:return self.image_cache[view]
         lut=np.zeros((1<<24,3),dtype=np.uint8);lut[:]=[19,37,49]
         import hashlib
@@ -164,14 +170,14 @@ class App:
     def region(self,key,selected=None,preview=None):
         preview=preview or self.preview
         row=next((r for r in preview['rows'] if r['id']==key),None)
-        if row is None:raise ValueError('地区不存在')
+        if row is None:raise ValueError(Message('地区不存在'))
         provinces=sorted(set(selected or [])&set(row['provinces'])) or row['provinces']
         cache=getattr(self,'_region_cache',None)
         if cache is None:self._region_cache=cache={}
         signature=(self.world.fingerprint,tuple(provinces))
         if signature in cache:return cache[signature]
         mask=np.isin(self.world.raster(),[int(p[1:],16) for p in provinces]);yy,xx=np.where(mask)
-        if not len(xx):raise ValueError('地图中缺少地区')
+        if not len(xx):raise ValueError(Message('地图中缺少地区'))
         x0,x1,y0,y1=int(xx.min()),int(xx.max())+1,int(yy.min()),int(yy.max())+1
         middle=len(xx)//2;xy=[int(xx[middle]),int(yy[middle])]
         # A seam-spanning region focuses on one actual land pixel, not an ocean centroid.

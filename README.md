@@ -1,8 +1,10 @@
 # EraBridge — EU5 → Victoria 3
 
+**简体中文** · [English](README.en.md)
+
 ![EraBridge 图标](tools/converter_ui/icons/erabridge-beta-128.png)
 
-EraBridge 将 Europa Universalis V 存档转换为 Victoria 3 候选模组，并提供 Windows 桌面工作台，用于查看地图、调整人口与耕地、编辑地区和导出结果。当前版本为 **0.12.2-beta.2，Windows x64 社区测试版**，主要验证环境是 EU5 1.3.11 与 Victoria 3 1.13.11。
+EraBridge 将 Europa Universalis V 存档转换为 Victoria 3 候选模组，并提供 Windows 桌面工作台，用于查看地图、调整人口与耕地、编辑地区和导出结果。当前版本为 **0.12.2-beta.3，Windows x64 社区测试版**，主要验证环境是 EU5 1.3.11 与 Victoria 3 1.13.11。
 
 项目基于 [ParadoxGameConverters/EU5ToVic3](https://github.com/ParadoxGameConverters/EU5ToVic3) 独立修改，与上游团队没有官方隶属关系。上游基线为 `56ee636b6ebd8a110b54d3133794f964af0f0e1e`。本分支开发使用了 AI 辅助；上游不接受此类贡献，相关反馈请留在本 fork。
 
@@ -17,7 +19,7 @@ EraBridge 将 Europa Universalis V 存档转换为 Victoria 3 候选模组，并
 
 ## 使用与构建
 
-[下载 v0.12.2-beta.2](https://github.com/UNI0NIUS/EU5ToVic3_EraBridge/releases/tag/v0.12.2-beta.2)。选择 `EraBridge-0.12.2-beta.2-windows-x64.zip`，完整解压到可写目录，双击 `EU5Converter.exe`。首次启动需阅读并接受包内第三方组件条款。包内已带 Python 和运行库，无需另装开发工具。
+[下载 v0.12.2-beta.3](https://github.com/UNI0NIUS/EU5ToVic3_EraBridge/releases/tag/v0.12.2-beta.3)。选择 `EraBridge-0.12.2-beta.3-windows-x64.zip`，完整解压到可写目录，双击 `EU5Converter.exe`。首次启动需阅读并接受包内第三方组件条款。包内已带 Python 和运行库，无需另装开发工具。
 
 这是便携压缩包，没有安装向导。GitHub 自动生成的 Source code ZIP/TAR 是源码，不能直接运行；从源码构建还需初始化子模块。
 
@@ -30,6 +32,8 @@ EraBridge 将 Europa Universalis V 存档转换为 Victoria 3 候选模组，并
 已有本地构建时，双击 `Open-ConverterWorkbench.cmd`，或运行 `build/ConverterWorkbench/EU5Converter.exe`。先点击“准备转换规则”，选择两款游戏和自备的 V3 原版开局存档，再导入 EU5 存档。转换完成后在地图上检查并导出模组。新模组应在 Victoria 3 中新开战役验证。
 
 ## 文档
+
+beta.3 新增工作台中英切换和独立的游戏显示语言选择。导入、导出会检查所选语言的本地化键并生成相应语言的安装说明。使用方式与覆盖范围见[多语言支持](docs/LOCALIZATION.md)。
 
 - [开发文档：使用说明、架构与转换规则](docs/README.md)
 - [桌面工作台：操作流程、编辑和导出](docs/CONVERTER_WORKBENCH.md)

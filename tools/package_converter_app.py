@@ -16,6 +16,15 @@ import zipfile
 from converter_project import read,write,digest
 
 
+def copy_language_docs(root,out):
+    from prepare_release import copy_public_docs
+    copy_public_docs(root,out)
+    with (out/'README.txt').open('a',encoding='utf-8') as guide:
+        guide.write('\nEnglish: run EU5Converter.exe and choose English under 语言 / Language.\n'
+                    'Choose Game display language on import/export and set the same language in Victoria 3.\n'
+                    'See docs/CONVERTER_WORKBENCH.en.md and docs/LOCALIZATION.en.md.\n')
+
+
 def refresh_rules(root,out):
     """Refresh the default rules too; code-only refresh used to leave identities stale."""
     from datetime import datetime
@@ -55,6 +64,7 @@ def refresh(root,out,include_local_rules=False):
     for path in (root/'tools').glob('*.py'):
         if not path.name.startswith('test_'):shutil.copy2(path,out/'tools'/path.name)
     shutil.copytree(root/'tools/converter_ui',out/'tools/converter_ui',dirs_exist_ok=True)
+    shutil.copytree(root/'tools/converter_locales',out/'tools/converter_locales',dirs_exist_ok=True)
     shutil.copytree(root/'config',out/'config',dirs_exist_ok=True)
     for name in ('EU5ToVic3Converter.exe','rakaly.dll'):shutil.copy2(root/'build/Release-Windows/EU5ToVic3'/name,out/'native'/name)
     (out/'docs').mkdir(exist_ok=True)
@@ -62,6 +72,7 @@ def refresh(root,out,include_local_rules=False):
     shutil.copy2(root/'docs/CONVERTER_SOURCE_CORES.md',out/'docs/CONVERTER_SOURCE_CORES.md')
     write(out/'data/defaults.json',dict(candidate_paths=[],game='',eu5=''))
     (out/'README.txt').write_text('EU5 → Victoria 3 桌面转换器 0.12.2\n\n双击 EU5Converter.exe 打开独立桌面窗口。无需浏览器，无需另装 Python。\n完整保留软件目录，不要单独复制 EXE。\n首次使用点击“准备转换规则”，选择自己的游戏安装和 V3 原版 1836.1.1 开局存档。\n支持原始存档转换、地图选择、参数调试、合并、撤销和导出。\n耕地 ≤ 3、严重失业和食物不足分别提醒。\n操作失败弹出具体原因并保存日志。详细说明见 docs/CONVERTER_WORKBENCH.md。\n',encoding='utf-8')
+    copy_language_docs(root,out)
 
 def package(root,out,include_local_rules=False):
     root,out=Path(root).resolve(),Path(out).resolve();base=Path(sys.base_prefix)
@@ -118,6 +129,7 @@ def package(root,out,include_local_rules=False):
     (out/'README.txt').write_text('EU5 → Victoria 3 桌面转换器 0.12.2\n\n双击 EU5Converter.exe 打开独立桌面窗口。无需浏览器，无需另装 Python。\n首次使用点击“准备转换规则”，从自己的游戏安装和 V3 原版开局存档生成资源。\n请完整保留软件目录。软件关闭与详细说明见 docs/CONVERTER_WORKBENCH.md。\n',encoding='utf-8')
     (out/'docs').mkdir()
     if (root/'docs/CONVERTER_WORKBENCH.md').exists():shutil.copy2(root/'docs/CONVERTER_WORKBENCH.md',out/'docs/CONVERTER_WORKBENCH.md')
+    copy_language_docs(root,out)
     write(out/'build_manifest.json',dict(python=sys.version,files={p.relative_to(out).as_posix():digest(p) for p in out.rglob('*') if p.is_file()}))
     print(str(out),flush=True)
 

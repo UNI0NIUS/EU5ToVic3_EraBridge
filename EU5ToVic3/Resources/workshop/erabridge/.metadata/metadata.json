@@ -1,0 +1,13 @@
+{
+  "name": "EraBridge - EU5 to Victoria 3 Converter",
+  "id": "union.erabridge",
+  "version": "0.12.2-beta.3",
+  "game_id": "eu5",
+  "supported_game_version": "1.3.11",
+  "short_description": "EraBridge v0.12.2-beta.3 — 中英文工作台与模组输出。打开模组文件夹运行 EU5Converter.exe。Chinese/English workbench and mod output. Run EU5Converter.exe from this folder.",
+  "tags": [
+    "Utilities"
+  ],
+  "relationships": [],
+  "game_custom_data": {}
+}

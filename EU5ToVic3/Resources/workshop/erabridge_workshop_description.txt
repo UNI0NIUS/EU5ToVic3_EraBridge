@@ -1,0 +1,49 @@
+[h1]EraBridge — EU5 → Victoria 3[/h1]
+
+将 Europa Universalis V 战役转换为 Victoria 3 中文或英文模组，在下一时代继续游戏。
+Convert a Europa Universalis V campaign into a Chinese- or English-language Victoria 3 mod.
+
+[b]语言支持：工作台可即时切换简体中文或英文；导入和导出时独立选择游戏显示语言，并在 Victoria 3 中使用相同语言。[/b]
+[b]Language support: switch the workbench between Simplified Chinese and English. Choose Game display language separately on import/export, and use the matching language in Victoria 3.[/b]
+
+[b]v0.12.2-beta.3 Windows 社区测试版已发布 / Windows community test release available[/b]
+本版提供可直接运行的 Windows x64 便携包，已附 Python 和运行依赖，无需另装开发工具。本工坊条目包含完整、已展开的转换器程序。订阅下载完成后，在 EU5 模组工具中打开本模组所在文件夹，双击根目录的 EU5Converter.exe 即可运行，无需解压。此程序独立运行，转换结果在 Victoria 3 中加载。
+A runnable Windows x64 portable package is available, with Python and runtime dependencies included. No development tools are required. This Workshop item contains the complete extracted application. After the download finishes, open the mod folder from EU5 Mod Tools and run EU5Converter.exe at its root. No extraction is needed. The converter runs separately and produces mods for Victoria 3.
+
+[h2]下载与文档 / Downloads and documentation[/h2]
+[url=https://github.com/UNI0NIUS/EU5ToVic3_EraBridge/releases/tag/v0.12.2-beta.3]v0.12.2-beta.3 下载页面与更新说明 / Release page and notes[/url]
+[url=https://github.com/UNI0NIUS/EU5ToVic3_EraBridge/releases/download/v0.12.2-beta.3/EraBridge-0.12.2-beta.3-windows-x64.zip]下载 Windows x64 便携包 / Download portable ZIP[/url]
+[url=https://github.com/UNI0NIUS/EU5ToVic3_EraBridge/releases/download/v0.12.2-beta.3/SHA256SUMS.txt]SHA-256 校验文件 / Checksums[/url]
+[url=https://github.com/UNI0NIUS/EU5ToVic3_EraBridge/blob/v0.12.2-beta.3/docs/CONVERTER_WORKBENCH.md]工作台使用说明 / Workbench guide[/url]
+[url=https://github.com/UNI0NIUS/EU5ToVic3_EraBridge/issues]问题反馈 / Issue tracker[/url]
+
+工坊订阅版已展开，可直接运行。若选择从 GitHub 单独下载，请选择 EraBridge-0.12.2-beta.3-windows-x64.zip；Source code ZIP/TAR 仅包含源码。
+The Workshop copy is already extracted and ready to run. For a separate GitHub download, choose EraBridge-0.12.2-beta.3-windows-x64.zip; Source code archives contain source only.
+
+[url=https://github.com/UNI0NIUS/EU5ToVic3_EraBridge/blob/v0.12.2-beta.3/docs/CONVERTER_WORKBENCH.en.md]English workbench guide[/url]
+
+[h2]首次使用 / Getting started[/h2]
+[list]
+[*]订阅并等待下载完成，在 EU5 模组工具中打开本模组所在文件夹，双击 EU5Converter.exe，阅读并接受第三方组件条款。请保留完整目录，不要单独移动 EXE。
+[*]点击“准备转换规则”，选择自己的 EU5、Victoria 3 游戏目录和 V3 原版 1836.1.1 开局存档。游戏与存档需自行提供。
+[*]导入 EU5 存档，在工作台检查结果，调整人口、耕地或地区后导出所选语言的模组。在 Victoria 3 中选择对应语言，启用导出的模组，新开战役测试。
+[*]Subscribe and wait for the download to finish. Open this mod folder from EU5 Mod Tools and run EU5Converter.exe, then read and accept the bundled third-party terms. Keep the complete application folder together.
+[*]Use the rule preparation action to select your EU5 and Victoria 3 installations and a vanilla Victoria 3 save dated 1836.1.1. Provide your own games and save.
+[*]Import an EU5 save, review and edit the conversion in the workbench, and export a mod in your selected language. Set Victoria 3 to the matching language, enable the exported mod, and start a new campaign.
+[/list]
+
+[h2]功能 / Features[/h2]
+读取 EU5 存档，转换人口、国家、文化、宗教、政治关系、经济、军队和开局战争。桌面地图支持检查结果、调整人口与耕地、编辑归属与州界、保存项目和导出模组。
+Import EU5 saves and convert populations, countries, cultures, religions, diplomacy, economy, armies, and opening wars. The desktop map workbench supports reviewing results, editing population, arable land, ownership and state borders, saving projects, and exporting mods.
+
+[h2]版本与限制 / Versions and limitations[/h2]
+本次新增中英切换、英文界面提示和输出语言校验；转换器生成开局模组，在 V3 中开始战役后由游戏保存为 .v3。英文游戏内显示仍待验证。
+This update adds bilingual UI messages and output-language validation. It produces a starting-world mod; Victoria 3 creates the .v3 save when you save a new campaign. English in-game display remains unverified.
+主要验证环境为 Windows x64、EU5 1.3.11 和 Victoria 3 1.13.11。此前 beta.2 的开发机全流程检查覆盖规则初始化、原始存档转换、项目保存重开及导出回读，3292 个地区数据一致，开局 5 场战争成员已核对。独立 Windows 机器、其他游戏版本、第三方模组和长期战役尚未完成验收。
+1337 样本仍有资源建筑容量及部分原版脚本作用域报错，可能导致资源建筑被引擎削减、动态州名等内容异常。食物、就业及财政指标包含静态估算。详细已知问题和验证范围见 Release 说明。
+Development checks use Windows x64, EU5 1.3.11, and Victoria 3 1.13.11. An earlier beta.2 developer-machine run covered rule initialization, conversion, project save/reopen, and export readback with 3,292 matching locations; members of five opening wars were checked. Independent Windows machines, other game versions, third-party mods, and long campaigns remain unverified.
+The 1337 sample still has resource-building capacity and some vanilla script-scope errors, which can reduce resource buildings or affect features such as dynamic state names. Food, employment, and fiscal indicators include static estimates. See the release notes for details.
+
+[h2]来源 / Credits[/h2]
+本项目基于 [url=https://github.com/ParadoxGameConverters/EU5ToVic3]ParadoxGameConverters/EU5ToVic3[/url] 独立修改，保留原 MIT 许可。与 Paradox 或上游团队没有官方隶属关系。本分支使用 AI 辅助开发，请将问题反馈到本 fork。其他组件适用各自许可，条款与通知随包提供。
+An independently maintained fork of ParadoxGameConverters/EU5ToVic3 under the original MIT license. It is not affiliated with Paradox or the upstream team. This fork uses AI-assisted development; please report issues to this fork. Other components have their own licenses, with terms and notices included in the package.

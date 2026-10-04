@@ -1,4 +1,5 @@
 """Replay desktop decisions into an isolated, deterministic candidate view."""
+from converter_i18n import Message
 from collections import Counter, defaultdict
 from copy import copy, deepcopy
 import json
@@ -12,7 +13,7 @@ from build_m2_prototype import strings
 
 def integer(value, label, maximum=1000000):
     if isinstance(value,bool) or not isinstance(value,int) or not 0<=value<=maximum:
-        raise ValueError(label+'必须为 0–'+str(maximum)+' 的整数')
+        raise ValueError(Message('{0}必须为 0–{1} 的整数', label, str(maximum)))
     return value
 
 
@@ -28,17 +29,17 @@ def risk_reasons(row,risks,food_threshold=.2):
 
 def plan_bulk(rows,mode='risk',state=None,risks=('food','unemployment'),grouping='state',region=None,food_threshold=.2):
     """Freeze dominant owners from the current preview, avoiding order-dependent targets."""
-    if mode not in ('risk','state'):raise ValueError('未知批量模式')
-    if grouping not in ('state','strategic_region'):raise ValueError('未知整合层级')
-    if grouping=='strategic_region' and state is not None:raise ValueError('战略地区整合不能只用一个州统计最大国家；请按战略地区筛选')
-    if mode=='state' and not (state or region):raise ValueError('请先选择一个州或战略地区')
-    if set(risks)-{'food','unemployment','market_food','local_food'}:raise ValueError('未知批量风险条件')
+    if mode not in ('risk','state'):raise ValueError(Message('未知批量模式'))
+    if grouping not in ('state','strategic_region'):raise ValueError(Message('未知整合层级'))
+    if grouping=='strategic_region' and state is not None:raise ValueError(Message('战略地区整合不能只用一个州统计最大国家；请按战略地区筛选'))
+    if mode=='state' and not (state or region):raise ValueError(Message('请先选择一个州或战略地区'))
+    if set(risks)-{'food','unemployment','market_food','local_food'}:raise ValueError(Message('未知批量风险条件'))
     by_state=defaultdict(list)
     for row in rows:
         if state is not None and row['state']!=state:continue
         if region is not None and row.get('strategic_region')!=region:continue
         key=row.get(grouping)
-        if not key:raise ValueError('地区缺少战略地区定义，不能在此层级整合')
+        if not key:raise ValueError(Message('地区缺少战略地区定义，不能在此层级整合'))
         by_state[key].append(row)
     transfers=[]
     for s,parts in sorted(by_state.items()):
@@ -51,15 +52,15 @@ def plan_bulk(rows,mode='risk',state=None,risks=('food','unemployment'),grouping
             if mode=='risk' and not reasons:continue
             transfers.append(dict(state=part['state'],source=part['country'],target=dominant,group=s,reasons=reasons,
                 market_food_shortfall=part.get('market_food_shortfall'),local_food_shortfall=part.get('local_food_shortfall')))
-    if not transfers:raise ValueError('当前范围内没有需要整合到其他国家的地区；已属该层级最大地块国家的地区保持原状')
+    if not transfers:raise ValueError(Message('当前范围内没有需要整合到其他国家的地区；已属该层级最大地块国家的地区保持原状'))
     return dict(kind='bulk',mode=mode,state=state,region=region,grouping=grouping,risks=list(risks),food_threshold=food_threshold,transfers=transfers)
 
 
 def plan_population(world,options,operations,region_ids,mode='percent',percent=10):
-    if mode not in ('percent','jobs'):raise ValueError('未知人口削减方式')
-    if mode=='percent' and (isinstance(percent,bool) or not isinstance(percent,(int,float)) or not math.isfinite(percent) or not 0<percent<100):raise ValueError('削减比例须大于 0 且小于 100%')
+    if mode not in ('percent','jobs'):raise ValueError(Message('未知人口削减方式'))
+    if mode=='percent' and (isinstance(percent,bool) or not isinstance(percent,(int,float)) or not math.isfinite(percent) or not 0<percent<100):raise ValueError(Message('削减比例须大于 0 且小于 100%'))
     preview=world.preview(options,operations);rows={r['id']:r for r in preview['rows']};selected=set(region_ids)
-    if not selected or not selected<=rows.keys():raise ValueError('请选择仍存在的地区')
+    if not selected or not selected<=rows.keys():raise ValueError(Message('请选择仍存在的地区'))
     view=materialize(world,operations);totals=Counter()
     for (s,t,_,_),n in view.population.items():totals[s,t]+=n
     targets=[];skipped=[]
@@ -71,7 +72,7 @@ def plan_population(world,options,operations,region_ids,mode='percent',percent=1
         else:value=math.floor(before*(1-percent/100))
         value=max(1,min(before,value)) if before else 0
         if value<before:targets.append(dict(state=row['state'],country=row['country'],before=before,value=value))
-    if not targets:raise ValueError('当前范围内没有可削减的人口；岗位未知或岗位已足够的地区不会自动削减')
+    if not targets:raise ValueError(Message('当前范围内没有可削减的人口；岗位未知或岗位已足够的地区不会自动削减'))
     return dict(kind='population',mode=mode,percent=percent if mode=='percent' else None,targets=targets,skipped_unknown=skipped)
 
 
@@ -81,9 +82,9 @@ def resize_building(row, levels):
     if 'body' not in row:return row
     body=row['body'];matches=list(re.finditer(r'\b(levels|level)\s*=\s*(\d+)\b',body))
     if not matches:
-        raise ValueError('建筑缺少可编辑等级：'+row['building'])
+        raise ValueError(Message('建筑缺少可编辑等级：{0}', row['building']))
     allocation=apportion(levels,{i:int(m[2]) for i,m in enumerate(matches)})
-    if levels and not sum(int(m[2]) for m in matches):raise ValueError('建筑所有权等级为零')
+    if levels and not sum(int(m[2]) for m in matches):raise ValueError(Message('建筑所有权等级为零'))
     for i,m in reversed(list(enumerate(matches))):body=body[:m.start(2)]+str(allocation[i])+body[m.end(2):]
     row['body']=body
     return row
@@ -160,7 +161,7 @@ def normalize_buildings(view,notes):
             target=view.target
             unlocking=target.buildings[kind].get('unlocking_technologies')
             if not set(strings(unlocking) if unlocking else [])<=view.techs[t]:
-                raise ValueError('接收国家尚未解锁建筑：'+kind+' → '+t+'；请先在建筑编辑器移除该建筑')
+                raise ValueError(Message('接收国家尚未解锁建筑：{0} → {1}；请先在建筑编辑器移除该建筑', kind, t))
             need=len({tuple(r['pms']) for r in rows})>1 or any(not target.available(pm,view.techs[t],view.laws[t]) for r in rows for pm in r['pms'])
             if need:
                 methods=target.select(kind,view.techs[t],set(),view.laws[t])
@@ -171,7 +172,7 @@ def normalize_buildings(view,notes):
                         row['body']=re.sub(r'activate_production_methods\s*=\s*\{[^{}]*\}',
                             lambda _: 'activate_production_methods = { '+' '.join(methods)+' }',row['body'])
                     updated.append(row)
-                rows=updated;notes.append('生产方式统一为接收国可用配置：'+s+' / '+t+' / '+kind)
+                rows=updated;notes.append(Message('生产方式统一为接收国可用配置：{0} / {1} / {2}', s, t, kind))
         normalized.extend(rows)
     # render_buildings can generate a complete body for newly added establishments.
     from economy_model import render_buildings,building_rows
@@ -229,32 +230,32 @@ def materialize(world,operations):
         kind=op.get('kind');s=op.get('state');t=op.get('country')
         if kind=='population':
             targets=op.get('targets');seen=set();removed=0
-            if not isinstance(targets,list) or not targets:raise ValueError('人口削减方案为空')
+            if not isinstance(targets,list) or not targets:raise ValueError(Message('人口削减方案为空'))
             live={(states[p],owners[p]) for p in owners};by_pair=defaultdict(dict)
             for key,n in view.population.items():by_pair[key[:2]][key]=n
             for item in targets:
                 pair=item['state'],item['country']
-                if pair in seen:raise ValueError('人口削减方案重复地区')
+                if pair in seen:raise ValueError(Message('人口削减方案重复地区'))
                 seen.add(pair)
-                if pair not in live:raise ValueError('人口所属地区已不存在')
+                if pair not in live:raise ValueError(Message('人口所属地区已不存在'))
                 groups=by_pair[pair];before=sum(groups.values())
-                value=integer(item.get('value'),'地区人口',1000000000000)
-                if before!=item.get('before'):raise ValueError('地区人口已变化，请重新生成削减预览')
-                if not 1<=value<before:raise ValueError('削减后每个有人地区至少保留 1 人，且不得增加人口')
+                value=integer(item.get('value'),Message('地区人口'),1000000000000)
+                if before!=item.get('before'):raise ValueError(Message('地区人口已变化，请重新生成削减预览'))
+                if not 1<=value<before:raise ValueError(Message('削减后每个有人地区至少保留 1 人，且不得增加人口'))
                 allocation=apportion(value,groups)
                 for key in groups:
                     if allocation[key]:view.population[key]=allocation[key]
                     else:view.population.pop(key,None)
                 removed+=before-value
-            notes.append('人口方案削减 '+str(removed)+' 人（全局人口系数前），涉及 '+str(len(targets))+' 个地区；文化与宗教按原比例取整。')
+            notes.append(Message('人口方案削减 {0} 人（全局人口系数前），涉及 {1} 个地区；文化与宗教按原比例取整。', str(removed), str(len(targets))))
             continue
         if kind=='bulk':
             moves=op.get('transfers')
-            if not isinstance(moves,list) or not moves:raise ValueError('批量整合方案为空')
+            if not isinstance(moves,list) or not moves:raise ValueError(Message('批量整合方案为空'))
             before_owners=dict(owners);before_states=dict(states)
             counts=Counter((states[p],t) for p,t in owners.items())
             grouping=op.get('grouping','state')
-            if grouping not in ('state','strategic_region'):raise ValueError('未知整合层级')
+            if grouping not in ('state','strategic_region'):raise ValueError(Message('未知整合层级'))
             state_groups={ss:(view.strategic_regions.get(ss) if grouping=='strategic_region' else ss) for ss,_ in counts}
             groups=defaultdict(Counter)
             for (ss,tt),n in counts.items():groups[state_groups[ss]][tt]+=n
@@ -262,8 +263,8 @@ def materialize(world,operations):
             lookup={}
             for move in moves:
                 ss,source,target=move['state'],move['source'],move['target']
-                if source==target or not counts[ss,source] or state_groups.get(ss) is None or leaders.get(state_groups.get(ss))!=target:raise ValueError('批量目标已改变，请重新生成预览')
-                if (ss,source) in lookup:raise ValueError('批量方案重复地区')
+                if source==target or not counts[ss,source] or state_groups.get(ss) is None or leaders.get(state_groups.get(ss))!=target:raise ValueError(Message('批量目标已改变，请重新生成预览'))
+                if (ss,source) in lookup:raise ValueError(Message('批量方案重复地区'))
                 lookup[ss,source]=target
             blocked={};conflicts=[];remove_ids=set()
             for row in view.buildings:
@@ -272,11 +273,11 @@ def materialize(world,operations):
                 kind=row['building'];unlocking=view.target.buildings[kind].get('unlocking_technologies')
                 reason=None
                 if not set(strings(unlocking) if unlocking else [])<=view.techs[target]:
-                    reason='接收国尚未解锁 '+kind
-                elif row.get('guards'):reason='存在需要单独处理的条件建筑 '+kind
+                    reason=Message('接收国尚未解锁 {0}', kind)
+                elif row.get('guards'):reason=Message('存在需要单独处理的条件建筑 {0}', kind)
                 else:
                     try:view.target.select(kind,view.techs[target],set(),view.laws[target])
-                    except (ValueError,KeyError):reason='接收国没有可用生产方式 '+kind
+                    except (ValueError,KeyError):reason=Message('接收国没有可用生产方式 {0}', kind)
                 if reason:
                     blocked[pair]=reason;remove_ids.add(id(row))
                     conflicts.append(dict(state=pair[0],source=pair[1],target=target,building=kind,levels=row['levels'],reason=reason))
@@ -284,10 +285,10 @@ def materialize(world,operations):
             if op.get('demolish') is True:
                 demolitions=conflicts;blocked={}
                 view.buildings=[row for row in view.buildings if id(row) not in remove_ids]
-                for r in demolitions:notes.append('自动拆除 '+r['state']+' / '+r['source']+'：'+r['building']+' × '+str(r['levels']))
+                for r in demolitions:notes.append(Message('自动拆除 {0} / {1}：{2} × {3}', r['state'], r['source'], r['building'], str(r['levels'])))
             for (ss,source),reason in sorted(blocked.items()):
                 skipped.append(dict(state=ss,source=source,target=lookup.pop((ss,source)),reason=reason))
-                notes.append('跳过 '+ss+' / '+source+'：'+reason)
+                notes.append(Message('跳过 {0} / {1}：{2}', ss, source, reason))
             bulk_outcomes.append(dict(requested=len(moves),applied=len(lookup),skipped=skipped,conflicts=conflicts,demolitions=demolitions))
             for p,t in before_owners.items():owners[p]=lookup.get((states[p],t),t)
             for source in sorted(set(before_owners.values())-set(owners.values())):
@@ -296,39 +297,39 @@ def materialize(world,operations):
                 for old,new in list(aliases.items()):
                     if new==source:aliases[old]=target
                 aliases[source]=target
-                if len(successors)>1:notes.append('国家领土分入多个接收国，外交由接收地块最多者继承：'+source+' → '+target)
+                if len(successors)>1:notes.append(Message('国家领土分入多个接收国，外交由接收地块最多者继承：{0} → {1}', source, target))
             weights=destinations(before_owners,before_states,owners,states)
             redistribute(view,weights);normalize_buildings(view,notes)
             history.append(deepcopy(op))
-            notes.append('批量整合 '+str(len(lookup))+' 个分属地区 / '+str(len({ss for ss,_ in lookup}))+' 个州；跳过 '+str(len(skipped))+' 个地区')
+            notes.append(Message('批量整合 {0} 个分属地区 / {1} 个州；跳过 {2} 个地区', str(len(lookup)), str(len({ss for ss, _ in lookup})), str(len(skipped))))
             continue
         if kind=='arable_bulk':
             targets=op.get('targets');seen=set();factor=op.get('max_multiplier')
-            if not isinstance(targets,list) or not targets:raise ValueError('批量耕地方案为空')
-            if isinstance(factor,bool) or not isinstance(factor,(int,float)) or not math.isfinite(factor) or not 1<factor<=100:raise ValueError('耕地倍率上限无效')
+            if not isinstance(targets,list) or not targets:raise ValueError(Message('批量耕地方案为空'))
+            if isinstance(factor,bool) or not isinstance(factor,(int,float)) or not math.isfinite(factor) or not 1<factor<=100:raise ValueError(Message('耕地倍率上限无效'))
             for item in targets:
                 ss=item['state']
-                if ss in seen or ss not in view.target.states:raise ValueError('批量耕地方案重复州或州不存在')
-                seen.add(ss);before=int(view.target.states[ss].get('arable_land',0));value=integer(item.get('value'),'耕地数量')
-                if before!=item.get('before'):raise ValueError('州耕地已变化，请重新预览批量补地')
-                if not before<value<=math.floor(before*factor):raise ValueError('批量补地超过倍率上限或未增加耕地')
+                if ss in seen or ss not in view.target.states:raise ValueError(Message('批量耕地方案重复州或州不存在'))
+                seen.add(ss);before=int(view.target.states[ss].get('arable_land',0));value=integer(item.get('value'),Message('耕地数量'))
+                if before!=item.get('before'):raise ValueError(Message('州耕地已变化，请重新预览批量补地'))
+                if not before<value<=math.floor(before*factor):raise ValueError(Message('批量补地超过倍率上限或未增加耕地'))
                 view.target.states[ss]['arable_land']=str(value);edited_states.add(ss)
-            notes.append('批量补耕地：'+str(len(targets))+' 个州，新增 '+str(sum(i['value']-i['before'] for i in targets))+' 基础耕地；上限为各州操作前的 '+str(factor)+' 倍。')
+            notes.append(Message('批量补耕地：{0} 个州，新增 {1} 基础耕地；上限为各州操作前的 {2} 倍。', str(len(targets)), str(sum((i['value'] - i['before'] for i in targets))), str(factor)))
             continue
         if kind=='arable':
-            if s not in view.target.states:raise ValueError('州不存在')
-            view.target.states[s]['arable_land']=str(integer(op.get('value'),'耕地数量'))
+            if s not in view.target.states:raise ValueError(Message('州不存在'))
+            view.target.states[s]['arable_land']=str(integer(op.get('value'),Message('耕地数量')))
             edited_states.add(s);continue
         if kind=='building':
-            if not any(states[p]==s and owners[p]==t for p in owners):raise ValueError('建筑所属地区已不存在')
+            if not any(states[p]==s and owners[p]==t for p in owners):raise ValueError(Message('建筑所属地区已不存在'))
             levels=op.get('levels')
-            if not isinstance(levels,dict) or not levels:raise ValueError('请选择需要调整的建筑')
+            if not isinstance(levels,dict) or not levels:raise ValueError(Message('请选择需要调整的建筑'))
             for building,n in levels.items():
-                integer(n,'建筑等级',100000)
-                if building not in view.target.buildings:raise ValueError('未知建筑：'+building)
-                if building.startswith('building_subsistence'):raise ValueError('自给建筑由剩余耕地自动生成，请调整耕地或农业建筑')
+                integer(n,Message('建筑等级'),100000)
+                if building not in view.target.buildings:raise ValueError(Message('未知建筑：{0}', building))
+                if building.startswith('building_subsistence'):raise ValueError(Message('自给建筑由剩余耕地自动生成，请调整耕地或农业建筑'))
                 matches=[r for r in view.buildings if (r['state'],r['owner'],r['building'])==(s,t,building)]
-                if any(r.get('guards') for r in matches):raise ValueError('带条件的建筑请先在游戏中确认条件，不能直接覆盖：'+building)
+                if any(r.get('guards') for r in matches):raise ValueError(Message('带条件的建筑请先在游戏中确认条件，不能直接覆盖：{0}', building))
                 view.buildings=[r for r in view.buildings if r not in matches]
                 if n:
                     if matches:
@@ -342,23 +343,23 @@ def materialize(world,operations):
                             row['body']=f'building = {building}\nlevel = {n}\nreserves = 1\nactivate_production_methods = {{ '+ ' '.join(methods)+' }'
                         view.buildings.append(row)
             normalize_buildings(view,notes);continue
-        if kind not in ('country','region','province'):raise ValueError('未知编辑类型')
+        if kind not in ('country','region','province'):raise ValueError(Message('未知编辑类型'))
         before_owners=dict(owners);before_states=dict(states)
         if kind=='province':
             selected=set(op.get('provinces',[]));target=op.get('target');dest=op.get('target_state')
-            if not selected or not selected<=owners.keys():raise ValueError('请选择现有陆地地块')
-            if len({(states[p],owners[p]) for p in selected})!=1:raise ValueError('一次请选择同一分属地区内的地块')
+            if not selected or not selected<=owners.keys():raise ValueError(Message('请选择现有陆地地块'))
+            if len({(states[p],owners[p]) for p in selected})!=1:raise ValueError(Message('一次请选择同一分属地区内的地块'))
             source=owners[next(iter(selected))];source_state=states[next(iter(selected))]
-            if not any(states[p]==dest and owners[p]==target and p not in selected for p in owners):raise ValueError('目标必须是仍有地块的现有地区')
-            if dest==source_state and source==target:raise ValueError('地块已经属于目标地区')
-            if dest!=source_state and not any(states[p]==source_state and p not in selected for p in owners):raise ValueError('原州至少保留一个地块；不能删除整州定义')
+            if not any(states[p]==dest and owners[p]==target and p not in selected for p in owners):raise ValueError(Message('目标必须是仍有地块的现有地区'))
+            if dest==source_state and source==target:raise ValueError(Message('地块已经属于目标地区'))
+            if dest!=source_state and not any(states[p]==source_state and p not in selected for p in owners):raise ValueError(Message('原州至少保留一个地块；不能删除整州定义'))
         else:
             source=op.get('source');target=op.get('target');dest=None
             selected={p for p in owners if owners[p]==source and (kind=='country' or states[p]==s)}
-            if not selected or source==target or target not in owners.values():raise ValueError('请选择两个仍存在的不同国家')
+            if not selected or source==target or target not in owners.values():raise ValueError(Message('请选择两个仍存在的不同国家'))
         def adjacent(a,b):
             return a in selected and b not in selected and owners.get(b)==target and (kind=='country' or states.get(b)==(dest if kind=='province' else s))
-        if not any(adjacent(a,b) or adjacent(b,a) for a,b in view.edges):raise ValueError('目标必须与所选地块陆地相邻；地区合并需在同一州')
+        if not any(adjacent(a,b) or adjacent(b,a) for a,b in view.edges):raise ValueError(Message('目标必须与所选地块陆地相邻；地区合并需在同一州'))
         for p in selected:
             owners[p]=target
             if dest:states[p]=dest
@@ -367,7 +368,7 @@ def materialize(world,operations):
             for old,new in list(aliases.items()):
                 if new==source:aliases[old]=target
             aliases[source]=target
-            if kind!='country':notes.append('来源国最后一个地区已转移，按整个国家合并同步关系：'+source+' → '+target)
+            if kind!='country':notes.append(Message('来源国最后一个地区已转移，按整个国家合并同步关系：{0} → {1}', source, target))
         weights=destinations(before_owners,before_states,owners,states)
         redistribute(view,weights);normalize_buildings(view,notes)
         history.append(deepcopy(op))

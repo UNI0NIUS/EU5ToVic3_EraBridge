@@ -12,12 +12,15 @@ import traceback
 from types import SimpleNamespace
 import uuid
 from converter_project import read, write, digest
+from converter_i18n import Message, diagnostic_payload, restore_diagnostic
 
 def run_conversion(root, workspace, request, progress=None, cancel=None):
+    from converter_output_language import output_language
+    request={**request,'output_language':output_language(request.get('output_language','zh-CN'))}
     root,workspace=Path(root).resolve(),Path(workspace).resolve()
     # Commands come from fixed application code, never a project-supplied command line.
     for key in ('save','eu5','game','rules'):
-        if not request.get(key) or not Path(request[key]).exists():raise ValueError('路径不存在：'+key)
+        if not request.get(key) or not Path(request[key]).exists():raise ValueError(Message('路径不存在：{0}',key))
     run=workspace/'runs'/(datetime.now().strftime('%Y%m%d-%H%M%S')+'-'+uuid.uuid4().hex[:6])
     run.mkdir(parents=True,exist_ok=False)
     request={**request,'run':str(run.resolve()),'root':str(root.resolve())}
@@ -34,14 +37,15 @@ def run_conversion(root, workspace, request, progress=None, cancel=None):
                 else:process.terminate()
                 process.wait(timeout=15)
                 write(run/'status.json',dict(status='cancelled',stage='用户停止转换'))
-                raise RuntimeError('转换已停止；未完成的任务保留在 '+str(run))
+                raise RuntimeError(Message('转换已停止；未完成的任务保留在 {0}',str(run)))
             try:
                 code=process.wait(timeout=2);break
             except subprocess.TimeoutExpired:
                 if progress and (run/'status.json').exists():progress(read(run/'status.json').get('stage','正在启动'))
     if code:
         detail=read(run/'status.json') if (run/'status.json').exists() else {}
-        raise ValueError(str(detail.get('error','转换失败'))+'；日志：'+str(run/'conversion.log'))
+        error=restore_diagnostic(detail.get('error_message'),detail.get('error',Message('转换失败')))
+        raise ValueError(Message('{0}；日志：{1}',error,str(run/'conversion.log')))
     return dict(directory=str(run/'complete'),log=str(run/'conversion.log'),run=str(run))
 
 def validate_rules(path,game,eu5):
@@ -147,13 +151,17 @@ def finalize(request,stage):
         stage('Campaign text and Jing homelands',lambda:write(package/'identity_repair.json',repair(mod,game,run)))
         stage('Country labels and icons',lambda:write(package/'country_identity_verification.json',verify_identity(mod,game,read(run/'political/conversion_report.json')['countries'])))
     stage('Starting laws, localization and opening wars',lambda:write(package/'startup_compatibility.json',startup_compatibility(mod,game,run)))
+    from converter_output_language import output_language,verify as verify_language,write_guide
+    language=output_language(request.get('output_language','zh-CN'))
+    stage('Output localization',lambda:write(package/'localization_verification.json',verify_language(mod,game,language)))
+    write_guide(package,language)
     if digest(save)!=sha or digest(original_save)!=original_sha:raise ValueError('Source save changed during conversion')
     name='EU5 Converted '+auditdoc['date'];metadata=mod/'.metadata/metadata.json'
     if metadata.exists():
         info=read(metadata);info.update(name=name,id='eu5-converted-'+sha[:12],version='0.12.2',short_description='World converted from EU5 '+auditdoc['date']+'; runtime verification pending.')
         write(metadata,info)
     report=dict(status='passed_static_runtime_pending',source_date=auditdoc['date'],source_sha256=sha,mod_directory=str(mod),
-                mod_name=name,version='0.12.2',
+                mod_name=name,version='0.12.2',output_language=language,
                 political_run=str(run/'political'),demographic_run=str(run/'demographic'),runtime_verified=False,
                 output_sha256=world.files(mod),rules_sha256=digest(Path(request['rules'])),summary=read(package/'summary.json'))
     from converter_refresh import REVISION
@@ -171,5 +179,5 @@ if __name__=='__main__':
     try:worker(req)
     except Exception as e:
         state=read(Path(req['run'])/'status.json') if (Path(req['run'])/'status.json').exists() else {}
-        write(Path(req['run'])/'status.json',dict(state,status='failed',error=str(e)))
+        write(Path(req['run'])/'status.json',dict(state,status='failed',error=str(e),error_message=diagnostic_payload(e)))
         traceback.print_exc();sys.exit(1)

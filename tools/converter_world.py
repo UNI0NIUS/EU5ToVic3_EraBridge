@@ -1,4 +1,5 @@
 """Load actual V3 candidate files and calculate map-linked opening scenarios."""
+from converter_i18n import Message, diagnostic
 from collections import Counter, defaultdict
 from pathlib import Path
 from types import SimpleNamespace
@@ -28,7 +29,7 @@ def opening_laws(obj, target, country, prior=()):
             elif k=='has_law_or_variant':tests.append(v.split(':')[-1] in laws.values())
             elif k=='country_is_islamic':tests.append((country.get('religion') in ('sunni','shiite'))==(v=='yes'))
             elif k=='is_country_type':tests.append(country.get('country_type')==v)
-            else:raise ValueError('不能解析法律条件：'+str(k))
+            else:raise ValueError(Message('不能解析法律条件：{0}', str(k)))
         return all(tests)
     def condition_terms(o):
         for k,v in o.entries():yield condition(root(entry_local(k,v)))
@@ -54,10 +55,10 @@ class Candidate:
         self.mod = declared if declared.is_absolute() else self.package/declared
         # Support relocating a package as one directory.
         if not self.mod.is_dir(): self.mod = self.package/declared.name
-        if not self.mod.is_dir(): raise ValueError('找不到模组目录：' + str(self.mod))
+        if not self.mod.is_dir(): raise ValueError(Message('找不到模组目录：{0}', str(self.mod)))
         self.input_hashes = {p.relative_to(self.mod).as_posix():digest(p) for p in self.mod.rglob('*') if p.is_file()}
         for rel, sha in self.report.get('output_sha256', {}).items():
-            if self.input_hashes.get(rel) != sha: raise ValueError('候选包已改变，需重新生成清单：' + rel)
+            if self.input_hashes.get(rel) != sha: raise ValueError(Message('候选包已改变，需重新生成清单：{0}', rel))
         self.target = Target(self.game)
         for key, folder in [('states','map_data/state_regions'),('buildings','common/buildings'),('pms','common/production_methods'),('groups','common/production_method_groups'),('techs','common/technology/technologies')]:
             getattr(self.target,key).update(definitions(self.mod/folder))
@@ -151,7 +152,7 @@ class Candidate:
             result=dict(view.preview(options,[]))
             _,political_notes=view._political_reconciliation
             result.update(merges=operations,aliases=view._edit_aliases,adjustments=view._edit_notes+political_notes,bulk_outcomes=view._bulk_outcomes)
-            result['assumptions']=result['assumptions']+['地块拆分按地块数量比例分配现有人口与建筑，整数采用最大余数法；这不是地块级历史人口数据。']
+            result['assumptions']=result['assumptions']+[Message('地块拆分按地块数量比例分配现有人口与建筑，整数采用最大余数法；这不是地块级历史人口数据。')]
             return result
         options=settings(options)
         owners, aliases, transfers, _=resolve_merges(self.parts,operations,self.edges)
@@ -189,7 +190,7 @@ class Candidate:
         basket=self.buy_packages['wealth_'+str(options['food_wealth'])]['goods'].fields()
         # Same base-price food budget units as the existing economy planner.
         food_per_person=float(basket.get('popneed_basic_food',basket.get('basic_food',0)))/10000
-        if not food_per_person: raise ValueError('游戏食物消费篮子缺失，不能把未知需求显示为零')
+        if not food_per_person: raise ValueError(Message('游戏食物消费篮子缺失，不能把未知需求显示为零'))
         foods=('grain','fish','meat','fruit','groceries')
         for pair,pr in sorted(ps.items()):
             s,t=pair; population=pops[pair]; workforce=population*options['workforce_share']
@@ -210,7 +211,7 @@ class Candidate:
             household_factor=(options['workforce_share']+(1-options['workforce_share'])*.5)/options['workforce_share']
             demand=(max(0,workforce-occupied)+occupied*.05)*household_factor*food_per_person
             row=dict(id=s+'|'+t,state=s,country=t,state_name=self.labels.get(s,s),country_name=self.labels.get(t,t),
-                     strategic_region=self.strategic_regions.get(s),strategic_region_name=self.labels.get(self.strategic_regions.get(s),self.strategic_regions.get(s,'未知战略地区')),
+                     strategic_region=self.strategic_regions.get(s),strategic_region_name=self.labels.get(self.strategic_regions.get(s),self.strategic_regions.get(s,Message('未知战略地区'))),
                      population=population,arable=land[pair],province_count=len(pr),provinces=sorted(pr),
                      state_arable=int(self.target.states[s].get('arable_land',0)),
                      buildings=dict(building_levels[pair]),
@@ -242,17 +243,17 @@ class Candidate:
         for row in rows:
             if 'unemployment' in row['risks']:
                 try:row['arable_advice']=arable_advice(self,options,row,state_rows[row['state']])
-                except (ValueError,KeyError) as e:row['arable_advice_error']=str(e)
+                except (ValueError,KeyError) as e:row['arable_advice_error']=diagnostic(e)
         return dict(rows=rows,summary=summarize(rows),settings=options,merges=operations,
                     markets=markets,
-                    aliases=aliases,source_date=self.report.get('source_date','未知'),fingerprint=self.fingerprint,
-                    assumptions=['耕地按地块比例以最大余数法分配，实际引擎分配需入游戏核对。',
-                    '失业为岗位容量缺口估算；未模拟资质、工资、价格和实际招聘。',
-                    '食物按附属关系、独立市场协议及国家集团实际关税同盟原则汇总；普通集团、贸易与防御条约不会自动成为同一市场。',
-                    '食物风险使用预计市场接入后的缺口；陆路、两端有效港口及基础设施容量决定接入估算。未模拟舰船吨位、封锁、市场外贸易、价格或实际饥荒事件。',
-                    '本地净产能含自给农业并扣除工业原料；自给农民95%口粮视为实物自给。未知产能或市场接入显示未知，不据此自动合并。',
-                    '合并不会创造耕地、岗位或粮食，跨州的岗位不能自动解决本地失业。'])
+                    aliases=aliases,source_date=self.report.get('source_date',Message('未知')),fingerprint=self.fingerprint,
+                    assumptions=[Message('耕地按地块比例以最大余数法分配，实际引擎分配需入游戏核对。'),
+                    Message('失业为岗位容量缺口估算；未模拟资质、工资、价格和实际招聘。'),
+                    Message('食物按附属关系、独立市场协议及国家集团实际关税同盟原则汇总；普通集团、贸易与防御条约不会自动成为同一市场。'),
+                    Message('食物风险使用预计市场接入后的缺口；陆路、两端有效港口及基础设施容量决定接入估算。未模拟舰船吨位、封锁、市场外贸易、价格或实际饥荒事件。'),
+                    Message('本地净产能含自给农业并扣除工业原料；自给农民95%口粮视为实物自给。未知产能或市场接入显示未知，不据此自动合并。'),
+                    Message('合并不会创造耕地、岗位或粮食，跨州的岗位不能自动解决本地失业。')])
 
     def verify_unchanged(self):
         current={p.relative_to(self.mod).as_posix():digest(p) for p in self.mod.rglob('*') if p.is_file()}
-        if current!=self.input_hashes or digest(self.map_path)!=self.map_hash:raise ValueError('输入在编辑期间发生变化，请重新载入')
+        if current!=self.input_hashes or digest(self.map_path)!=self.map_hash:raise ValueError(Message('输入在编辑期间发生变化，请重新载入'))

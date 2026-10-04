@@ -1,0 +1,16 @@
+EraBridge Workshop packaging — v0.12.2-beta.3
+
+Use the complete extracted EraBridge-0.12.2-beta.3-windows-x64.zip from:
+https://github.com/UNI0NIUS/EU5ToVic3_EraBridge/releases/tag/v0.12.2-beta.3
+Verify the archive against its SHA256SUMS.txt before extraction.
+Add the erabridge/ metadata and thumbnail overlay to the application root.
+EU5Converter.exe must be at the root beside runtime, native, tools, config, data and licenses.
+Keep README.txt, docs, LICENSE, all licenses and build_manifest.json.
+Do not include ZIPs, checksums, this publishing guide, saves, initialized rules, user projects or accepted-terms markers.
+
+Publisher target: %USERPROFILE%\Documents\Paradox Interactive\Europa Universalis V\mod\EraBridge
+Game mod path: mod/EraBridge (or EraBridge when mod/ is separate).
+Stable mod ID: union.erabridge. Preserve any assigned numeric Workshop item ID and publisher metadata.
+The erabridge/ subtree alone is an overlay, not a complete runnable application.
+The local publishing folder does not update Steam until the publisher uploads it through the mod tools.
+Use erabridge_workshop_description.txt as the bilingual page description and erabridge-cover.png as artwork.

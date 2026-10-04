@@ -1,4 +1,5 @@
 """Portable project settings and deterministic, independently testable risk/merge rules."""
+from converter_i18n import Message
 from collections import Counter, defaultdict
 from copy import deepcopy
 import hashlib
@@ -29,23 +30,23 @@ def digest(path):
 
 
 def mod_name(value):
-    if not isinstance(value,str):raise ValueError('请输入模组名称')
+    if not isinstance(value,str):raise ValueError(Message('请输入模组名称'))
     value=value.strip()
-    if not value:raise ValueError('模组名称不能为空')
-    if len(value)>120:raise ValueError('模组名称最多 120 个字符')
-    if any(ord(c)<32 or 127<=ord(c)<160 for c in value):raise ValueError('模组名称不能包含换行或控制字符')
+    if not value:raise ValueError(Message('模组名称不能为空'))
+    if len(value)>120:raise ValueError(Message('模组名称最多 120 个字符'))
+    if any(ord(c)<32 or 127<=ord(c)<160 for c in value):raise ValueError(Message('模组名称不能包含换行或控制字符'))
     return value
 
 def settings(value):
     if not isinstance(value, dict) or set(value) - set(DEFAULTS):
-        raise ValueError('未知参数')
+        raise ValueError(Message('未知参数'))
     result = dict(DEFAULTS, **value)
     for key, (lo, hi) in RANGES.items():
         n = result[key]
         if isinstance(n, bool) or not isinstance(n, (float, int)) or not math.isfinite(n) or not lo <= n <= hi:
-            raise ValueError(f'{key} 必须在 {lo}–{hi} 之间')
+            raise ValueError(Message('{0} 必须在 {1}–{2} 之间', f'{key}', f'{lo}', f'{hi}'))
     for key in ('small_arable', 'food_wealth'):
-        if result[key] != int(result[key]): raise ValueError(key + ' 必须为整数')
+        if result[key] != int(result[key]): raise ValueError(Message('{0} 必须为整数', key))
         result[key] = int(result[key])
     return result
 
@@ -68,18 +69,18 @@ def resolve_merges(parts, operations, edges):
     transitions = []
     for op in operations:
         if not isinstance(op, dict) or op.get('kind') not in ('country', 'region'):
-            raise ValueError('未知合并类型')
+            raise ValueError(Message('未知合并类型'))
         source, target = op.get('source'), op.get('target')
         if source == target or source not in owners.values() or target not in owners.values():
-            raise ValueError('请选择两个仍存在的不同国家')
+            raise ValueError(Message('请选择两个仍存在的不同国家'))
         state = op.get('state') if op['kind'] == 'region' else None
         selected = {p for p, t in owners.items() if t == source and (state is None or states[p] == state)}
-        if not selected: raise ValueError('待合并地区已不存在')
+        if not selected: raise ValueError(Message('待合并地区已不存在'))
         neighboring = any((a in selected and owners.get(b) == target and (state is None or states[b] == state)) or
                           (b in selected and owners.get(a) == target and (state is None or states[a] == state)) for a,b in edges)
-        if not neighboring: raise ValueError('合并目标必须真实陆地相邻；地区合并需在同一州')
+        if not neighboring: raise ValueError(Message('合并目标必须真实陆地相邻；地区合并需在同一州'))
         if state and not any(t == source and p not in selected for p,t in owners.items()):
-            raise ValueError('这会删除整个国家，请选择“整个国家合并”以同步外交关系')
+            raise ValueError(Message('这会删除整个国家，请选择“整个国家合并”以同步外交关系'))
         transitions.append((deepcopy(op), sorted(selected)))
         for p in selected: owners[p] = target
         if state is None:

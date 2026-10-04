@@ -1,6 +1,6 @@
 # Release 准备与验收
 
-当前便携版为 `v0.12.2-beta.2`，面向社区测试，保留 GitHub **Pre-release** 标记。`beta.1` 是此前的源码预览版，标签和附件不覆盖。
+当前便携版为 `v0.12.2-beta.3`，面向社区测试，保留 GitHub **Pre-release** 标记。`beta.1` 是此前的源码预览版，标签和附件不覆盖。
 
 仓库保存源码、配置、测试与文档；ZIP 作为 Release 附件上传。游戏、存档、完整模组、开发对话和本机记录均不进入公开材料。
 
@@ -9,15 +9,15 @@
 先按[构建说明](BUILDING.md)重建 C++ 导入器和桌面启动器。发行环境需要已许可的 Visual Studio Community 2022；当前脚本从 `.tools/VisualStudio2022/VC/Redist/MSVC/` 取得 x64 正式运行库，放入 Python 目录及独立导入器目录。其他依赖按包缓存或 wheel RECORD 的文件摘要核对来源。
 
 ```powershell
-./tools/Build-ConverterApp.ps1 -Output build/EraBridge-beta2
-python -X utf8 tools/prepare_release.py --app build/EraBridge-beta2 --out build/release-preparation/v0.12.2-beta.2 --public-preview
+./tools/Build-ConverterApp.ps1 -Output build/EraBridge-beta3
+python -X utf8 tools/prepare_release.py --app build/EraBridge-beta3 --out build/release-preparation/v0.12.2-beta.3 --public-preview
 ```
 
 输出必须是 `build/` 下尚不存在的新目录，与输入目录分开。`--python-base` 可指定打包所用 Python 安装根目录；`--no-archive` 只生成目录与报告。省略 `--public-preview` 会生成带 `INTERNAL` 的内部候选，不能通过改名替代发行检查。
 
 | 产物 | 用途 |
 |---|---|
-| `EraBridge-0.12.2-beta.2-windows-x64/` | 独立便携目录，含运行环境、配方、文档与许可 |
+| `EraBridge-0.12.2-beta.3-windows-x64/` | 独立便携目录，含运行环境、配方、文档与许可 |
 | 同名 `.zip`、`SHA256SUMS.txt` | Release 下载附件及其摘要 |
 | `release-readiness.json` | 本地准备报告，记录来源提交、工作区状态和未完成验证 |
 | 包内 `build_manifest.json` | 每个打包文件的 SHA-256，不含清单自身 |
@@ -30,7 +30,7 @@ python -X utf8 tools/prepare_release.py --app build/EraBridge-beta2 --out build/
 1. 从准备发布的源码提交重建。核对二进制、规则与测试报告对应同一候选；无关本地文件不纳入提交。
 2. 检查文件清单与 ZIP，排除个人路径、密钥、存档、完整规则、日志和开发缓存。默认游戏与候选路径应为空。
 3. 将 ZIP 解压至带中文和空格的新目录，运行独立验收工具。开发机移目录检查不能标成干净机器验收；具体命令见[独立验收](ACCEPTANCE.md)。
-4. 在[发行说明](releases/v0.12.2-beta.2.md)列出已验证范围、资源容量和脚本报错，以及独立机器和长期运行尚未覆盖的事实。
+4. 在[发行说明](releases/v0.12.2-beta.3.md)列出已验证范围、资源容量和脚本报错，以及独立机器和长期运行尚未覆盖的事实。
 5. 创建对应提交的新标签和 Release 草稿，上传 ZIP 与校验文件，核对服务器附件摘要和大小，再公开为预发布版。未来修订使用新版本，不覆盖已经下载的附件。
 
 ## 社区测试范围

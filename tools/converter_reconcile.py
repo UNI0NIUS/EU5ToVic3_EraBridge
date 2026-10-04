@@ -1,4 +1,5 @@
 """Reconcile capital and generated political history after player territory edits."""
+from converter_i18n import Message
 from collections import Counter, defaultdict
 import re
 from pdx_text import root, Object
@@ -28,7 +29,7 @@ def reconcile(world,view):
             if t in live and capital and not shares[capital,t]:
                 new=max((s for s,c in shares if c==t),key=lambda s:(pops[s,t],shares[s,t],s))
                 body=re.sub(r'\bcapital\s*=\s*\w+',lambda _:'capital = '+new,body)
-                notes.append('迁都：'+t+' / '+capital+' → '+new)
+                notes.append(Message('迁都：{0} / {1} → {2}', t, capital, new))
             bodies.append(block(t,body))
         files[rel]=''.join(bodies)
     if aliases:
@@ -42,7 +43,7 @@ def reconcile(world,view):
                         fields=dict(v.entries()) if isinstance(v,Object) else {}
                         other=fields.get('country');dest=tag(other) if isinstance(other,str) else None
                         if dest==new:
-                            notes.append('清除合并后的自身外交关系：'+new+' / '+str(k));continue
+                            notes.append(Message('清除合并后的自身外交关系：{0} / {1}', new, str(k)));continue
                         typ=fields.get('type');is_subject=k=='create_diplomatic_pact' and typ in SUBJECTS
                         records.append(dict(owner=new,other=dest,kind=k,type=typ,body=body,subject=is_subject,
                                             priority=(old!=new)+(other is not None and tag(other)!=other.removeprefix('c:'))))
@@ -55,7 +56,7 @@ def reconcile(world,view):
                 while ancestor in parents and ancestor not in visited:
                     visited.add(ancestor);ancestor=parents[ancestor]
                 if b in parents or ancestor==b:
-                    notes.append('移除冲突或成环的附属关系：'+a+' → '+b+'；优先保留接收国原关系');continue
+                    notes.append(Message('移除冲突或成环的附属关系：{0} → {1}；优先保留接收国原关系', a, b));continue
                 parents[b]=a
             seen.add(key);groups[a].append(rec['body'])
         if original_files:
@@ -69,7 +70,7 @@ def reconcile(world,view):
                 for k,v in objects(obj):
                     body=scoped(v.text(),aliases);f=dict(root(body).entries())
                     if f.get('first_country')==f.get('second_country'):
-                        notes.append('清除合并后的内部条约：'+str(f.get('name','')));continue
+                        notes.append(Message('清除合并后的内部条约：{0}', str(f.get('name', ''))));continue
                     signature=re.sub(r'\s+','',re.sub(r'\bname\s*=\s*\S+','',body))
                     if signature not in seen:inner.append(block(k,body));seen.add(signature)
                 output.append(block(outer,''.join(inner)))
@@ -89,7 +90,7 @@ def reconcile(world,view):
                     if key=='member' and tag(value)==value.removeprefix('c:'):membership.setdefault(tag(value),leader)
         for changed,leader,k,obj in sorted(blocs,key=lambda r:(r[0],r[1])):
             if changed and (leader in original_leaders or leader in newleaders):
-                notes.append('合并重叠组织：保留接收国原组织 / '+leader);continue
+                notes.append(Message('合并重叠组织：保留接收国原组织 / {0}', leader));continue
             if changed:newleaders.add(leader)
             kept.append((leader,k,obj))
         groups=defaultdict(list)
@@ -122,7 +123,7 @@ def reconcile(world,view):
                 invalid=[(s,t) for s,t in re.findall(r'\bs:(STATE_\w+)\.region_state:([A-Z0-9]{3})\b',body) if not shares[s,t]]
                 if first&second or invalid:
                     patches.append((obj.start,obj.end,'# Retired after player territory edit\n'))
-                    notes.append('结束因合并失去有效对手或目标地区的开局战争：'+str(f.get('name','')));continue
+                    notes.append(Message('结束因合并失去有效对手或目标地区的开局战争：{0}', str(f.get('name', ''))));continue
                 # A former ally that is now the leader must not test "ally of self".
                 body=re.sub(r'(this\s*=\s*c:([A-Z0-9]{3}))\s+is_diplomatic_play_ally_of\s*=\s*c:\2\b',r'\1',body)
                 def unique_backers(m):
@@ -189,7 +190,7 @@ def reconcile(world,view):
             if n==old:continue
             allocated=apportion(n,{i:r[2] for i,r in enumerate(rows)})
             for i,(rel,obj,count) in enumerate(rows):replacement[rel,obj.start]=allocated[i]
-            notes.append('兵营与营数同步：'+'/'.join(pair)+' / '+str(old)+' → '+str(n))
+            notes.append(Message('兵营与营数同步：{0} / {1} → {2}', '/'.join(pair), str(old), str(n)))
         patches=defaultdict(list)
         for rel,owner,k,form in forms:
             body=[]
@@ -207,7 +208,7 @@ def reconcile(world,view):
         for (s,t),n in sorted(capacities.items()):
             if n and (s,t) not in units and s in strategic:
                 new.append(block('c:'+t+' ?',block('create_military_formation','type = army\nhq_region = sr:'+strategic[s]+'\n'+block('combat_unit',f'type = unit_type:combat_unit_type_irregular_infantry\nstate_region = s:{s}\ncount = {n}'))))
-                notes.append('按新增兵营配置基础步兵营：'+s+' / '+t+' / '+str(n))
+                notes.append(Message('按新增兵营配置基础步兵营：{0} / {1} / {2}', s, t, str(n)))
         if new:
             rel=next((r for r in files if r.startswith('common/history/military_formations/')),'common/history/military_formations/00_eu5_world.txt')
             text=files.get(rel,'MILITARY_FORMATIONS = {}');outer=root(text).fields()['MILITARY_FORMATIONS']

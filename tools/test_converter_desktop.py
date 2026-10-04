@@ -55,6 +55,100 @@ class DesktopTests(unittest.TestCase):
         deadline=time.monotonic()+5
         while self.ui.busy and time.monotonic()<deadline:self.root.update();time.sleep(.01)
         self.assertFalse(self.ui.busy)
+
+    def test_language_switch_preserves_draft_and_stable_control_ids(self):
+        self.ui.params['population_multiplier'].set('1.25')
+        self.ui.layer.set('市场归属');self.ui.filter.set('严重失业');self.ui.kind.set('当前州内的地区')
+        self.ui.save_preferences(last_project='remember-me')
+        self.ui.language_choice.set('English');self.ui.change_language()
+        self.assertEqual(self.ui.params['population_multiplier'].get(),'1.25')
+        self.assertEqual(self.ui.layers[self.ui.layer.get()],'market')
+        self.assertEqual(self.ui.filters[self.ui.filter.get()],'unemployment')
+        self.assertEqual(self.ui.kind.get(),'Region within this state')
+        self.assertEqual(self.ui.fmt(None),'Unknown')
+        from converter_project import read
+        self.assertEqual(read(self.ui.preferences),dict(language='en',last_project='remember-me'))
+        self.ui.language_choice.set('简体中文');self.ui.change_language()
+        self.assertEqual(self.ui.kind.get(),'当前州内的地区')
+        self.assertEqual(self.ui.params['population_multiplier'].get(),'1.25')
+
+    def test_language_does_not_change_during_background_operation(self):
+        self.ui.busy=True;self.ui.language_choice.set('English');self.ui.change_language()
+        self.assertEqual(self.ui.translator.language,'zh-CN')
+        self.assertEqual(self.ui.language_choice.get(),'简体中文')
+        self.ui.busy=False
+
+    def test_english_backend_error_translates_display_but_preserves_log(self):
+        from converter_project import settings
+        self.ui.language_choice.set('English');self.ui.change_language()
+        with patch('converter_desktop.messagebox.showerror') as error:
+            self.ui.submit('Check settings',lambda:settings({'population_multiplier':99}))
+            self.pump()
+        self.assertIn('population_multiplier must be between 0.1 and 5',error.call_args.args[1])
+        log=next((Path(self.temp.name)/'logs').glob('desktop-*.log')).read_text(encoding='utf-8')
+        self.assertIn('必须在',log)
+
+    def test_english_assumptions_translate_without_modifying_preview(self):
+        from converter_i18n import Message
+        original=Message('失业为岗位容量缺口估算；未模拟资质、工资、价格和实际招聘。')
+        self.ui.language_choice.set('English');self.ui.change_language()
+        self.ui.app.preview={'assumptions':[original]}
+        with patch('converter_desktop.messagebox.showinfo') as info:self.ui.assumptions()
+        self.assertIn('Unemployment estimates a job-capacity gap',info.call_args.args[1])
+        self.assertIs(self.ui.app.preview['assumptions'][0],original)
+
+    def test_english_action_buttons_fit_at_minimum_window_width(self):
+        self.ui.language_choice.set('English');self.ui.change_language()
+        self.root.attributes('-alpha',0);self.root.geometry('1080x760');self.root.deiconify();self.root.update()
+        def descendants(parent):
+            for child in parent.winfo_children():yield child;yield from descendants(child)
+        clipped=[w.cget('text') for w in descendants(self.root)
+                 if isinstance(w,ttk.Button) and w.winfo_width()+2<w.winfo_reqwidth()]
+        self.assertEqual(clipped,[])
+        self.root.withdraw()
+
+    def test_construction_goal_is_correct_in_both_languages(self):
+        from types import SimpleNamespace
+        self.ui.app.project={'settings':DEFAULTS,'merges':[]}
+        self.ui.app.world=SimpleNamespace(labels={},target=SimpleNamespace(buildings={'building_wheat_farm':{}}))
+        sample_rows={'S|AAA':dict(state_name='State',country_name='Country',provinces=['x000001'],buildings={})}
+        def descendants(parent):
+            for child in parent.winfo_children():yield child;yield from descendants(child)
+        for language in ('English','简体中文'):
+            self.ui.rows={}
+            self.ui.language_choice.set(language);self.ui.change_language()
+            self.ui.rows=sample_rows
+            for metric,label in [('food','市场接入后的食物缺口'),('unemployment','失业岗位缺口')]:
+                with self.subTest(language=language,metric=metric),patch.object(self.ui,'submit',side_effect=lambda title,fn,done:fn()),patch('converter_supplement.proposal',return_value={}) as propose:
+                    self.ui.supplement_dialog('x000001')
+                    widgets=list(descendants(self.root))
+                    box=next(w for w in widgets if isinstance(w,ttk.Combobox) and self.ui.tr(label) in w.cget('values'))
+                    box.set(self.ui.tr(label))
+                    next(w for w in widgets if isinstance(w,ttk.Button) and w.cget('text')==self.ui.tr('计算补建方案')).invoke()
+                    self.assertEqual(propose.call_args.args[5],metric)
+
+    def test_english_merge_uses_region_identifier_and_unmodified_tags(self):
+        self.ui.language_choice.set('English');self.ui.change_language()
+        self.ui.app.project={'id':'test'}
+        self.ui.rows={'S|AAA':dict(state='S',country='AAA',country_name='Alpha',neighbors=[])}
+        self.ui.selected='S|AAA';self.ui.targets={'Beta':'BBB'};self.ui.target.set('Beta')
+        self.ui.kind.set('Region within this state')
+        with patch.object(self.ui,'review_edit') as review:
+            self.ui.merge()
+        self.assertEqual(review.call_args.args[0],dict(kind='region',source='AAA',target='BBB',state='S'))
+
+    def test_language_saved_on_restart_and_output_language_is_independent(self):
+        from converter_project import write
+        write(self.ui.preferences,dict(language='en',last_project='old'))
+        other=tk.Toplevel(self.root)
+        with patch('converter_desktop.App.defaults',return_value=dict(candidates=[],projects=[],game='',eu5='')):
+            ui=Workbench(other,Path(self.temp.name),autoload=False)
+        try:
+            self.assertEqual(ui.translator.language,'en')
+            d,f=ui.dialog('Test');get_language=ui.output_language_field(f,0,'zh-CN')
+            self.assertEqual(get_language(),'zh-CN');d.destroy()
+        finally:
+            ui.selection_pool.shutdown(wait=True,cancel_futures=True);other.destroy()
     def test_background_error_reenables_controls_and_displays_cause(self):
         with patch('converter_desktop.messagebox.showerror') as error:
             self.ui.submit('测试导入',lambda:(_ for _ in ()).throw(ValueError('缺少所需模组')))

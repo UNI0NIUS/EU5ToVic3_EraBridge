@@ -13,7 +13,7 @@ int WINAPI wWinMain(HINSTANCE, HINSTANCE, PWSTR, int) {
     const auto python = root / L"runtime/python.exe";
     const auto app = root / L"tools/converter_desktop.py";
     if (!std::filesystem::exists(python) || !std::filesystem::exists(app)) {
-        MessageBoxW(nullptr, L"软件文件不完整。请完整解压转换器目录，不要单独移动 EXE。", L"EU5 → Victoria 3", MB_OK | MB_ICONERROR);
+        MessageBoxW(nullptr, L"软件文件不完整。请完整解压转换器目录，不要单独移动 EXE。\n\nApplication files are missing. Extract the complete folder; do not move the EXE by itself.", L"EU5 → Victoria 3", MB_OK | MB_ICONERROR);
         return 1;
     }
     const auto data = root / L"data";
@@ -26,8 +26,12 @@ int WINAPI wWinMain(HINSTANCE, HINSTANCE, PWSTR, int) {
                 L"首次运行需要同意第三方组件使用条款。\n\n"
                 L"许可说明：licenses/END_USER_TERMS.txt\n"
                 L"微软运行组件按附带的微软条款使用；EraBridge 源码仍采用 MIT 许可。\n\n"
-                L"是：同意条款并启动\n否：打开条款阅读\n取消：退出",
-                L"EraBridge — 第三方组件条款", MB_YESNOCANCEL | MB_ICONINFORMATION | MB_DEFBUTTON2);
+                L"是：同意条款并启动\n否：打开条款阅读\n取消：退出\n\n"
+                L"First launch requires acceptance of the bundled third-party terms.\n"
+                L"Read licenses/END_USER_TERMS.txt (Chinese / English).\n"
+                L"Microsoft runtime components use their bundled Microsoft licenses; EraBridge source code remains MIT-licensed.\n\n"
+                L"Yes: accept and launch\nNo: open the terms\nCancel: exit",
+                L"EraBridge — 第三方组件条款 / Third-party terms", MB_YESNOCANCEL | MB_ICONINFORMATION | MB_DEFBUTTON2);
             if (choice == IDCANCEL) return 0;
             if (choice == IDNO) {
                 ShellExecuteW(nullptr, L"open", terms.c_str(), nullptr, root.c_str(), SW_SHOWNORMAL);
@@ -36,7 +40,7 @@ int WINAPI wWinMain(HINSTANCE, HINSTANCE, PWSTR, int) {
             std::ofstream receipt(accepted);
             receipt << "third-party-terms-v1\n";
             if (!receipt) {
-                MessageBoxW(nullptr, L"无法保存许可选择。请将完整软件目录解压到可写入的位置。", L"EraBridge", MB_OK | MB_ICONERROR);
+                MessageBoxW(nullptr, L"无法保存许可选择。请将完整软件目录解压到可写入的位置。\n\nCannot save your choice. Extract the complete application into a writable folder.", L"EraBridge", MB_OK | MB_ICONERROR);
                 return 1;
             }
             break;
@@ -54,7 +58,7 @@ int WINAPI wWinMain(HINSTANCE, HINSTANCE, PWSTR, int) {
     PROCESS_INFORMATION process{};
     const BOOL ok=CreateProcessW(python.c_str(), command.data(), nullptr, nullptr, TRUE, CREATE_NO_WINDOW, nullptr, root.c_str(), &startup, &process);
     if(log != INVALID_HANDLE_VALUE) CloseHandle(log);
-    if (!ok) { MessageBoxW(nullptr, L"无法启动转换器，请查看 data/startup.log。", L"启动失败", MB_OK | MB_ICONERROR); return 2; }
+    if (!ok) { MessageBoxW(nullptr, L"无法启动转换器，请查看 data/startup.log。\n\nCannot start the converter. See data/startup.log.", L"启动失败 / Startup failed", MB_OK | MB_ICONERROR); return 2; }
     CloseHandle(process.hThread); CloseHandle(process.hProcess);
     return 0;
 }

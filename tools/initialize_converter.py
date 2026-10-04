@@ -1,4 +1,5 @@
 """Rebuild private identity resources from the player's own game installations."""
+from converter_i18n import Message
 import argparse
 import hashlib
 import json
@@ -41,7 +42,7 @@ def safe_child(parent, relative):
     parent = Path(parent).resolve()
     path = (parent / relative).resolve()
     if not path.is_relative_to(parent) or path == parent:
-        raise ValueError('资源路径越界：' + str(relative))
+        raise ValueError(Message('资源路径越界：{0}', str(relative)))
     return path
 
 
@@ -52,7 +53,7 @@ def game_paths(eu5, game):
     if (game / 'game/common').is_dir():
         game = game / 'game'
     if not (eu5 / 'in_game/common/cultures').is_dir() or not (game / 'common/cultures').is_dir():
-        raise ValueError('请选择有效的 EU5 安装目录及 Victoria 3 game 目录。')
+        raise ValueError(Message('请选择有效的 EU5 安装目录及 Victoria 3 game 目录。'))
     return {'eu5': eu5, 'v3': game}
 
 
@@ -84,20 +85,20 @@ class InstalledResources:
             obj = self.definitions_for(reference['game'], reference['kind'])[reference['key']]
             value = obj.fields()[reference['field']]
         except KeyError as error:
-            raise ValueError('游戏资源缺少定义：' + str(reference)) from error
+            raise ValueError(Message('游戏资源缺少定义：{0}', str(reference))) from error
         if semantic_hash(value) != reference['sha256']:
-            raise ValueError('游戏定义与规则版本不符：' + reference['key'] + '/' + reference['field'])
+            raise ValueError(Message('游戏定义与规则版本不符：{0}/{1}', reference['key'], reference['field']))
         return value
 
     def label(self, reference):
         value = self.labels_for(reference['game'], reference['language']).get(reference['key'])
         if value is None:
-            raise ValueError('游戏缺少本地化：' + reference['key'])
+            raise ValueError(Message('游戏缺少本地化：{0}', reference['key']))
         if reference.get('clean'):
             value = clean_label(value)
         value += reference.get('suffix', '')
         if hashlib.sha256(value.encode('utf-8')).hexdigest() != reference['sha256']:
-            raise ValueError('游戏本地化与规则版本不符：' + reference['key'])
+            raise ValueError(Message('游戏本地化与规则版本不符：{0}', reference['key']))
         return value
 
 
@@ -127,7 +128,7 @@ def materialize_assets(recipe, installed, out):
     for target, spec in recipe['icons'].items():
         source = safe_child(installed.paths['eu5'], spec['source'])
         if digest(source) != spec['sha256']:
-            raise ValueError('宗教图标与规则版本不符：' + spec['source'])
+            raise ValueError(Message('宗教图标与规则版本不符：{0}', spec['source']))
         compile_icon(source, safe_child(out, target))
 
 
@@ -138,14 +139,14 @@ def validate_baseline(path, game):
     doc = parse(text).fields()
     meta = doc.get('meta_data')
     if not isinstance(meta, Object):
-        raise ValueError('基准存档缺少 meta_data；请提供 V3 1.13.11 的原版开局存档。')
+        raise ValueError(Message('基准存档缺少 meta_data；请提供 V3 1.13.11 的原版开局存档。'))
     info = meta.fields()
     if info.get('version') != '1.13.11' or doc.get('date') != '1836.1.1':
-        raise ValueError('基准须为 V3 1.13.11、1836.1.1，保存前不要推进时间。')
+        raise ValueError(Message('基准须为 V3 1.13.11、1836.1.1，保存前不要推进时间。'))
     for key in ('mods', 'enabled_mods', 'mods_used', 'mod_list'):
         value = info.get(key) or doc.get(key)
         if value and (not isinstance(value, Object) or list(value.entries())):
-            raise ValueError('基准存档包含模组记录；请禁用模组后新开局。')
+            raise ValueError(Message('基准存档包含模组记录；请禁用模组后新开局。'))
     reference = british_baseline(path, Target(game))
     return {'date': doc['date'], 'version': info['version'], 'british_population': reference['population'],
             'mod_free_requirement': 'User must create an unmodified fresh start; absence of mod metadata alone is not proof.'}
@@ -160,18 +161,18 @@ def initialize(root, workspace, eu5, game, baseline, progress=None):
         raise ValueError('Unsupported rule recipe schema')
     for rel, expected in manifest['files'].items():
         if digest(safe_child(seed, rel)) != expected:
-            raise ValueError('初始化规则文件已变化：' + rel)
+            raise ValueError(Message('初始化规则文件已变化：{0}', rel))
     for domain, rel, key in [('eu5', 'in_game/map_data/locations.png', 'source_map_sha256'),
                               ('v3', 'map_data/provinces.png', 'target_map_sha256')]:
         if digest(paths[domain] / rel) != manifest[key]:
-            raise ValueError('游戏地图版本与规则不匹配：' + domain)
+            raise ValueError(Message('游戏地图版本与规则不匹配：{0}', domain))
     if not baseline.is_file():
-        raise ValueError('请选择自己的 V3 原版 1836.1.1 开局存档。')
+        raise ValueError(Message('请选择自己的 V3 原版 1836.1.1 开局存档。'))
     # Never touch existing rules. An incomplete attempt remains separate and has no manifest.
     out = workspace / 'initialized-rules' / uuid.uuid4().hex
     out.mkdir(parents=True, exist_ok=False)
     notify = progress or (lambda message: None)
-    notify('读取 Victoria 3 基准存档')
+    notify(Message('读取 Victoria 3 基准存档'))
     private = out / 'private/vic3-start.txt'
     private.parent.mkdir()
     header = baseline.open('rb')
@@ -186,9 +187,9 @@ def initialize(root, workspace, eu5, game, baseline, progress=None):
             library = root / 'build/Release-Windows/EU5ToVic3/rakaly.dll'
         result = inspect(baseline, 'vic3', library, private)
         if result.get('unknown_tokens') or result.get('full_save', {}).get('unknown_tokens'):
-            raise ValueError('基准存档包含未知词元，不能用于转换。')
+            raise ValueError(Message('基准存档包含未知词元，不能用于转换。'))
     baseline_report = validate_baseline(private, paths['v3'])
-    notify('从本机游戏生成文化、宗教和图标')
+    notify(Message('从本机游戏生成文化、宗教和图标'))
     materialize_assets(read(seed / 'assets.json'), InstalledResources(paths), out / 'assets')
     for name in ('culture_mapping.json', 'identity_homelands.json', 'identity_policy.json', 'terrain_reviews.json'):
         shutil.copy2(seed / name, out / name)
@@ -196,7 +197,7 @@ def initialize(root, workspace, eu5, game, baseline, progress=None):
     for rel, expected in profile['files'].items():
         source = safe_child(root, rel)
         if config_digest(source) != expected:
-            raise ValueError('转换配置与规则版本不匹配：' + rel)
+            raise ValueError(Message('转换配置与规则版本不匹配：{0}', rel))
         target = safe_child(out, rel)
         target.parent.mkdir(parents=True, exist_ok=True)
         shutil.copy2(source, target)
@@ -207,7 +208,7 @@ def initialize(root, workspace, eu5, game, baseline, progress=None):
                          baseline_sha256=digest(private), recipe_sha256=digest(seed / 'manifest.json'),
                          files={p.relative_to(out).as_posix(): digest(p) for p in out.rglob('*') if p.is_file() and not p.is_relative_to(out / 'private')})
     write(out / 'manifest.json', rule_manifest)
-    notify('检查规则引用与本地化')
+    notify(Message('检查规则引用与本地化'))
     try:
         from verify_converter_identity import verify
         validation = verify(out, paths['v3'], paths['eu5'])

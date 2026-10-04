@@ -1,4 +1,5 @@
 """Export an isolated candidate, applying reviewed decisions to real game history."""
+from converter_i18n import Message
 from collections import Counter, defaultdict
 from pathlib import Path
 import json
@@ -47,7 +48,7 @@ def merged_buildings(rows):
     for key,items in grouped.items():
         if len(items)==1:result+=items;continue
         if any(i['guards'] for i in items) or len({tuple(i['pms']) for i in items})!=1:
-            raise ValueError('合并后同类建筑的生产方式或条件不一致，需先统一：'+'/'.join(key))
+            raise ValueError(Message('合并后同类建筑的生产方式或条件不一致，需先统一：{0}', '/'.join(key)))
         # Repeated ownership instructions are additive. Direct level histories are consolidated.
         bodies=[];level=0
         for index,row in enumerate(items):
@@ -56,13 +57,15 @@ def merged_buildings(rows):
                 elif k in ('building','reserves','activate_production_methods'):
                     if index==0:bodies.append(entry(k,v))
                 elif k=='add_ownership':bodies.append(entry(k,v))
-                else:raise ValueError('未知建筑合并操作，已停止导出：'+str(k))
+                else:raise ValueError(Message('未知建筑合并操作，已停止导出：{0}', str(k)))
         if level:bodies.append(f'level = {level}\n')
         result.append(dict(items[0],levels=sum(i['levels'] for i in items),body=''.join(bodies)))
     return result
 
 def export_candidate(world, project, output):
-    name=mod_name(project.get('mod_name',project.get('name','EU5 通用转换项目')))
+    from converter_output_language import output_language,verify as verify_language,write_guide
+    language=output_language(project.get('output_language','zh-CN'))
+    name=mod_name(project.get('mod_name',project.get('name',Message('EU5 通用转换项目'))))
     project=dict(project,mod_name=name)
     options=settings(project['settings']); operations=project['merges']
     world.verify_unchanged()
@@ -73,10 +76,10 @@ def export_candidate(world, project, output):
     political_files,political_notes=reconcile(original,world)
     aliases=world._edit_aliases;transfers={}
     if any(r['overbuilt_arable'] for r in preview['rows']):
-        raise ValueError('调整后耕地小于现有农业建筑占地，请提高耕地系数或更改合并方案')
+        raise ValueError(Message('调整后耕地小于现有农业建筑占地，请提高耕地系数或更改合并方案'))
     out=Path(output).resolve()
-    if out.exists():raise ValueError('输出目录已存在；每次导出必须使用新目录')
-    if out==world.mod or world.mod in out.parents:raise ValueError('输出不能位于输入模组内')
+    if out.exists():raise ValueError(Message('输出目录已存在；每次导出必须使用新目录'))
+    if out==world.mod or world.mod in out.parents:raise ValueError(Message('输出不能位于输入模组内'))
     temp=out.with_name(out.name+'.building-'+uuid.uuid4().hex[:8]);mod=temp/'eu5_converted'
     shutil.copytree(world.mod,mod)
     # Countries with source-core release territories remain defined after annexation.
@@ -133,13 +136,13 @@ def export_candidate(world, project, output):
         from package_m4_population_test import parse_pops
         from economy_model import building_rows
         actual=parse_pops(mod/POPS)
-        if actual!=dict(groups):raise ValueError('人口回读不守恒')
+        if actual!=dict(groups):raise ValueError(Message('人口回读不守恒'))
         newowners={}
         for s,obj in objects(root((mod/STATES).read_text(encoding='utf-8-sig')).fields()['STATES']):
             newowners[s[2:]]=state_owners(obj)
         expected={p:r['country'] for r in world.parts.values() for p in r['provinces']}
-        if {p:t for ps in newowners.values() for p,t in ps.items()}!=expected:raise ValueError('地块归属回读不一致')
-        if newowners!=world.owners:raise ValueError('地块所属州回读不一致')
+        if {p:t for ps in newowners.values() for p,t in ps.items()}!=expected:raise ValueError(Message('地块归属回读不一致'))
+        if newowners!=world.owners:raise ValueError(Message('地块所属州回读不一致'))
         if hasattr(world,'target'):
             from economy_model import definitions
             from build_m2_prototype import strings
@@ -148,20 +151,20 @@ def export_candidate(world, project, output):
             for state,f in state_defs.items():
                 for p in strings(f['provinces']) if f.get('provinces') else []:
                     p=p[0]+p[1:].upper()
-                    if p in province_states:raise ValueError('州定义重复地块：'+p)
+                    if p in province_states:raise ValueError(Message('州定义重复地块：{0}', p))
                     province_states[p]=state
             for state,owners in newowners.items():
-                if any(province_states.get(p)!=state for p in owners):raise ValueError('地图州界与开局地块归属不一致：'+state)
+                if any(province_states.get(p)!=state for p in owners):raise ValueError(Message('地图州界与开局地块归属不一致：{0}', state))
             for tag,f in definitions(mod/'common/country_definitions').items():
-                if tag in expected.values() and f.get('capital') and tag not in newowners.get(f['capital'],{}).values():raise ValueError('首都不属于本国：'+tag)
+                if tag in expected.values() and f.get('capital') and tag not in newowners.get(f['capital'],{}).values():raise ValueError(Message('首都不属于本国：{0}', tag))
         actual_buildings=building_rows(mod/BUILDINGS)
         def totals(rows):
             result=Counter()
             for r in rows:result[r['state'],r['owner'],r['building']]+=r['levels']
             return result
-        if totals(actual_buildings)!=totals(world.buildings):raise ValueError('各地区建筑等级回读不一致')
+        if totals(actual_buildings)!=totals(world.buildings):raise ValueError(Message('各地区建筑等级回读不一致'))
         for (s,t,c,r),n in actual.items():
-            if t not in newowners[s].values():raise ValueError('人口所属地区不存在')
+            if t not in newowners[s].values():raise ValueError(Message('人口所属地区不存在'))
         descriptor=f'name={json.dumps(name,ensure_ascii=False)}\nversion="0.12.2-workbench"\nsupported_version="1.13.*"\npath="mod/eu5_converted"\n'
         (temp/'eu5_converted.mod').write_text(descriptor,encoding='utf-8-sig')
         metadata=mod/'.metadata/metadata.json'
@@ -187,7 +190,9 @@ def export_candidate(world, project, output):
         if world.report.get('refresh_signature'):
             from converter_identity_audit import verify as verify_identity
             write(temp/'identity_verification.json',verify_identity(mod,world.game,{t:c for t,c in world.countries.items() if t not in aliases}))
-        report=dict(status='passed_static_runtime_pending',mod_directory='eu5_converted',mod_name=name,
+        localization=verify_language(mod,getattr(world,'game',temp/'no-base-game'),language)
+        write(temp/'localization_verification.json',localization)
+        report=dict(status='passed_static_runtime_pending',mod_directory='eu5_converted',mod_name=name,output_language=language,
                     source_date=world.report.get('source_date'),source_sha256=world.report.get('source_sha256'),
                     output_sha256={p.relative_to(mod).as_posix():digest(p) for p in mod.rglob('*') if p.is_file()},
                     input_fingerprint=world.fingerprint,settings=options,merges=operations,runtime_verified=False,
@@ -200,7 +205,7 @@ def export_candidate(world, project, output):
         for name in ('identity_refresh.json','source_claims.json','opening_balance.json','startup_compatibility.json'):
             if not (temp/name).exists() and hasattr(original,'package') and (original.package/name).exists():shutil.copyfile(original.package/name,temp/name)
         write(temp/'package_report.json',report);write(temp/'risk_report.json',preview);write(temp/'project.json',project)
-        (temp/'README.txt').write_text('独立候选包；需新开游戏验证。\n把 eu5_converted 目录及同名 .mod 文件放入 Victoria 3 用户 mod 目录。\n只在启动器启用本候选包，避免与其他世界转换包同时启用。\n参数和风险模型见 project.json、risk_report.json。\n',encoding='utf-8')
+        write_guide(temp,language)
         temp.rename(out)
         return dict(directory=str(out),mod_name=report['mod_name'],**report['checks'])
     except Exception:

@@ -15,13 +15,14 @@ import subprocess
 import sys
 import zipfile
 
-VERSION = '0.12.2-beta.2'
+VERSION = '0.12.2-beta.3'
 PUBLIC_DOCUMENTS = (
     'README.md', 'BUILDING.md', 'ARCHITECTURE.md', 'CONVERSION_RULES.md',
+    'README.en.md', 'BUILDING.en.md', 'CONVERTER_WORKBENCH.en.md', 'LOCALIZATION.md', 'LOCALIZATION.en.md',
     'CONVERTER_WORKBENCH.md', 'CONVERTER_IDENTITY_SETTINGS.md',
     'CONVERTER_SOURCE_CORES.md', 'FLAG_GENERATION_RULES.md',
     'LICENSING.md', 'PUBLICATION.md', 'RELEASING.md', 'ACCEPTANCE.md',
-    'releases/v0.12.2-beta.1.md', 'releases/v0.12.2-beta.2.md',
+    'releases/v0.12.2-beta.1.md', 'releases/v0.12.2-beta.2.md', 'releases/v0.12.2-beta.3.md',
 )
 EXCLUDED_PARTS = {'__pycache__', '.git', '.local', 'tests', 'test', 'logs'}
 EXCLUDED_SUFFIXES = {'.pyc', '.pyo', '.obj', '.pdb', '.lib', '.res', '.eu5', '.v3'}
@@ -202,6 +203,7 @@ def prepare(root, app, out, python_base, make_archive=True, public_preview=False
         if not path.name.startswith('test_') and path.name not in {'prepare_release.py', 'package_converter_app.py'}:
             shutil.copy2(path, stage / 'tools' / path.name)
     copy_tree(root / 'tools/converter_ui', stage / 'tools/converter_ui')
+    copy_tree(root / 'tools/converter_locales', stage / 'tools/converter_locales')
     copy_tree(root / 'config', stage / 'config')
     copy_tree(root / 'EU5ToVic3/Data_Files', stage / 'EU5ToVic3/Data_Files')
     copy_public_docs(root, stage)
@@ -267,7 +269,11 @@ def prepare(root, app, out, python_base, make_archive=True, public_preview=False
         '双击 EU5Converter.exe 启动。保留整个目录，不要单独复制 EXE。首次启动请阅读并接受第三方组件条款。\n'
         '首次使用点击“准备转换规则”，选择两款游戏安装及自己的 V3 原版 1836.1.1 开局存档。\n'
         '游戏素材与基准存档仅在本机读取或生成，不随软件分发。独立验收用 Test-PortableRelease.ps1。\n'
-        '发布流程见 docs/RELEASING.md；依赖清单见 licenses/runtime-inventory.json。\n', encoding='utf-8')
+        '发布流程见 docs/RELEASING.md；依赖清单见 licenses/runtime-inventory.json。\n\n'
+        'English: run EU5Converter.exe and choose English under 语言 / Language. Keep the entire folder together.\n'
+        'Read the bundled third-party terms on first launch. Use Prepare rules with your installed games and vanilla V3 starting save.\n'
+        'Choose Game display language on import/export and set the same language in Victoria 3.\n'
+        'See docs/CONVERTER_WORKBENCH.en.md and docs/LOCALIZATION.en.md.\n', encoding='utf-8')
     if make_archive:
         archive = out / (stage.name + '.zip')
         manifest = seal(stage, archive, public_preview, revision)

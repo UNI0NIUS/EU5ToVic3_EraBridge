@@ -1,4 +1,5 @@
 """Static market food scenario from effective V3 political and transport history."""
+from converter_i18n import Message
 from collections import Counter,defaultdict
 from pathlib import Path
 from pdx_text import root,Object
@@ -27,7 +28,7 @@ def market_membership(tags,diplomacy,blocs,actions,identities,principles):
     independent={b for a,b,kind in pacts if fields(actions.get(kind,{}).get('pact')).get('market_owner')=='second_country' or kind=='grant_own_market'}
     for a,b,kind in pacts:
         pact=fields(actions.get(kind,{}).get('pact'))
-        if pact.get('subject_type') or pact.get('market_owner')=='first_country':join(a,b,'附属或共同市场协议：'+str(kind))
+        if pact.get('subject_type') or pact.get('market_owner')=='first_country':join(a,b,Message('附属或共同市场协议：{0}', str(kind)))
     def common_market(f):return fields(f.get('power_bloc_modifier')).get('power_bloc_customs_union_bool')=='yes'
     for text in blocs:
         for _,outer in objects(root(text)):
@@ -44,7 +45,7 @@ def market_membership(tags,diplomacy,blocs,actions,identities,principles):
                     for member in members:
                         if member not in parents:continue
                         memberships[member].append(dict(name=name,leader=leader,customs_union=union))
-                        if union:join(leader,member,'国家集团关税同盟：'+name)
+                        if union:join(leader,member,Message('国家集团关税同盟：{0}', name))
     return {t:find(t) for t in sorted(parents)},dict(memberships),dict(reasons)
 
 
