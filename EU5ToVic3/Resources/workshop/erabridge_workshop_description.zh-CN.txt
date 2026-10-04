@@ -1,0 +1,43 @@
+[h1]EraBridge — EU5 → Victoria 3（简体中文）[/h1]
+
+将 Europa Universalis V 战役转换为 Victoria 3 中文或英文模组，在下一时代继续游戏。
+
+[b]语言支持：工作台可即时切换简体中文或英文；导入和导出时独立选择游戏显示语言，并在 Victoria 3 中使用相同语言。[/b]
+
+[b]v0.12.2-beta.3 Windows 社区测试版已发布[/b]
+本版提供可直接运行的 Windows x64 便携包，已附 Python 和运行依赖，无需另装开发工具。本工坊条目包含完整、已展开的转换器程序。订阅下载完成后，在 EU5 模组工具中打开本模组所在文件夹，双击根目录的 EU5Converter.exe 即可运行，无需解压。此程序独立运行，转换结果在 Victoria 3 中加载。
+
+[h2]下载与文档[/h2]
+[url=https://github.com/UNI0NIUS/EU5ToVic3_EraBridge/releases/tag/v0.12.2-beta.3]v0.12.2-beta.3 下载页面与更新说明[/url]
+[url=https://github.com/UNI0NIUS/EU5ToVic3_EraBridge/releases/download/v0.12.2-beta.3/EraBridge-0.12.2-beta.3-windows-x64.zip]下载 Windows x64 便携包[/url]
+[url=https://github.com/UNI0NIUS/EU5ToVic3_EraBridge/releases/download/v0.12.2-beta.3/SHA256SUMS.txt]SHA-256 校验文件[/url]
+[url=https://github.com/UNI0NIUS/EU5ToVic3_EraBridge/blob/v0.12.2-beta.3/docs/CONVERTER_WORKBENCH.md]工作台使用说明[/url]
+[url=https://github.com/UNI0NIUS/EU5ToVic3_EraBridge/issues]问题反馈[/url]
+
+工坊订阅版已展开，可直接运行。若选择从 GitHub 单独下载，请选择 EraBridge-0.12.2-beta.3-windows-x64.zip；Source code ZIP/TAR 仅包含源码。
+
+[h2]首次使用[/h2]
+[list]
+[*]订阅并等待下载完成，在 EU5 模组工具中打开本模组所在文件夹，双击 EU5Converter.exe，阅读并接受第三方组件条款。请保留完整目录，不要单独移动 EXE。
+[*]点击“准备转换规则”，选择自己的 EU5、Victoria 3 游戏目录和 V3 原版 1836.1.1 开局存档。游戏与存档需自行提供。
+[*]导入 EU5 存档，在工作台检查结果，调整人口、耕地或地区后导出所选语言的模组。在 Victoria 3 中选择对应语言，启用导出的模组，新开战役测试。
+[/list]
+
+[h2]功能[/h2]
+读取 EU5 存档，转换人口、国家、文化、宗教、政治关系、经济、军队和开局战争。桌面地图支持检查结果、调整人口与耕地、编辑归属与州界、保存项目和导出模组。
+
+[h2]版本与限制[/h2]
+主要验证环境为 Windows x64、EU5 1.3.11 和 Victoria 3 1.13.11。beta.3 新增中英切换、英文界面提示和独立的输出语言选择，并修复英文食物补建选项误用就业目标的问题。
+
+[b]已验证[/b]
+从 GitHub 重新下载的 beta.3 便携包已通过 SHA-256 核验。开发机上，一份 1337 年原版开局存档完成了规则初始化、完整转换、项目保存重开及中英文导出；3292 个地区回读一致，两种语言各通过 22748 个本地化键检查。两份导出的独立模组 ID 不同，其余 1056 个模组文件哈希一致。
+
+[b]已知存档兼容性问题[/b]
+抽样测试中的一份 1338 年 KNI 二进制存档在导入阶段报错“Unknown EU5 binary tokens”，未能完成转换。并非所有 EU5 存档都已兼容。遇到该错误时，请反馈游戏与存档版本、存档日期和导入日志；此问题尚未修复。
+
+上述检查属于开发机上的转换与静态回读，不等于游戏内验收。英文游戏内显示、独立 Windows 机器、其他游戏版本、第三方模组及长期战役仍待验证。此前 1337 样本中的资源建筑容量和部分原版脚本作用域报错仍是已知问题，可能导致资源建筑被引擎削减或动态州名等内容异常。食物、就业及财政指标包含静态估算。
+
+转换器生成开局世界模组。在 Victoria 3 中选择对应语言、启用模组并新开战役，再由游戏保存为 .v3；转换器不直接生成 .v3 存档。
+
+[h2]来源[/h2]
+本项目基于 [url=https://github.com/ParadoxGameConverters/EU5ToVic3]ParadoxGameConverters/EU5ToVic3[/url] 独立修改，保留原 MIT 许可。与 Paradox 或上游团队没有官方隶属关系。本分支使用 AI 辅助开发，请将问题反馈到本 fork。其他组件适用各自许可，条款与通知随包提供。

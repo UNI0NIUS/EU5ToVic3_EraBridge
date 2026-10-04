@@ -13,4 +13,6 @@ Game mod path: mod/EraBridge (or EraBridge when mod/ is separate).
 Stable mod ID: union.erabridge. Preserve any assigned numeric Workshop item ID and publisher metadata.
 The erabridge/ subtree alone is an overlay, not a complete runnable application.
 The local publishing folder does not update Steam until the publisher uploads it through the mod tools.
-Use erabridge_workshop_description.txt as the bilingual page description and erabridge-cover.png as artwork.
+Use erabridge_workshop_description.zh-CN.txt for the Chinese Workshop description and erabridge_workshop_description.en.txt for the English description.
+The combined erabridge_workshop_description.txt contains the complete Chinese version followed by the complete English version.
+Use erabridge-cover.png as artwork.
