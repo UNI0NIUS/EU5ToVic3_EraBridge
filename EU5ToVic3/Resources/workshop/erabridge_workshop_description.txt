@@ -37,12 +37,22 @@ The Workshop copy is already extracted and ready to run. For a separate GitHub d
 Import EU5 saves and convert populations, countries, cultures, religions, diplomacy, economy, armies, and opening wars. The desktop map workbench supports reviewing results, editing population, arable land, ownership and state borders, saving projects, and exporting mods.
 
 [h2]版本与限制 / Versions and limitations[/h2]
-本次新增中英切换、英文界面提示和输出语言校验；转换器生成开局模组，在 V3 中开始战役后由游戏保存为 .v3。英文游戏内显示仍待验证。
-This update adds bilingual UI messages and output-language validation. It produces a starting-world mod; Victoria 3 creates the .v3 save when you save a new campaign. English in-game display remains unverified.
-主要验证环境为 Windows x64、EU5 1.3.11 和 Victoria 3 1.13.11。此前 beta.2 的开发机全流程检查覆盖规则初始化、原始存档转换、项目保存重开及导出回读，3292 个地区数据一致，开局 5 场战争成员已核对。独立 Windows 机器、其他游戏版本、第三方模组和长期战役尚未完成验收。
-1337 样本仍有资源建筑容量及部分原版脚本作用域报错，可能导致资源建筑被引擎削减、动态州名等内容异常。食物、就业及财政指标包含静态估算。详细已知问题和验证范围见 Release 说明。
-Development checks use Windows x64, EU5 1.3.11, and Victoria 3 1.13.11. An earlier beta.2 developer-machine run covered rule initialization, conversion, project save/reopen, and export readback with 3,292 matching locations; members of five opening wars were checked. Independent Windows machines, other game versions, third-party mods, and long campaigns remain unverified.
-The 1337 sample still has resource-building capacity and some vanilla script-scope errors, which can reduce resource buildings or affect features such as dynamic state names. Food, employment, and fiscal indicators include static estimates. See the release notes for details.
+主要验证环境为 Windows x64、EU5 1.3.11 和 Victoria 3 1.13.11。beta.3 新增中英切换、英文界面提示和独立的输出语言选择，并修复英文食物补建选项误用就业目标的问题。
+The primary test environment is Windows x64, EU5 1.3.11 and Victoria 3 1.13.11. Beta.3 adds Chinese/English switching, English interface messages and independent output-language selection, and fixes the English food-construction option choosing the employment goal.
+
+[b]已验证 / Verified[/b]
+从 GitHub 重新下载的 beta.3 便携包已通过 SHA-256 核验。开发机上，一份 1337 年原版开局存档完成了规则初始化、完整转换、项目保存重开及中英文导出；3292 个地区回读一致，两种语言各通过 22748 个本地化键检查。两份导出的独立模组 ID 不同，其余 1056 个模组文件哈希一致。
+A fresh download of the beta.3 portable package passed SHA-256 verification. On the developer machine, a vanilla 1337 starting save completed rule initialization, full conversion, project save/reopen and Chinese/English export. All 3,292 regions matched on readback, and each language passed checks for 22,748 localization keys. The exports have separate mod IDs; the remaining 1,056 mod files have identical hashes.
+
+[b]已知存档兼容性问题 / Known save compatibility issue[/b]
+抽样测试中的一份 1338 年 KNI 二进制存档在导入阶段报错“Unknown EU5 binary tokens”，未能完成转换。并非所有 EU5 存档都已兼容。遇到该错误时，请反馈游戏与存档版本、存档日期和导入日志；此问题尚未修复。
+A sampled 1338 KNI binary save failed at import with “Unknown EU5 binary tokens” and could not be converted. Not all EU5 saves are compatible. If you encounter this error, report the game/save versions, save date and importer log. This issue remains unresolved.
+
+上述检查属于开发机上的转换与静态回读，不等于游戏内验收。英文游戏内显示、独立 Windows 机器、其他游戏版本、第三方模组及长期战役仍待验证。此前 1337 样本中的资源建筑容量和部分原版脚本作用域报错仍是已知问题，可能导致资源建筑被引擎削减或动态州名等内容异常。食物、就业及财政指标包含静态估算。
+These are developer-machine conversion and static readback checks, not in-game validation. English in-game display, independent Windows machines, other game versions, third-party mods and long campaigns remain unverified. Previously observed resource-building capacity and vanilla script-scope errors remain known issues; they may reduce resource buildings or affect features such as dynamic state names. Food, employment and fiscal indicators include static estimates.
+
+转换器生成开局世界模组。在 Victoria 3 中选择对应语言、启用模组并新开战役，再由游戏保存为 .v3；转换器不直接生成 .v3 存档。
+The converter produces a starting-world mod. Set Victoria 3 to the matching language, enable the mod and start a new campaign; Victoria 3 creates the .v3 save when you save that campaign.
 
 [h2]来源 / Credits[/h2]
 本项目基于 [url=https://github.com/ParadoxGameConverters/EU5ToVic3]ParadoxGameConverters/EU5ToVic3[/url] 独立修改，保留原 MIT 许可。与 Paradox 或上游团队没有官方隶属关系。本分支使用 AI 辅助开发，请将问题反馈到本 fork。其他组件适用各自许可，条款与通知随包提供。

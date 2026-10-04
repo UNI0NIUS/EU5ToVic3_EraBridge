@@ -4,7 +4,7 @@
   "version": "0.12.2-beta.3",
   "game_id": "eu5",
   "supported_game_version": "1.3.11",
-  "short_description": "EraBridge v0.12.2-beta.3 — 中英文工作台与模组输出。打开模组文件夹运行 EU5Converter.exe。Chinese/English workbench and mod output. Run EU5Converter.exe from this folder.",
+  "short_description": "EraBridge beta.3：EU5 转 Victoria 3，中英文工作台与模组输出。打开文件夹运行 EU5Converter.exe；部分二进制存档仍不兼容。Chinese/English workbench and mod output. Run EU5Converter.exe; some binary saves remain unsupported.",
   "tags": [
     "Utilities"
   ],
