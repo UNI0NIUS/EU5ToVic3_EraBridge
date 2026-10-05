@@ -31,3 +31,6 @@ assignees: ''
 ### 已知问题对照
 
 本预览版尚有部分资源建筑被引擎削减及原版脚本报错，独立 Windows 和长期运行未验证。如果报告涉及这些问题，请补充具体地区、建筑或复现条件。
+
+
+提交存档、较大附件和日志前，请阅读[问题与存档提交指南](https://github.com/UNI0NIUS/EU5ToVic3_EraBridge/blob/master/docs/SUPPORT.md).

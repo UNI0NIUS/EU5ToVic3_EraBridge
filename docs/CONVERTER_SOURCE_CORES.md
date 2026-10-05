@@ -1,5 +1,7 @@
 # 源核心、宣称与释放边界（0.12.2）
 
+**简体中文** · [English](CONVERTER_SOURCE_CORES.en.md)
+
 [文档索引](README.md) · [发布准备](RELEASING.md)
 
 源核心用于判断可释放地块，整州宣称另按覆盖率判断。可释放国家的旗帜优先从源定义恢复。

@@ -1,5 +1,7 @@
 # 来源与再发布许可
 
+**简体中文** · [English](LICENSING.en.md)
+
 核查日期：2026-10-03。本次核查针对 v0.12.2-beta.2 源码和 Windows x64 便携包。beta.3 沿用相同运行组件与原生导入器，仅重建桌面启动器并更新双语源码、条款译文和文档；各组件来源仍以包内清单为准。
 
 ## 上游代码
@@ -22,7 +24,7 @@
 
 ### 微软组件
 
-发行构建使用已按个人开发者条款许可的 Visual Studio Community 2022。C++ 导入器和启动器均由该工具链重建。Visual C++ DLL 从安装目录的 `VC/Redist/MSVC/<version>/x64` 取得，保持原文件，排除 `debug_nonredist`；这些目录列于[微软可分发清单](https://learn.microsoft.com/en-us/visualstudio/releases/2022/redistribution)。UCRT 文件按实际来源匹配 Windows SDK 组件，保留其原许可。
+发行构建使用已按个人开发者条款许可的 Visual Studio Community 2022。beta.2 的 C++ 导入器和启动器均由该工具链重建；beta.3 沿用未改动的导入器并重建启动器。Visual C++ DLL 从安装目录的 `VC/Redist/MSVC/<version>/x64` 取得，保持原文件，排除 `debug_nonredist`；这些目录列于[微软可分发清单](https://learn.microsoft.com/en-us/visualstudio/releases/2022/redistribution)。UCRT 文件按实际来源匹配 Windows SDK 组件，保留其原许可。
 
 [Community 条款](https://visualstudio.microsoft.com/license-terms/vs2022-ga-community/)和[微软分发说明](https://learn.microsoft.com/en-us/cpp/windows/redistributing-visual-cpp-files?view=msvc-170)约束微软组件。许可文本、终端用户条款和必要通知随包提供；首次启动要求使用者阅读并接受第三方组件条款。微软组件不改用本项目的 MIT，也不因本次发行而向接收者授予不受限制的再分发权。
 
@@ -39,3 +41,6 @@ Europa Universalis V、Victoria 3 及其商标、游戏脚本、美术和其他�
 ## 文档编辑
 
 README 与本次发布文档按 [Humanizer-zh](https://github.com/op7418/Humanizer-zh) 的编辑原则整理：删去重复和空泛表达，保留事实、限定条件与完成状态。其规范作为编辑参考使用，未复制到发行内容中。历史验证记录与本次重新运行的检查分别标明。
+
+
+项目说明提供独立中英文版本。第三方许可保留原文，这些解释性译文不替代原条款。

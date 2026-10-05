@@ -31,10 +31,17 @@ EraBridge 将 Europa Universalis V 存档转换为 Victoria 3 候选模组，并
 
 已有本地构建时，双击 `Open-ConverterWorkbench.cmd`，或运行 `build/ConverterWorkbench/EU5Converter.exe`。先点击“准备转换规则”，选择两款游戏和自备的 V3 原版开局存档，再导入 EU5 存档。转换完成后在地图上检查并导出模组。新模组应在 Victoria 3 中新开战役验证。
 
+beta.3 后续复核中，1338 KNI 二进制存档仍因 `Unknown EU5 binary tokens: import refused` 导入失败；另一份 1337 对照存档在开发机完成完整转换与中英文导出回读。具体范围见[验证记录](docs/PUBLICATION.md)。
+
+## 默认输出位置
+
+相对于便携版软件目录，初次转换结果位于 `data/runs/<时间戳-ID>/complete/`，工作台再次导出位于 `data/exports/<时间戳-ID>/`。“打开输出目录”可定位最近输出。程序不会自动安装到 V3 的模组目录。日志与提交存档的方法见[问题提交指南](docs/SUPPORT.md)。
+
 ## 文档
 
-beta.3 新增工作台中英切换和独立的游戏显示语言选择。导入、导出会检查所选语言的本地化键并生成相应语言的安装说明。使用方式与覆盖范围见[多语言支持](docs/LOCALIZATION.md)。
+beta.3 新增工作台中英切换和独立的游戏显示语言选择。导入、导出会检查所选语言的本地化键并生成相应语言的安装说明。使用方式与覆盖范围见[多语言支持](docs/LOCALIZATION.md)。在 V3 中选择对应语言、启用导出模组并新开战役，再由游戏保存 `.v3`；转换器本身生成开局世界模组。切换界面语言不翻译自定义名称，也不改变游戏规则。
 
+- [问题反馈、日志与存档提交](docs/SUPPORT.md)
 - [开发文档：使用说明、架构与转换规则](docs/README.md)
 - [桌面工作台：操作流程、编辑和导出](docs/CONVERTER_WORKBENCH.md)
 - [文化、宗教与身份规则](docs/CONVERTER_IDENTITY_SETTINGS.md)

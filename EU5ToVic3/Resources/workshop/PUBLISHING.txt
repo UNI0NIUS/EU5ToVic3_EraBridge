@@ -1,4 +1,5 @@
 EraBridge Workshop packaging — v0.12.2-beta.3
+简体中文：PUBLISHING.zh-CN.txt | English: PUBLISHING.txt
 
 Use the complete extracted EraBridge-0.12.2-beta.3-windows-x64.zip from:
 https://github.com/UNI0NIUS/EU5ToVic3_EraBridge/releases/tag/v0.12.2-beta.3

@@ -1,26 +1,26 @@
 # Build EraBridge
 
-[简体中文](BUILDING.md) · **English** · [Documentation](README.en.md)
+[简体中文](BUILDING.md) · **English**
 
-Windows x64 is the maintained desktop build environment. Upstream Linux build files remain, but this fork's desktop version has not completed Linux validation.
+[Documentation](README.en.md) · [Release preparation](RELEASING.en.md)
 
-Initialize submodules after cloning:
+Windows x64 is the maintained build environment. Upstream Linux build files remain, but this fork's desktop version has not completed Linux validation.
+
+## Get the source
+
+After cloning this fork, initialize submodules from the repository root:
 
 ```powershell
 git submodule update --init --recursive
 ```
 
-For desktop source development, use Python 3.11 or newer with Tk, NumPy and Pillow. Development tests also need SciPy:
+`commonItems` and `Fronter` use pinned upstream submodule commits. Do not replace them with ordinary copies of local directories.
 
-```powershell
-python -m pip install -r requirements-dev.txt
-python -X utf8 tools/converter_desktop.py --language en --no-autoload
-python -X utf8 -m unittest discover -s tools -p 'test_converter_*.py'
-```
+## C++ importer and tests
 
-Some integration tests require local game installations and private intermediate data. State which inputs were available when reporting results. Language tests and small synthetic export fixtures are in `test_converter_i18n.py`, `test_converter_desktop.py` and `test_converter_workbench.py`.
+Prepare Python 3.11 or newer, CMake, Ninja and librakaly 0.12.7. Windows release builds use Visual Studio Community 2022's C++ desktop tools and Windows SDK; confirm your eligibility and accept the applicable product terms. `Setup-PersonalEnvironment.ps1` can download other local tools but does not replace the applicable Visual Studio license.
 
-The C++ importer needs CMake, Ninja, librakaly 0.12.7 and a suitable Windows C++ toolchain. The maintained release setup uses Visual Studio Community 2022 and Windows SDK; review their applicable terms. Example using the repository's tool layout:
+`Enter-DevEnvironment.ps1` prefers the official installation under `.tools/VisualStudio2022`. Use `-VisualStudioPath` for another installation. When changing compilers, use a fresh CMake build directory so an old cache does not retain another toolchain:
 
 ```powershell
 . ./tools/Enter-DevEnvironment.ps1
@@ -29,12 +29,45 @@ cmake --build build/community-release --target EU5ToVic3Converter EU5ToVic3Tests
 ctest --test-dir build/community-release --output-on-failure
 ```
 
-Desktop packaging requires the importer and Rakaly DLL under `build/Release-Windows/EU5ToVic3/`, a Python runtime with Tk and dependencies, and the repository's release-rule recipes. With those inputs available:
+For routine builds using the same toolchain, run `tools/Build-Personal.ps1`. Its output is under `build/Release-Windows/EU5ToVic3/`, with test logs in `.local/m0/`. It runs CTest by default; `-ConfigureOnly` only configures, and `-Jobs 4` reduces parallelism.
+
+## Python tools and tests
+
+The desktop runtime uses NumPy, Pillow and Tk; development tests also need SciPy. Local validation used Python 3.13.9. The code uses `hashlib.file_digest`, requiring Python 3.11 or newer. Install dependencies in your own virtual environment and check that its Tk is available:
+
+```powershell
+python -m pip install -r requirements-dev.txt
+python -X utf8 -m unittest discover -s tools -p 'test_*.py'
+```
+
+Some historical tests and audit scripts read local game installations or intermediates under `.local/`. Those integration checks cannot be reproduced without their inputs; state the environment and skipped checks when reporting results.
+
+To start the desktop in English without reopening the last project:
+
+```powershell
+python -X utf8 tools/converter_desktop.py --language en --no-autoload
+```
+
+Language tests and small export fixtures are in `test_converter_i18n.py`, `test_converter_desktop.py` and `test_converter_workbench.py`.
+
+## Additional desktop-packaging inputs
+
+`tools/Build-ConverterApp.ps1` calls `package_converter_app.py` and needs:
+
+- The built C++ importer and Rakaly DLL.
+- A Python environment containing NumPy, Pillow, Tk and dependency DLLs.
+- `config/release_rules/` recipes and the configuration files they reference.
+
+Default packaging does not read the development machine's `.local/converter/rules/`. On first use, players prepare private resources from their games and a vanilla V3 1836.1.1 baseline save. `initialize_converter.py` checks recipe, map and referenced-field hashes; changed game resources require a maintainer to update the recipe. `freeze_release_rules.py` maintains recipes and is not a player first-use step.
+
+`-IncludeLocalRules` is only for local debugging. It includes complete existing rules and must not be used for public candidates.
+
+With inputs available, run:
 
 ```powershell
 ./tools/Build-ConverterApp.ps1 -Output build/EraBridge-local
 ```
 
-The output must be a new directory inside the repository. The packager currently assumes the maintained local Python distribution layout; other installations may need adjustments. `-SkipRuntime` refreshes an existing local build and is not a clean release procedure. Translation catalogs in `tools/converter_locales/` must accompany the Python code.
+Output must be a new directory inside the repository. The packager currently collects dependencies according to the maintained local Python distribution layout; other installations may need adjustments. `-SkipRuntime` refreshes an existing local build and is not a clean release procedure. The `tools/converter_locales/` catalogs must accompany the Python code.
 
-Default packaging includes rule recipes rather than private game-derived resources. Users prepare complete rules from their own games and baseline save. `-IncludeLocalRules` is for local debugging and must not be used for public candidates. See the [Chinese release procedure](RELEASING.md) and [licensing notes](LICENSING.md) before distribution.
+Older builds or ZIPs using `-IncludeLocalRules` may contain local default paths and game resources. Do not use them directly as public downloads. Before publishing binaries, check dependency licenses, asset provenance and path cleanup. Record development-machine checks separately from independent-machine acceptance. See [release preparation](RELEASING.en.md) and [licensing](LICENSING.en.md).

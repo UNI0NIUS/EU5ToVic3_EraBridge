@@ -1,5 +1,7 @@
 # 运行组件署名与许可说明
 
+**简体中文** · [English](THIRD_PARTY_NOTICES.en.md)
+
 EraBridge 的 Windows 便携包使用 Python、NumPy、Pillow、Tcl/Tk 及它们的运行依赖。组件版本和文件来源见包内 `licenses/runtime-inventory.json`，原版权与许可文本保留在相应目录。这里的署名不替代原许可，也不表示替代各组件的适用条款。
 
 本软件部分功能基于 FreeType 团队的工作，使用 FreeType 字体引擎。本包采用其 FTL 许可选项，原文位于 `licenses/runtime/freetype-*/docs/FTL.TXT`。项目主页：[FreeType](https://freetype.org/)。

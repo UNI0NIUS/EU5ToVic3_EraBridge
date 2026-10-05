@@ -31,3 +31,6 @@ Prefer relevant error excerpts. Remove usernames, personal paths and private dat
 ### Known limitations
 
 Resource-building capacity and some vanilla script errors remain known issues. Independent Windows environments and long campaigns are not fully validated. If relevant, add the affected region, building and reproduction conditions.
+
+
+Before sharing saves, large attachments or logs, read the [issue/save submission guide](https://github.com/UNI0NIUS/EU5ToVic3_EraBridge/blob/master/docs/SUPPORT.en.md).

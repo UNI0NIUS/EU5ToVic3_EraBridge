@@ -23,6 +23,20 @@ PUBLIC_DOCUMENTS = (
     'CONVERTER_SOURCE_CORES.md', 'FLAG_GENERATION_RULES.md',
     'LICENSING.md', 'PUBLICATION.md', 'RELEASING.md', 'ACCEPTANCE.md',
     'releases/v0.12.2-beta.1.md', 'releases/v0.12.2-beta.2.md', 'releases/v0.12.2-beta.3.md',
+    'ACCEPTANCE.en.md',
+    'ARCHITECTURE.en.md',
+    'CONVERSION_RULES.en.md',
+    'CONVERTER_IDENTITY_SETTINGS.en.md',
+    'CONVERTER_SOURCE_CORES.en.md',
+    'FLAG_GENERATION_RULES.en.md',
+    'LICENSING.en.md',
+    'PUBLICATION.en.md',
+    'RELEASING.en.md',
+    'SUPPORT.en.md',
+    'SUPPORT.md',
+    'releases/v0.12.2-beta.1.en.md',
+    'releases/v0.12.2-beta.2.en.md',
+    'releases/v0.12.2-beta.3.en.md',
 )
 EXCLUDED_PARTS = {'__pycache__', '.git', '.local', 'tests', 'test', 'logs'}
 EXCLUDED_SUFFIXES = {'.pyc', '.pyo', '.obj', '.pdb', '.lib', '.res', '.eu5', '.v3'}
@@ -207,11 +221,14 @@ def prepare(root, app, out, python_base, make_archive=True, public_preview=False
     copy_tree(root / 'config', stage / 'config')
     copy_tree(root / 'EU5ToVic3/Data_Files', stage / 'EU5ToVic3/Data_Files')
     copy_public_docs(root, stage)
-    shutil.copy2(root / 'EU5ToVic3/NamingConvention.txt', stage / 'EU5ToVic3/NamingConvention.txt')
+    for name in ('NamingConvention.txt', 'NamingConvention.zh-CN.txt'):
+        shutil.copy2(root / 'EU5ToVic3' / name, stage / 'EU5ToVic3' / name)
     shutil.copy2(root / 'LICENSE', stage / 'LICENSE')
     (stage / 'licenses').mkdir(exist_ok=True)
     shutil.copy2(root / 'licenses/README.md', stage / 'licenses/README.md')
+    shutil.copy2(root / 'licenses/README.en.md', stage / 'licenses/README.en.md')
     shutil.copy2(root / 'licenses/THIRD_PARTY_NOTICES.md', stage / 'licenses/THIRD_PARTY_NOTICES.md')
+    shutil.copy2(root / 'licenses/THIRD_PARTY_NOTICES.en.md', stage / 'licenses/THIRD_PARTY_NOTICES.en.md')
     shutil.copy2(root / 'licenses/END_USER_TERMS.txt', stage / 'licenses/END_USER_TERMS.txt')
     copy_tree(root / 'licenses/microsoft-community-2022', stage / 'licenses/microsoft-community-2022')
     for source, name in [(root / 'commonItems/LICENSE', 'commonItems-LICENSE'),

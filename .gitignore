@@ -74,3 +74,19 @@ __pycache__/
 /tools/Select-PopulationMode.ps1
 
 !/docs/releases/v0.12.2-beta.3.md
+
+# Complete Chinese and English public documentation.
+!/docs/ARCHITECTURE.en.md
+!/docs/CONVERSION_RULES.en.md
+!/docs/CONVERTER_IDENTITY_SETTINGS.en.md
+!/docs/CONVERTER_SOURCE_CORES.en.md
+!/docs/FLAG_GENERATION_RULES.en.md
+!/docs/ACCEPTANCE.en.md
+!/docs/LICENSING.en.md
+!/docs/PUBLICATION.en.md
+!/docs/RELEASING.en.md
+!/docs/SUPPORT.md
+!/docs/SUPPORT.en.md
+!/docs/releases/v0.12.2-beta.1.en.md
+!/docs/releases/v0.12.2-beta.2.en.md
+!/docs/releases/v0.12.2-beta.3.en.md

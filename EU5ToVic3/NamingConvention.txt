@@ -1,3 +1,6 @@
+C++ naming conventions
+简体中文：NamingConvention.zh-CN.txt | English: NamingConvention.txt
+
 1. Scraper - loads data without the commonItems parser, such as the old definitions.csv format, which does not use PDXscript.
 2. Parser - reads PDXscript data for later processing, such as sections of a save file.
 3. Mapper - reads configuration from configurables and maps one value to another according to those rules.

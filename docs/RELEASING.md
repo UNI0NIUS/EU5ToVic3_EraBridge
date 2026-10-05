@@ -1,5 +1,7 @@
 # Release 准备与验收
 
+**简体中文** · [English](RELEASING.en.md)
+
 当前便携版为 `v0.12.2-beta.3`，面向社区测试，保留 GitHub **Pre-release** 标记。`beta.1` 是此前的源码预览版，标签和附件不覆盖。
 
 仓库保存源码、配置、测试与文档；ZIP 作为 Release 附件上传。游戏、存档、完整模组、开发对话和本机记录均不进入公开材料。
@@ -7,6 +9,8 @@
 ## 准备便携包
 
 先按[构建说明](BUILDING.md)重建 C++ 导入器和桌面启动器。发行环境需要已许可的 Visual Studio Community 2022；当前脚本从 `.tools/VisualStudio2022/VC/Redist/MSVC/` 取得 x64 正式运行库，放入 Python 目录及独立导入器目录。其他依赖按包缓存或 wheel RECORD 的文件摘要核对来源。
+
+以下示例用于在新工作区复现 beta.3 的打包布局；后续公开修订须使用新版本：
 
 ```powershell
 ./tools/Build-ConverterApp.ps1 -Output build/EraBridge-beta3
@@ -38,3 +42,10 @@ python -X utf8 tools/prepare_release.py --app build/EraBridge-beta3 --out build/
 首次初始化、完整转换、地图编辑、保存重开、导出和游戏内加载均欢迎反馈。资源建筑容量和部分原版脚本错误是已披露问题，独立 Windows 与长期战役仍待测试；它们不被描述为已通过，也不阻止本次社区预览发布。
 
 GitHub 自动附带的 Source code ZIP/TAR 是源码快照，不包含便携运行环境和完整子模块，不能当作安装包。
+
+
+## 文档维护
+
+中文原文件与 `.en.md` 英文版同步维护，并保留互相跳转的语言链接。`tools/prepare_release.py` 的 `PUBLIC_DOCUMENTS` 明确列出随包文档，新增指南时同时加入两种语言。工坊说明也有独立中英文文件，见[工坊发布指南](https://github.com/UNI0NIUS/EU5ToVic3_EraBridge/blob/master/EU5ToVic3/Resources/workshop/PUBLISHING.zh-CN.txt)。
+
+`master` 的文档更新不改变已发布 ZIP 或标签快照。新下载包必须采用新版本。

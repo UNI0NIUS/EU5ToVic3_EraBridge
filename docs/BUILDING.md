@@ -43,6 +43,14 @@ python -X utf8 -m unittest discover -s tools -p 'test_*.py'
 
 部分历史测试和审计脚本读取本机游戏目录或 `.local/` 中的中间资料。缺少这些输入时不能复现相应集成验证；测试结果应说明环境和跳过项。
 
+使用英文启动工作台且不恢复上次项目：
+
+```powershell
+python -X utf8 tools/converter_desktop.py --language en --no-autoload
+```
+
+语言与小型导出测试位于 `test_converter_i18n.py`、`test_converter_desktop.py` 和 `test_converter_workbench.py`。
+
 ## 桌面打包的额外输入
 
 `tools/Build-ConverterApp.ps1` 调用 `package_converter_app.py`，需要：
@@ -61,6 +69,6 @@ python -X utf8 -m unittest discover -s tools -p 'test_*.py'
 ./tools/Build-ConverterApp.ps1 -Output build/EraBridge-local
 ```
 
-输出目录必须位于仓库内且尚不存在。打包器目前按本机 Python 发行版的目录布局收集依赖，其他 Python 安装可能需要调整。`-SkipRuntime` 用于刷新已有本地构建，不用于制作干净发行包。
+输出目录必须位于仓库内且尚不存在。打包器目前按本机 Python 发行版的目录布局收集依赖，其他 Python 安装可能需要调整。`-SkipRuntime` 用于刷新已有本地构建，不用于制作干净发行包。`tools/converter_locales/` 翻译目录必须与 Python 代码一同提供。
 
 旧构建或使用 `-IncludeLocalRules` 的 ZIP 可能包含本地默认路径和游戏资源，不应直接作为公开下载。公开二进制前需核查依赖许可证、资产来源和路径清理；开发机检查与独立机器验收分别记录。

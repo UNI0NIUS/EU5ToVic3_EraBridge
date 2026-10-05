@@ -1,5 +1,7 @@
 # 通用转换器的文化与宗教设置
 
+**简体中文** · [English](CONVERTER_IDENTITY_SETTINGS.en.md)
+
 [文档索引](README.md) · [发布准备](RELEASING.md)
 
 适用于桌面版 0.12.2。转换按源文化键、源居民分布和明确配置判断身份，不复用旧战役的国家或人口历史。规则更新用于后续转换，已有候选包需通过项目升级流程更新。
@@ -36,9 +38,9 @@ python -X utf8 tools/update_converter_identity_rules.py --root . --base <旧规�
 python -X utf8 tools/verify_converter_identity.py --rules <新的规则目录> --game <V3游戏目录> --eu5 <EU5游戏目录> --output <验证报告.json>
 ```
 
-从头构建规则时，`build_converter_rules.py` 增加 `--identity-package` 与 `--game` 参数。身份资产包输入先校验输出哈希。构建后的规则运行时不依赖安装目录、原始 M5 包或 `.local` 审核报告。
+从头构建规则时，`build_converter_rules.py` 增加 `--identity-package` 与 `--game` 参数。身份资产包输入先校验输出哈希。构建后的身份资源不再依赖原始素材输入目录、M5 包或 `.local` 审核报告；完整转换仍需要受支持的游戏安装与基准存档。
 
-默认规则位于源码 `.local/converter/rules/` 和完整本地构建的 `build/ConverterWorkbench/data/rules/`。桌面版代码刷新现在也会同步规则；更新前保留原规则目录备份。每次转换仍复制独立规则快照，既有转换任务不被追溯改写。
+旧本地调试构建的默认规则位于源码 `.local/converter/rules/` 和 `build/ConverterWorkbench/data/rules/`；发行版首次初始化会创建新规则目录并记住其路径。仅明确启用本地规则的代码刷新才同步旧默认规则；更新前保留原规则目录备份。每次转换仍复制独立规则快照，既有转换任务不被追溯改写。
 
 ## 验证
 
